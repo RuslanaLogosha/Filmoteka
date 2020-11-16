@@ -12,7 +12,8 @@
 - [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
 - [Denys Onyshchuk](https://www.linkedin.com/in/onishchuk-denis)
 - [Daria Churkina](https://www.linkedin.com/in/daria-churkina-823a4b108/)
-остальные, конечно, тут будут
+- [Aleksandr Mukomelov](https://www.linkedin.com/in/aleksandr-mukomelov-b9799155/)
+- [Vladimir Ivanchenko](https://www.linkedin.com/in/vladimir-ivanchenko/)
 
 
 ### Prerequisites
