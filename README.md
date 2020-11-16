@@ -2,9 +2,10 @@
 
 Финальный проект по курсу **JavaScript** группы №2 (Frontend Core #22, GoIT).
 
-## Tech stack 
+## Tech stack
 
-Для реализации проекта были использованы такие технологии: HTML5 (%), CSS3 (%), JavaScript (%)....
+Для реализации проекта были использованы такие технологии: HTML5 (%), CSS3 (%),
+JavaScript (%)....
 
 ## Developers
 
@@ -12,8 +13,7 @@
 - [Olga Levshukova](https://www.linkedin.com/in/olga-levshukova-62831343/)
 - [Denys Onyshchuk](https://www.linkedin.com/in/onishchuk-denis)
 - [Daria Churkina](https://www.linkedin.com/in/daria-churkina-823a4b108/)
-остальные, конечно, тут будут
-
+  остальные, конечно, тут будут
 
 ### Prerequisites
 
@@ -104,3 +104,8 @@ npm run deploy
   просто копирует используемые изображения чтобы не нагружать вашу систему
   оптимизацией десятков картинок, так как на слабых компьютерах это повесит
   систему.
+
+Changelog
+
+- удалил темплейтовые картинки
+- удалил main.css файл (видимо остался с прошлого проекта)
