@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/AleksMkm/webpack5-basic-kit/issues"
   },
-  "homepage": "https://github.com/RuslanaLogosha/FilmsFinder",
+  "homepage": "https://github.com/RuslanaLogosha/Filmoteka",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
