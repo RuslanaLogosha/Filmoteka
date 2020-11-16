@@ -1,52 +1,29 @@
 {
-  "name": "webpack5-basic-kit",
+  "name": "parcel-project-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://RuslanaLogosha.github.io/Filmoteka",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config config/dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/prod.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html",
+    "predeploy": "npm run build -- --public-url=/Filmoteka/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AleksMkm/webpack5-basic-kit.git"
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
-  "author": "Aleksandr Mukomelov",
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AleksMkm/webpack5-basic-kit/issues"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
-  "homepage": "https://github.com/RuslanaLogosha/Filmoteka",
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
-    "autoprefixer": "^10.0.1",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "core-js": "^3.6.5",
-    "cross-env": "^7.0.2",
-    "css-loader": "^5.0.0",
-    "file-loader": "^6.2.0",
     "gh-pages": "^3.1.0",
-    "handlebars": "^4.7.6",
-    "handlebars-loader": "^1.7.1",
-    "html-loader": "^1.3.2",
-    "html-webpack-plugin": "^4.5.0",
-    "image-webpack-loader": "^7.0.1",
-    "mini-css-extract-plugin": "^1.2.1",
-    "node-sass": "^5.0.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "postcss-loader": "^4.0.4",
-    "sass-loader": "^10.0.5",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.0.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.4.0",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.3.0"
+    "parcel-bundler": "^1.12.4",
+    "posthtml-include": "^1.4.3",
+    "sass": "^1.26.9"
   }
 }
