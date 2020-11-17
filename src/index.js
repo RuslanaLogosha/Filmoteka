@@ -1,4 +1,7 @@
+
 import './sass/main.scss';
+import "./js/modalFilmCard.js";
+
 import filmsCardTpl from './templates/card-films.hbs';
 
 const refs = {
@@ -19,3 +22,4 @@ function renderFilmsCard(info) {
   refs.cardContainet.insertAdjacentHTML('beforeend', markup);
   console.log(markup);
 }
+
