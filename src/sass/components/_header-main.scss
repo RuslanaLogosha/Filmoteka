@@ -13,7 +13,10 @@
 
   max-width: $mobile;
 
-  background-image: url(../images/header-bg-main-mobile.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header-bg-main-mobile.jpg);
+  background-color: #000000;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,29 +24,40 @@
   @media screen and (max-width: ($tablet - 1)) and (min-device-pixel-ratio: 2),
     screen and (max-width: ($tablet - 1)) and (min-resolution: 192dpi),
     screen and (max-width: ($tablet - 1)) and (min-resolution: 2dppx) {
-    background-image: url(../images/header-bg-main-mobile@2x.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-bg-main-mobile@2x.jpg);
   }
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
 
-    background-image: url(../images/header-bg-main-tablet.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-bg-main-tablet.jpg);
 
     @media screen and (max-width: ($desktop - 1)) and (min-device-pixel-ratio: 2),
       screen and (max-width: ($desktop - 1)) and (min-resolution: 192dpi),
       screen and (max-width: ($desktop - 1)) and (min-resolution: 2dppx) {
-      background-image: url(../images/header-bg-main-tablet@2x.jpg);
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header-bg-main-tablet.jpg);
     }
   }
 
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
-    background-image: url(../images/header-bg-main-desktop.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header-bg-main-desktop.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/header-bg-main-desktop@2x.jpg);
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../images/header-bg-main-desktop.jpg);
     }
   }
 }
