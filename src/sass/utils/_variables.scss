@@ -13,3 +13,23 @@ $warningColor: #ff001b;
 
 // fonts
 $mainFont: 'Roboto', sans-serif;
+
+// mixins for transitions
+
+@mixin transition(
+  $property,
+  $time: 250ms,
+  $timingFunction: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition: $property $time $timingFunction;
+}
+
+@mixin twoTransitions(
+  $propertyI,
+  $propertyII,
+  $time: 250ms,
+  $timingFunction: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition: $propertyI $time $timingFunction,
+    $propertyII $time $timingFunction;
+}

@@ -1,20 +1,8 @@
-// temp container (will be removed after Katya's merge
-.temp-container {
-  margin: 0 auto;
-  padding: 0 20px;
-  @media screen and (min-width: $mobile) {
-    width: $mobile;
-  }
+// wrappers
 
-  @media screen and (min-width: $tablet) {
-    width: $tablet;
-    padding: 0 76px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: $desktop;
-    padding: 0 71px;
-  }
+.header-section {
+  padding-top: 58px;
+  padding-bottom: 97px;
 }
 
 // bg
@@ -57,92 +45,6 @@
       screen and (min-resolution: 2dppx) {
       background-image: url(../images/header-bg-main-desktop@2x.jpg);
     }
-  }
-}
-
-// wrappers
-
-.header-section {
-  padding-top: 58px;
-  padding-bottom: 97px;
-}
-
-// logo
-.logo {
-  position: absolute;
-  top: 46px;
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: baseline;
-  }
-
-  text-decoration: none;
-
-  color: $svgColor;
-}
-
-.logo__icon {
-  @media screen and (min-width: $tablet) {
-    margin-right: 10px;
-  }
-}
-
-.logo__name {
-  @media screen and (max-width: ($tablet - 1)) {
-    display: none;
-  }
-
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 1.16;
-
-  color: $white;
-}
-
-// side-nav
-
-.side-nav {
-  display: flex;
-  justify-content: flex-end;
-
-  margin-bottom: 41px;
-
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-  text-transform: uppercase;
-
-  color: $white;
-}
-
-.side-nav__item {
-  &:first-child {
-    margin-right: 39px;
-  }
-}
-
-.side-nav__link {
-  text-decoration: none;
-
-  color: inherit;
-}
-
-.side-nav__link--current-page {
-  position: relative;
-
-  &::after {
-    content: '';
-
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-
-    height: 3px;
-    width: 100%;
-
-    background-color: $accentColor;
   }
 }
 
