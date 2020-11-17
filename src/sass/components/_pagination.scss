@@ -97,3 +97,16 @@
       background-color: green;
   }
 }
+
+.threeDots {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    
+    border:none;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 5px 1px 5px;
+}
