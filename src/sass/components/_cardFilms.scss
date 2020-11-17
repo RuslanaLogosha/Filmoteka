@@ -1,0 +1,41 @@
+.continer_card {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card__colection {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+  margin: -15px;
+}
+.card__film {
+  margin: 15px;
+  width: 274px;
+}
+
+.card__title {
+  margin-top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+.card__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* or 133% */
+
+  color: #ff6b08;
+}
