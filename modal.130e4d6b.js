@@ -117,76 +117,83 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/btn-upp.js":[function(require,module,exports) {
-var backToTopButton = document.querySelector('#myBtn');
-window.addEventListener('scroll', scrollFunction);
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-function scrollFunction() {
-  if (window.pageYOffset > 300) {
-    // Показывает кнопку поднятия вверх
-    if (!backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnExit');
-      backToTopButton.classList.add('btnEntrance');
-      backToTopButton.style.display = 'block';
-    }
-  } else {
-    // Скрывает кнопку поднятия вверх
-    if (backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnEntrance');
-      backToTopButton.classList.add('btnExit');
-      setTimeout(function () {
-        backToTopButton.style.display = 'none';
-      }, 150);
-    }
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
+
+  return bundleURL;
 }
 
-backToTopButton.addEventListener('click', smoothScrollBackToTop); // Добавляет плавность
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
 
-function smoothScrollBackToTop() {
-  var targetPosition = 0;
-  var startPosition = window.pageYOffset;
-  var distance = targetPosition - startPosition;
-  var duration = 750;
-  var start = null;
-  window.requestAnimationFrame(step);
-
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    var progress = timestamp - start;
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-    if (progress < duration) window.requestAnimationFrame(step);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
   }
+
+  return '/';
 }
 
-function easeInOutCubic(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t * t + b;
-  t -= 2;
-  return c / 2 * (t * t * t + 2) + b;
-} // //Get the button
-// const mybutton = document.querySelector('[button-top]');
-// mybutton.addEventListener('click', topFunction);
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 300 ||
-//     document.documentElement.scrollTop > 300
-//   ) {
-//     mybutton.style.display = 'block';
-//   } else {
-//     mybutton.style.display = 'none';
-//   }
-// }
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/header-bg-modal-mobile.jpg":[["header-bg-modal-mobile.22f8232e.jpg","images/header-bg-modal-mobile.jpg"],"images/header-bg-modal-mobile.jpg"],"./../images/header-bg-modal-mobile@2x.jpg":[["header-bg-modal-mobile@2x.db48d55b.jpg","images/header-bg-modal-mobile@2x.jpg"],"images/header-bg-modal-mobile@2x.jpg"],"./../images/header-bg-modal-tablet.jpg":[["header-bg-modal-tablet.f7cd343a.jpg","images/header-bg-modal-tablet.jpg"],"images/header-bg-modal-tablet.jpg"],"./../images/header-bg-modal-desktop.jpg":[["header-bg-modal-desktop.8a7384dd.jpg","images/header-bg-modal-desktop.jpg"],"images/header-bg-modal-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"modal.js":[function(require,module,exports) {
+"use strict";
+
+require("./sass/main.scss");
+},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -390,5 +397,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/btn-upp.js"], null)
-//# sourceMappingURL=/btn-upp.fab9e288.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","modal.js"], null)
+//# sourceMappingURL=/modal.130e4d6b.js.map

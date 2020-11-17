@@ -117,75 +117,112 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/btn-upp.js":[function(require,module,exports) {
-var backToTopButton = document.querySelector('#myBtn');
-window.addEventListener('scroll', scrollFunction);
+})({"js/pagination.js":[function(require,module,exports) {
+var list_items = [// "Film 1",
+  // "Film 2",
+  // "Film 3",
+  // "Film 4",
+  // "Film 5",
+  // "Film 6",
+  // "Film 7",
+  // "Film 8",
+  // "Film 9",
+  // "Film 10",
+  // "Film 11",
+  // "Film 12",
+  // "Film 13",
+  // "Film 14",
+  // "Film 15",
+  // "Film 16",
+  // "Film 17",
+  // "Film 18",
+  // "Film 19",
+  // "Film 20",
+  // "Film 21",
+  // "Film 22",
+  // "Film 23",
+  // "Film 24",
+  // "Film 25",
+  // "Film 26",
+  // "Film 27",
+  // "Film 28",
+  // "Film 29",
+  // "Film 30",
+  // "Film 31",
+  // "Film 32",
+  // "Film 33",
+  // "Film 34",
+  // "Film 35",
+];
+var list_element = document.getElementById("list");
+var pagination_element = document.getElementById("pagination");
+var arrowLeft = document.querySelector(".arrow_left");
+var arrowRight = document.querySelector(".arrow_right");
+var current_page = 1; // mobile = 4, laptop = 8, desctop = 9;
 
-function scrollFunction() {
-  if (window.pageYOffset > 300) {
-    // Показывает кнопку поднятия вверх
-    if (!backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnExit');
-      backToTopButton.classList.add('btnEntrance');
-      backToTopButton.style.display = 'block';
-    }
-  } else {
-    // Скрывает кнопку поднятия вверх
-    if (backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnEntrance');
-      backToTopButton.classList.add('btnExit');
-      setTimeout(function () {
-        backToTopButton.style.display = 'none';
-      }, 150);
-    }
+var rows = 5;
+var allPageCount = Math.ceil(list_items.length / rows);
+
+function DisplayList(items, wrapper, rows_per_page, page) {
+  wrapper.innerHTML = "";
+  page--;
+  var start = rows_per_page * page;
+  var end = start + rows_per_page;
+  var paginatedItems = items.slice(start, end);
+
+  for (var i = 0; i < paginatedItems.length; i++) {
+    var item = paginatedItems[i];
+    var item_element = document.createElement("div");
+    item_element.classList.add("item");
+    item_element.innerText = item;
+    wrapper.appendChild(item_element);
   }
 }
 
-backToTopButton.addEventListener('click', smoothScrollBackToTop); // Добавляет плавность
+function SetupPagination(items, wrapper, rows_per_page) {
+  wrapper.innerHTML = "";
+  var page_count = Math.ceil(items.length / rows_per_page);
 
-function smoothScrollBackToTop() {
-  var targetPosition = 0;
-  var startPosition = window.pageYOffset;
-  var distance = targetPosition - startPosition;
-  var duration = 750;
-  var start = null;
-  window.requestAnimationFrame(step);
-
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    var progress = timestamp - start;
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-    if (progress < duration) window.requestAnimationFrame(step);
+  for (var i = 1; i < page_count + 1; i++) {
+    var btn = PaginationButton(i, items);
+    wrapper.appendChild(btn);
   }
 }
 
-function easeInOutCubic(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t * t + b;
-  t -= 2;
-  return c / 2 * (t * t * t + 2) + b;
-} // //Get the button
-// const mybutton = document.querySelector('[button-top]');
-// mybutton.addEventListener('click', topFunction);
-// // When the user scrolls down 20px from the top of the document, show the button
-// window.onscroll = function () {
-//   scrollFunction();
-// };
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 300 ||
-//     document.documentElement.scrollTop > 300
-//   ) {
-//     mybutton.style.display = 'block';
-//   } else {
-//     mybutton.style.display = 'none';
-//   }
-// }
-// // When the user clicks on the button, scroll to the top of the document
-// function topFunction() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
+function PaginationButton(page, items) {
+  var button = document.createElement("button");
+  button.innerText = page;
+  if (current_page == page) button.classList.add("active");
+  button.addEventListener("click", function () {
+    current_page = page;
+    DisplayList(items, list_element, rows, current_page);
+    var current_btn = document.querySelector(".pagenumbers button.active");
+    current_btn.classList.remove("active");
+    button.classList.add("active");
+  });
+  return button;
+}
+
+DisplayList(list_items, list_element, rows, current_page);
+SetupPagination(list_items, pagination_element, rows);
+arrowLeft.addEventListener("click", onArrowLeftClick);
+arrowRight.addEventListener("click", onArrowRightClick);
+
+function onArrowLeftClick() {
+  if (current_page > 1) {
+    current_page--;
+    SetupPagination(list_items, pagination_element, rows);
+    DisplayList(list_items, list_element, rows, current_page);
+  }
+}
+
+function onArrowRightClick() {
+  if (current_page < allPageCount) {
+    current_page++;
+    SetupPagination(list_items, pagination_element, rows);
+    DisplayList(list_items, list_element, rows, current_page);
+  }
+}
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -214,7 +251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61042" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54165" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -390,5 +427,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/btn-upp.js"], null)
-//# sourceMappingURL=/btn-upp.fab9e288.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/pagination.js"], null)
+//# sourceMappingURL=/pagination.8daf0c5f.js.map
