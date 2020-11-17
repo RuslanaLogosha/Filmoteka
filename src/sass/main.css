@@ -259,4 +259,96 @@ Add the correct display in Chrome and Safari.
 summary {
   display: list-item;
 }
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #545454;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+}
+
+footer {
+  background-color: #f7f7f7;
+}
+
+@media screen and (min-width: 320px) {
+  .copyright {
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 29px;
+    padding-bottom: 10px;
+  }
+  .developers {
+    margin: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
+  .page-footer {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .copyright {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+  .developers {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+  .page-footer {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,43 @@
+<div class="madal-card">
+    <img src="{{webformatURL}}" alt="{{name}}" class="card-image" />
+
+    <div class="card__content">
+        <h2 class="card__name">{{name}}</h2>
+        <div class="stats">
+            <p class="stats-item">
+                <i class="material-icons">thumb_up</i>
+                {{likes}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">visibility</i>
+                {{views}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">comment</i>
+                {{comments}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">cloud_download</i>
+                {{downloads}}
+            </p>
+        </div>
+
+
+        <p class="card__descr">{{description}}
+        </p>
+
+        <ul class="tag-list">
+            {{#each ingredients}}
+            <li class="tag-list__item">{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <button class="card__button button">
+        <i class="material-icons button__icon">
+            shopping_cart
+        </i>
+        В корзину
+    </button>
+
+    </>
