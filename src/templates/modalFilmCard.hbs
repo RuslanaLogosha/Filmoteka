@@ -1,43 +1,44 @@
-<div class="madal-card">
-    <img src="{{webformatURL}}" alt="{{name}}" class="card-image" />
-
-    <div class="card__content">
-        <h2 class="card__name">{{name}}</h2>
-        <div class="stats">
-            <p class="stats-item">
-                <i class="material-icons">thumb_up</i>
-                {{likes}}
-            </p>
-            <p class="stats-item">
-                <i class="material-icons">visibility</i>
-                {{views}}
-            </p>
-            <p class="stats-item">
-                <i class="material-icons">comment</i>
-                {{comments}}
-            </p>
-            <p class="stats-item">
-                <i class="material-icons">cloud_download</i>
-                {{downloads}}
-            </p>
-        </div>
-
-
-        <p class="card__descr">{{description}}
-        </p>
-
-        <ul class="tag-list">
-            {{#each ingredients}}
-            <li class="tag-list__item">{{this}}</li>
-            {{/each}}
-        </ul>
+<li class="cardItem__list">
+    <div class="cardItem__image">
+        {{#if poster_path}}
+        <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}" />
+        {{else}}
+        <img src="{{nothingHere}}" alt="{{title}}" />
+        {{/if}}
     </div>
 
-    <button class="card__button button">
-        <i class="material-icons button__icon">
-            shopping_cart
-        </i>
-        В корзину
-    </button>
+    <div class=" cardItem__wrapper">
+        <h2 class="cardItem__name">{{title}}</h2>
+        <p class="cadrItem__vote cardItem_text">
+            Vote / Votes<span class="cardItem__vote_average">{{vote_average}}</span>/<span
+                class="cardItem__vote_count">{{vote_count}}</span>
+        </p>
+        <p class="cardItem__popularity cardItem_text">
+            Popularity<span class="cardItem___data">{{popularity}}</span>
+        </p>
+        <p class="cardItem-Title cardItem_text">
+            Original Title<span class="cardItem__title_data">{{original_title}}</span>
+        </p>
 
-    </>
+        <p class="cardItem__genre cardItem_text">
+            Genre
+        </p>
+        <p class="cardItem__genreList">{{#each genres}}
+            <span class="cardItem__genre_data">{{this.name}}</span>
+            {{/each}}</p>
+
+
+        <p class="cardItem__about">About</p>
+        <p class="cardItem__description">
+            {{overview}}
+        </p>
+        <div class="cardItem__listButton">
+            <button class="cardItem__button">
+                Add to watched
+            </button>
+            <button class="cardItem__button">
+                Add to queue
+            </button>
+        </div>
+    </div>
+</li>
