@@ -14,5 +14,5 @@ function render() {
 
 function renderFilmsCard(articles) {
   refs.cardContainet.insertAdjacentHTML('beforeend', filmsCardTpl(articles));
-  console.log(filmsCardTpl(articles));
+  // console.log(filmsCardTpl(articles));
 }
