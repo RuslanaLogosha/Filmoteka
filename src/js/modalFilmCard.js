@@ -1,4 +1,4 @@
-import '../sass/components/modalFilmCard.scss';
+// import '../sass/components/modalFilmCard.scss';
 import modalFilmCard from "../templates/modalFilmCard.hbs";
 import openModal from './modalOpen.js';
 
