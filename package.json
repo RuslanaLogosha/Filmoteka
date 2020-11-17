@@ -26,5 +26,8 @@
     "posthtml-include": "^1.6.0",
     "sass": "^1.26.9",
     "parcel-plugin-handlebars-precompile": "^1.0.2"
+  },
+  "dependencies": {
+    "basiclightbox": "^5.0.3"
   }
 }
