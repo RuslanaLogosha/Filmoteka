@@ -1,6 +1,15 @@
+// breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1024px;
 
+// text colors
+$white: #ffffff;
+$dark: #000000;
+$textColor: #545454;
+$accentColor: #ff6b08;
+$svgColor: #818181;
+$warningColor: #ff001b;
 
-
-
-// для того, чтобы предварительно видеть цвет переменной, установите расширение colorize
-
+// fonts
+$mainFont: 'Roboto', sans-serif;

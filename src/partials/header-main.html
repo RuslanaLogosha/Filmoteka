@@ -1,0 +1,44 @@
+<header class="header-bg">
+  <div class="temp-container">
+    <div class="header-section">
+      <nav class="navigation">
+        <a href="" class="navigation__logo logo"
+          ><svg class="logo__icon" width="24" height="24">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
+          <span class="logo__name">Filmoteka</span>
+        </a>
+
+        <ul class="side-nav">
+          <li class="side-nav__item">
+            <a href="" class="side-nav__link side-nav__link--current-page"
+              >Home</a
+            >
+          </li>
+          <li class="side-nav__item">
+            <a href="" class="side-nav__link">My library</a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="search-form" id="search-form">
+        <input
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Поиск фильмов"
+          class="search-field"
+        />
+        <button type="submit" class="search-btn">
+          <svg class="search-icon" width="12" height="12">
+            <use href="./images/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <!-- текст временно для контроля отрисовки интерфейса -->
+    <div class="js-warning header-warning">
+      Search result not successful. Enter the correct movie name and
+    </div>
+  </div>
+</header>
