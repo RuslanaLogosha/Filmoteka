@@ -1,5 +1,8 @@
 import '../sass/components/modalFilmCard.scss';
 import modalFilmCard from "../templates/modalFilmCard.hbs";
+import openModal from './modalOpen.js';
+
+const cardСolection = document.querySelector('.card__colection');
 // import nothingHere from '../images/nothingHere.jpg';
 
 // const baseUrl = 'https://api.themoviedb.org/3';
@@ -27,3 +30,6 @@ const refs = {
 }
   
 insertCardItems();
+
+
+cardСolection.addEventListener('click', openModal);
