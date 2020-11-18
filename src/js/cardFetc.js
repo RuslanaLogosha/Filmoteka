@@ -2,7 +2,7 @@ import filmsCardTpl from "../templates/card-films.hbs";
 import NewApiService from "./apiServis";
 
 const refs = {
-  cardContainet: document.querySelector('.js-card-home'),
+  cardContainer: document.querySelector('.js-card'),
 };
 const newApiService = new NewApiService();
 
