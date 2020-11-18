@@ -2788,16 +2788,16 @@ function renderFilmsCard(articles) {
 }
 },{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
 module.exports = "/team-ruslana.5ee08793.jpeg";
-},{}],"images/team-olga.jpg":[function(require,module,exports) {
-module.exports = "/team-olga.00cc36e9.jpg";
+},{}],"images/team-olga.jpeg":[function(require,module,exports) {
+module.exports = "/team-olga.c40113fb.jpeg";
 },{}],"images/team-daria.jpeg":[function(require,module,exports) {
 module.exports = "/team-daria.ee65a5d2.jpeg";
 },{}],"images/team-denis.jpeg":[function(require,module,exports) {
 module.exports = "/team-denis.0a5b0591.jpeg";
-},{}],"images/team-ihor.jpg":[function(require,module,exports) {
-module.exports = "/team-ihor.ab333400.jpg";
-},{}],"images/team-katya.jpg":[function(require,module,exports) {
-module.exports = "/team-katya.af4ea0b4.jpg";
+},{}],"images/team-ihor.jpeg":[function(require,module,exports) {
+module.exports = "/team-ihor.677fa90f.jpeg";
+},{}],"images/team-katya.jpeg":[function(require,module,exports) {
+module.exports = "/team-katya.dcfa35e7.jpeg";
 },{}],"images/team-vladymyr.jpeg":[function(require,module,exports) {
 module.exports = "/team-vladymyr.bc76483f.jpeg";
 },{}],"images/team-aleksandr.jpg":[function(require,module,exports) {
@@ -2811,15 +2811,15 @@ var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
 
 var _teamRuslana = _interopRequireDefault(require("../images/team-ruslana.jpeg"));
 
-var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpg"));
+var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpeg"));
 
 var _teamDaria = _interopRequireDefault(require("../images/team-daria.jpeg"));
 
 var _teamDenis = _interopRequireDefault(require("../images/team-denis.jpeg"));
 
-var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpg"));
+var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpeg"));
 
-var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpg"));
+var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpeg"));
 
 var _teamVladymyr = _interopRequireDefault(require("../images/team-vladymyr.jpeg"));
 
@@ -2833,10 +2833,10 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Leader</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
-var container = document.querySelector('.js-team-modal');
+var markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+var container = document.querySelector(".js-team-modal");
 var markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
-container.addEventListener('click', openModal);
+container.addEventListener("click", openModal);
 
 function teamModalWindow(data) {
   return basicLightbox.create(data);
@@ -2845,7 +2845,7 @@ function teamModalWindow(data) {
 function openModal(e) {
   teamModalWindow(markup).show();
 }
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpg":"images/team-olga.jpg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpg":"images/team-ihor.jpg","../images/team-katya.jpg":"images/team-katya.jpg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/pagination.js":[function(require,module,exports) {
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
@@ -3022,7 +3022,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63535" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56290" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
