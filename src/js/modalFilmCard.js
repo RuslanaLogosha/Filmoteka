@@ -1,26 +1,34 @@
-// import '../sass/components/modalFilmCard.scss';
 import modalFilmCard from "../templates/modalFilmCard.hbs";
-import openModal from './modalOpen.js';
+
+import * as basicLightbox from 'basiclightbox';
+import 'basiclightbox/dist/basicLightbox.min.css';
+
+// открытие модалки
+
+function openModal(e) {
+
+  const instance = basicLightbox.create(
+     document.querySelector('.movie-card')
+  );
+
+  instance.show();
+
+  window.addEventListener('keydown', closeModalHandler);
+
+  function closeModalHandler(e) {
+    e.code === 'Escape' && instance.close();
+
+    window.removeEventListener('keydown', closeModalHandler);
+  }
+}
 
 const cardСolection = document.querySelector('.card__colection');
-// import nothingHere from '../images/nothingHere.jpg';
+cardСolection.addEventListener('click', openModal);
 
-// const baseUrl = 'https://api.themoviedb.org/3';
-// const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 
-// export default {
-//     fetchMovieCardApi(movieId) {
-//         const movieCardPrmts = `/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-//         return fetch(baseUrl + movieCardPrmts)
-//             .then(data => {
-//                 return data;
-//             })
-//             .catch(error => console.log(error));
-//     }
-// };
 
 const refs = {
-  modalCard: document.querySelector('.js-modal'),
+  modalCard: document.querySelector('.movie-card'),
 };
  function insertCardItems(film) {
     const copyFilm = { ...film};
@@ -32,4 +40,4 @@ const refs = {
 insertCardItems();
 
 
-cardСolection.addEventListener('click', openModal);
+
