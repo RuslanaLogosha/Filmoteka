@@ -1,16 +1,21 @@
+import filmsCardTpl from '../templates/card-films.hbs';
+import regeneratorRuntime from 'regenerator-runtime';
+
 const refs = {
   searchForm: document.querySelector('#search-form'),
-  cardContainer: document.querySelector('.container'),
+  cardContainer: document.querySelector('.js-card'),
 };
 refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
-class apiService {
+class ApiService {
   constructor() {
     this.searchQuery = '';
   }
-  fetchFilms() {
+  async fetchFilms() {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=${this.searchQuery}`;
-    return fetch(url).then(response => response.json());
+    const films = await fetch(url);
+    const response = await films.json();
+    return response;
   }
   get query() {
     return this.searchQuery;
@@ -19,8 +24,8 @@ class apiService {
     this.searchQuery = newQuery;
   }
 }
-const filmApiService = new apiService();
-let totalPages;
+const filmApiService = new ApiService();
+
 function onKeyWordSearch(e) {
   e.preventDefault();
   filmApiService.query = e.currentTarget.elements.query.value;
@@ -29,8 +34,24 @@ function onKeyWordSearch(e) {
   }
   console.log(filmApiService.query);
 
-  filmApiService.fetchFilms().then(data => {
-    totalPages = data.total_pages;
-    return totalPages;
+  totalPagesCount();
+  onKeyWordRender();
+}
+async function totalPagesCount() {
+  const totalPages = await filmApiService.fetchFilms().then(total_pages => {
+    return total_pages;
   });
+}
+async function onKeyWordRender() {
+  refs.cardContainer.innerHTML = '';
+  const renderMovies = await filmApiService
+    .fetchFilms()
+    .then(({ results }) => {
+      return results;
+    })
+    .then(appendMarkup);
+}
+
+function appendMarkup(cards) {
+  refs.cardContainer.insertAdjacentHTML('beforeend', filmsCardTpl(cards));
 }
