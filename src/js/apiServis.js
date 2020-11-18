@@ -1,6 +1,6 @@
 export default class NewApiService {
   constructor() {
-    this.searcgQuery = '';
+    this.searchQuery = '';
   }
   fetchTrendingArticles() {
     const url = `https://api.themoviedb.org/3/trending/all/day?api_key=d91911ebb88751cf9e5c4b8fdf4412c9`;
@@ -11,7 +11,7 @@ export default class NewApiService {
       });
   }
   fetchFilmsSearch() {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=${searcgQuery}`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=${searchQuery}`;
     return fetch(url)
       .then(response => response.json())
       .then(data => {
