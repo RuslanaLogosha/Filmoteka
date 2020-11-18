@@ -24,6 +24,7 @@
     display: none;
   }
 
+  font-family: $mainFont;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.16;
@@ -64,7 +65,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
 
     position: absolute;
     bottom: -3px;
