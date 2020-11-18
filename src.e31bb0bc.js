@@ -2848,6 +2848,11 @@ function openModal(e) {
 },{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = fetchFilmsSearch;
+
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
 var _apiServis = _interopRequireDefault(require("./apiServis"));
@@ -3773,6 +3778,8 @@ var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
 var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
 
+var _pagination = _interopRequireDefault(require("./pagination"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -3860,6 +3867,7 @@ function onKeyWordSearch(e) {
   console.log(filmApiService.query);
   totalPagesCount();
   onKeyWordRender();
+  (0, _pagination.default)(filmApiService.query);
 }
 
 function totalPagesCount() {
@@ -3927,7 +3935,7 @@ function _onKeyWordRender() {
 function appendMarkup(cards) {
   refs.cardContainer.insertAdjacentHTML('beforeend', (0, _cardFilms.default)(cards));
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js"}],"index.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./pagination":"js/pagination.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -3971,7 +3979,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63144" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57043" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
