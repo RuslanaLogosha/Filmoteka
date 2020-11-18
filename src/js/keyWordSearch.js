@@ -41,7 +41,7 @@ function onKeyWordSearch(e) {
 }
 
 async function totalPagesCount() {
-  const totalPages = await filmApiService.fetchFilms().then(data => {
+  const totalPages = await filmApiService.fetchFilms().then((data) => {
     const numberOfPages = data.total_pages;
     console.log(numberOfPages);
     return totalPages;
