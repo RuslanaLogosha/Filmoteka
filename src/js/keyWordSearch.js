@@ -37,9 +37,12 @@ function onKeyWordSearch(e) {
   totalPagesCount();
   onKeyWordRender();
 }
+
 async function totalPagesCount() {
-  const totalPages = await filmApiService.fetchFilms().then(total_pages => {
-    return total_pages;
+  const totalPages = await filmApiService.fetchFilms().then(data => {
+    const numberOfPages = data.total_pages;
+    console.log(numberOfPages);
+    return totalPages;
   });
 }
 async function onKeyWordRender() {
