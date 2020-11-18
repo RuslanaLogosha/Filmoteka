@@ -22,11 +22,11 @@ export default class NewApiService {
       });
   }
   fetchPopularArticles() {
-    const url = `https://${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
+    const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
     return fetch(url)
       .then(response => response.json())
       .then(({ results }) => {
-        console.log(results);
+        // console.log(results);
         return results;
       });
   }
