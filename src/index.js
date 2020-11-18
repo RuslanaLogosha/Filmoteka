@@ -6,3 +6,4 @@ import './js/teamLightbox';
 import "./js/pagination.js";
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
 
+ 
