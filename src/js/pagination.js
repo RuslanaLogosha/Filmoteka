@@ -42,7 +42,7 @@ function fetchSearchFilmsByPage(page) {
     });
 }
 
-function fetchFilmsSearch(searchQuery) {
+export default function fetchFilmsSearch(searchQuery) {
   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
   return fetch(url)
     .then((response) => response.json())

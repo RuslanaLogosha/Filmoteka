@@ -1,5 +1,6 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import regeneratorRuntime from 'regenerator-runtime';
+import fetchFilmsSearch from './pagination';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -36,6 +37,7 @@ function onKeyWordSearch(e) {
 
   totalPagesCount();
   onKeyWordRender();
+  fetchFilmsSearch(filmApiService.query);
 }
 
 async function totalPagesCount() {
