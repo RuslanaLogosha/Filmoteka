@@ -1,5 +1,5 @@
-import filmsCardTpl from '../templates/card-films.hbs';
-import NewApiService from './apiServis';
+import filmsCardTpl from "../templates/card-films.hbs";
+import NewApiService from "./apiServis";
 
 const refs = {
   cardContainet: document.querySelector('.js-card-home'),
@@ -13,6 +13,6 @@ function render() {
 }
 
 function renderFilmsCard(articles) {
-  refs.cardContainet.insertAdjacentHTML('beforeend', filmsCardTpl(articles));
+  refs.cardContainer.insertAdjacentHTML('beforeend', filmsCardTpl(articles));
   // console.log(filmsCardTpl(articles));
 }
