@@ -1,5 +1,4 @@
 import filmsCardTpl from '../templates/card-films.hbs';
-import NewApiService from './apiServis';
 
 const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
@@ -33,8 +32,8 @@ function fetchPopularFilmsByPage(page) {
     });
 }
 
-function fetchSearchFilmsByPage(page) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=true`;
+function fetchSearchFilmsByPage(page, searchQuery) {
+  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=true&query=${searchQuery}`;
   return fetch(url)
     .then((response) => response.json())
     .then(({ results }) => {
@@ -50,7 +49,8 @@ export default function fetchFilmsSearch(searchQuery) {
       renderPagination(
         results.total_pages,
         results.results,
-        displaySearchListByPage
+        displaySearchListByPage,
+        searchQuery
       );
     });
 }
@@ -64,12 +64,12 @@ function displayList(wrapper, page) {
   fetchPopularFilmsByPage(page).then(renderFilmsCard);
 }
 
-function displaySearchListByPage(wrapper, page) {
+function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page).then(renderFilmsCard);
+  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
 }
 
-function renderPagination(totalPages, listItems, callback) {
+function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
   currentPage = 1;
 
@@ -149,7 +149,7 @@ function renderPagination(totalPages, listItems, callback) {
 
     button.addEventListener('click', function () {
       currentPage = page;
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
 
       let current_btn = document.querySelector('.pagenumbers button.active');
       current_btn.classList.remove('active');
@@ -165,7 +165,7 @@ function renderPagination(totalPages, listItems, callback) {
     if (currentPage > 1) {
       currentPage--;
       setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
     }
   }
 
@@ -173,7 +173,7 @@ function renderPagination(totalPages, listItems, callback) {
     if (currentPage < totalPages) {
       currentPage++;
       setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
     }
   }
 
