@@ -33,7 +33,7 @@ function fetchPopularFilmsByPage(page) {
 }
 
 function fetchSearchFilmsByPage(page, searchQuery) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=true&query=${searchQuery}`;
+  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
   return fetch(url)
     .then((response) => response.json())
     .then(({ results }) => {
