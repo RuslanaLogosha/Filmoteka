@@ -1040,8 +1040,10 @@ footer {
     width: 170px;
   }
 }
-/* No CSS */
-/*# sourceMappingURL=backdrop.css.map */
+.modal {
+  background-color: #ffffff;
+}
+
 .basicLightbox {
   overflow: scroll;
 }

@@ -2467,13 +2467,10 @@ var global = arguments[3];
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/modalOpen.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = openModal;
+var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
 
 var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
 
@@ -2483,31 +2480,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function openModal(e) {
-  if (e.target.nodeName !== 'IMG') return;
-  var largeImg = e.target.src; //   const instance = basicLightbox.create(`
-  // 	<h1>Dynamic Content</h1>
-  // 	<p>You can set the content of the lightbox with JS.</p>
-  // `
-  // )
-
-  var instance = basicLightbox.create("<div><img src='".concat(largeImg, "' class='largeImg'></div>"));
-  instance.show();
-  window.addEventListener('keydown', closeModalHandler);
-
-  function closeModalHandler(e) {
-    e.code === 'Escape' && instance.close();
-    window.removeEventListener('keydown', closeModalHandler);
-    closeBtn.removeEventListener('click', closeModalHandler);
-  }
-}
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"js/modalFilmCard.js":[function(require,module,exports) {
-"use strict";
-
-var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
-
-var _modalOpen = _interopRequireDefault(require("./modalOpen.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -2516,22 +2488,22 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var cardСolection = document.querySelector('.card__colection'); // import nothingHere from '../images/nothingHere.jpg';
-// const baseUrl = 'https://api.themoviedb.org/3';
-// const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
-// export default {
-//     fetchMovieCardApi(movieId) {
-//         const movieCardPrmts = `/movie/${movieId}?api_key=${apiKey}&language=en-US`;
-//         return fetch(baseUrl + movieCardPrmts)
-//             .then(data => {
-//                 return data;
-//             })
-//             .catch(error => console.log(error));
-//     }
-// };
+// открытие модалки
+function openModal(e) {
+  var instance = basicLightbox.create(document.querySelector('.movie-card'));
+  instance.show();
+  window.addEventListener('keydown', closeModalHandler);
 
+  function closeModalHandler(e) {
+    e.code === 'Escape' && instance.close();
+    window.removeEventListener('keydown', closeModalHandler);
+  }
+}
+
+var cardСolection = document.querySelector('.card__colection');
+cardСolection.addEventListener('click', openModal);
 var refs = {
-  modalCard: document.querySelector('.js-modal')
+  modalCard: document.querySelector('.movie-card')
 };
 
 function insertCardItems(film) {
@@ -2542,8 +2514,7 @@ function insertCardItems(film) {
 }
 
 insertCardItems();
-cardСolection.addEventListener('click', _modalOpen.default);
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","./modalOpen.js":"js/modalOpen.js"}],"templates/card-films.hbs":[function(require,module,exports) {
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2734,35 +2705,49 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+var BASE_URL = "https://api.themoviedb.org/3";
+var KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
+
 var NewApiService = /*#__PURE__*/function () {
   function NewApiService() {
     _classCallCheck(this, NewApiService);
 
-    this.searchQuery = '';
+    this.searchQuery = "";
+    this.page = 1;
   }
 
   _createClass(NewApiService, [{
     key: "fetchTrendingArticles",
     value: function fetchTrendingArticles() {
-      var url = "https://api.themoviedb.org/3/trending/all/day?api_key=d91911ebb88751cf9e5c4b8fdf4412c9";
+      var url = "".concat(BASE_URL, "/trending/all/day?api_key=").concat(KEY);
       return fetch(url).then(function (response) {
         return response.json();
-      }).then(function (data) {
-        return data.results.map(function (d) {
-          return d;
-        });
+      }).then(function (_ref) {
+        var results = _ref.results;
+        return results;
       });
     }
   }, {
     key: "fetchFilmsSearch",
     value: function fetchFilmsSearch() {
-      var url = "https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=".concat(searchQuery);
+      var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&query=").concat(this.searchQuery);
       return fetch(url).then(function (response) {
         return response.json();
-      }).then(function (data) {
-        return data.results.map(function (d) {
-          return d;
-        });
+      }).then(function (_ref2) {
+        var results = _ref2.results;
+        return results;
+      });
+    }
+  }, {
+    key: "fetchPopularArticles",
+    value: function fetchPopularArticles() {
+      var url = "https://".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (_ref3) {
+        var results = _ref3.results;
+        console.log(results);
+        return results;
       });
     }
   }, {
@@ -3002,8 +2987,6 @@ require("./sass/main.scss");
 
 require("./js/modalFilmCard.js");
 
-require("./js/modalOpen.js");
-
 require("./js/cardFetc.js");
 
 require("./js/teamLightbox");
@@ -3011,7 +2994,7 @@ require("./js/teamLightbox");
 require("./js/pagination.js");
 
 require("../node_modules/basiclightbox/dist/basicLightbox.min.css");
-},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/modalOpen.js":"js/modalOpen.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3039,7 +3022,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59685" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63535" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
