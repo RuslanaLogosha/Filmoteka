@@ -1,41 +1,47 @@
-.continer_card {
-  width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .card__colection {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 60px;
-  padding-bottom: 50px;
-  margin: -15px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 .card__film {
-  margin: 15px;
-  width: 274px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    margin: 15px;
+    flex-basis: calc((100% - 2 * 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
-
-.card__title {
-  margin-top: 10px;
-  font-family: Roboto;
-  font-style: normal;
+.card__film > img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 402px;
+  @media screen and (min-width: $tablet) {
+    height: 398px;
+  }
+}
+.card__title,
+.card__text {
+  font-family: $mainFont;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.33;
+}
+.card__title {
   text-transform: uppercase;
-
-  color: #000000;
+  color: $dark;
 }
 .card__text {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  /* or 133% */
-
-  color: #ff6b08;
+  color: $accentColor;
 }
