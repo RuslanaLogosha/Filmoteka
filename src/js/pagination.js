@@ -69,7 +69,7 @@ function displaySearchListByPage(wrapper, page, searchQuery) {
   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
 }
 
-function renderPagination(totalPages, listItems, callback, searchQuery) {
+export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
   currentPage = 1;
 
