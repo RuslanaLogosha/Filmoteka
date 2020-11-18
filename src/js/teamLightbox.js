@@ -1,18 +1,18 @@
-import * as basicLightbox from 'basiclightbox';
-import ruslanaUrl from '../images/team-ruslana.jpeg';
-import olgaUrl from '../images/team-olga.jpg';
-import dariaUrl from '../images/team-daria.jpeg';
-import denisUrl from '../images/team-denis.jpeg';
-import ihorUrl from '../images/team-ihor.jpg';
-import katyaUrl from '../images/team-katya.jpg';
-import vladymyrUrl from '../images/team-vladymyr.jpeg';
-import aleksandrUrl from '../images/team-aleksandr.jpg';
-import spriteUrl from '../images/sprite.svg';
+import * as basicLightbox from "basiclightbox";
+import ruslanaUrl from "../images/team-ruslana.jpeg";
+import olgaUrl from "../images/team-olga.jpeg";
+import dariaUrl from "../images/team-daria.jpeg";
+import denisUrl from "../images/team-denis.jpeg";
+import ihorUrl from "../images/team-ihor.jpeg";
+import katyaUrl from "../images/team-katya.jpeg";
+import vladymyrUrl from "../images/team-vladymyr.jpeg";
+import aleksandrUrl from "../images/team-aleksandr.jpg";
+import spriteUrl from "../images/sprite.svg";
 
 const markup = `<div class="team-wrapper"><div class="team-card">
     <img src="${ruslanaUrl}" alt="Ruslana" class="team-image">
     <p class="team-name">Ruslana</p>
-    <p class="team-role">Team Leader</p>
+    <p class="team-role">Team Lead</p>
     <a href="https://github.com/RuslanaLogosha" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
       <use href="${spriteUrl}#github"></use>
     </svg></a>
@@ -73,10 +73,10 @@ const markup = `<div class="team-wrapper"><div class="team-card">
       <use href="${spriteUrl}#github"></use>
     </svg></a>
 </div></div>`;
-const container = document.querySelector('.js-team-modal');
+const container = document.querySelector(".js-team-modal");
 const markup2 = `<img src="${katyaUrl}"/>`;
 
-container.addEventListener('click', openModal);
+container.addEventListener("click", openModal);
 
 function teamModalWindow(data) {
   return basicLightbox.create(data);
