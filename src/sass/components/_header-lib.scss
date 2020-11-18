@@ -118,6 +118,13 @@
   border: 1px solid $accentColor;
 }
 
+//добавила для кнопок в модальном окне
+.storage__input ~ .storage__btn {
+  background-color: $white;
+  border: 1px solid $dark;
+  color: $dark;
+}
+
 // nav
 
 .side-nav--lib {
