@@ -1,10 +1,6 @@
-<li class="cardItem__list">
+<div class="modal-card">
     <div class="cardItem__image">
-        {{#if poster_path}}
         <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}" />
-        {{else}}
-        <img src="{{nothingHere}}" alt="{{title}}" />
-        {{/if}}
     </div>
 
     <div class=" cardItem__wrapper">
@@ -41,4 +37,4 @@
             </button>
         </div>
     </div>
-</li>
+</div>
