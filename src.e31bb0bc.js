@@ -189,12 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/header-bg-modal-mobile.jpg":[["header-bg-modal-mobile.22f8232e.jpg","images/header-bg-modal-mobile.jpg"],"images/header-bg-modal-mobile.jpg"],"./../images/header-bg-modal-mobile@2x.jpg":[["header-bg-modal-mobile@2x.db48d55b.jpg","images/header-bg-modal-mobile@2x.jpg"],"images/header-bg-modal-mobile@2x.jpg"],"./../images/header-bg-modal-tablet.jpg":[["header-bg-modal-tablet.f7cd343a.jpg","images/header-bg-modal-tablet.jpg"],"images/header-bg-modal-tablet.jpg"],"./../images/header-bg-modal-desktop.jpg":[["header-bg-modal-desktop.8a7384dd.jpg","images/header-bg-modal-desktop.jpg"],"images/header-bg-modal-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"sass/components/modalFilmCard.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/header-bg-modal-mobile.jpg":[["header-bg-modal-mobile.22f8232e.jpg","images/header-bg-modal-mobile.jpg"],"images/header-bg-modal-mobile.jpg"],"./../images/header-bg-modal-mobile@2x.jpg":[["header-bg-modal-mobile@2x.db48d55b.jpg","images/header-bg-modal-mobile@2x.jpg"],"images/header-bg-modal-mobile@2x.jpg"],"./../images/header-bg-modal-tablet.jpg":[["header-bg-modal-tablet.f7cd343a.jpg","images/header-bg-modal-tablet.jpg"],"images/header-bg-modal-tablet.jpg"],"./../images/header-bg-modal-desktop.jpg":[["header-bg-modal-desktop.8a7384dd.jpg","images/header-bg-modal-desktop.jpg"],"images/header-bg-modal-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2462,12 +2457,56 @@ var templateFunction = _handlebars.default.template({
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../node_modules/basiclightbox/dist/basicLightbox.min.js":[function(require,module,exports) {
+var define;
+var global = arguments[3];
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).basicLightbox=e()}}((function(){return function e(n,t,o){function r(c,u){if(!t[c]){if(!n[c]){var s="function"==typeof require&&require;if(!u&&s)return s(c,!0);if(i)return i(c,!0);var a=new Error("Cannot find module '"+c+"'");throw a.code="MODULE_NOT_FOUND",a}var l=t[c]={exports:{}};n[c][0].call(l.exports,(function(e){return r(n[c][1][e]||e)}),l,l.exports,e,n,t,o)}return t[c].exports}for(var i="function"==typeof require&&require,c=0;c<o.length;c++)r(o[c]);return r}({1:[function(e,n,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.create=t.visible=void 0;var o=function(e){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=document.createElement("div");return t.innerHTML=e.trim(),!0===n?t.children:t.firstChild},r=function(e,n){var t=e.children;return 1===t.length&&t[0].tagName===n},i=function(e){return null!=(e=e||document.querySelector(".basicLightbox"))&&!0===e.ownerDocument.body.contains(e)};t.visible=i;t.create=function(e,n){var t=function(e,n){var t=o('\n\t\t<div class="basicLightbox '.concat(n.className,'">\n\t\t\t<div class="basicLightbox__placeholder" role="dialog"></div>\n\t\t</div>\n\t')),i=t.querySelector(".basicLightbox__placeholder");e.forEach((function(e){return i.appendChild(e)}));var c=r(i,"IMG"),u=r(i,"VIDEO"),s=r(i,"IFRAME");return!0===c&&t.classList.add("basicLightbox--img"),!0===u&&t.classList.add("basicLightbox--video"),!0===s&&t.classList.add("basicLightbox--iframe"),t}(e=function(e){var n="string"==typeof e,t=e instanceof HTMLElement==!0;if(!1===n&&!1===t)throw new Error("Content must be a DOM element/node or string");return!0===n?Array.from(o(e,!0)):"TEMPLATE"===e.tagName?[e.content.cloneNode(!0)]:Array.from(e.children)}(e),n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(null==(e=Object.assign({},e)).closable&&(e.closable=!0),null==e.className&&(e.className=""),null==e.onShow&&(e.onShow=function(){}),null==e.onClose&&(e.onClose=function(){}),"boolean"!=typeof e.closable)throw new Error("Property `closable` must be a boolean");if("string"!=typeof e.className)throw new Error("Property `className` must be a string");if("function"!=typeof e.onShow)throw new Error("Property `onShow` must be a function");if("function"!=typeof e.onClose)throw new Error("Property `onClose` must be a function");return e}(n)),c=function(e){return!1!==n.onClose(u)&&function(e,n){return e.classList.remove("basicLightbox--visible"),setTimeout((function(){return!1===i(e)||e.parentElement.removeChild(e),n()}),410),!0}(t,(function(){if("function"==typeof e)return e(u)}))};!0===n.closable&&t.addEventListener("click",(function(e){e.target===t&&c()}));var u={element:function(){return t},visible:function(){return i(t)},show:function(e){return!1!==n.onShow(u)&&function(e,n){return document.body.appendChild(e),setTimeout((function(){requestAnimationFrame((function(){return e.classList.add("basicLightbox--visible"),n()}))}),10),!0}(t,(function(){if("function"==typeof e)return e(u)}))},close:c};return u}},{}]},{},[1])(1)}));
+},{}],"../node_modules/basiclightbox/dist/basicLightbox.min.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/modalOpen.js":[function(require,module,exports) {
 "use strict";
 
-require("../sass/components/modalFilmCard.scss");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = openModal;
 
-var _modalFilmCard2 = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+require("basiclightbox/dist/basicLightbox.min.css");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function openModal(e) {
+  if (e.target.nodeName !== 'IMG') return;
+  var largeImg = e.target.src; //   const instance = basicLightbox.create(`
+  // 	<h1>Dynamic Content</h1>
+  // 	<p>You can set the content of the lightbox with JS.</p>
+  // `
+  // )
+
+  var instance = basicLightbox.create("<div><img src='".concat(largeImg, "' class='largeImg'></div>"));
+  instance.show();
+  window.addEventListener('keydown', closeModalHandler);
+
+  function closeModalHandler(e) {
+    e.code === 'Escape' && instance.close();
+    window.removeEventListener('keydown', closeModalHandler);
+    closeBtn.removeEventListener('click', closeModalHandler);
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"js/modalFilmCard.js":[function(require,module,exports) {
+"use strict";
+
+var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
+
+var _modalOpen = _interopRequireDefault(require("./modalOpen.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2477,7 +2516,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// import nothingHere from '../images/nothingHere.jpg';
+var cardСolection = document.querySelector('.card__colection'); // import nothingHere from '../images/nothingHere.jpg';
 // const baseUrl = 'https://api.themoviedb.org/3';
 // const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 // export default {
@@ -2490,6 +2529,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //             .catch(error => console.log(error));
 //     }
 // };
+
 var refs = {
   modalCard: document.querySelector('.js-modal')
 };
@@ -2497,18 +2537,481 @@ var refs = {
 function insertCardItems(film) {
   var copyFilm = _objectSpread({}, film);
 
-  var markup = (0, _modalFilmCard2.default)(copyFilm);
+  var markup = (0, _modalFilmCard.default)(copyFilm);
   refs.modalCard.insertAdjacentHTML('beforeend', markup);
 }
 
 insertCardItems();
-},{"../sass/components/modalFilmCard.scss":"sass/components/modalFilmCard.scss","../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs"}],"index.js":[function(require,module,exports) {
+cardСolection.addEventListener('click', _modalOpen.default);
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","./modalOpen.js":"js/modalOpen.js"}],"templates/card-films.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var templateFunction = _handlebars.default.template({
+  "1": function _(container, depth0, helpers, partials, data) {
+    var helper,
+        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+        alias2 = container.hooks.helperMissing,
+        alias3 = "function",
+        alias4 = container.escapeExpression,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return " <li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 37
+        },
+        "end": {
+          "line": 2,
+          "column": 43
+        }
+      }
+    }) : helper)) + "'>\n    <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "poster_path",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 45
+        },
+        "end": {
+          "line": 3,
+          "column": 60
+        }
+      }
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 67
+        },
+        "end": {
+          "line": 3,
+          "column": 76
+        }
+      }
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "name",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 77
+        },
+        "end": {
+          "line": 3,
+          "column": 85
+        }
+      }
+    }) : helper)) + "\" width=\"100%\" />\n      <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 30
+        },
+        "end": {
+          "line": 4,
+          "column": 39
+        }
+      }
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "name",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 40
+        },
+        "end": {
+          "line": 4,
+          "column": 48
+        }
+      }
+    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + alias4((helper = (helper = lookupProperty(helpers, "genre_ids") || (depth0 != null ? lookupProperty(depth0, "genre_ids") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "genre_ids",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 16
+        },
+        "end": {
+          "line": 6,
+          "column": 29
+        }
+      }
+    }) : helper)) + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+      "name": "release_date",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 45
+        },
+        "end": {
+          "line": 6,
+          "column": 61
+        }
+      }
+    }) : helper)) + "</span>\n       </p>\n </li>\n";
+  },
+  "compiler": [8, ">= 4.3.0"],
+  "main": function main(container, depth0, helpers, partials, data) {
+    var stack1,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return ((stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
+      "name": "each",
+      "hash": {},
+      "fn": container.program(1, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 9
+        }
+      }
+    })) != null ? stack1 : "") + "\n";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/apiServis.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var NewApiService = /*#__PURE__*/function () {
+  function NewApiService() {
+    _classCallCheck(this, NewApiService);
+
+    this.searchQuery = '';
+  }
+
+  _createClass(NewApiService, [{
+    key: "fetchTrendingArticles",
+    value: function fetchTrendingArticles() {
+      var url = "https://api.themoviedb.org/3/trending/all/day?api_key=d91911ebb88751cf9e5c4b8fdf4412c9";
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        return data.results.map(function (d) {
+          return d;
+        });
+      });
+    }
+  }, {
+    key: "fetchFilmsSearch",
+    value: function fetchFilmsSearch() {
+      var url = "https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=".concat(searchQuery);
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        return data.results.map(function (d) {
+          return d;
+        });
+      });
+    }
+  }, {
+    key: "query",
+    get: function get() {
+      return this.searchQuery;
+    },
+    set: function set(newQuery) {
+      this.searchQuery = newQuery;
+    }
+  }]);
+
+  return NewApiService;
+}();
+
+exports.default = NewApiService;
+},{}],"js/cardFetc.js":[function(require,module,exports) {
+"use strict";
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+var _apiServis = _interopRequireDefault(require("./apiServis"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var refs = {
+  cardContainer: document.querySelector('.js-card')
+};
+var newApiService = new _apiServis.default();
+render();
+
+function render() {
+  newApiService.fetchTrendingArticles().then(renderFilmsCard);
+}
+
+function renderFilmsCard(articles) {
+  refs.cardContainer.insertAdjacentHTML('beforeend', (0, _cardFilms.default)(articles)); // console.log(filmsCardTpl(articles));
+}
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
+module.exports = "/team-ruslana.5ee08793.jpeg";
+},{}],"images/team-olga.jpg":[function(require,module,exports) {
+module.exports = "/team-olga.00cc36e9.jpg";
+},{}],"images/team-daria.jpeg":[function(require,module,exports) {
+module.exports = "/team-daria.ee65a5d2.jpeg";
+},{}],"images/team-denis.jpeg":[function(require,module,exports) {
+module.exports = "/team-denis.0a5b0591.jpeg";
+},{}],"images/team-ihor.jpg":[function(require,module,exports) {
+module.exports = "/team-ihor.ab333400.jpg";
+},{}],"images/team-katya.jpg":[function(require,module,exports) {
+module.exports = "/team-katya.af4ea0b4.jpg";
+},{}],"images/team-vladymyr.jpeg":[function(require,module,exports) {
+module.exports = "/team-vladymyr.bc76483f.jpeg";
+},{}],"images/team-aleksandr.jpg":[function(require,module,exports) {
+module.exports = "/team-aleksandr.cfd8cc78.jpg";
+},{}],"images/sprite.svg":[function(require,module,exports) {
+module.exports = "/sprite.5ec50489.svg";
+},{}],"js/teamLightbox.js":[function(require,module,exports) {
+"use strict";
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+var _teamRuslana = _interopRequireDefault(require("../images/team-ruslana.jpeg"));
+
+var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpg"));
+
+var _teamDaria = _interopRequireDefault(require("../images/team-daria.jpeg"));
+
+var _teamDenis = _interopRequireDefault(require("../images/team-denis.jpeg"));
+
+var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpg"));
+
+var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpg"));
+
+var _teamVladymyr = _interopRequireDefault(require("../images/team-vladymyr.jpeg"));
+
+var _teamAleksandr = _interopRequireDefault(require("../images/team-aleksandr.jpg"));
+
+var _sprite = _interopRequireDefault(require("../images/sprite.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Leader</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+var container = document.querySelector('.js-team-modal');
+var markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
+container.addEventListener('click', openModal);
+
+function teamModalWindow(data) {
+  return basicLightbox.create(data);
+}
+
+function openModal(e) {
+  teamModalWindow(markup).show();
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpg":"images/team-olga.jpg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpg":"images/team-ihor.jpg","../images/team-katya.jpg":"images/team-katya.jpg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/pagination.js":[function(require,module,exports) {
+"use strict";
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var listItems = ["Film 1", "Film 2", "Film 3", "Film 4", "Film 5", "Film 6", "Film 7", "Film 8", "Film 9", "Film 10", "Film 11", "Film 12", "Film 13", "Film 14", "Film 15", "Film 16", "Film 17", "Film 18", "Film 19", "Film 20", "Film 21", "Film 22", "Film 23", "Film 24", "Film 25", "Film 26", "Film 27", "Film 28", "Film 29", "Film 30", "Film 31", "Film 32", "Film 33", "Film 34", "Film 35", "Film 36", "Film 37", "Film 38", "Film 39", "Film 40", "Film 41", "Film 42", "Film 43", "Film 44", "Film 45", "Film 46", "Film 47", "Film 48"]; // const listElement = document.getElementById("list");
+
+var listElement = document.querySelector(".js-card");
+var paginationElement = document.getElementById("pagination");
+var arrowLeft = document.querySelector(".arrow_left");
+var arrowRight = document.querySelector(".arrow_right");
+var currentPage = 1;
+var pagesOnWindow = 5; // mobile = 4, laptop = 8, desctop = 9; 20?
+
+var rows = 5;
+var allPageCount = Math.ceil(listItems.length / rows);
+
+function setupPagination(items, wrapper, rowsPerPage) {
+  wrapper.innerHTML = "";
+  var pageCount = Math.ceil(items.length / rowsPerPage);
+  var maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
+  var maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
+
+  if (maxLeftPage < 1) {
+    maxLeftPage = 1;
+    maxRightPage = pagesOnWindow;
+  }
+
+  if (maxRightPage > allPageCount) {
+    maxLeftPage = allPageCount - (pagesOnWindow - 1);
+
+    if (maxLeftPage < 1) {
+      maxLeftPage = 1;
+    }
+
+    maxRightPage = allPageCount;
+  }
+
+  for (var i = 1; i <= allPageCount; i++) {
+    if (maxLeftPage !== 1 && i == 1) {
+      var btn = paginationButton(i, items);
+      wrapper.appendChild(btn);
+    }
+
+    if (maxRightPage !== allPageCount && i == allPageCount) {
+      var _btn = paginationButton(i, items);
+
+      wrapper.appendChild(_btn);
+    }
+
+    if (i >= maxLeftPage && i <= maxRightPage) {
+      var _btn2 = paginationButton(i, items);
+
+      wrapper.appendChild(_btn2);
+    }
+
+    if (allPageCount >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
+      var threeDotsEl = addThreeDotsBlock();
+      wrapper.insertBefore(threeDotsEl, wrapper[wrapper.length - 2]);
+    }
+
+    if (pageCount >= 7 && i == pageCount - 1 && currentPage !== pageCount && currentPage !== pageCount - 2 && currentPage !== pageCount - 1) {
+      var _threeDotsEl = addThreeDotsBlock();
+
+      wrapper.insertBefore(_threeDotsEl, wrapper[1]);
+    }
+  }
+}
+
+function addThreeDotsBlock() {
+  var threeDots = document.createElement("div");
+  threeDots.classList.add("threeDots");
+  threeDots.innerText = "...";
+  return threeDots;
+}
+
+function paginationButton(page, items) {
+  var button = document.createElement("button");
+  button.innerText = page;
+  if (currentPage == page) button.classList.add("active");
+  button.addEventListener("click", function () {
+    currentPage = page; // displayList(items, listElement, rows, currentPage);
+
+    var current_btn = document.querySelector(".pagenumbers button.active");
+    current_btn.classList.remove("active");
+    button.classList.add("active");
+    setupPagination(listItems, paginationElement, rows);
+  });
+  return button;
+}
+
+function onArrowLeftClick() {
+  if (currentPage > 1) {
+    currentPage--;
+    setupPagination(listItems, paginationElement, rows); // displayList(listItems, listElement, rows, currentPage);
+  }
+}
+
+function onArrowRightClick() {
+  if (currentPage < allPageCount) {
+    currentPage++;
+    setupPagination(listItems, paginationElement, rows); // displayList(listItems, listElement, rows, currentPage);
+  }
+}
+
+setupPagination(listItems, paginationElement, rows);
+arrowLeft.addEventListener("click", onArrowLeftClick);
+arrowRight.addEventListener("click", onArrowRightClick);
+/*
+функция для добавления контента на страницу
+параментры:
+items = массив с данными для отрисовки
+wrapper = родитель, куда полетит рендер
+rowsPerPage = количество элементов на странице
+page = текущая страница выбранная в pagination
+*/
+
+function displayList(items, wrapper, rowsPerPage, page) {
+  wrapper.innerHTML = "";
+  page--;
+  var start = rowsPerPage * page;
+  var end = start + rowsPerPage; // обрезанный массив элементов текущей страницы
+
+  var paginatedItems = items.slice(start, end);
+
+  for (var i = 0; i < paginatedItems.length; i++) {
+    var item = paginatedItems[i];
+    var itemElement = document.createElement("div");
+    itemElement.classList.add("item");
+    itemElement.innerText = item;
+    wrapper.appendChild(itemElement);
+  }
+} // displayList(listItems, listElement, rows, currentPage);
+},{"../templates/card-films.hbs":"templates/card-films.hbs"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
 
 require("./js/modalFilmCard.js");
-},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/modalOpen.js");
+
+require("./js/cardFetc.js");
+
+require("./js/teamLightbox");
+
+require("./js/pagination.js");
+
+require("../node_modules/basiclightbox/dist/basicLightbox.min.css");
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/modalOpen.js":"js/modalOpen.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2536,7 +3039,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61042" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59685" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
