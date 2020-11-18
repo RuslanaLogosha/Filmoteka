@@ -1,5 +1,5 @@
-import filmsCardTpl from '../templates/card-films.hbs';
-import NewApiService from './apiServis';
+import filmsCardTpl from "../templates/card-films.hbs";
+import NewApiService from "./apiServis";
 
 const refs = {
   cardContainer: document.querySelector('.js-card'),
