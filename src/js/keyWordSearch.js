@@ -17,6 +17,7 @@ function onKeyWordSearch(e) {
   e.preventDefault();
   filmApiService.query = e.currentTarget.elements.query.value;
   if (filmApiService.query === '') {
+    placeholder.spinner.close();
     return;
   }
 
