@@ -21,25 +21,22 @@ const getMovies = async idList => {
   return await Promise.all(promises);
 };
 
+const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
 const refs = {
-  btn: document.querySelector('[name=storage-btn]'),
+  storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card-library'),
-  watchedButton: document.querySelector('#js-WatchedButton'),
-  queueButton: document.querySelector('#js-QueueButton'),
 };
 
-//Заглушка
-if (refs.btn.checked) renderMovies('Watched');
-localStorageApi.save('Queue', [550, 551, 552, 553, 554, 557, 558, 559]);
-refs.queueButton.addEventListener('click', e => {
-  renderMovies('Queue');
-});
-refs.watchedButton.addEventListener('click', e => {
-  renderMovies('Watched');
-});
-//Заглушка
 
-function renderMovies(key) {
+renderMovies();
+
+refs.storageList.addEventListener('change', (e) => { 
+  renderMovies();
+});
+
+function renderMovies() {
+
+  const key = getCheckedLiblary(CHOICE_STORAGE_BTN_NAME);
   const queueIds = localStorageApi.getMovies(key);
 
   if (queueIds.length) {
@@ -47,6 +44,9 @@ function renderMovies(key) {
   } else {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
   }
+}
+function getCheckedLiblary(name){
+ return document.querySelector(`[name=${name}]:checked`).value;
 }
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
