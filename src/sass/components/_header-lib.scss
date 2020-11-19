@@ -2,7 +2,6 @@
 
 .header-section-lib {
   padding-top: 58px;
-  padding-bottom: 65px;
 }
 
 // bg
@@ -12,6 +11,7 @@
   margin-right: auto;
 
   max-width: $mobile;
+  min-height: 230px;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url(../images/header-bg-lib-mobile.jpg);
@@ -123,6 +123,14 @@
   background-color: $white;
   border: 1px solid $dark;
   color: $dark;
+}
+
+.storage__input ~ .storage__btn {
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    border: 1px solid $accentColor;
+  }
 }
 
 // nav

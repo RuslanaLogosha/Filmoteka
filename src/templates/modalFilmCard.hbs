@@ -15,13 +15,16 @@
         <p class="cardItem-Title cardItem_text">
             Original Title<span class="cardItem__title_data">{{original_title}}</span>
         </p>
+        <div class="genres">
+            <p class="cardItem__genre cardItem_text">
+                Genre
+            </p>
+            <p class="cardItem__genreList">{{#each genres}}
+                <span class="cardItem__genre_data">{{this.name}}</span>
+                {{/each}}</p>
 
-        <p class="cardItem__genre cardItem_text">
-            Genre
-        </p>
-        <p class="cardItem__genreList">{{#each genres}}
-            <span class="cardItem__genre_data">{{this.name}}</span>
-            {{/each}}</p>
+        </div>
+
 
 
         <p class="cardItem__about">About</p>
