@@ -2,6 +2,7 @@ import filmsCardTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 import ApiService from './apiServis';
 import placeholder from './spinner';
+import createTrailerLink from './trailers.js';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -29,31 +30,47 @@ function onKeyWordSearch(e) {
 // renders main (first) page after search *on submit*
 function render(searchQuery) {
   filmApiService.query = searchQuery;
-  filmApiService.insertGenresToSearchObj().then(renderFilmsCard);
+  filmApiService
+    .insertGenresToSearchObj()
+    .then(renderFilmsCard)
+    .catch(err => {
+      console.log('error in function render');
+    });
 }
 
 // function for insertion of markup
 function renderFilmsCard(articles) {
   listElement.innerHTML = filmsCardTpl(articles);
+  createTrailerLink();
 }
 
 // renders movies by appropriate page & search query
 function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+  fetchSearchFilmsByPage(page, searchQuery)
+    .then(renderFilmsCard)
+    .catch(err => {
+      console.log('error in function displaySearchListByPage');
+    });
 }
 
 // renders pagination for main (first) fetch
 function fetchDataOfSearchFilms(searchQuery) {
   filmApiService.query = searchQuery;
-  filmApiService.fetchSearchArticlesPages().then(results => {
-    renderPagination(
-      results.total_pages,
-      results.results,
-      displaySearchListByPage,
-      searchQuery,
-    );
-  });
+
+  filmApiService
+    .fetchSearchArticlesPages()
+    .then(results => {
+      renderPagination(
+        results.total_pages,
+        results.results,
+        displaySearchListByPage,
+        searchQuery,
+      );
+    })
+    .catch(err => {
+      console.log('error in function fetchDataOfSearchFilms');
+    });
 }
 
 // fetches search queries by appropriate page & search query

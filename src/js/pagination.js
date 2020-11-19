@@ -1,5 +1,6 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import placeholder from './spinner';
+import createTrailerLink from './trailers.js';
 
 const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
@@ -161,6 +162,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 
       button.classList.add('active');
       setupPagination(listItems, paginationElement, rows);
+      hideExtremeButtons(totalPages);
     });
 
     return button;
@@ -173,6 +175,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+    hideExtremeButtons(totalPages);
   }
 
   function onArrowRightClick() {
@@ -182,9 +185,33 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+    hideExtremeButtons(totalPages);
   }
 
   setupPagination(listItems, paginationElement, rows);
   arrowLeft.addEventListener('click', onArrowLeftClick);
   arrowRight.addEventListener('click', onArrowRightClick);
+  hideExtremeButtons(totalPages);
+}
+
+function hideExtremeButtons(totalPages) {
+  if (
+    /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    // код для мобильных устройств
+    const allPaginationBtns = document.querySelectorAll('#pagination button');
+    if (currentPage > 3) {
+      allPaginationBtns[0].classList.add('hide');
+    } else {
+      allPaginationBtns[0].classList.remove('hide');
+    }
+
+    if (currentPage < totalPages - 3) {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.add('hide');
+    } else {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
+    }
+  }
 }

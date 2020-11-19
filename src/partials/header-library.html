@@ -1,14 +1,14 @@
-<header class="header-bg-lib">
-  <div class="container">
-    <div class="header-section-lib">
-      <nav class="navigation">
-        <a href="/index.html" class="navigation__logo logo"
-          ><svg class="logo__icon" width="24" height="24">
-            <use href="./images/sprite.svg#logo"></use>
-          </svg>
-          <span class="logo__name">Filmoteka</span>
-        </a>
-
+<div class="endless-bg-color">
+  <header class="header-bg-lib">
+    <div class="container">
+      <div class="header-section-lib">
+        <nav class="navigation">
+          <a href="/index.html" class="navigation__logo logo"
+            ><svg class="logo__icon" width="24" height="24">
+              <use href="./images/sprite.svg#logo"></use>
+            </svg>
+            <span class="logo__name">Filmoteka</span>
+          </a>
         <ul class="side-nav side-nav--lib">
           <li class="side-nav__item">
             <a href="/index.html" class="side-nav__link">Home</a>
@@ -48,8 +48,38 @@
               </label>
             </li>
           </ul>
-        </div>
-      </form>
+        </nav>
+
+        <form>
+          <div role="group">
+            <ul class="storage">
+              <li class="storage__item">
+                <label class="storage__label">
+                  <input
+                    type="radio"
+                    name="storage-btn"
+                    class="storage__input visuallyhidden"
+                    checked
+                  />
+                  <span class="storage__btn" id="js-WatchedButton"
+                    >Watched</span
+                  >
+                </label>
+              </li>
+              <li class="storage__item">
+                <label class="storage__label">
+                  <input
+                    type="radio"
+                    name="storage-btn"
+                    class="storage__input visuallyhidden"
+                  />
+                  <span class="storage__btn" id="js-QueueButton">Queue</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
+</div>
