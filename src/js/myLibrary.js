@@ -30,9 +30,7 @@ const refs = {
 
 renderMovies();
 
-refs.storageList.addEventListener('change', (e) => { 
-  renderMovies();
-});
+refs.storageList.addEventListener('change', renderMovies);
 
 function renderMovies() {
 

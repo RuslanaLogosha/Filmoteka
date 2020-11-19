@@ -1,4 +1,4 @@
-<div class="modal-card">
+<div class="modal-card" data-action="{{id}}">
     <div class="cardItem__image">
         <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}" />
     </div>
@@ -38,13 +38,13 @@
             <ul class="storage">
                 <li class="storage__item">
                     <label class="storage__label ">
-                        <input type="checkbox" class="storage__input visuallyhidden" />
+                        <input type="checkbox" value="Watched" class="storage__input visuallyhidden" />
                         <span class="storage__btn" id="js-WatchedButton">Watched</span>
                     </label>
                 </li>
                 <li class="storage__item">
                     <label class="storage__label ">
-                        <input type="checkbox" class="storage__input  visuallyhidden" />
+                        <input type="checkbox" value="Queue" class="storage__input  visuallyhidden" />
                         <span class="storage__btn" id="js-QueueButton">Queue</span>
                     </label>
                 </li>
