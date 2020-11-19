@@ -5,14 +5,6 @@ export default class NewApiService {
     this.searchQuery = '';
     this.page = 1;
   }
-  fetchTrendingArticles() {
-    const url = `${BASE_URL}/trending/all/day?api_key=${KEY}`;
-    return fetch(url)
-      .then(response => response.json())
-      .then(({ results }) => {
-        return results;
-      });
-  }
   fetchPopularArticles() {
     const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
     return fetch(url)
@@ -21,8 +13,20 @@ export default class NewApiService {
         return results;
       });
   }
+  fetchSearchArticles() {
+    const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${this.page}&query=${this.searchQuery}`;
+    return fetch(url)
+      .then(response => response.json())
+      .then(({ results }) => {
+        return results;
+      });
+  }
   fetchPopularArticlesPages() {
     const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
+    return fetch(url).then(response => response.json());
+  }
+  fetchSearchArticlesPages() {
+    const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${this.page}&query=${this.searchQuery}`;
     return fetch(url).then(response => response.json());
   }
   fetchGenres() {
@@ -35,6 +39,19 @@ export default class NewApiService {
   }
   insertGenresToMovieObj() {
     return this.fetchPopularArticles().then(data => {
+      return this.fetchGenres().then(genresList => {
+        return data.map(movie => ({
+          ...movie,
+          release_date: movie.release_date.split('-')[0],
+          genre_ids: movie.genre_ids
+            .map(id => genresList.filter(el => el.id === id))
+            .flat(),
+        }));
+      });
+    });
+  }
+  insertGenresToSearchObj() {
+    return this.fetchSearchArticles().then(data => {
       return this.fetchGenres().then(genresList => {
         return data.map(movie => ({
           ...movie,

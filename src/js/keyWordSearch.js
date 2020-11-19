@@ -1,31 +1,15 @@
 import filmsCardTpl from '../templates/card-films.hbs';
-import regeneratorRuntime from 'regenerator-runtime';
-import fetchFilmsSearch from './pagination';
+import { renderPagination } from './pagination';
+import ApiService from './apiServis';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
   cardContainer: document.querySelector('.js-card'),
 };
-refs.searchForm.addEventListener('submit', onKeyWordSearch);
-
-class ApiService {
-  constructor() {
-    this.searchQuery = '';
-  }
-  async fetchFilms() {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=${this.searchQuery}`;
-    const films = await fetch(url);
-    const response = await films.json();
-    return response;
-  }
-  get query() {
-    return this.searchQuery;
-  }
-  set query(newQuery) {
-    this.searchQuery = newQuery;
-  }
-}
 const filmApiService = new ApiService();
+const listElement = document.querySelector('.js-card');
+
+refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
 function onKeyWordSearch(e) {
   e.preventDefault();
@@ -33,30 +17,45 @@ function onKeyWordSearch(e) {
   if (filmApiService.query === '') {
     return;
   }
-  console.log(filmApiService.query);
 
-  totalPagesCount();
-  onKeyWordRender();
-  fetchFilmsSearch(filmApiService.query);
+  render(filmApiService.query);
+  fetchDataOfSearchFilms(filmApiService.query);
+  e.currentTarget.elements.query.value = '';
 }
 
-async function totalPagesCount() {
-  const totalPages = await filmApiService.fetchFilms().then((data) => {
-    const numberOfPages = data.total_pages;
-    console.log(numberOfPages);
-    return totalPages;
+// renders main (first) page after search *on submit*
+function render(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.insertGenresToSearchObj().then(renderFilmsCard);
+}
+
+// function for insertion of markup
+function renderFilmsCard(articles) {
+  listElement.innerHTML = filmsCardTpl(articles);
+}
+
+// renders movies by appropriate page & search query
+function displaySearchListByPage(wrapper, page, searchQuery) {
+  wrapper.innerHTML = '';
+  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+}
+
+// renders pagination for main (first) fetch
+function fetchDataOfSearchFilms(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.fetchSearchArticlesPages().then(results => {
+    renderPagination(
+      results.total_pages,
+      results.results,
+      displaySearchListByPage,
+      searchQuery,
+    );
   });
 }
-async function onKeyWordRender() {
-  refs.cardContainer.innerHTML = '';
-  const renderMovies = await filmApiService
-    .fetchFilms()
-    .then(({ results }) => {
-      return results;
-    })
-    .then(appendMarkup);
-}
 
-function appendMarkup(cards) {
-  refs.cardContainer.insertAdjacentHTML('beforeend', filmsCardTpl(cards));
+// fetches search queries by appropriate page & search query
+function fetchSearchFilmsByPage(page, searchQuery) {
+  filmApiService.pageNum = page;
+  filmApiService.query = searchQuery;
+  return filmApiService.insertGenresToSearchObj();
 }

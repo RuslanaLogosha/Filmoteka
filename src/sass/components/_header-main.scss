@@ -73,6 +73,9 @@
 .search-field {
   width: 100%;
 
+  font-size: 14px;
+  line-height: 1.14;
+
   @media screen and (min-width: $tablet) {
     width: 336px;
   }
@@ -116,6 +119,9 @@
 .header-warning {
   position: absolute;
   top: 155px;
+
+  font-size: 14px;
+  line-height: 1.14;
 
   @media screen and (max-width: ($tablet - 1)) {
     max-width: ($mobile - 40);
