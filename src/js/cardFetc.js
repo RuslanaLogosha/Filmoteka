@@ -1,18 +1,48 @@
-import filmsCardTpl from "../templates/card-films.hbs";
-import NewApiService from "./apiServis";
+import filmsCardTpl from '../templates/card-films.hbs';
+import NewApiService from './apiServis';
+import { renderPagination } from './pagination';
 
-const refs = {
-  cardContainer: document.querySelector(".js-card"),
-};
+const listElement = document.querySelector('.js-card');
+const logoEl = document.querySelector('.js-main-logo');
 const newApiService = new NewApiService();
 
 render();
+fetchDataOfPopularFilms();
 
-function render() {
-  newApiService.fetchPopularArticles().then(renderFilmsCard);
+logoEl.addEventListener('click', onLogoClick);
+
+// page set to default with click on logotype without page refresh
+function onLogoClick(e) {
+  e.preventDefault();
+  render();
+  fetchDataOfPopularFilms();
 }
 
+// renders main (first) page
+function render() {
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard);
+}
+
+// function for insertion of markup
 function renderFilmsCard(articles) {
-  refs.cardContainer.insertAdjacentHTML("beforeend", filmsCardTpl(articles));
-  // console.log(filmsCardTpl(articles));
+  listElement.innerHTML = filmsCardTpl(articles);
+}
+
+// renders movies by appropriate page
+function displayList(wrapper, page) {
+  wrapper.innerHTML = '';
+  fetchPopularFilmsByPage(page).then(renderFilmsCard);
+}
+
+// renders pagination for main (first) fetch
+function fetchDataOfPopularFilms() {
+  newApiService.fetchPopularArticlesPages().then(results => {
+    renderPagination(results.total_pages, results.results, displayList);
+  });
+}
+
+// fetches popular movies by appropriate page
+function fetchPopularFilmsByPage(page) {
+  newApiService.pageNum = page;
+  return newApiService.insertGenresToMovieObj();
 }

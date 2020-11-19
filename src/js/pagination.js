@@ -10,32 +10,38 @@ let rows = 20;
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 
-fetchDataOfPopularFilms();
+// эту часть оставить закомментированной или удалить
+// рендер популярного вынесен в отдельную ф-ю
+// fetchDataOfPopularFilms();
 
-function fetchDataOfPopularFilms() {
-  const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
-  return fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((results) => {
-      renderPagination(results.total_pages, results.results, displayList);
-    });
-}
+// эту часть оставить закомментированной или удалить
+// рендер популярного вынесен в отдельную ф-ю
+// function fetchDataOfPopularFilms() {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
+//   return fetch(url)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((results) => {
+//       renderPagination(results.total_pages, results.results, displayList);
+//     });
+// }
 
-function fetchPopularFilmsByPage(page) {
-  const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .then(({ results }) => {
-      return results;
-    });
-}
+// эту часть оставить закомментированной или удалить
+// рендер популярного вынесен в отдельную ф-ю
+// function fetchPopularFilmsByPage(page) {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
+//   return fetch(url)
+//     .then((response) => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
 
 function fetchSearchFilmsByPage(page, searchQuery) {
   const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
   return fetch(url)
-    .then((response) => response.json())
+    .then(response => response.json())
     .then(({ results }) => {
       return results;
     });
@@ -44,13 +50,13 @@ function fetchSearchFilmsByPage(page, searchQuery) {
 export default function fetchFilmsSearch(searchQuery) {
   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
   return fetch(url)
-    .then((response) => response.json())
-    .then((results) => {
+    .then(response => response.json())
+    .then(results => {
       renderPagination(
         results.total_pages,
         results.results,
         displaySearchListByPage,
-        searchQuery
+        searchQuery,
       );
     });
 }
@@ -59,10 +65,12 @@ function renderFilmsCard(articles) {
   listElement.innerHTML = filmsCardTpl(articles);
 }
 
-function displayList(wrapper, page) {
-  wrapper.innerHTML = '';
-  fetchPopularFilmsByPage(page).then(renderFilmsCard);
-}
+// эту часть оставить закомментированной или удалить
+// рендер популярного вынесен в отдельную ф-ю
+// function displayList(wrapper, page) {
+//   wrapper.innerHTML = '';
+//   fetchPopularFilmsByPage(page).then(renderFilmsCard);
+// }
 
 function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';

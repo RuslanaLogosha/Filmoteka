@@ -11,6 +11,8 @@
   text-decoration: none;
 
   color: $svgColor;
+
+  cursor: pointer;
 }
 
 .logo__icon {
@@ -65,7 +67,7 @@
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
 
     position: absolute;
     bottom: -3px;
