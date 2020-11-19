@@ -1,6 +1,7 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import NewApiService from './apiServis';
 import { renderPagination } from './pagination';
+import createTrailerLink from './trailers.js';
 
 const listElement = document.querySelector('.js-card');
 const logoEl = document.querySelector('.js-main-logo');
@@ -31,6 +32,7 @@ function render() {
 // function for insertion of markup
 function renderFilmsCard(articles) {
   listElement.innerHTML = filmsCardTpl(articles);
+  createTrailerLink();
 }
 
 // renders movies by appropriate page

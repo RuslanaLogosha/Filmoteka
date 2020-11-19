@@ -1,5 +1,6 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import placeholder from './spinner';
+import createTrailerLink from './trailers.js';
 
 const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
