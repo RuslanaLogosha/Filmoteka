@@ -125,6 +125,14 @@
   color: $dark;
 }
 
+.storage__input ~ .storage__btn {
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    border: 1px solid $accentColor;
+  }
+}
+
 // nav
 
 .side-nav--lib {
