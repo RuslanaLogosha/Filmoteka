@@ -43,3 +43,5 @@ function fetchPopularFilmsByPage(page) {
   newApiService.pageNum = page;
   return newApiService.fetchPopularArticlesPages();
 }
+
+newApiService.insertGenrestoMovieObj().then(console.log);
