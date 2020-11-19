@@ -662,6 +662,18 @@ p {
   color: #ff6b08;
 }
 
+.card__vote_average {
+  display: inline-block;
+  margin-left: 3px;
+  background-color: #ff6b08;
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  line-height: 18px;
+}
+
 p {
   padding: 0;
   margin: 0;

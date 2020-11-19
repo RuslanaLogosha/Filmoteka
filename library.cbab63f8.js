@@ -3189,7 +3189,7 @@ const templateFunction = _handlebars.default.template({
           "column": 48
         }
       }
-    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genre_ids") : depth0, {
+    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -3202,7 +3202,7 @@ const templateFunction = _handlebars.default.template({
         },
         "end": {
           "line": 6,
-          "column": 82
+          "column": 51
         }
       }
     })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3212,19 +3212,31 @@ const templateFunction = _handlebars.default.template({
       "loc": {
         "start": {
           "line": 6,
-          "column": 98
+          "column": 67
         },
         "end": {
           "line": 6,
-          "column": 114
+          "column": 83
+        }
+      }
+    }) : helper)) + "</span> <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "vote_average",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 124
+        },
+        "end": {
+          "line": 6,
+          "column": 140
         }
       }
     }) : helper)) + "</span>\n       </p>\n </li>\n";
   },
   "2": function (container, depth0, helpers, partials, data) {
-    var stack1,
-        helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+    var helper,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
         return parent[propertyName];
@@ -3233,40 +3245,21 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return " " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(alias1, {
+    return " " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(depth0 != null ? depth0 : container.nullContext || {}, {
       "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 6,
-          "column": 36
+          "column": 33
         },
         "end": {
           "line": 6,
-          "column": 44
+          "column": 41
         }
       }
-    }) : helper)) + ((stack1 = lookupProperty(helpers, "unless").call(alias1, data && lookupProperty(data, "last"), {
-      "name": "unless",
-      "hash": {},
-      "fn": container.program(3, data, 0),
-      "inverse": container.noop,
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 44
-        },
-        "end": {
-          "line": 6,
-          "column": 73
-        }
-      }
-    })) != null ? stack1 : "");
-  },
-  "3": function (container, depth0, helpers, partials, data) {
-    return ",";
+    }) : helper)) + " ";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function (container, depth0, helpers, partials, data) {
@@ -3319,7 +3312,9 @@ const getMovies = async idList => {
   const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
   const promises = idList.map(id => {
     const url = "https://api.themoviedb.org/3/movie/".concat(id, "?api_key=").concat(key);
-    return fetch(url).then(r => r.json());
+    return fetch(url).then(r => r.json()).then(data => ({ ...data,
+      release_date: data.release_date.split('-')[0]
+    }));
   });
   return await Promise.all(promises);
 };
@@ -3393,7 +3388,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65476" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49659" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

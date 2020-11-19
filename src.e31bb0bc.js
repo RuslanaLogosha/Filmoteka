@@ -2559,7 +2559,7 @@ const templateFunction = _handlebars.default.template({
           "column": 48
         }
       }
-    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genre_ids") : depth0, {
+    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -2572,7 +2572,7 @@ const templateFunction = _handlebars.default.template({
         },
         "end": {
           "line": 6,
-          "column": 82
+          "column": 51
         }
       }
     })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2582,19 +2582,31 @@ const templateFunction = _handlebars.default.template({
       "loc": {
         "start": {
           "line": 6,
-          "column": 98
+          "column": 67
         },
         "end": {
           "line": 6,
-          "column": 114
+          "column": 83
+        }
+      }
+    }) : helper)) + "</span> <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "vote_average",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 124
+        },
+        "end": {
+          "line": 6,
+          "column": 140
         }
       }
     }) : helper)) + "</span>\n       </p>\n </li>\n";
   },
   "2": function (container, depth0, helpers, partials, data) {
-    var stack1,
-        helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+    var helper,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
         return parent[propertyName];
@@ -2603,40 +2615,21 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return " " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(alias1, {
+    return " " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(depth0 != null ? depth0 : container.nullContext || {}, {
       "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 6,
-          "column": 36
+          "column": 33
         },
         "end": {
           "line": 6,
-          "column": 44
+          "column": 41
         }
       }
-    }) : helper)) + ((stack1 = lookupProperty(helpers, "unless").call(alias1, data && lookupProperty(data, "last"), {
-      "name": "unless",
-      "hash": {},
-      "fn": container.program(3, data, 0),
-      "inverse": container.noop,
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 44
-        },
-        "end": {
-          "line": 6,
-          "column": 73
-        }
-      }
-    })) != null ? stack1 : "");
-  },
-  "3": function (container, depth0, helpers, partials, data) {
-    return ",";
+    }) : helper)) + " ";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function (container, depth0, helpers, partials, data) {
@@ -2728,7 +2721,7 @@ class NewApiService {
       return this.fetchGenres().then(genresList => {
         return data.map(movie => ({ ...movie,
           release_date: movie.release_date.split('-')[0],
-          genre_ids: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+          genres: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
         }));
       });
     });
@@ -2739,7 +2732,7 @@ class NewApiService {
       return this.fetchGenres().then(genresList => {
         return data.map(movie => ({ ...movie,
           release_date: movie.release_date.split('-')[0],
-          genre_ids: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+          genres: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
         }));
       });
     });
@@ -2764,7 +2757,35 @@ class NewApiService {
 }
 
 exports.default = NewApiService;
-},{}],"js/pagination.js":[function(require,module,exports) {
+},{}],"js/spinner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
+const spinner = basicLightbox.create(markup);
+var _default = {
+  spinner
+}; // ПОКАЗАТЬ спиннер - spinner.show();
+// ЗАКРЫТЬ  спиннер - spinner.close();
+// // Как пример - спиннер пока срабатывает при клике на копирайт
+// const copyrightContainer = document.querySelector('.copyright');
+// copyrightContainer.addEventListener('click', onLoadingSpinner);
+// function onLoadingSpinner() {
+//   spinner.show();
+// }
+
+exports.default = _default;
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2773,6 +2794,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.renderPagination = renderPagination;
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+var _spinner = _interopRequireDefault(require("./spinner"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2888,6 +2911,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
         wrapper.insertBefore(threeDotsEl, wrapper[1]);
       }
     }
+
+    _spinner.default.spinner.close();
   }
 
   function addThreeDotsBlock() {
@@ -2902,6 +2927,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
     button.innerText = page;
     if (currentPage == page) button.classList.add('active');
     button.addEventListener('click', function () {
+      _spinner.default.spinner.show();
+
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
       let current_btn = document.querySelector('.pagenumbers button.active');
@@ -2914,6 +2941,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
   function onArrowLeftClick() {
     if (currentPage > 1) {
+      _spinner.default.spinner.show();
+
       currentPage--;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
@@ -2922,6 +2951,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
   function onArrowRightClick() {
     if (currentPage < totalPages) {
+      _spinner.default.spinner.show();
+
       currentPage++;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
@@ -2932,7 +2963,7 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
   arrowLeft.addEventListener('click', onArrowLeftClick);
   arrowRight.addEventListener('click', onArrowRightClick);
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs"}],"js/cardFetc.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js"}],"js/cardFetc.js":[function(require,module,exports) {
 "use strict";
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
@@ -3057,6 +3088,8 @@ var _pagination = require("./pagination");
 
 var _apiServis = _interopRequireDefault(require("./apiServis"));
 
+var _spinner = _interopRequireDefault(require("./spinner"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const refs = {
@@ -3068,6 +3101,8 @@ const listElement = document.querySelector('.js-card');
 refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
 function onKeyWordSearch(e) {
+  _spinner.default.spinner.show();
+
   e.preventDefault();
   filmApiService.query = e.currentTarget.elements.query.value;
 
@@ -3111,7 +3146,7 @@ function fetchSearchFilmsByPage(page, searchQuery) {
   filmApiService.query = searchQuery;
   return filmApiService.insertGenresToSearchObj();
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js","./spinner":"js/spinner.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3842,36 +3877,7 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"js/spinner.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-const markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
-const spinner = basicLightbox.create(markup);
-var _default = {
-  spinner
-}; // ПОКАЗАТЬ спиннер - spinner.show();
-// ЗАКРЫТЬ  спиннер - spinner.close();
-// Как пример - спиннер пока срабатывает при клике на копирайт
-
-exports.default = _default;
-const copyrightContainer = document.querySelector('.copyright');
-copyrightContainer.addEventListener('click', onLoadingSpinner);
-
-function onLoadingSpinner() {
-  spinner.show();
-}
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"index.js":[function(require,module,exports) {
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -3919,7 +3925,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65476" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49659" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
