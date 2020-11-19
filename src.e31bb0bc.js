@@ -2989,7 +2989,9 @@ function onLogoClick(e) {
 
 
 function render() {
-  newApiService.insertGenresToMovieObj().then(renderFilmsCard);
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard).catch(err => {
+    console.log('error in function render');
+  });
 } // function for insertion of markup
 
 
@@ -3000,13 +3002,17 @@ function renderFilmsCard(articles) {
 
 function displayList(wrapper, page) {
   wrapper.innerHTML = '';
-  fetchPopularFilmsByPage(page).then(renderFilmsCard);
+  fetchPopularFilmsByPage(page).then(renderFilmsCard).catch(err => {
+    console.log('error in function displayList');
+  });
 } // renders pagination for main (first) fetch
 
 
 function fetchDataOfPopularFilms() {
   newApiService.fetchPopularArticlesPages().then(results => {
     (0, _pagination.renderPagination)(results.total_pages, results.results, displayList);
+  }).catch(err => {
+    console.log('error in function fetchDataOfPopularFilms');
   });
 } // fetches popular movies by appropriate page
 
@@ -3120,7 +3126,9 @@ function onKeyWordSearch(e) {
 
 function render(searchQuery) {
   filmApiService.query = searchQuery;
-  filmApiService.insertGenresToSearchObj().then(renderFilmsCard);
+  filmApiService.insertGenresToSearchObj().then(renderFilmsCard).catch(err => {
+    console.log('error in function render');
+  });
 } // function for insertion of markup
 
 
@@ -3131,7 +3139,9 @@ function renderFilmsCard(articles) {
 
 function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard).catch(err => {
+    console.log('error in function displaySearchListByPage');
+  });
 } // renders pagination for main (first) fetch
 
 
@@ -3139,6 +3149,8 @@ function fetchDataOfSearchFilms(searchQuery) {
   filmApiService.query = searchQuery;
   filmApiService.fetchSearchArticlesPages().then(results => {
     (0, _pagination.renderPagination)(results.total_pages, results.results, displaySearchListByPage, searchQuery);
+  }).catch(err => {
+    console.log('error in function fetchDataOfSearchFilms');
   });
 } // fetches search queries by appropriate page & search query
 
@@ -3927,7 +3939,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50021" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
