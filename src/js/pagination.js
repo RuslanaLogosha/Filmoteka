@@ -10,12 +10,10 @@ let rows = 20;
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 
-// эту часть оставить закомментированной или удалить
-// рендер популярного вынесен в отдельную ф-ю
+// Вова, комменты не снимай, рендер выведен в отдельные модули
+
 // fetchDataOfPopularFilms();
 
-// эту часть оставить закомментированной или удалить
-// рендер популярного вынесен в отдельную ф-ю
 // function fetchDataOfPopularFilms() {
 //   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
 //   return fetch(url)
@@ -27,8 +25,6 @@ const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 //     });
 // }
 
-// эту часть оставить закомментированной или удалить
-// рендер популярного вынесен в отдельную ф-ю
 // function fetchPopularFilmsByPage(page) {
 //   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
 //   return fetch(url)
@@ -38,44 +34,42 @@ const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 //     });
 // }
 
-function fetchSearchFilmsByPage(page, searchQuery) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
-  return fetch(url)
-    .then(response => response.json())
-    .then(({ results }) => {
-      return results;
-    });
-}
+// function fetchSearchFilmsByPage(page, searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
 
-export default function fetchFilmsSearch(searchQuery) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
-  return fetch(url)
-    .then(response => response.json())
-    .then(results => {
-      renderPagination(
-        results.total_pages,
-        results.results,
-        displaySearchListByPage,
-        searchQuery,
-      );
-    });
-}
+// function fetchFilmsSearch(searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(results => {
+//       renderPagination(
+//         results.total_pages,
+//         results.results,
+//         displaySearchListByPage,
+//         searchQuery,
+//       );
+//     });
+// }
 
-function renderFilmsCard(articles) {
-  listElement.innerHTML = filmsCardTpl(articles);
-}
+// function renderFilmsCard(articles) {
+//   listElement.innerHTML = filmsCardTpl(articles);
+// }
 
-// эту часть оставить закомментированной или удалить
-// рендер популярного вынесен в отдельную ф-ю
 // function displayList(wrapper, page) {
 //   wrapper.innerHTML = '';
 //   fetchPopularFilmsByPage(page).then(renderFilmsCard);
 // }
 
-function displaySearchListByPage(wrapper, page, searchQuery) {
-  wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
-}
+// function displaySearchListByPage(wrapper, page, searchQuery) {
+//   wrapper.innerHTML = '';
+//   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+// }
 
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
