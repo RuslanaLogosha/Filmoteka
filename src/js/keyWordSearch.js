@@ -1,6 +1,7 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 import ApiService from './apiServis';
+import placeholder from './spinner';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -12,6 +13,7 @@ const listElement = document.querySelector('.js-card');
 refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
 function onKeyWordSearch(e) {
+  placeholder.spinner.show();
   e.preventDefault();
   filmApiService.query = e.currentTarget.elements.query.value;
   if (filmApiService.query === '') {

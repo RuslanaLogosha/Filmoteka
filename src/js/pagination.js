@@ -1,4 +1,5 @@
 import filmsCardTpl from '../templates/card-films.hbs';
+import placeholder from './spinner';
 
 const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
@@ -134,6 +135,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
         wrapper.insertBefore(threeDotsEl, wrapper[1]);
       }
     }
+    placeholder.spinner.close();
   }
 
   function addThreeDotsBlock() {
@@ -150,6 +152,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     if (currentPage == page) button.classList.add('active');
 
     button.addEventListener('click', function () {
+      placeholder.spinner.show();
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
 
@@ -165,6 +168,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 
   function onArrowLeftClick() {
     if (currentPage > 1) {
+      placeholder.spinner.show();
       currentPage--;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
@@ -173,6 +177,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 
   function onArrowRightClick() {
     if (currentPage < totalPages) {
+      placeholder.spinner.show();
       currentPage++;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
