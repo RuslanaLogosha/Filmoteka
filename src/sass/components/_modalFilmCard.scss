@@ -6,6 +6,11 @@
     margin-top: 450px;
   }
 }
+
+.genres {
+  display: flex;
+}
+
 .image {
   display: block;
   margin-right: auto;
@@ -32,11 +37,17 @@
 }
 
 .cardItem__wrapper p {
+  display: flex;
   font-size: 12px;
   font-family: 'Roboto';
   line-height: 1.333;
   margin-bottom: 18px;
   letter-spacing: 1px;
+}
+
+.cardItem__genreList {
+  list-style: disc;
+  display: block;
 }
 
 .cardItem_text {
@@ -67,7 +78,7 @@
 }
 
 .cardItem__title_data {
-  margin-left: 46px;
+  margin-left: 50px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 }
@@ -84,6 +95,7 @@
 
 .cardItem__genre_data {
   color: rgb(0, 0, 0);
+  margin-right: 5px;
 }
 
 .cardItem__about {
@@ -170,6 +182,10 @@
     font-size: 25px;
     line-height: 35px;
   }
+
+  // .cardItem__title_data {
+  //   display: block;
+  // }
 
   .cardItem__button:not(:last-child) {
     margin-right: 16px;
