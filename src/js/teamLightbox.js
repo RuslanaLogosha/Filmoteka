@@ -1,13 +1,13 @@
-import * as basicLightbox from "basiclightbox";
-import ruslanaUrl from "../images/team-ruslana.jpeg";
-import olgaUrl from "../images/team-olga.jpeg";
-import dariaUrl from "../images/team-daria.jpeg";
-import denisUrl from "../images/team-denis.jpeg";
-import ihorUrl from "../images/team-ihor.jpeg";
-import katyaUrl from "../images/team-katya.jpeg";
-import vladymyrUrl from "../images/team-vladymyr.jpeg";
-import aleksandrUrl from "../images/team-aleksandr.jpg";
-import spriteUrl from "../images/sprite.svg";
+import * as basicLightbox from 'basiclightbox';
+import ruslanaUrl from '../images/team-ruslana.jpeg';
+import olgaUrl from '../images/team-olga.jpeg';
+import dariaUrl from '../images/team-daria.jpeg';
+import denisUrl from '../images/team-denis.jpeg';
+import ihorUrl from '../images/team-ihor.jpeg';
+import katyaUrl from '../images/team-katya.jpeg';
+import vladymyrUrl from '../images/team-vladymyr.jpeg';
+import aleksandrUrl from '../images/team-aleksandr.jpg';
+import spriteUrl from '../images/sprite.svg';
 
 const markup = `<div class="team-wrapper"><div class="team-card">
     <img src="${ruslanaUrl}" alt="Ruslana" class="team-image">
@@ -73,15 +73,22 @@ const markup = `<div class="team-wrapper"><div class="team-card">
       <use href="${spriteUrl}#github"></use>
     </svg></a>
 </div></div>`;
-const container = document.querySelector(".js-team-modal");
+const container = document.querySelector('.js-team-modal');
 const markup2 = `<img src="${katyaUrl}"/>`;
 
-container.addEventListener("click", openModal);
+container.addEventListener('click', openModal);
 
-function teamModalWindow(data) {
-  return basicLightbox.create(data);
-}
+const modal = basicLightbox.create(markup);
 
 function openModal(e) {
-  teamModalWindow(markup).show();
+  modal.show();
+
+  window.addEventListener('keydown', closeModalHandler);
+
+  function closeModalHandler(e) {
+    if (e.code === 'Escape') {
+      modal.close();
+      window.removeEventListener('keydown', closeModalHandler);
+    }
+  }
 }
