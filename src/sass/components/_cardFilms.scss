@@ -45,3 +45,14 @@
 .card__text {
   color: $accentColor;
 }
+.card__vote_average {
+  display: inline-block;
+  margin-left: 3px;
+  background-color: rgb(255, 107, 8);
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 18px;
+}
