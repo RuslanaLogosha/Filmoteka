@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/header-bg-modal-mobile.jpg":[["header-bg-modal-mobile.22f8232e.jpg","images/header-bg-modal-mobile.jpg"],"images/header-bg-modal-mobile.jpg"],"./../images/header-bg-modal-mobile@2x.jpg":[["header-bg-modal-mobile@2x.db48d55b.jpg","images/header-bg-modal-mobile@2x.jpg"],"images/header-bg-modal-mobile@2x.jpg"],"./../images/header-bg-modal-tablet.jpg":[["header-bg-modal-tablet.f7cd343a.jpg","images/header-bg-modal-tablet.jpg"],"images/header-bg-modal-tablet.jpg"],"./../images/header-bg-modal-desktop.jpg":[["header-bg-modal-desktop.8a7384dd.jpg","images/header-bg-modal-desktop.jpg"],"images/header-bg-modal-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2216,98 +2216,8 @@ var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.run
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
-    var helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
-        alias2 = container.hooks.helperMissing,
-        alias3 = "function",
-        alias4 = container.escapeExpression,
-        lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return "        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "poster_path",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 63
-        },
-        "end": {
-          "line": 4,
-          "column": 78
-        }
-      }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 4,
-          "column": 85
-        },
-        "end": {
-          "line": 4,
-          "column": 94
-        }
-      }
-    }) : helper)) + "\" />\n";
-  },
-  "3": function _(container, depth0, helpers, partials, data) {
-    var helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
-        alias2 = container.hooks.helperMissing,
-        alias3 = "function",
-        alias4 = container.escapeExpression,
-        lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return "        <img src=\"" + alias4((helper = (helper = lookupProperty(helpers, "nothingHere") || (depth0 != null ? lookupProperty(depth0, "nothingHere") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "nothingHere",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 18
-        },
-        "end": {
-          "line": 6,
-          "column": 33
-        }
-      }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 6,
-          "column": 40
-        },
-        "end": {
-          "line": 6,
-          "column": 49
-        }
-      }
-    }) : helper)) + "\" />\n";
-  },
-  "5": function _(container, depth0, helpers, partials, data) {
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
     var lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
         return parent[propertyName];
@@ -2319,7 +2229,7 @@ var templateFunction = _handlebars.default.template({
     return "\n            <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n            ";
   },
   "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
+  "main": function (container, depth0, helpers, partials, data) {
     var stack1,
         helper,
         alias1 = depth0 != null ? depth0 : container.nullContext || {},
@@ -2334,123 +2244,135 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<li class=\"cardItem__list\">\n    <div class=\"cardItem__image\">\n" + ((stack1 = lookupProperty(helpers, "if").call(alias1, depth0 != null ? lookupProperty(depth0, "poster_path") : depth0, {
-      "name": "if",
+    return "<div class=\"modal-card\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "poster_path",
       "hash": {},
-      "fn": container.program(1, data, 0),
-      "inverse": container.program(3, data, 0),
       "data": data,
       "loc": {
         "start": {
           "line": 3,
-          "column": 8
+          "column": 63
         },
         "end": {
-          "line": 7,
-          "column": 15
+          "line": 3,
+          "column": 78
         }
       }
-    })) != null ? stack1 : "") + "    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 3,
+          "column": 85
+        },
+        "end": {
+          "line": 3,
+          "column": 94
+        }
+      }
+    }) : helper)) + "\" />\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 7,
           "column": 35
         },
         "end": {
-          "line": 11,
+          "line": 7,
           "column": 44
         }
       }
-    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 9,
           "column": 61
         },
         "end": {
-          "line": 13,
+          "line": 9,
           "column": 77
         }
       }
-    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_count",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 10,
           "column": 45
         },
         "end": {
-          "line": 14,
+          "line": 10,
           "column": 59
         }
       }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "popularity",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 13,
           "column": 52
         },
         "end": {
-          "line": 17,
+          "line": 13,
           "column": 66
         }
       }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "original_title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 16,
           "column": 61
         },
         "end": {
-          "line": 20,
+          "line": 16,
           "column": 79
         }
       }
     }) : helper)) + "</span>\n        </p>\n\n        <p class=\"cardItem__genre cardItem_text\">\n            Genre\n        </p>\n        <p class=\"cardItem__genreList\">" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
-      "fn": container.program(5, data, 0),
+      "fn": container.program(1, data, 0),
       "inverse": container.noop,
       "data": data,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 22,
           "column": 39
         },
         "end": {
-          "line": 28,
+          "line": 24,
           "column": 21
         }
       }
-    })) != null ? stack1 : "") + "</p>\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    })) != null ? stack1 : "") + "</p>\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "overview",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 29,
           "column": 12
         },
         "end": {
-          "line": 33,
+          "line": 29,
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <button class=\"cardItem__button\">\n                Add to watched\n            </button>\n            <button class=\"cardItem__button\">\n                Add to queue\n            </button>\n        </div>\n    </div>\n</li>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
   },
   "useData": true
 });
@@ -2482,38 +2404,37 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+let page = 1;
+const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+const cardFilm = document.querySelector('.card__colection');
+cardFilm.addEventListener('click', openModal);
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function fetchOneMovieInfo(movie_id) {
+  const url = "https://api.themoviedb.org/3/movie/".concat(movie_id, "?api_key=").concat(apiKey);
+  return fetch(url).then(response => response.json());
+}
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-// открытие модалки
 function openModal(e) {
-  var instance = basicLightbox.create(document.querySelector('.movie-card'));
-  instance.show();
-  window.addEventListener('keydown', closeModalHandler);
+  e.preventDefault();
+  fetchOneMovieInfo(e.target.dataset.id).then(data => {
+    if (e.target.nodeName !== 'IMG') return;
+    const markup = (0, _modalFilmCard.default)(data);
+    const modal = basicLightbox.create(markup);
+    modal.show();
+    window.addEventListener('keydown', closeModalHandler);
 
-  function closeModalHandler(e) {
-    e.code === 'Escape' && instance.close();
-    window.removeEventListener('keydown', closeModalHandler);
-  }
+    function closeModalHandler(e) {
+      if (e.code === 'Escape') {
+        modal.close();
+        window.removeEventListener('keydown', closeModalHandler);
+      }
+    }
+  }).then(data => {}).catch(error => {
+    console.log("oops!");
+  });
 }
 
-var cardСolection = document.querySelector('.card__colection');
-cardСolection.addEventListener('click', openModal);
-var refs = {
-  modalCard: document.querySelector('.movie-card')
-};
-
-function insertCardItems(film) {
-  var copyFilm = _objectSpread({}, film);
-
-  var markup = (0, _modalFilmCard.default)(copyFilm);
-  refs.modalCard.insertAdjacentHTML('beforeend', markup);
-}
-
-insertCardItems();
+;
 },{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
@@ -2698,70 +2619,52 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+const BASE_URL = "https://api.themoviedb.org/3";
+const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var BASE_URL = "https://api.themoviedb.org/3";
-var KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
-
-var NewApiService = /*#__PURE__*/function () {
-  function NewApiService() {
-    _classCallCheck(this, NewApiService);
-
+class NewApiService {
+  constructor() {
     this.searchQuery = '';
     this.page = 1;
   }
 
-  _createClass(NewApiService, [{
-    key: "fetchTrendingArticles",
-    value: function fetchTrendingArticles() {
-      var url = "".concat(BASE_URL, "/trending/all/day?api_key=").concat(KEY);
-      return fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (_ref) {
-        var results = _ref.results;
-        return results;
-      });
-    }
-  }, {
-    key: "fetchFilmsSearch",
-    value: function fetchFilmsSearch() {
-      var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&query=").concat(this.searchQuery);
-      return fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (_ref2) {
-        var results = _ref2.results;
-        return results;
-      });
-    }
-  }, {
-    key: "fetchPopularArticles",
-    value: function fetchPopularArticles() {
-      var url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
-      return fetch(url).then(function (response) {
-        return response.json();
-      }).then(function (_ref3) {
-        var results = _ref3.results;
-        // console.log(results);
-        return results;
-      });
-    }
-  }, {
-    key: "query",
-    get: function get() {
-      return this.searchQuery;
-    },
-    set: function set(newQuery) {
-      this.searchQuery = newQuery;
-    }
-  }]);
+  fetchTrendingArticles() {
+    const url = "".concat(BASE_URL, "/trending/all/day?api_key=").concat(KEY);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      return results;
+    });
+  }
 
-  return NewApiService;
-}();
+  fetchFilmsSearch() {
+    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&query=").concat(this.searchQuery);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      return results;
+    });
+  }
+
+  fetchPopularArticles() {
+    const url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      // console.log(results);
+      return results;
+    });
+  }
+
+  get query() {
+    return this.searchQuery;
+  }
+
+  set query(newQuery) {
+    this.searchQuery = newQuery;
+  }
+
+}
 
 exports.default = NewApiService;
 },{}],"js/cardFetc.js":[function(require,module,exports) {
@@ -2773,10 +2676,10 @@ var _apiServis = _interopRequireDefault(require("./apiServis"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var refs = {
+const refs = {
   cardContainer: document.querySelector(".js-card")
 };
-var newApiService = new _apiServis.default();
+const newApiService = new _apiServis.default();
 render();
 
 function render() {
@@ -2833,9 +2736,9 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
-var container = document.querySelector(".js-team-modal");
-var markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
+const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+const container = document.querySelector(".js-team-modal");
+const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
 container.addEventListener("click", openModal);
 
 function teamModalWindow(data) {
@@ -2852,10 +2755,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = fetchFilmsSearch;
+exports.renderPagination = renderPagination;
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
-
-var _apiServis = _interopRequireDefault(require("./apiServis"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2889,8 +2791,8 @@ function fetchPopularFilmsByPage(page) {
   });
 }
 
-function fetchSearchFilmsByPage(page) {
-  var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(page, "&include_adult=true");
+function fetchSearchFilmsByPage(page, searchQuery) {
+  var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(page, "&include_adult=false&query=").concat(searchQuery);
   return fetch(url).then(function (response) {
     return response.json();
   }).then(function (_ref2) {
@@ -2904,7 +2806,7 @@ function fetchFilmsSearch(searchQuery) {
   return fetch(url).then(function (response) {
     return response.json();
   }).then(function (results) {
-    renderPagination(results.total_pages, results.results, displaySearchListByPage);
+    renderPagination(results.total_pages, results.results, displaySearchListByPage, searchQuery);
   });
 }
 
@@ -2917,12 +2819,12 @@ function displayList(wrapper, page) {
   fetchPopularFilmsByPage(page).then(renderFilmsCard);
 }
 
-function displaySearchListByPage(wrapper, page) {
+function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page).then(renderFilmsCard);
+  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
 }
 
-function renderPagination(totalPages, listItems, callback) {
+function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
   currentPage = 1;
 
@@ -2991,7 +2893,7 @@ function renderPagination(totalPages, listItems, callback) {
     if (currentPage == page) button.classList.add('active');
     button.addEventListener('click', function () {
       currentPage = page;
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
       var current_btn = document.querySelector('.pagenumbers button.active');
       current_btn.classList.remove('active');
       button.classList.add('active');
@@ -3004,7 +2906,7 @@ function renderPagination(totalPages, listItems, callback) {
     if (currentPage > 1) {
       currentPage--;
       setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
     }
   }
 
@@ -3012,7 +2914,7 @@ function renderPagination(totalPages, listItems, callback) {
     if (currentPage < totalPages) {
       currentPage++;
       setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage);
+      callback(listElement, currentPage, searchQuery);
     }
   }
 
@@ -3020,8 +2922,7 @@ function renderPagination(totalPages, listItems, callback) {
   arrowLeft.addEventListener('click', onArrowLeftClick);
   arrowRight.addEventListener('click', onArrowRightClick);
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
-var define;
+},{"../templates/card-films.hbs":"templates/card-films.hbs"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3039,24 +2940,6 @@ var runtime = (function (exports) {
   var iteratorSymbol = $Symbol.iterator || "@@iterator";
   var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
   var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function define(obj, key, value) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-    return obj[key];
-  }
-  try {
-    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
-    define({}, "");
-  } catch (err) {
-    define = function(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
 
   function wrap(innerFn, outerFn, self, tryLocsList) {
     // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
@@ -3128,19 +3011,16 @@ var runtime = (function (exports) {
     Generator.prototype = Object.create(IteratorPrototype);
   GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
   GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunction.displayName = define(
-    GeneratorFunctionPrototype,
-    toStringTagSymbol,
-    "GeneratorFunction"
-  );
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
 
   // Helper for defining the .next, .throw, and .return methods of the
   // Iterator interface in terms of a single ._invoke method.
   function defineIteratorMethods(prototype) {
     ["next", "throw", "return"].forEach(function(method) {
-      define(prototype, method, function(arg) {
+      prototype[method] = function(arg) {
         return this._invoke(method, arg);
-      });
+      };
     });
   }
 
@@ -3159,7 +3039,9 @@ var runtime = (function (exports) {
       Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
     } else {
       genFun.__proto__ = GeneratorFunctionPrototype;
-      define(genFun, toStringTagSymbol, "GeneratorFunction");
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
     }
     genFun.prototype = Object.create(Gp);
     return genFun;
@@ -3429,7 +3311,7 @@ var runtime = (function (exports) {
   // unified ._invoke helper method.
   defineIteratorMethods(Gp);
 
-  define(Gp, toStringTagSymbol, "Generator");
+  Gp[toStringTagSymbol] = "Generator";
 
   // A Generator should always return itself as the iterator object when the
   // @@iterator function is called on it. Some browsers' implementations of the
@@ -3979,7 +3861,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57043" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60624" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
