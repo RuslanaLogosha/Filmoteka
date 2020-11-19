@@ -1,3 +1,8 @@
+// .modal-card {
+//   background-color: #ffffff;
+//   width: 100%;
+// }
+
 .image {
   display: block;
   width: auto;
@@ -16,7 +21,7 @@
 }
 
 .cardItem__name {
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -28,7 +33,7 @@
 
 .cardItem__wrapper p {
   font-size: 12px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   line-height: 1.333;
   margin-bottom: 18px;
   letter-spacing: 1px;
@@ -100,7 +105,7 @@
 .cardItem__button {
   padding: 0 15px;
   font-size: 12px;
-  font-family: 'Roboto', 'Arial', sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   line-height: 1.333;

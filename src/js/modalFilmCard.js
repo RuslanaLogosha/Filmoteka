@@ -3,41 +3,50 @@ import modalFilmCard from "../templates/modalFilmCard.hbs";
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 
-// открытие модалки
+
+let page = 1;
+const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+
+const cardFilm = document.querySelector('.card__colection');
+cardFilm.addEventListener('click', openModal);
+
+
+function fetchOneMovieInfo(movie_id) {
+  const url = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}`;
+  return fetch(url)
+    .then(response => response.json())        
+}
 
 function openModal(e) {
+  e.preventDefault();
 
-  const instance = basicLightbox.create(
-     document.querySelector('.movie-card')
-  );
+  fetchOneMovieInfo(e.target.dataset.id).then(data => {
 
-  instance.show();
+    if (e.target.nodeName !== 'IMG') return;
+    
+  const markup = modalFilmCard(data);
+    const modal = basicLightbox.create(markup);
+
+    modal.show();
 
   window.addEventListener('keydown', closeModalHandler);
 
-  function closeModalHandler(e) {
-    e.code === 'Escape' && instance.close();
-
+function closeModalHandler(e) {
+  if (e.code === 'Escape') {
+    modal.close();
     window.removeEventListener('keydown', closeModalHandler);
   }
 }
-
-const cardСolection = document.querySelector('.card__colection');
-cardСolection.addEventListener('click', openModal);
-
-
-
-const refs = {
-  modalCard: document.querySelector('.movie-card'),
+    
+  }).then(data => {}).catch(error => {console.log("oops!")})
 };
- function insertCardItems(film) {
-    const copyFilm = { ...film};
-    const markup = modalFilmCard(copyFilm);
 
-    refs.modalCard.insertAdjacentHTML('beforeend', markup);
-}
-  
-insertCardItems();
+
+
+
+
+
+
 
 
 

@@ -1,10 +1,6 @@
-<li class="cardItem__list">
+<div class="modal-card">
     <div class="cardItem__image">
-        {{#if poster_path}}
         <img class="image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}}" />
-        {{else}}
-        <img src="{{nothingHere}}" alt="{{title}}" />
-        {{/if}}
     </div>
 
     <div class=" cardItem__wrapper">
@@ -33,12 +29,26 @@
             {{overview}}
         </p>
         <div class="cardItem__listButton">
-            <button class="cardItem__button">
+            {{!-- <button class="cardItem__button">
                 Add to watched
             </button>
             <button class="cardItem__button">
                 Add to queue
-            </button>
+            </button> --}}
+            <ul class="storage">
+                <li class="storage__item">
+                    <label class="storage__label ">
+                        <input type="checkbox" class="storage__input visuallyhidden" />
+                        <span class="storage__btn" id="js-WatchedButton">Watched</span>
+                    </label>
+                </li>
+                <li class="storage__item">
+                    <label class="storage__label ">
+                        <input type="checkbox" class="storage__input  visuallyhidden" />
+                        <span class="storage__btn" id="js-QueueButton">Queue</span>
+                    </label>
+                </li>
+            </ul>
         </div>
     </div>
-</li>
+</div>
