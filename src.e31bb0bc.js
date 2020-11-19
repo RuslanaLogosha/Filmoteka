@@ -2404,7 +2404,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-let page = 1;
+// let page = 1;
 const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 const cardFilm = document.querySelector('.card__colection');
 cardFilm.addEventListener('click', openModal);
@@ -2430,11 +2430,9 @@ function openModal(e) {
       }
     }
   }).then(data => {}).catch(error => {
-    console.log("oops!");
+    console.log('oops!');
   });
 }
-
-;
 },{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
@@ -2447,11 +2445,10 @@ var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.run
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
-    var helper,
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
+    var stack1,
+        helper,
         alias1 = depth0 != null ? depth0 : container.nullContext || {},
         alias2 = container.hooks.helperMissing,
         alias3 = "function",
@@ -2464,7 +2461,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return " <li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return " <li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2478,7 +2475,7 @@ var templateFunction = _handlebars.default.template({
           "column": 43
         }
       }
-    }) : helper)) + "'>\n    <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>\n    <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
@@ -2492,7 +2489,7 @@ var templateFunction = _handlebars.default.template({
           "column": 60
         }
       }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -2506,7 +2503,7 @@ var templateFunction = _handlebars.default.template({
           "column": 76
         }
       }
-    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2520,7 +2517,21 @@ var templateFunction = _handlebars.default.template({
           "column": 85
         }
       }
-    }) : helper)) + "\" width=\"100%\" />\n      <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 109
+        },
+        "end": {
+          "line": 3,
+          "column": 115
+        }
+      }
+    }) : helper)) + "\"/>\n      <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -2534,7 +2545,7 @@ var templateFunction = _handlebars.default.template({
           "column": 39
         }
       }
-    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2548,9 +2559,11 @@ var templateFunction = _handlebars.default.template({
           "column": 48
         }
       }
-    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + alias4((helper = (helper = lookupProperty(helpers, "genre_ids") || (depth0 != null ? lookupProperty(depth0, "genre_ids") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
-      "name": "genre_ids",
+    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genre_ids") : depth0, {
+      "name": "each",
       "hash": {},
+      "fn": container.program(2, data, 0),
+      "inverse": container.noop,
       "data": data,
       "loc": {
         "start": {
@@ -2559,27 +2572,74 @@ var templateFunction = _handlebars.default.template({
         },
         "end": {
           "line": 6,
-          "column": 29
+          "column": 82
         }
       }
-    }) : helper)) + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "release_date",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 6,
-          "column": 45
+          "column": 98
         },
         "end": {
           "line": 6,
-          "column": 61
+          "column": 114
         }
       }
     }) : helper)) + "</span>\n       </p>\n </li>\n";
   },
+  "2": function (container, depth0, helpers, partials, data) {
+    var stack1,
+        helper,
+        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return " " + container.escapeExpression((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : container.hooks.helperMissing, typeof helper === "function" ? helper.call(alias1, {
+      "name": "name",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 36
+        },
+        "end": {
+          "line": 6,
+          "column": 44
+        }
+      }
+    }) : helper)) + ((stack1 = lookupProperty(helpers, "unless").call(alias1, data && lookupProperty(data, "last"), {
+      "name": "unless",
+      "hash": {},
+      "fn": container.program(3, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 44
+        },
+        "end": {
+          "line": 6,
+          "column": 73
+        }
+      }
+    })) != null ? stack1 : "");
+  },
+  "3": function (container, depth0, helpers, partials, data) {
+    return ",";
+  },
   "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
+  "main": function (container, depth0, helpers, partials, data) {
     var stack1,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -2628,31 +2688,60 @@ class NewApiService {
     this.page = 1;
   }
 
-  fetchTrendingArticles() {
-    const url = "".concat(BASE_URL, "/trending/all/day?api_key=").concat(KEY);
-    return fetch(url).then(response => response.json()).then(({
-      results
-    }) => {
-      return results;
-    });
-  }
-
-  fetchFilmsSearch() {
-    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&query=").concat(this.searchQuery);
-    return fetch(url).then(response => response.json()).then(({
-      results
-    }) => {
-      return results;
-    });
-  }
-
   fetchPopularArticles() {
     const url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
     return fetch(url).then(response => response.json()).then(({
       results
     }) => {
-      // console.log(results);
       return results;
+    });
+  }
+
+  fetchSearchArticles() {
+    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page, "&query=").concat(this.searchQuery);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      return results;
+    });
+  }
+
+  fetchPopularArticlesPages() {
+    const url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
+    return fetch(url).then(response => response.json());
+  }
+
+  fetchSearchArticlesPages() {
+    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page, "&query=").concat(this.searchQuery);
+    return fetch(url).then(response => response.json());
+  }
+
+  fetchGenres() {
+    const url = "".concat(BASE_URL, "/genre/movie/list?api_key=").concat(KEY);
+    return fetch(url).then(response => response.json()).then(data => {
+      return data.genres;
+    });
+  }
+
+  insertGenresToMovieObj() {
+    return this.fetchPopularArticles().then(data => {
+      return this.fetchGenres().then(genresList => {
+        return data.map(movie => ({ ...movie,
+          release_date: movie.release_date.split('-')[0],
+          genre_ids: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+        }));
+      });
+    });
+  }
+
+  insertGenresToSearchObj() {
+    return this.fetchSearchArticles().then(data => {
+      return this.fetchGenres().then(genresList => {
+        return data.map(movie => ({ ...movie,
+          release_date: movie.release_date.split('-')[0],
+          genre_ids: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+        }));
+      });
     });
   }
 
@@ -2664,32 +2753,238 @@ class NewApiService {
     this.searchQuery = newQuery;
   }
 
+  get pageNum() {
+    return this.page;
+  }
+
+  set pageNum(newPage) {
+    this.page = newPage;
+  }
+
 }
 
 exports.default = NewApiService;
-},{}],"js/cardFetc.js":[function(require,module,exports) {
+},{}],"js/pagination.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.renderPagination = renderPagination;
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const listElement = document.querySelector('.js-card');
+const paginationElement = document.getElementById('pagination');
+const arrowLeft = document.querySelector('.arrow_left');
+const arrowRight = document.querySelector('.arrow_right');
+let currentPage = 1;
+const pagesOnWindow = 5;
+let rows = 20;
+const BASE_URL = "https://api.themoviedb.org/3";
+const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9"; // Вова, комменты не снимай, рендер выведен в отдельные модули
+// fetchDataOfPopularFilms();
+// function fetchDataOfPopularFilms() {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
+//   return fetch(url)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((results) => {
+//       renderPagination(results.total_pages, results.results, displayList);
+//     });
+// }
+// function fetchPopularFilmsByPage(page) {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
+//   return fetch(url)
+//     .then((response) => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
+// function fetchSearchFilmsByPage(page, searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
+// function fetchFilmsSearch(searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(results => {
+//       renderPagination(
+//         results.total_pages,
+//         results.results,
+//         displaySearchListByPage,
+//         searchQuery,
+//       );
+//     });
+// }
+// function renderFilmsCard(articles) {
+//   listElement.innerHTML = filmsCardTpl(articles);
+// }
+// function displayList(wrapper, page) {
+//   wrapper.innerHTML = '';
+//   fetchPopularFilmsByPage(page).then(renderFilmsCard);
+// }
+// function displaySearchListByPage(wrapper, page, searchQuery) {
+//   wrapper.innerHTML = '';
+//   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+// }
+
+function renderPagination(totalPages, listItems, callback, searchQuery) {
+  paginationElement.innerHTML = '';
+  currentPage = 1;
+
+  function setupPagination(items, wrapper, rowsPerPage) {
+    wrapper.innerHTML = '';
+    let pageCount = totalPages;
+    let maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
+    let maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
+
+    if (maxLeftPage < 1) {
+      maxLeftPage = 1;
+      maxRightPage = pagesOnWindow;
+    }
+
+    if (maxRightPage > totalPages) {
+      maxLeftPage = totalPages - (pagesOnWindow - 1);
+
+      if (maxLeftPage < 1) {
+        maxLeftPage = 1;
+      }
+
+      maxRightPage = totalPages;
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (maxLeftPage !== 1 && i == 1) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (maxRightPage !== totalPages && i == totalPages) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (i >= maxLeftPage && i <= maxRightPage) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
+        const threeDotsEl = addThreeDotsBlock();
+        wrapper.insertBefore(threeDotsEl, wrapper[wrapper.length - 2]);
+      }
+
+      if (pageCount >= 7 && i == pageCount - 1 && currentPage !== pageCount && currentPage !== pageCount - 2 && currentPage !== pageCount - 1) {
+        const threeDotsEl = addThreeDotsBlock();
+        wrapper.insertBefore(threeDotsEl, wrapper[1]);
+      }
+    }
+  }
+
+  function addThreeDotsBlock() {
+    const threeDots = document.createElement('div');
+    threeDots.classList.add('threeDots');
+    threeDots.innerText = '...';
+    return threeDots;
+  }
+
+  function paginationButton(page, items) {
+    let button = document.createElement('button');
+    button.innerText = page;
+    if (currentPage == page) button.classList.add('active');
+    button.addEventListener('click', function () {
+      currentPage = page;
+      callback(listElement, currentPage, searchQuery);
+      let current_btn = document.querySelector('.pagenumbers button.active');
+      current_btn.classList.remove('active');
+      button.classList.add('active');
+      setupPagination(listItems, paginationElement, rows);
+    });
+    return button;
+  }
+
+  function onArrowLeftClick() {
+    if (currentPage > 1) {
+      currentPage--;
+      setupPagination(listItems, paginationElement, rows);
+      callback(listElement, currentPage, searchQuery);
+    }
+  }
+
+  function onArrowRightClick() {
+    if (currentPage < totalPages) {
+      currentPage++;
+      setupPagination(listItems, paginationElement, rows);
+      callback(listElement, currentPage, searchQuery);
+    }
+  }
+
+  setupPagination(listItems, paginationElement, rows);
+  arrowLeft.addEventListener('click', onArrowLeftClick);
+  arrowRight.addEventListener('click', onArrowRightClick);
+}
+},{"../templates/card-films.hbs":"templates/card-films.hbs"}],"js/cardFetc.js":[function(require,module,exports) {
 "use strict";
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
 var _apiServis = _interopRequireDefault(require("./apiServis"));
 
+var _pagination = require("./pagination");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const refs = {
-  cardContainer: document.querySelector(".js-card")
-};
+const listElement = document.querySelector('.js-card');
+const logoEl = document.querySelector('.js-main-logo');
 const newApiService = new _apiServis.default();
 render();
+fetchDataOfPopularFilms();
+logoEl.addEventListener('click', onLogoClick); // page set to default with click on logotype without page refresh
+
+function onLogoClick(e) {
+  e.preventDefault();
+  render();
+  fetchDataOfPopularFilms();
+} // renders main (first) page
+
 
 function render() {
-  newApiService.fetchPopularArticles().then(renderFilmsCard);
-}
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard);
+} // function for insertion of markup
+
 
 function renderFilmsCard(articles) {
-  refs.cardContainer.insertAdjacentHTML("beforeend", (0, _cardFilms.default)(articles)); // console.log(filmsCardTpl(articles));
+  listElement.innerHTML = (0, _cardFilms.default)(articles);
+} // renders movies by appropriate page
+
+
+function displayList(wrapper, page) {
+  wrapper.innerHTML = '';
+  fetchPopularFilmsByPage(page).then(renderFilmsCard);
+} // renders pagination for main (first) fetch
+
+
+function fetchDataOfPopularFilms() {
+  newApiService.fetchPopularArticlesPages().then(results => {
+    (0, _pagination.renderPagination)(results.total_pages, results.results, displayList);
+  });
+} // fetches popular movies by appropriate page
+
+
+function fetchPopularFilmsByPage(page) {
+  newApiService.pageNum = page;
+  return newApiService.insertGenresToMovieObj();
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js","./pagination":"js/pagination.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
 module.exports = "/team-ruslana.5ee08793.jpeg";
 },{}],"images/team-olga.jpeg":[function(require,module,exports) {
 module.exports = "/team-olga.c40113fb.jpeg";
@@ -2737,192 +3032,86 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
-const container = document.querySelector(".js-team-modal");
+const container = document.querySelector('.js-team-modal');
 const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
-container.addEventListener("click", openModal);
-
-function teamModalWindow(data) {
-  return basicLightbox.create(data);
-}
+container.addEventListener('click', openModal);
+const modal = basicLightbox.create(markup);
 
 function openModal(e) {
-  teamModalWindow(markup).show();
-}
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/pagination.js":[function(require,module,exports) {
-"use strict";
+  modal.show();
+  window.addEventListener('keydown', closeModalHandler);
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = fetchFilmsSearch;
-exports.renderPagination = renderPagination;
+  function closeModalHandler(e) {
+    if (e.code === 'Escape') {
+      modal.close();
+      window.removeEventListener('keydown', closeModalHandler);
+    }
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/keyWordSearch.js":[function(require,module,exports) {
+"use strict";
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
+var _pagination = require("./pagination");
+
+var _apiServis = _interopRequireDefault(require("./apiServis"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var listElement = document.querySelector('.js-card');
-var paginationElement = document.getElementById('pagination');
-var arrowLeft = document.querySelector('.arrow_left');
-var arrowRight = document.querySelector('.arrow_right');
-var currentPage = 1;
-var pagesOnWindow = 5;
-var rows = 20;
-var BASE_URL = "https://api.themoviedb.org/3";
-var KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
-fetchDataOfPopularFilms();
+const refs = {
+  searchForm: document.querySelector('#search-form'),
+  cardContainer: document.querySelector('.js-card')
+};
+const filmApiService = new _apiServis.default();
+const listElement = document.querySelector('.js-card');
+refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
-function fetchDataOfPopularFilms() {
-  var url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US");
-  return fetch(url).then(function (response) {
-    return response.json();
-  }).then(function (results) {
-    renderPagination(results.total_pages, results.results, displayList);
-  });
-}
+function onKeyWordSearch(e) {
+  e.preventDefault();
+  filmApiService.query = e.currentTarget.elements.query.value;
 
-function fetchPopularFilmsByPage(page) {
-  var url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(page);
-  return fetch(url).then(function (response) {
-    return response.json();
-  }).then(function (_ref) {
-    var results = _ref.results;
-    return results;
-  });
-}
+  if (filmApiService.query === '') {
+    return;
+  }
 
-function fetchSearchFilmsByPage(page, searchQuery) {
-  var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(page, "&include_adult=false&query=").concat(searchQuery);
-  return fetch(url).then(function (response) {
-    return response.json();
-  }).then(function (_ref2) {
-    var results = _ref2.results;
-    return results;
-  });
-}
+  render(filmApiService.query);
+  fetchDataOfSearchFilms(filmApiService.query);
+  e.currentTarget.elements.query.value = '';
+} // renders main (first) page after search *on submit*
 
-function fetchFilmsSearch(searchQuery) {
-  var url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&query=").concat(searchQuery);
-  return fetch(url).then(function (response) {
-    return response.json();
-  }).then(function (results) {
-    renderPagination(results.total_pages, results.results, displaySearchListByPage, searchQuery);
-  });
-}
+
+function render(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.insertGenresToSearchObj().then(renderFilmsCard);
+} // function for insertion of markup
+
 
 function renderFilmsCard(articles) {
   listElement.innerHTML = (0, _cardFilms.default)(articles);
-}
+} // renders movies by appropriate page & search query
 
-function displayList(wrapper, page) {
-  wrapper.innerHTML = '';
-  fetchPopularFilmsByPage(page).then(renderFilmsCard);
-}
 
 function displaySearchListByPage(wrapper, page, searchQuery) {
   wrapper.innerHTML = '';
   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+} // renders pagination for main (first) fetch
+
+
+function fetchDataOfSearchFilms(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.fetchSearchArticlesPages().then(results => {
+    (0, _pagination.renderPagination)(results.total_pages, results.results, displaySearchListByPage, searchQuery);
+  });
+} // fetches search queries by appropriate page & search query
+
+
+function fetchSearchFilmsByPage(page, searchQuery) {
+  filmApiService.pageNum = page;
+  filmApiService.query = searchQuery;
+  return filmApiService.insertGenresToSearchObj();
 }
-
-function renderPagination(totalPages, listItems, callback, searchQuery) {
-  paginationElement.innerHTML = '';
-  currentPage = 1;
-
-  function setupPagination(items, wrapper, rowsPerPage) {
-    wrapper.innerHTML = '';
-    var pageCount = totalPages;
-    var maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
-    var maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
-
-    if (maxLeftPage < 1) {
-      maxLeftPage = 1;
-      maxRightPage = pagesOnWindow;
-    }
-
-    if (maxRightPage > totalPages) {
-      maxLeftPage = totalPages - (pagesOnWindow - 1);
-
-      if (maxLeftPage < 1) {
-        maxLeftPage = 1;
-      }
-
-      maxRightPage = totalPages;
-    }
-
-    for (var i = 1; i <= totalPages; i++) {
-      if (maxLeftPage !== 1 && i == 1) {
-        var btn = paginationButton(i, items);
-        wrapper.appendChild(btn);
-      }
-
-      if (maxRightPage !== totalPages && i == totalPages) {
-        var _btn = paginationButton(i, items);
-
-        wrapper.appendChild(_btn);
-      }
-
-      if (i >= maxLeftPage && i <= maxRightPage) {
-        var _btn2 = paginationButton(i, items);
-
-        wrapper.appendChild(_btn2);
-      }
-
-      if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
-        var threeDotsEl = addThreeDotsBlock();
-        wrapper.insertBefore(threeDotsEl, wrapper[wrapper.length - 2]);
-      }
-
-      if (pageCount >= 7 && i == pageCount - 1 && currentPage !== pageCount && currentPage !== pageCount - 2 && currentPage !== pageCount - 1) {
-        var _threeDotsEl = addThreeDotsBlock();
-
-        wrapper.insertBefore(_threeDotsEl, wrapper[1]);
-      }
-    }
-  }
-
-  function addThreeDotsBlock() {
-    var threeDots = document.createElement('div');
-    threeDots.classList.add('threeDots');
-    threeDots.innerText = '...';
-    return threeDots;
-  }
-
-  function paginationButton(page, items) {
-    var button = document.createElement('button');
-    button.innerText = page;
-    if (currentPage == page) button.classList.add('active');
-    button.addEventListener('click', function () {
-      currentPage = page;
-      callback(listElement, currentPage, searchQuery);
-      var current_btn = document.querySelector('.pagenumbers button.active');
-      current_btn.classList.remove('active');
-      button.classList.add('active');
-      setupPagination(listItems, paginationElement, rows);
-    });
-    return button;
-  }
-
-  function onArrowLeftClick() {
-    if (currentPage > 1) {
-      currentPage--;
-      setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage, searchQuery);
-    }
-  }
-
-  function onArrowRightClick() {
-    if (currentPage < totalPages) {
-      currentPage++;
-      setupPagination(listItems, paginationElement, rows);
-      callback(listElement, currentPage, searchQuery);
-    }
-  }
-
-  setupPagination(listItems, paginationElement, rows);
-  arrowLeft.addEventListener('click', onArrowLeftClick);
-  arrowRight.addEventListener('click', onArrowRightClick);
-}
-},{"../templates/card-films.hbs":"templates/card-films.hbs"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3653,171 +3842,36 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"js/keyWordSearch.js":[function(require,module,exports) {
+},{}],"js/spinner.js":[function(require,module,exports) {
 "use strict";
 
-var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
 
-var _pagination = _interopRequireDefault(require("./pagination"));
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+const markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
+const spinner = basicLightbox.create(markup);
+var _default = {
+  spinner
+}; // ПОКАЗАТЬ спиннер - spinner.show();
+// ЗАКРЫТЬ  спиннер - spinner.close();
+// Как пример - спиннер пока срабатывает при клике на копирайт
 
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+exports.default = _default;
+const copyrightContainer = document.querySelector('.copyright');
+copyrightContainer.addEventListener('click', onLoadingSpinner);
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var refs = {
-  searchForm: document.querySelector('#search-form'),
-  cardContainer: document.querySelector('.js-card')
-};
-refs.searchForm.addEventListener('submit', onKeyWordSearch);
-
-var ApiService = /*#__PURE__*/function () {
-  function ApiService() {
-    _classCallCheck(this, ApiService);
-
-    this.searchQuery = '';
-  }
-
-  _createClass(ApiService, [{
-    key: "fetchFilms",
-    value: function () {
-      var _fetchFilms = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.default.mark(function _callee() {
-        var url, films, response;
-        return _regeneratorRuntime.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                url = "https://api.themoviedb.org/3/search/movie?api_key=d91911ebb88751cf9e5c4b8fdf4412c9&query=".concat(this.searchQuery);
-                _context.next = 3;
-                return fetch(url);
-
-              case 3:
-                films = _context.sent;
-                _context.next = 6;
-                return films.json();
-
-              case 6:
-                response = _context.sent;
-                return _context.abrupt("return", response);
-
-              case 8:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      function fetchFilms() {
-        return _fetchFilms.apply(this, arguments);
-      }
-
-      return fetchFilms;
-    }()
-  }, {
-    key: "query",
-    get: function get() {
-      return this.searchQuery;
-    },
-    set: function set(newQuery) {
-      this.searchQuery = newQuery;
-    }
-  }]);
-
-  return ApiService;
-}();
-
-var filmApiService = new ApiService();
-
-function onKeyWordSearch(e) {
-  e.preventDefault();
-  filmApiService.query = e.currentTarget.elements.query.value;
-
-  if (filmApiService.query === '') {
-    return;
-  }
-
-  console.log(filmApiService.query);
-  totalPagesCount();
-  onKeyWordRender();
-  (0, _pagination.default)(filmApiService.query);
+function onLoadingSpinner() {
+  spinner.show();
 }
-
-function totalPagesCount() {
-  return _totalPagesCount.apply(this, arguments);
-}
-
-function _totalPagesCount() {
-  _totalPagesCount = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.default.mark(function _callee2() {
-    var totalPages;
-    return _regeneratorRuntime.default.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return filmApiService.fetchFilms().then(function (data) {
-              var numberOfPages = data.total_pages;
-              console.log(numberOfPages);
-              return totalPages;
-            });
-
-          case 2:
-            totalPages = _context2.sent;
-
-          case 3:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2);
-  }));
-  return _totalPagesCount.apply(this, arguments);
-}
-
-function onKeyWordRender() {
-  return _onKeyWordRender.apply(this, arguments);
-}
-
-function _onKeyWordRender() {
-  _onKeyWordRender = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.default.mark(function _callee3() {
-    var renderMovies;
-    return _regeneratorRuntime.default.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            refs.cardContainer.innerHTML = '';
-            _context3.next = 3;
-            return filmApiService.fetchFilms().then(function (_ref) {
-              var results = _ref.results;
-              return results;
-            }).then(appendMarkup);
-
-          case 3:
-            renderMovies = _context3.sent;
-
-          case 4:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3);
-  }));
-  return _onKeyWordRender.apply(this, arguments);
-}
-
-function appendMarkup(cards) {
-  refs.cardContainer.insertAdjacentHTML('beforeend', (0, _cardFilms.default)(cards));
-}
-},{"../templates/card-films.hbs":"templates/card-films.hbs","regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./pagination":"js/pagination.js"}],"index.js":[function(require,module,exports) {
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -3833,7 +3887,11 @@ require("./js/pagination.js");
 require("../node_modules/basiclightbox/dist/basicLightbox.min.css");
 
 require("./js/keyWordSearch");
-},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("regenerator-runtime/runtime.js");
+
+require("./js/spinner");
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js","regenerator-runtime/runtime.js":"../node_modules/regenerator-runtime/runtime.js","./js/spinner":"js/spinner.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3861,7 +3919,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60624" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65476" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
