@@ -2,9 +2,6 @@ import filmsCardTpl from '../templates/card-films.hbs';
 import NewApiService from './apiServis';
 import { renderPagination } from './pagination';
 
-// const refs = {
-//   cardContainer: document.querySelector('.js-card'),
-// };
 const listElement = document.querySelector('.js-card');
 const newApiService = new NewApiService();
 
@@ -24,11 +21,7 @@ function renderFilmsCard(articles) {
 // renders movies by appropriate page
 function displayList(wrapper, page) {
   wrapper.innerHTML = '';
-  fetchPopularFilmsByPage(page)
-    .then(({ results }) => {
-      return results;
-    })
-    .then(renderFilmsCard);
+  fetchPopularFilmsByPage(page).then(renderFilmsCard);
 }
 
 // renders pagination for main (first) fetch
@@ -41,20 +34,5 @@ function fetchDataOfPopularFilms() {
 // fetches popular movies by appropriate page
 function fetchPopularFilmsByPage(page) {
   newApiService.pageNum = page;
-  return newApiService.fetchPopularArticlesPages();
+  return newApiService.insertGenresToMovieObj();
 }
-
-// insertGenresToMovieObj() {
-//     return this.fetchPopularArticles().then(data => {
-//       return this.fetchGenres().then(genresList => {
-//         return data.map(movie => ({
-//           ...movie,
-//           genre_ids: movie.genre_ids
-//             .map(id => genresList.filter(el => el.id === id))
-//             .flat(),
-//         }));
-//       });
-//     });
-//   }
-
-newApiService.insertGenresToMovieObj().then(console.log);
