@@ -1,3 +1,13 @@
+// prevents interface shift due to scrollbar render by browser
+html {
+  overflow-y: scroll;
+}
+
+// endless bg color
+.endless-bg-color {
+  background-color: $dark;
+}
+
 // logo
 .logo {
   position: absolute;
