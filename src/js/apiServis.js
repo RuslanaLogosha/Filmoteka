@@ -1,5 +1,3 @@
-import regeneratorRuntime from 'regenerator-runtime';
-
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 export default class NewApiService {

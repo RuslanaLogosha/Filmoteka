@@ -3,10 +3,20 @@ import NewApiService from './apiServis';
 import { renderPagination } from './pagination';
 
 const listElement = document.querySelector('.js-card');
+const logoEl = document.querySelector('.js-main-logo');
 const newApiService = new NewApiService();
 
 render();
 fetchDataOfPopularFilms();
+
+logoEl.addEventListener('click', onLogoClick);
+
+// page set to default with click on logotype without page refresh
+function onLogoClick(e) {
+  e.preventDefault();
+  render();
+  fetchDataOfPopularFilms();
+}
 
 // renders main (first) page
 function render() {
