@@ -1,27 +1,28 @@
-// .modal-card {
-//   background-color: #ffffff;
-//   width: 100%;
-// }
-
+@media screen and (min-width: 320px) {
+  .modal-card {
+    background-color: #ffffff;
+    width: 300px;
+    cursor: pointer;
+    margin-top: 450px;
+    overflow: scroll;
+  }
+}
 .image {
   display: block;
-  width: auto;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.cardItem__image {
-  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  width: 260px;
   height: 404px;
   border-radius: 5px;
 }
 
 .cardItem__wrapper {
-  padding: 32px 0px 36px;
+  padding: 32px 20px 36px;
 }
 
 .cardItem__name {
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -33,7 +34,7 @@
 
 .cardItem__wrapper p {
   font-size: 12px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   line-height: 1.333;
   margin-bottom: 18px;
   letter-spacing: 1px;
@@ -105,7 +106,7 @@
 .cardItem__button {
   padding: 0 15px;
   font-size: 12px;
-  font-family: "Roboto", "Arial", sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   color: rgb(0, 0, 0);
   text-transform: uppercase;
   line-height: 1.333;
@@ -127,7 +128,24 @@
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .modal-card {
+    background-color: #ffffff;
+    width: 720px;
+    margin-top: 0px;
+    cursor: pointer;
+    overflow: scroll;
+    display: flex;
+  }
+
+  .image {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border-radius: 5px;
+  }
+
   .cardItem {
     display: flex;
   }
@@ -139,21 +157,20 @@
   }
 
   .cardItem__wrapper {
-    width: 295px;
+    width: 370px;
+    padding: 10px;
+    margin-left: 30px;
   }
 
   .cardItem__image {
     width: 295px;
-    height: 421px;
+    padding-left: 50px;
+    padding-bottom: 10px;
   }
 
   .cardItem__name {
     font-size: 25px;
     line-height: 35px;
-  }
-
-  .cardItem__wrapper {
-    padding: 10px 0px 0px;
   }
 
   .cardItem__button:not(:last-child) {
@@ -162,9 +179,19 @@
 }
 
 @media (min-width: 1024px) {
-  .cardItem__image {
-    width: 423px;
-    height: 520px;
+  .modal-card {
+    background-color: #ffffff;
+    width: 810px;
+    margin-top: 0px;
+    overflow: scroll;
+    display: flex;
+  }
+  .image {
+    display: block;
+    width: auto;
+    height: auto;
+    padding-top: 10px;
+    border-radius: 5px;
   }
 
   .cardItem__wrapper {
