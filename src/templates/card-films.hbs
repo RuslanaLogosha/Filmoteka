@@ -3,7 +3,7 @@
     <img src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}} {{name}}" width="100%" />
       <h2 class="card__title">{{title}} {{name}}</h4>
        <p class="card__text">
-          <span>{{genre_ids}}</span> | <span>{{release_date}}</span>
+          <span>{{#each genre_ids}} {{name}}{{#unless @last}},{{/unless}}{{/each}}</span> | <span>{{release_date}}</span>
        </p>
  </li>
 {{/each}}

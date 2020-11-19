@@ -35,14 +35,15 @@ export default class NewApiService {
         return data.genres;
       });
   }
-  insertGenrestoMovieObj() {
+  insertGenresToMovieObj() {
     return this.fetchPopularArticles().then(data => {
       return this.fetchGenres().then(genresList => {
         return data.map(movie => ({
           ...movie,
-          genre_ids: movie.genre_ids.map(id =>
-            genresList.filter(el => el.id === id),
-          ),
+          release_date: movie.release_date.split('-')[0],
+          genre_ids: movie.genre_ids
+            .map(id => genresList.filter(el => el.id === id))
+            .flat(),
         }));
       });
     });

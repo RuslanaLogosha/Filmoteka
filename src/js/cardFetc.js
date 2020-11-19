@@ -13,7 +13,7 @@ fetchDataOfPopularFilms();
 
 // renders main (first) page
 function render() {
-  newApiService.fetchPopularArticles().then(renderFilmsCard);
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard);
 }
 
 // function for insertion of markup
@@ -44,4 +44,17 @@ function fetchPopularFilmsByPage(page) {
   return newApiService.fetchPopularArticlesPages();
 }
 
-newApiService.insertGenrestoMovieObj().then(console.log);
+// insertGenresToMovieObj() {
+//     return this.fetchPopularArticles().then(data => {
+//       return this.fetchGenres().then(genresList => {
+//         return data.map(movie => ({
+//           ...movie,
+//           genre_ids: movie.genre_ids
+//             .map(id => genresList.filter(el => el.id === id))
+//             .flat(),
+//         }));
+//       });
+//     });
+//   }
+
+newApiService.insertGenresToMovieObj().then(console.log);
