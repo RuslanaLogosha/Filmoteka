@@ -6,3 +6,4 @@ import './js/pagination.js';
 import '../node_modules/basiclightbox/dist/basicLightbox.min.css';
 import './js/keyWordSearch';
 import 'regenerator-runtime/runtime.js';
+import './js/spinner';
