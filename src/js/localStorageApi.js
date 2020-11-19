@@ -9,16 +9,6 @@ const localStorageApi = {
         this.save(key, []);
         return [];
     },
-
-    //Забирает по ID фильм из хранилища
-    // getSingleMovie(key, id) { 
-
-    //     const movies = this.load(key);
-    //     // console.log(movies);
-    //     const movie = movies.find(movie => movie.id === id);
-    //     return movie;
-    // },
-
     
     //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
     addMovie(key, value) {        
@@ -26,6 +16,18 @@ const localStorageApi = {
         this.save(key, [value, ...dataFromLocalStorage]);
     },
     
+    removeMovie(key, value) {
+  
+        const dataFromLocalStorage = this.load(key);
+
+        const valueIndex = dataFromLocalStorage.indexOf(value);
+
+        if (0 <= valueIndex) { 
+            dataFromLocalStorage.splice(valueIndex, 1);
+
+            this.save(key, dataFromLocalStorage);
+        }
+     },
 
 
     // Принимает ключ `key` по которому будет произведена выборка.

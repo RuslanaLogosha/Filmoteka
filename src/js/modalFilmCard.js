@@ -3,6 +3,9 @@ import modalFilmCard from '../templates/modalFilmCard.hbs';
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 
+//local Storage
+import { initStorageBtns } from './initStorageInModal';
+
 // let page = 1;
 const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 
@@ -34,6 +37,9 @@ function openModal(e) {
           window.removeEventListener('keydown', closeModalHandler);
         }
       }
+
+      //new Function
+      initStorageBtns();
     })
     .then(data => {})
     .catch(error => {

@@ -9,15 +9,43 @@
             </svg>
             <span class="logo__name">Filmoteka</span>
           </a>
+        <ul class="side-nav side-nav--lib">
+          <li class="side-nav__item">
+            <a href="/index.html" class="side-nav__link">Home</a>
+          </li>
+          <li class="side-nav__item">
+            <a href="" class="side-nav__link side-nav__link--current-page"
+              >My library</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-          <ul class="side-nav side-nav--lib">
-            <li class="side-nav__item">
-              <a href="/index.html" class="side-nav__link">Home</a>
+      <form>
+        <div role="group">
+          <ul class="storage js-choice-storage">
+            <li class="storage__item">
+              <label class="storage__label">
+                <input
+                  type="radio"
+                  name="storage-btn"
+                  value="Watched"
+                  class="storage__input visuallyhidden"
+                  checked
+                />
+                <span class="storage__btn" id="js-WatchedButton">Watched</span>
+              </label>
             </li>
-            <li class="side-nav__item">
-              <a href="" class="side-nav__link side-nav__link--current-page"
-                >My library</a
-              >
+            <li class="storage__item">
+              <label class="storage__label">
+                <input
+                  type="radio"
+                  name="storage-btn"
+                  value="Queue"
+                  class="storage__input visuallyhidden"
+                />
+                <span class="storage__btn" id="js-QueueButton">Queue</span>
+              </label>
             </li>
           </ul>
         </nav>
