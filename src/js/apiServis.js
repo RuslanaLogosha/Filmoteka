@@ -43,7 +43,7 @@ export default class NewApiService {
         return data.map(movie => ({
           ...movie,
           release_date: movie.release_date.split('-')[0],
-          genre_ids: movie.genre_ids
+          genres: movie.genre_ids
             .map(id => genresList.filter(el => el.id === id))
             .flat(),
         }));
@@ -56,7 +56,7 @@ export default class NewApiService {
         return data.map(movie => ({
           ...movie,
           release_date: movie.release_date.split('-')[0],
-          genre_ids: movie.genre_ids
+          genres: movie.genre_ids
             .map(id => genresList.filter(el => el.id === id))
             .flat(),
         }));
