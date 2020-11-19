@@ -8,15 +8,7 @@ export default class NewApiService {
   fetchTrendingArticles() {
     const url = `${BASE_URL}/trending/all/day?api_key=${KEY}`;
     return fetch(url)
-      .then((response) => response.json())
-      .then(({ results }) => {
-        return results;
-      });
-  }
-  fetchFilmsSearch() {
-    const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${this.searchQuery}`;
-    return fetch(url)
-      .then((response) => response.json())
+      .then(response => response.json())
       .then(({ results }) => {
         return results;
       });
@@ -24,16 +16,25 @@ export default class NewApiService {
   fetchPopularArticles() {
     const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
     return fetch(url)
-      .then((response) => response.json())
+      .then(response => response.json())
       .then(({ results }) => {
-        // console.log(results);
         return results;
       });
+  }
+  fetchPopularArticlesPages() {
+    const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${this.page}`;
+    return fetch(url).then(response => response.json());
   }
   get query() {
     return this.searchQuery;
   }
   set query(newQuery) {
     this.searchQuery = newQuery;
+  }
+  get pageNum() {
+    return this.page;
+  }
+  set pageNum(newPage) {
+    this.page = newPage;
   }
 }

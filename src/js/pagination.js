@@ -10,64 +10,64 @@ let rows = 20;
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 
-fetchDataOfPopularFilms();
+// fetchDataOfPopularFilms();
 
-function fetchDataOfPopularFilms() {
-  const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
-  return fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((results) => {
-      renderPagination(results.total_pages, results.results, displayList);
-    });
-}
+// function fetchDataOfPopularFilms() {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
+//   return fetch(url)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then((results) => {
+//       renderPagination(results.total_pages, results.results, displayList);
+//     });
+// }
 
-function fetchPopularFilmsByPage(page) {
-  const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .then(({ results }) => {
-      return results;
-    });
-}
+// function fetchPopularFilmsByPage(page) {
+//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
+//   return fetch(url)
+//     .then((response) => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
 
-function fetchSearchFilmsByPage(page, searchQuery) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .then(({ results }) => {
-      return results;
-    });
-}
+// function fetchSearchFilmsByPage(page, searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(({ results }) => {
+//       return results;
+//     });
+// }
 
-export default function fetchFilmsSearch(searchQuery) {
-  const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
-  return fetch(url)
-    .then((response) => response.json())
-    .then((results) => {
-      renderPagination(
-        results.total_pages,
-        results.results,
-        displaySearchListByPage,
-        searchQuery
-      );
-    });
-}
+// export default function fetchFilmsSearch(searchQuery) {
+//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
+//   return fetch(url)
+//     .then(response => response.json())
+//     .then(results => {
+//       renderPagination(
+//         results.total_pages,
+//         results.results,
+//         displaySearchListByPage,
+//         searchQuery,
+//       );
+//     });
+// }
 
-function renderFilmsCard(articles) {
-  listElement.innerHTML = filmsCardTpl(articles);
-}
+// function renderFilmsCard(articles) {
+//   listElement.innerHTML = filmsCardTpl(articles);
+// }
 
-function displayList(wrapper, page) {
-  wrapper.innerHTML = '';
-  fetchPopularFilmsByPage(page).then(renderFilmsCard);
-}
+// function displayList(wrapper, page) {
+//   wrapper.innerHTML = '';
+//   fetchPopularFilmsByPage(page).then(renderFilmsCard);
+// }
 
-function displaySearchListByPage(wrapper, page, searchQuery) {
-  wrapper.innerHTML = '';
-  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
-}
+// function displaySearchListByPage(wrapper, page, searchQuery) {
+//   wrapper.innerHTML = '';
+//   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
+// }
 
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
