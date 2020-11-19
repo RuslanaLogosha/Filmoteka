@@ -2,6 +2,7 @@ import filmsCardTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 import ApiService from './apiServis';
 import placeholder from './spinner';
+import createTrailerLink from './trailers.js';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -35,6 +36,7 @@ function render(searchQuery) {
 // function for insertion of markup
 function renderFilmsCard(articles) {
   listElement.innerHTML = filmsCardTpl(articles);
+  createTrailerLink();
 }
 
 // renders movies by appropriate page & search query
@@ -46,12 +48,12 @@ function displaySearchListByPage(wrapper, page, searchQuery) {
 // renders pagination for main (first) fetch
 function fetchDataOfSearchFilms(searchQuery) {
   filmApiService.query = searchQuery;
-  filmApiService.fetchSearchArticlesPages().then(results => {
+  filmApiService.fetchSearchArticlesPages().then((results) => {
     renderPagination(
       results.total_pages,
       results.results,
       displaySearchListByPage,
-      searchQuery,
+      searchQuery
     );
   });
 }
