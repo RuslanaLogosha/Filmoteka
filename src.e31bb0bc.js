@@ -2226,7 +2226,7 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "\n            <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n            ";
+    return "\n                <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n                ";
   },
   "compiler": [8, ">= 4.3.0"],
   "main": function (container, depth0, helpers, partials, data) {
@@ -2342,7 +2342,7 @@ const templateFunction = _handlebars.default.template({
           "column": 79
         }
       }
-    }) : helper)) + "</span>\n        </p>\n\n        <p class=\"cardItem__genre cardItem_text\">\n            Genre\n        </p>\n        <p class=\"cardItem__genreList\">" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+    }) : helper)) + "</span>\n        </p>\n        <div class=\"genres\">\n            <p class=\"cardItem__genre cardItem_text\">\n                Genre\n            </p>\n            <p class=\"cardItem__genreList\">" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(1, data, 0),
@@ -2351,24 +2351,24 @@ const templateFunction = _handlebars.default.template({
       "loc": {
         "start": {
           "line": 22,
-          "column": 39
+          "column": 43
         },
         "end": {
           "line": 24,
-          "column": 21
+          "column": 25
         }
       }
-    })) != null ? stack1 : "") + "</p>\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    })) != null ? stack1 : "") + "</p>\n\n        </div>\n\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "overview",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 32,
           "column": 12
         },
         "end": {
-          "line": 29,
+          "line": 32,
           "column": 24
         }
       }
@@ -2935,6 +2935,7 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       current_btn.classList.remove('active');
       button.classList.add('active');
       setupPagination(listItems, paginationElement, rows);
+      hideExtremeButtons(totalPages);
     });
     return button;
   }
@@ -2947,6 +2948,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+
+    hideExtremeButtons(totalPages);
   }
 
   function onArrowRightClick() {
@@ -2957,11 +2960,33 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+
+    hideExtremeButtons(totalPages);
   }
 
   setupPagination(listItems, paginationElement, rows);
   arrowLeft.addEventListener('click', onArrowLeftClick);
   arrowRight.addEventListener('click', onArrowRightClick);
+  hideExtremeButtons(totalPages);
+}
+
+function hideExtremeButtons(totalPages) {
+  if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // код для мобильных устройств
+    const allPaginationBtns = document.querySelectorAll('#pagination button');
+
+    if (currentPage > 3) {
+      allPaginationBtns[0].classList.add('hide');
+    } else {
+      allPaginationBtns[0].classList.remove('hide');
+    }
+
+    if (currentPage < totalPages - 3) {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.add('hide');
+    } else {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
+    }
+  }
 }
 },{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js"}],"js/cardFetc.js":[function(require,module,exports) {
 "use strict";
@@ -3939,7 +3964,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50021" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

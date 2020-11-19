@@ -626,6 +626,7 @@ html {
     padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: -15px;
   }
 }
@@ -871,6 +872,20 @@ footer {
   padding: 10px 5px 1px 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .threeDots {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .threeDots {
+    display: inline-block;
+  }
+}
+.hide {
+  display: none;
+}
+
 @media screen and (min-width: 320px) {
   .modal-card {
     background-color: #ffffff;
@@ -879,6 +894,10 @@ footer {
     margin-top: 450px;
   }
 }
+.genres {
+  display: flex;
+}
+
 .image {
   display: block;
   margin-right: auto;
@@ -905,11 +924,17 @@ footer {
 }
 
 .cardItem__wrapper p {
+  display: flex;
   font-size: 12px;
   font-family: "Roboto";
   line-height: 1.333;
   margin-bottom: 18px;
   letter-spacing: 1px;
+}
+
+.cardItem__genreList {
+  list-style: disc;
+  display: block;
 }
 
 .cardItem_text {
@@ -940,7 +965,7 @@ footer {
 }
 
 .cardItem__title_data {
-  margin-left: 46px;
+  margin-left: 50px;
   text-transform: uppercase;
   color: black;
 }
@@ -957,6 +982,7 @@ footer {
 
 .cardItem__genre_data {
   color: black;
+  margin-right: 5px;
 }
 
 .cardItem__about {
