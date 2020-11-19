@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/basiclightbox/dist/basicLightbox.min.js":[function(require,module,exports) {
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"./../images/icons8-play-button-2.svg":[["icons8-play-button-2.f5ce0859.svg","images/icons8-play-button-2.svg"],"images/icons8-play-button-2.svg"],"./../images/icon-close.svg":[["icon-close.1add023a.svg","images/icon-close.svg"],"images/icon-close.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/basiclightbox/dist/basicLightbox.min.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 !function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).basicLightbox=e()}}((function(){return function e(n,t,o){function r(c,u){if(!t[c]){if(!n[c]){var s="function"==typeof require&&require;if(!u&&s)return s(c,!0);if(i)return i(c,!0);var a=new Error("Cannot find module '"+c+"'");throw a.code="MODULE_NOT_FOUND",a}var l=t[c]={exports:{}};n[c][0].call(l.exports,(function(e){return r(n[c][1][e]||e)}),l,l.exports,e,n,t,o)}return t[c].exports}for(var i="function"==typeof require&&require,c=0;c<o.length;c++)r(o[c]);return r}({1:[function(e,n,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.create=t.visible=void 0;var o=function(e){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=document.createElement("div");return t.innerHTML=e.trim(),!0===n?t.children:t.firstChild},r=function(e,n){var t=e.children;return 1===t.length&&t[0].tagName===n},i=function(e){return null!=(e=e||document.querySelector(".basicLightbox"))&&!0===e.ownerDocument.body.contains(e)};t.visible=i;t.create=function(e,n){var t=function(e,n){var t=o('\n\t\t<div class="basicLightbox '.concat(n.className,'">\n\t\t\t<div class="basicLightbox__placeholder" role="dialog"></div>\n\t\t</div>\n\t')),i=t.querySelector(".basicLightbox__placeholder");e.forEach((function(e){return i.appendChild(e)}));var c=r(i,"IMG"),u=r(i,"VIDEO"),s=r(i,"IFRAME");return!0===c&&t.classList.add("basicLightbox--img"),!0===u&&t.classList.add("basicLightbox--video"),!0===s&&t.classList.add("basicLightbox--iframe"),t}(e=function(e){var n="string"==typeof e,t=e instanceof HTMLElement==!0;if(!1===n&&!1===t)throw new Error("Content must be a DOM element/node or string");return!0===n?Array.from(o(e,!0)):"TEMPLATE"===e.tagName?[e.content.cloneNode(!0)]:Array.from(e.children)}(e),n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(null==(e=Object.assign({},e)).closable&&(e.closable=!0),null==e.className&&(e.className=""),null==e.onShow&&(e.onShow=function(){}),null==e.onClose&&(e.onClose=function(){}),"boolean"!=typeof e.closable)throw new Error("Property `closable` must be a boolean");if("string"!=typeof e.className)throw new Error("Property `className` must be a string");if("function"!=typeof e.onShow)throw new Error("Property `onShow` must be a function");if("function"!=typeof e.onClose)throw new Error("Property `onClose` must be a function");return e}(n)),c=function(e){return!1!==n.onClose(u)&&function(e,n){return e.classList.remove("basicLightbox--visible"),setTimeout((function(){return!1===i(e)||e.parentElement.removeChild(e),n()}),410),!0}(t,(function(){if("function"==typeof e)return e(u)}))};!0===n.closable&&t.addEventListener("click",(function(e){e.target===t&&c()}));var u={element:function(){return t},visible:function(){return i(t)},show:function(e){return!1!==n.onShow(u)&&function(e,n){return document.body.appendChild(e),setTimeout((function(){requestAnimationFrame((function(){return e.classList.add("basicLightbox--visible"),n()}))}),10),!0}(t,(function(){if("function"==typeof e)return e(u)}))},close:c};return u}},{}]},{},[1])(1)}));
@@ -1012,17 +1012,20 @@ const localStorageApi = {
     return [];
   },
 
-  //Забирает по ID фильм из хранилища
-  // getSingleMovie(key, id) { 
-  //     const movies = this.load(key);
-  //     // console.log(movies);
-  //     const movie = movies.find(movie => movie.id === id);
-  //     return movie;
-  // },
   //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
   addMovie(key, value) {
     const dataFromLocalStorage = this.load(key);
     this.save(key, [value, ...dataFromLocalStorage]);
+  },
+
+  removeMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    const valueIndex = dataFromLocalStorage.indexOf(value);
+
+    if (0 <= valueIndex) {
+      dataFromLocalStorage.splice(valueIndex, 1);
+      this.save(key, dataFromLocalStorage);
+    }
   },
 
   // Принимает ключ `key` по которому будет произведена выборка.
@@ -3091,32 +3094,74 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return " <li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    return "<li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 2,
-          "column": 37
+          "column": 36
         },
         "end": {
           "line": 2,
-          "column": 43
+          "column": 42
         }
       }
-    }) : helper)) + "'>\n    <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>\n   <div class=\"btn-id\">\n      <button data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 4,
+          "column": 29
+        }
+      }
+    }) : helper)) + "' class=\"btn-youtube\">\n         <div class=\"overlay-btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 56
+        },
+        "end": {
+          "line": 5,
+          "column": 62
+        }
+      }
+    }) : helper)) + "'>\n            <h2 class=\"btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 50
+        },
+        "end": {
+          "line": 6,
+          "column": 56
+        }
+      }
+    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 45
+          "line": 11,
+          "column": 44
         },
         "end": {
-          "line": 3,
-          "column": 60
+          "line": 11,
+          "column": 59
         }
       }
     }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3125,12 +3170,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 67
+          "line": 11,
+          "column": 66
         },
         "end": {
-          "line": 3,
-          "column": 76
+          "line": 11,
+          "column": 75
         }
       }
     }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3139,12 +3184,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 77
+          "line": 11,
+          "column": 76
         },
         "end": {
-          "line": 3,
-          "column": 85
+          "line": 11,
+          "column": 84
         }
       }
     }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3153,26 +3198,26 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 109
+          "line": 11,
+          "column": 108
         },
         "end": {
-          "line": 3,
-          "column": 115
+          "line": 11,
+          "column": 114
         }
       }
-    }) : helper)) + "\"/>\n      <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" />\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 30
+          "line": 12,
+          "column": 27
         },
         "end": {
-          "line": 4,
-          "column": 39
+          "line": 12,
+          "column": 36
         }
       }
     }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3181,15 +3226,15 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 40
+          "line": 12,
+          "column": 37
         },
         "end": {
-          "line": 4,
-          "column": 48
+          "line": 12,
+          "column": 45
         }
       }
-    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -3197,12 +3242,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 16
+          "line": 14,
+          "column": 15
         },
         "end": {
-          "line": 6,
-          "column": 51
+          "line": 14,
+          "column": 50
         }
       }
     })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3211,29 +3256,29 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 67
+          "line": 14,
+          "column": 66
         },
         "end": {
-          "line": 6,
-          "column": 83
+          "line": 14,
+          "column": 82
         }
       }
-    }) : helper)) + "</span> <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span> <span\n            class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 124
+          "line": 15,
+          "column": 39
         },
         "end": {
-          "line": 6,
-          "column": 140
+          "line": 15,
+          "column": 55
         }
       }
-    }) : helper)) + "</span>\n       </p>\n </li>\n";
+    }) : helper)) + "</span>\n      </p>\n</li>\n";
   },
   "2": function (container, depth0, helpers, partials, data) {
     var helper,
@@ -3251,12 +3296,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 33
+          "line": 14,
+          "column": 32
         },
         "end": {
-          "line": 6,
-          "column": 41
+          "line": 14,
+          "column": 40
         }
       }
     }) : helper)) + " ";
@@ -3272,7 +3317,7 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return ((stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
+    return (stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(1, data, 0),
@@ -3284,11 +3329,11 @@ const templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 18,
           "column": 9
         }
       }
-    })) != null ? stack1 : "") + "\n";
+    })) != null ? stack1 : "";
   },
   "useData": true
 });
@@ -3319,25 +3364,17 @@ const getMovies = async idList => {
   return await Promise.all(promises);
 };
 
+const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
 const refs = {
-  btn: document.querySelector('[name=storage-btn]'),
-  cardLibrary: document.querySelector('.js-card-library'),
-  watchedButton: document.querySelector('#js-WatchedButton'),
-  queueButton: document.querySelector('#js-QueueButton')
-}; //Заглушка
+  storageList: document.querySelector('.js-choice-storage'),
+  cardLibrary: document.querySelector('.js-card-library')
+};
+renderMovies();
+refs.storageList.addEventListener('change', renderMovies);
 
-if (refs.btn.checked) renderMovies('Watched');
+function renderMovies() {
+  const key = getCheckedLiblary(CHOICE_STORAGE_BTN_NAME);
 
-_localStorageApi.default.save('Queue', [550, 551, 552, 553, 554, 557, 558, 559]);
-
-refs.queueButton.addEventListener('click', e => {
-  renderMovies('Queue');
-});
-refs.watchedButton.addEventListener('click', e => {
-  renderMovies('Watched');
-}); //Заглушка
-
-function renderMovies(key) {
   const queueIds = _localStorageApi.default.getMovies(key);
 
   if (queueIds.length) {
@@ -3345,6 +3382,10 @@ function renderMovies(key) {
   } else {
     refs.cardLibrary.innerHTML = "<img src=\"".concat(_nothingHere.default, "\" alt=\"There is nothing\" />");
   }
+}
+
+function getCheckedLiblary(name) {
+  return document.querySelector("[name=".concat(name, "]:checked")).value;
 }
 
 function renderMarkup(moviesArray) {
@@ -3390,7 +3431,21 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div class=\"modal-card\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 37
+        },
+        "end": {
+          "line": 1,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
@@ -3518,14 +3573,69 @@ const templateFunction = _handlebars.default.template({
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
   },
   "useData": true
 });
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/initStorageInModal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initStorageBtns = void 0;
+
+var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const initStorageBtns = () => {
+  const storageEl = document.querySelector('.modal-card .storage');
+  const movieId = document.querySelector('.modal-card').dataset.action;
+  checkStorage(storageEl);
+  storageEl.addEventListener('change', onStorageBtnClick);
+
+  function onStorageBtnClick(e) {
+    const storageKey = e.target.value;
+    const action = e.target.checked ? 'add' : 'remove';
+
+    _localStorageApi.default.getMovies(storageKey);
+
+    makeActionInStorage({
+      storageKey,
+      movieId,
+      action
+    });
+  }
+
+  function checkStorage(storageEl) {
+    const btnsEl = storageEl.querySelectorAll('[type=checkbox]');
+    btnsEl.forEach(element => {
+      const storageKey = element.value;
+
+      const arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
+      // console.log(arr.indexOf(movieId));
+
+
+      if (0 <= arr.indexOf(movieId)) element.checked = "true";
+    });
+  }
+};
+
+exports.initStorageBtns = initStorageBtns;
+
+function makeActionInStorage({
+  storageKey,
+  movieId,
+  action
+}) {
+  if (action === 'add') _localStorageApi.default.addMovie(storageKey, movieId);
+  if (action === 'remove') _localStorageApi.default.removeMovie(storageKey, movieId);
+}
+},{"./localStorageApi":"js/localStorageApi.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
 "use strict";
 
 var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
@@ -3534,12 +3644,15 @@ var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
 
 require("basiclightbox/dist/basicLightbox.min.css");
 
+var _initStorageInModal = require("./initStorageInModal");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//local Storage
 // let page = 1;
 const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 const cardFilm = document.querySelector('.card__colection');
@@ -3564,12 +3677,15 @@ function openModal(e) {
         modal.close();
         window.removeEventListener('keydown', closeModalHandler);
       }
-    }
+    } //new Function
+
+
+    (0, _initStorageInModal.initStorageBtns)();
   }).then(data => {}).catch(error => {
     console.log('oops!');
   });
 }
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"library.js":[function(require,module,exports) {
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"library.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -3609,7 +3725,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58140" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

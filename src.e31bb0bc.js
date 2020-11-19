@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"./../images/icons8-play-button-2.svg":[["icons8-play-button-2.f5ce0859.svg","images/icons8-play-button-2.svg"],"images/icons8-play-button-2.svg"],"./../images/icon-close.svg":[["icon-close.1add023a.svg","images/icon-close.svg"],"images/icon-close.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -2244,7 +2244,21 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div class=\"modal-card\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 37
+        },
+        "end": {
+          "line": 1,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
@@ -2372,7 +2386,7 @@ const templateFunction = _handlebars.default.template({
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
   },
   "useData": true
 });
@@ -2389,7 +2403,117 @@ var global = arguments[3];
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/localStorageApi.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const localStorageApi = {
+  //Проверяет хранилище по ключу. Возвращает: Пустой массив - если не находит, и Данные - если находит
+  getMovies(key) {
+    const keyStorage = this.load(key);
+    if (Array.isArray(keyStorage)) return keyStorage;
+    this.save(key, []);
+    return [];
+  },
+
+  //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
+  addMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    this.save(key, [value, ...dataFromLocalStorage]);
+  },
+
+  removeMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    const valueIndex = dataFromLocalStorage.indexOf(value);
+
+    if (0 <= valueIndex) {
+      dataFromLocalStorage.splice(valueIndex, 1);
+      this.save(key, dataFromLocalStorage);
+    }
+  },
+
+  // Принимает ключ `key` по которому будет произведена выборка.
+  load(key) {
+    try {
+      const serializedState = localStorage.getItem(key);
+      return serializedState === null ? undefined : JSON.parse(serializedState);
+    } catch (err) {
+      console.error('Get state error: ', err);
+    }
+  },
+
+  // Принимает ключ `key` и значение `value`.
+  save(key, value) {
+    try {
+      const serializedState = JSON.stringify(value);
+      localStorage.setItem(key, serializedState);
+    } catch (err) {
+      console.error('Set state error: ', err);
+    }
+  }
+
+};
+var _default = localStorageApi;
+exports.default = _default;
+},{}],"js/initStorageInModal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initStorageBtns = void 0;
+
+var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const initStorageBtns = () => {
+  const storageEl = document.querySelector('.modal-card .storage');
+  const movieId = document.querySelector('.modal-card').dataset.action;
+  checkStorage(storageEl);
+  storageEl.addEventListener('change', onStorageBtnClick);
+
+  function onStorageBtnClick(e) {
+    const storageKey = e.target.value;
+    const action = e.target.checked ? 'add' : 'remove';
+
+    _localStorageApi.default.getMovies(storageKey);
+
+    makeActionInStorage({
+      storageKey,
+      movieId,
+      action
+    });
+  }
+
+  function checkStorage(storageEl) {
+    const btnsEl = storageEl.querySelectorAll('[type=checkbox]');
+    btnsEl.forEach(element => {
+      const storageKey = element.value;
+
+      const arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
+      // console.log(arr.indexOf(movieId));
+
+
+      if (0 <= arr.indexOf(movieId)) element.checked = "true";
+    });
+  }
+};
+
+exports.initStorageBtns = initStorageBtns;
+
+function makeActionInStorage({
+  storageKey,
+  movieId,
+  action
+}) {
+  if (action === 'add') _localStorageApi.default.addMovie(storageKey, movieId);
+  if (action === 'remove') _localStorageApi.default.removeMovie(storageKey, movieId);
+}
+},{"./localStorageApi":"js/localStorageApi.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
 "use strict";
 
 var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
@@ -2398,12 +2522,15 @@ var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
 
 require("basiclightbox/dist/basicLightbox.min.css");
 
+var _initStorageInModal = require("./initStorageInModal");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//local Storage
 // let page = 1;
 const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 const cardFilm = document.querySelector('.card__colection');
@@ -2428,12 +2555,15 @@ function openModal(e) {
         modal.close();
         window.removeEventListener('keydown', closeModalHandler);
       }
-    }
+    } //new Function
+
+
+    (0, _initStorageInModal.initStorageBtns)();
   }).then(data => {}).catch(error => {
     console.log('oops!');
   });
 }
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css"}],"templates/card-films.hbs":[function(require,module,exports) {
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2461,32 +2591,74 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return " <li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    return "<li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
           "line": 2,
-          "column": 37
+          "column": 36
         },
         "end": {
           "line": 2,
-          "column": 43
+          "column": 42
         }
       }
-    }) : helper)) + "'>\n    <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>\n   <div class=\"btn-id\">\n      <button data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 4,
+          "column": 29
+        }
+      }
+    }) : helper)) + "' class=\"btn-youtube\">\n         <div class=\"overlay-btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 56
+        },
+        "end": {
+          "line": 5,
+          "column": 62
+        }
+      }
+    }) : helper)) + "'>\n            <h2 class=\"btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 50
+        },
+        "end": {
+          "line": 6,
+          "column": 56
+        }
+      }
+    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 45
+          "line": 11,
+          "column": 44
         },
         "end": {
-          "line": 3,
-          "column": 60
+          "line": 11,
+          "column": 59
         }
       }
     }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2495,12 +2667,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 67
+          "line": 11,
+          "column": 66
         },
         "end": {
-          "line": 3,
-          "column": 76
+          "line": 11,
+          "column": 75
         }
       }
     }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2509,12 +2681,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 77
+          "line": 11,
+          "column": 76
         },
         "end": {
-          "line": 3,
-          "column": 85
+          "line": 11,
+          "column": 84
         }
       }
     }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2523,26 +2695,26 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 3,
-          "column": 109
+          "line": 11,
+          "column": 108
         },
         "end": {
-          "line": 3,
-          "column": 115
+          "line": 11,
+          "column": 114
         }
       }
-    }) : helper)) + "\"/>\n      <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" />\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 30
+          "line": 12,
+          "column": 27
         },
         "end": {
-          "line": 4,
-          "column": 39
+          "line": 12,
+          "column": 36
         }
       }
     }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2551,15 +2723,15 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 4,
-          "column": 40
+          "line": 12,
+          "column": 37
         },
         "end": {
-          "line": 4,
-          "column": 48
+          "line": 12,
+          "column": 45
         }
       }
-    }) : helper)) + "</h4>\n       <p class=\"card__text\">\n          <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -2567,12 +2739,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 16
+          "line": 14,
+          "column": 15
         },
         "end": {
-          "line": 6,
-          "column": 51
+          "line": 14,
+          "column": 50
         }
       }
     })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -2581,29 +2753,29 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 67
+          "line": 14,
+          "column": 66
         },
         "end": {
-          "line": 6,
-          "column": 83
+          "line": 14,
+          "column": 82
         }
       }
-    }) : helper)) + "</span> <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span> <span\n            class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 124
+          "line": 15,
+          "column": 39
         },
         "end": {
-          "line": 6,
-          "column": 140
+          "line": 15,
+          "column": 55
         }
       }
-    }) : helper)) + "</span>\n       </p>\n </li>\n";
+    }) : helper)) + "</span>\n      </p>\n</li>\n";
   },
   "2": function (container, depth0, helpers, partials, data) {
     var helper,
@@ -2621,12 +2793,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 6,
-          "column": 33
+          "line": 14,
+          "column": 32
         },
         "end": {
-          "line": 6,
-          "column": 41
+          "line": 14,
+          "column": 40
         }
       }
     }) : helper)) + " ";
@@ -2642,7 +2814,7 @@ const templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return ((stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
+    return (stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(1, data, 0),
@@ -2654,11 +2826,11 @@ const templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 9,
+          "line": 18,
           "column": 9
         }
       }
-    })) != null ? stack1 : "") + "\n";
+    })) != null ? stack1 : "";
   },
   "useData": true
 });
@@ -2785,6 +2957,48 @@ var _default = {
 // }
 
 exports.default = _default;
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/trailers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createTrailerLink;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function createTrailerLink() {
+  const trailerBtn = document.querySelectorAll('.btn-youtube');
+  trailerBtn.forEach(el => el.addEventListener('click', e => {
+    drawModalForTrailler(e.target.dataset.id);
+  }));
+
+  function drawModalForTrailler(id) {
+    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
+    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
+    fetch(url).then(response => response.json()).then(data => {
+      const id = data.results[0].key;
+      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
+      instance.show();
+      modalClBtTrailer(instance);
+    }).catch(() => {
+      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
+      instance.show();
+      modalClBtTrailer(instance);
+    });
+  }
+
+  function modalClBtTrailer(instance) {
+    const modalBox = document.querySelector('.basicLightbox--iframe');
+    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
+    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
+    modalCloseBtn.addEventListener('click', () => instance.close());
+  }
+}
 },{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
 
@@ -2796,6 +3010,8 @@ exports.renderPagination = renderPagination;
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
 var _spinner = _interopRequireDefault(require("./spinner"));
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2988,7 +3204,7 @@ function hideExtremeButtons(totalPages) {
     }
   }
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js"}],"js/cardFetc.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"js/cardFetc.js":[function(require,module,exports) {
 "use strict";
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
@@ -2996,6 +3212,8 @@ var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 var _apiServis = _interopRequireDefault(require("./apiServis"));
 
 var _pagination = require("./pagination");
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3022,6 +3240,7 @@ function render() {
 
 function renderFilmsCard(articles) {
   listElement.innerHTML = (0, _cardFilms.default)(articles);
+  (0, _trailers.default)();
 } // renders movies by appropriate page
 
 
@@ -3046,7 +3265,7 @@ function fetchPopularFilmsByPage(page) {
   newApiService.pageNum = page;
   return newApiService.insertGenresToMovieObj();
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js","./pagination":"js/pagination.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js","./pagination":"js/pagination.js","./trailers.js":"js/trailers.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
 module.exports = "/team-ruslana.5ee08793.jpeg";
 },{}],"images/team-olga.jpeg":[function(require,module,exports) {
 module.exports = "/team-olga.c40113fb.jpeg";
@@ -3121,6 +3340,8 @@ var _apiServis = _interopRequireDefault(require("./apiServis"));
 
 var _spinner = _interopRequireDefault(require("./spinner"));
 
+var _trailers = _interopRequireDefault(require("./trailers.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const refs = {
@@ -3159,6 +3380,7 @@ function render(searchQuery) {
 
 function renderFilmsCard(articles) {
   listElement.innerHTML = (0, _cardFilms.default)(articles);
+  (0, _trailers.default)();
 } // renders movies by appropriate page & search query
 
 
@@ -3185,7 +3407,7 @@ function fetchSearchFilmsByPage(page, searchQuery) {
   filmApiService.query = searchQuery;
   return filmApiService.insertGenresToSearchObj();
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js","./spinner":"js/spinner.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3936,7 +4158,9 @@ require("./js/keyWordSearch");
 require("regenerator-runtime/runtime.js");
 
 require("./js/spinner");
-},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js","regenerator-runtime/runtime.js":"../node_modules/regenerator-runtime/runtime.js","./js/spinner":"js/spinner.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/trailers");
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js","regenerator-runtime/runtime.js":"../node_modules/regenerator-runtime/runtime.js","./js/spinner":"js/spinner.js","./js/trailers":"js/trailers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3964,7 +4188,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57077" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58140" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
