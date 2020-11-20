@@ -4,6 +4,8 @@ import ApiService from './apiServis';
 import placeholder from './spinner';
 import createTrailerLink from './trailers.js';
 import errorUrl from '../images/catch-error-pagination.jpg';
+import * as cardFetch from './cardFetc';
+
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -22,7 +24,7 @@ function onKeyWordSearch(e) {
   filmApiService.query = e.currentTarget.elements.query.value;
   if (filmApiService.query === '') {
     placeholder.spinner.close();
-    refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
+    refs.warningField.textContent = `Please write something in the box :)`;
     return;
   }
 
@@ -74,6 +76,13 @@ function fetchDataOfSearchFilms(searchQuery) {
         displaySearchListByPage,
         searchQuery,
       );
+      if (results.total_pages === 0){
+        placeholder.spinner.close();
+        refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
+        cardFetch.render();
+        cardFetch.fetchDataOfPopularFilms();
+        return;
+      }
     })
     .catch(err => {
       console.log('error in function fetchDataOfSearchFilms');
