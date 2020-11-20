@@ -240,7 +240,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/vbd4eva\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
 const container = document.querySelector('.js-team-modal');
 const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
 container.addEventListener('click', openModal);
@@ -264,6 +264,7 @@ function openModal(e) {
         module.hot.accept(reloadCSS);
       
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+var define;
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -281,6 +282,24 @@ var runtime = (function (exports) {
   var iteratorSymbol = $Symbol.iterator || "@@iterator";
   var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
   var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
 
   function wrap(innerFn, outerFn, self, tryLocsList) {
     // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
@@ -352,16 +371,19 @@ var runtime = (function (exports) {
     Generator.prototype = Object.create(IteratorPrototype);
   GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
   GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
 
   // Helper for defining the .next, .throw, and .return methods of the
   // Iterator interface in terms of a single ._invoke method.
   function defineIteratorMethods(prototype) {
     ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
+      define(prototype, method, function(arg) {
         return this._invoke(method, arg);
-      };
+      });
     });
   }
 
@@ -380,9 +402,7 @@ var runtime = (function (exports) {
       Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
     } else {
       genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
     }
     genFun.prototype = Object.create(Gp);
     return genFun;
@@ -652,7 +672,7 @@ var runtime = (function (exports) {
   // unified ._invoke helper method.
   defineIteratorMethods(Gp);
 
-  Gp[toStringTagSymbol] = "Generator";
+  define(Gp, toStringTagSymbol, "Generator");
 
   // A Generator should always return itself as the iterator object when the
   // @@iterator function is called on it. Some browsers' implementations of the
@@ -994,7 +1014,49 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}],"images/nothingHere.jpg":[function(require,module,exports) {
+},{}],"js/trailers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createTrailerLink;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function createTrailerLink() {
+  const trailerBtn = document.querySelectorAll('.btn-youtube');
+  trailerBtn.forEach(el => el.addEventListener('click', e => {
+    drawModalForTrailler(e.target.dataset.id);
+  }));
+
+  function drawModalForTrailler(id) {
+    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
+    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
+    fetch(url).then(response => response.json()).then(data => {
+      const id = data.results[0].key;
+      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
+      instance.show();
+      modalClBtTrailer(instance);
+    }).catch(() => {
+      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
+      instance.show();
+      modalClBtTrailer(instance);
+    });
+  }
+
+  function modalClBtTrailer(instance) {
+    const modalBox = document.querySelector('.basicLightbox--iframe');
+    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
+    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
+    modalCloseBtn.addEventListener('click', () => instance.close());
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"images/nothingHere.jpg":[function(require,module,exports) {
 module.exports = "/nothingHere.316956b7.jpg";
 },{}],"js/localStorageApi.js":[function(require,module,exports) {
 "use strict";
@@ -3150,18 +3212,18 @@ const templateFunction = _handlebars.default.template({
           "column": 56
         }
       }
-    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <div class=\"thumb\">\n      <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
-          "column": 44
+          "line": 12,
+          "column": 47
         },
         "end": {
-          "line": 11,
-          "column": 59
+          "line": 12,
+          "column": 62
         }
       }
     }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3170,12 +3232,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
-          "column": 66
+          "line": 12,
+          "column": 69
         },
         "end": {
-          "line": 11,
-          "column": 75
+          "line": 12,
+          "column": 78
         }
       }
     }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3184,87 +3246,29 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
-          "column": 76
+          "line": 12,
+          "column": 79
         },
         "end": {
-          "line": 11,
-          "column": 84
+          "line": 12,
+          "column": 87
         }
       }
-    }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" width=\"100%\"\n         data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 11,
-          "column": 108
+          "line": 13,
+          "column": 18
         },
         "end": {
-          "line": 11,
-          "column": 114
+          "line": 13,
+          "column": 24
         }
       }
-    }) : helper)) + "\" />\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 27
-        },
-        "end": {
-          "line": 12,
-          "column": 36
-        }
-      }
-    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "name",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 37
-        },
-        "end": {
-          "line": 12,
-          "column": 45
-        }
-      }
-    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
-      "name": "each",
-      "hash": {},
-      "fn": container.program(2, data, 0),
-      "inverse": container.noop,
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 15
-        },
-        "end": {
-          "line": 14,
-          "column": 50
-        }
-      }
-    })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "release_date",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 66
-        },
-        "end": {
-          "line": 14,
-          "column": 82
-        }
-      }
-    }) : helper)) + "</span> <span\n            class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\"onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n />\n      <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
@@ -3276,6 +3280,64 @@ const templateFunction = _handlebars.default.template({
         "end": {
           "line": 15,
           "column": 55
+        }
+      }
+    }) : helper)) + "</span>\n   </div>\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 27
+        },
+        "end": {
+          "line": 17,
+          "column": 36
+        }
+      }
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "name",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 37
+        },
+        "end": {
+          "line": 17,
+          "column": 45
+        }
+      }
+    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+      "name": "each",
+      "hash": {},
+      "fn": container.program(2, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 15
+        },
+        "end": {
+          "line": 19,
+          "column": 50
+        }
+      }
+    })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "release_date",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 66
+        },
+        "end": {
+          "line": 19,
+          "column": 82
         }
       }
     }) : helper)) + "</span>\n      </p>\n</li>\n";
@@ -3296,11 +3358,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 19,
           "column": 32
         },
         "end": {
-          "line": 14,
+          "line": 19,
           "column": 40
         }
       }
@@ -3329,7 +3391,7 @@ const templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 22,
           "column": 9
         }
       }
@@ -3344,6 +3406,8 @@ exports.default = _default;
 "use strict";
 
 var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 var _nothingHere = _interopRequireDefault(require("../images/nothingHere.jpg"));
 
@@ -3390,8 +3454,9 @@ function getCheckedLiblary(name) {
 
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = (0, _cardFilms.default)(moviesArray);
+  (0, _trailers.default)();
 }
-},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs"}],"templates/modalFilmCard.hbs":[function(require,module,exports) {
+},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./trailers.js":"js/trailers.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs"}],"templates/modalFilmCard.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3473,17 +3538,17 @@ const templateFunction = _handlebars.default.template({
           "column": 94
         }
       }
-    }) : helper)) + "\" />\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n/>\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 35
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 44
         }
       }
@@ -3493,11 +3558,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 9,
+          "line": 10,
           "column": 61
         },
         "end": {
-          "line": 9,
+          "line": 10,
           "column": 77
         }
       }
@@ -3507,11 +3572,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 10,
+          "line": 11,
           "column": 45
         },
         "end": {
-          "line": 10,
+          "line": 11,
           "column": 59
         }
       }
@@ -3521,11 +3586,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 52
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 66
         }
       }
@@ -3535,11 +3600,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 61
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 79
         }
       }
@@ -3551,11 +3616,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 23,
           "column": 43
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 25
         }
       }
@@ -3565,11 +3630,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 12
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 24
         }
       }
@@ -3685,7 +3750,476 @@ function openModal(e) {
     console.log('oops!');
   });
 }
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"library.js":[function(require,module,exports) {
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
+var global = arguments[3];
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
+
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */
+function throttle(func, wait, options) {
+  var leading = true,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = throttle;
+
+},{}],"js/btn-upp.js":[function(require,module,exports) {
+"use strict";
+
+var _lodash = _interopRequireDefault(require("lodash.throttle"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const upBtn = document.querySelector('[data-up-btn]');
+window.addEventListener('scroll', (0, _lodash.default)(hideElOnScroll(upBtn), 250));
+upBtn.addEventListener('click', toPageTopOnClick);
+
+function hideElOnScroll(el) {
+  return function hideOnScroll(e) {
+    if (pageYOffset < document.documentElement.clientHeight) {
+      el.classList.add('visuallyhidden');
+    } else {
+      el.classList.remove('visuallyhidden');
+    }
+  };
+}
+
+function toPageTopOnClick(e) {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+},{"lodash.throttle":"../node_modules/lodash.throttle/index.js"}],"library.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -3697,7 +4231,11 @@ require("../node_modules/basiclightbox/dist/basicLightbox.min.css");
 require("./js/myLibrary");
 
 require("./js/modalFilmCard");
-},{"./sass/main.scss":"sass/main.scss","./js/teamLightbox":"js/teamLightbox.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/myLibrary":"js/myLibrary.js","./js/modalFilmCard":"js/modalFilmCard.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/btn-upp");
+
+require("./js/trailers");
+},{"./sass/main.scss":"sass/main.scss","./js/teamLightbox":"js/teamLightbox.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/myLibrary":"js/myLibrary.js","./js/modalFilmCard":"js/modalFilmCard.js","./js/btn-upp":"js/btn-upp.js","./js/trailers":"js/trailers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -3725,7 +4263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58140" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59548" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
