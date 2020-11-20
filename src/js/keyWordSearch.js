@@ -15,6 +15,7 @@ const listElement = document.querySelector('.js-card');
 refs.searchForm.addEventListener('submit', onKeyWordSearch);
 
 function onKeyWordSearch(e) {
+  filmApiService.pageNum = 1;
   placeholder.spinner.show();
   e.preventDefault();
   filmApiService.query = e.currentTarget.elements.query.value;
