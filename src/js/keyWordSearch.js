@@ -8,6 +8,7 @@ import errorUrl from '../images/catch-error-pagination.jpg';
 const refs = {
   searchForm: document.querySelector('#search-form'),
   cardContainer: document.querySelector('.js-card'),
+  warningField: document.querySelector('.header-warning'),
 };
 const filmApiService = new ApiService();
 const listElement = document.querySelector('.js-card');
@@ -21,12 +22,14 @@ function onKeyWordSearch(e) {
   filmApiService.query = e.currentTarget.elements.query.value;
   if (filmApiService.query === '') {
     placeholder.spinner.close();
+    refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
     return;
   }
 
   render(filmApiService.query);
   fetchDataOfSearchFilms(filmApiService.query);
   e.currentTarget.elements.query.value = '';
+  refs.warningField.textContent = '';
 }
 
 // renders main (first) page after search *on submit*
