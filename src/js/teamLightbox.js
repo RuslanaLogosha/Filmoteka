@@ -37,7 +37,7 @@ const markup = `<div class="team-wrapper"><div class="team-card">
     <img src="${denisUrl}" alt="Denis" class="team-image">
     <p class="team-name">Denis</p>
     <p class="team-role">Developer</p>
-    <a href="https://github.com/" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
+    <a href="https://github.com/vbd4eva" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
       <use href="${spriteUrl}#github"></use>
     </svg></a>
 </div>
