@@ -6,6 +6,7 @@ const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
+const warningField = document.querySelector('.header-warning');
 let currentPage = 1;
 const pagesOnWindow = 5;
 let rows = 20;
@@ -153,6 +154,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     if (currentPage == page) button.classList.add('active');
 
     button.addEventListener('click', function () {
+      warningField.textContent = ``;
       placeholder.spinner.show();
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
@@ -197,7 +199,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 function hideExtremeButtons(totalPages) {
   if (
     /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
+      navigator.userAgent,
     )
   ) {
     // код для мобильных устройств

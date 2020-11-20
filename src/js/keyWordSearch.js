@@ -6,7 +6,6 @@ import createTrailerLink from './trailers.js';
 import errorUrl from '../images/catch-error-pagination.jpg';
 import * as cardFetch from './cardFetc';
 
-
 const refs = {
   searchForm: document.querySelector('#search-form'),
   cardContainer: document.querySelector('.js-card'),
@@ -76,10 +75,10 @@ function fetchDataOfSearchFilms(searchQuery) {
         displaySearchListByPage,
         searchQuery,
       );
-      if (results.total_pages === 0){
+      if (results.total_pages === 0) {
         placeholder.spinner.close();
         refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
-        cardFetch.render();
+        cardFetch.renderOnSearchMistake();
         cardFetch.fetchDataOfPopularFilms();
         return;
       }
