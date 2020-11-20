@@ -24,7 +24,7 @@
     flex-basis: calc((100% - 3 * 30px) / 3);
   }
 }
-.card__film > img {
+.card__film img {
   border-radius: 5px;
   margin-bottom: 10px;
   height: 402px;
@@ -46,14 +46,25 @@
 .card__text {
   color: $accentColor;
 }
+.thumb {
+  position: relative;
+}
 .card__vote_average {
-  display: inline-block;
-  margin-left: 3px;
-  background-color: rgb(255, 107, 8);
-  width: 36px;
-  height: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 20px;
+  font-family: $mainFont;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.17;
+  color: $white;
+  background-color: $accentColor;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  line-height: 18px;
 }
