@@ -21,7 +21,7 @@ function onLogoClick(e) {
 }
 
 // renders main (first) page
-function render() {
+export function render() {
   newApiService.page = 1;
   newApiService
     .insertGenresToMovieObj()
@@ -50,7 +50,7 @@ function displayList(wrapper, page) {
 }
 
 // renders pagination for main (first) fetch
-function fetchDataOfPopularFilms() {
+export function fetchDataOfPopularFilms() {
   newApiService
     .fetchPopularArticlesPages()
     .then(results => {
