@@ -8,14 +8,13 @@ const glide = new Glide('.glide', {
   type: 'carousel',
   startAt: 0,
   perView: 5,
-  gap: 30,
   autoplay: 2000,
   hoverpause: true,
+  peek: '200px',
 });
 
 glide.mount();
 
-// SLIDER
 function renderTrendy() {
   const url = `https://api.themoviedb.org/3/trending/all/day?api_key=d91911ebb88751cf9e5c4b8fdf4412c9`;
   return fetch(url)

@@ -4,3 +4,77 @@
 .glide__arrow {
   background-color: $accentColor;
 }
+
+.slider-card {
+  margin-right: 8px;
+}
+
+.slider-title {
+  margin-top: 10px;
+  text-align: center;
+  color: $textColor;
+}
+
+.slider-image {
+  border-radius: 5px;
+}
+
+.rating-slider {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 18px;
+  font-family: $mainFont;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.1;
+  color: $white;
+  background-color: $accentColor;
+  border-radius: 5px;
+}
+
+// from trailler
+.slider-card .overlay-btn-youtube-text {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 19px;
+  width: 110px;
+
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
+
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 5px;
+  top: 5px;
+  left: 100px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-63%);
+  transition: all 400ms ease-in;
+}
+
+.slider-card:hover .overlay-btn-youtube-text {
+  display: flex;
+  opacity: 1;
+  transform: translateX(-63%);
+}
+
+.btn-youtube-text-slider {
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #c4302b;
+  cursor: pointer;
+  margin: 0;
+  z-index: 5;
+}
