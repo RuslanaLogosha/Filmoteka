@@ -6,6 +6,7 @@ import errorUrl from '../images/catch-error-pagination.jpg';
 
 const listElement = document.querySelector('.js-card');
 const logoEl = document.querySelector('.js-main-logo');
+const warningField = document.querySelector('.header-warning');
 const newApiService = new NewApiService();
 
 render();
@@ -22,6 +23,19 @@ function onLogoClick(e) {
 
 // renders main (first) page
 export function render() {
+  warningField.textContent = ``;
+  newApiService.page = 1;
+  newApiService
+    .insertGenresToMovieObj()
+    .then(renderFilmsCard)
+    .catch(err => {
+      console.log('error in function render');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
+    });
+}
+
+// renders main (first) page
+export function renderOnSearchMistake() {
   newApiService.page = 1;
   newApiService
     .insertGenresToMovieObj()
