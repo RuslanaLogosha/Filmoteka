@@ -2,6 +2,7 @@ import filmsCardTpl from '../templates/card-films.hbs';
 import NewApiService from './apiServis';
 import { renderPagination } from './pagination';
 import createTrailerLink from './trailers.js';
+import errorUrl from '../images/catch-error-pagination.jpg';
 
 const listElement = document.querySelector('.js-card');
 const logoEl = document.querySelector('.js-main-logo');
@@ -26,6 +27,7 @@ function render() {
     .then(renderFilmsCard)
     .catch(err => {
       console.log('error in function render');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
@@ -42,6 +44,7 @@ function displayList(wrapper, page) {
     .then(renderFilmsCard)
     .catch(err => {
       console.log('error in function displayList');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
@@ -54,6 +57,7 @@ function fetchDataOfPopularFilms() {
     })
     .catch(err => {
       console.log('error in function fetchDataOfPopularFilms');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
