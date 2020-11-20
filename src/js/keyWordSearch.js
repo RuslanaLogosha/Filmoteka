@@ -3,6 +3,7 @@ import { renderPagination } from './pagination';
 import ApiService from './apiServis';
 import placeholder from './spinner';
 import createTrailerLink from './trailers.js';
+import errorUrl from '../images/catch-error-pagination.jpg';
 
 const refs = {
   searchForm: document.querySelector('#search-form'),
@@ -35,6 +36,7 @@ function render(searchQuery) {
     .then(renderFilmsCard)
     .catch(err => {
       console.log('error in function render');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
@@ -51,6 +53,7 @@ function displaySearchListByPage(wrapper, page, searchQuery) {
     .then(renderFilmsCard)
     .catch(err => {
       console.log('error in function displaySearchListByPage');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
@@ -70,6 +73,7 @@ function fetchDataOfSearchFilms(searchQuery) {
     })
     .catch(err => {
       console.log('error in function fetchDataOfSearchFilms');
+      listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
     });
 }
 
