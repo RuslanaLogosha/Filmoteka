@@ -9,3 +9,4 @@ import 'regenerator-runtime/runtime.js';
 import './js/spinner';
 import './js/trailers';
 import './js/btn-upp';
+import './js/slider';
