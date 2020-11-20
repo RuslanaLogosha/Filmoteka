@@ -22,6 +22,7 @@ function onLogoClick(e) {
 
 // renders main (first) page
 function render() {
+  newApiService.page = 1;
   newApiService
     .insertGenresToMovieObj()
     .then(renderFilmsCard)
