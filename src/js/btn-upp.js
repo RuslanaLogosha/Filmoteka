@@ -1,28 +1,23 @@
-// const backToTopButton = document.querySelector('#myBtn');
+import throttle from 'lodash.throttle';
 
-// window.addEventListener('scroll', scrollFunction);
+const upBtn = document.querySelector('[data-up-btn]');
 
-// function scrollFunction() {
-//   if (window.pageYOffset > 300) {
-//     // Показывает кнопку поднятия вверх
-//     if (!backToTopButton.classList.contains('btnEntrance')) {
-//       backToTopButton.classList.remove('btnExit');
-//       backToTopButton.classList.add('btnEntrance');
-//       backToTopButton.style.display = 'block';
-//     }
-//   } else {
-//     // Скрывает кнопку поднятия вверх
-//     if (backToTopButton.classList.contains('btnEntrance')) {
-//       backToTopButton.classList.remove('btnEntrance');
-//       backToTopButton.classList.add('btnExit');
-//       setTimeout(function () {
-//         backToTopButton.style.display = 'none';
-//       }, 150);
-//     }
-//   }
-// }
+window.addEventListener('scroll', throttle(hideElOnScroll(upBtn), 250));
+upBtn.addEventListener('click', toPageTopOnClick);
 
-// backToTopButton.addEventListener('click', smoothScrollBackToTop);
+function hideElOnScroll(el) {
+  return function hideOnScroll(e) {
+    if (pageYOffset < document.documentElement.clientHeight) {
+      el.classList.add('visuallyhidden');
+    } else {
+      el.classList.remove('visuallyhidden');
+    }
+  };
+}
+
+function toPageTopOnClick(e) {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // // Добавляет плавность
 // function smoothScrollBackToTop() {
