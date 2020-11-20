@@ -1,5 +1,5 @@
 import regeneratorRuntime from 'regenerator-runtime';
-
+import createTrailerLink from './trailers.js';
 import nothingHereUrl from '../images/nothingHere.jpg';
 
 import localStorageApi from './localStorageApi';
@@ -27,13 +27,11 @@ const refs = {
   cardLibrary: document.querySelector('.js-card-library'),
 };
 
-
 renderMovies();
 
 refs.storageList.addEventListener('change', renderMovies);
 
 function renderMovies() {
-
   const key = getCheckedLiblary(CHOICE_STORAGE_BTN_NAME);
   const queueIds = localStorageApi.getMovies(key);
 
@@ -43,9 +41,10 @@ function renderMovies() {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
   }
 }
-function getCheckedLiblary(name){
- return document.querySelector(`[name=${name}]:checked`).value;
+function getCheckedLiblary(name) {
+  return document.querySelector(`[name=${name}]:checked`).value;
 }
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
+  createTrailerLink();
 }
