@@ -14,7 +14,12 @@ cardFilm.addEventListener('click', openModal);
 
 function fetchOneMovieInfo(movie_id) {
   const url = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${apiKey}`;
-  return fetch(url).then(response => response.json());
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => ({
+      ...data,
+      popularity: data.popularity.toFixed(1),
+    }));
 }
 
 function openModal(e) {
