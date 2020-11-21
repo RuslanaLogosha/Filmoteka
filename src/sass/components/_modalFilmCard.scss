@@ -38,6 +38,8 @@
 .cardItem__wrapper p {
   display: flex;
   font-size: 12px;
+  font-weight: 500;
+
   font-family: 'Roboto';
   line-height: 1.333;
   margin-bottom: 18px;
@@ -51,35 +53,46 @@
 
 .cardItem_text {
   color: #8d8d8d;
+  display: flex;
+  align-items: center;
 }
 
 .cardItem__vote_average {
   display: inline-block;
   margin-left: 50px;
-  margin-right: 7px;
+  margin-right: 3px;
   background-color: rgb(255, 107, 8);
-  width: 38px;
-  height: 18px;
   border-radius: 5px;
   color: rgb(255, 255, 255);
+  font-weight: 500;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.5;
+  padding: 1px 9px 1px 10px;
 }
 
 .cardItem__vote_count {
-  margin-left: 16px;
+  display: inline-block;
+  margin-left: 3px;
   color: rgb(0, 0, 0);
+  font-weight: 500;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 1px 4px 1px 4px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .cardItem___data {
   margin-left: 63px;
   color: rgb(0, 0, 0);
+  font-weight: 500;
 }
 
 .cardItem__title_data {
-  margin-left: 50px;
+  margin-left: 45px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
+  font-weight: 500;
 }
 
 .cardItem__genre {
@@ -90,6 +103,7 @@
 .cardItem__genreList {
   display: inline-block;
   width: 135px;
+  font-weight: 500;
 }
 
 .cardItem__genre_data {
