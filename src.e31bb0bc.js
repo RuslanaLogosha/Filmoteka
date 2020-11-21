@@ -2216,10 +2216,8 @@ var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.run
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
     var lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
         return parent[propertyName];
@@ -2231,7 +2229,7 @@ var templateFunction = _handlebars.default.template({
     return "\n                <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n                ";
   },
   "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
+  "main": function (container, depth0, helpers, partials, data) {
     var stack1,
         helper,
         alias1 = depth0 != null ? depth0 : container.nullContext || {},
@@ -2246,7 +2244,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2260,7 +2258,7 @@ var templateFunction = _handlebars.default.template({
           "column": 43
         }
       }
-    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
@@ -2274,7 +2272,7 @@ var templateFunction = _handlebars.default.template({
           "column": 78
         }
       }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -2288,7 +2286,7 @@ var templateFunction = _handlebars.default.template({
           "column": 94
         }
       }
-    }) : helper)) + "\" onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n/>\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n/>\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -2302,7 +2300,7 @@ var templateFunction = _handlebars.default.template({
           "column": 44
         }
       }
-    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
@@ -2316,7 +2314,7 @@ var templateFunction = _handlebars.default.template({
           "column": 77
         }
       }
-    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_count",
       "hash": {},
       "data": data,
@@ -2330,7 +2328,7 @@ var templateFunction = _handlebars.default.template({
           "column": 59
         }
       }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "popularity",
       "hash": {},
       "data": data,
@@ -2344,7 +2342,7 @@ var templateFunction = _handlebars.default.template({
           "column": 66
         }
       }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "original_title",
       "hash": {},
       "data": data,
@@ -2374,7 +2372,7 @@ var templateFunction = _handlebars.default.template({
           "column": 25
         }
       }
-    })) != null ? stack1 : "") + "</p>\n\n        </div>\n\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    })) != null ? stack1 : "") + "</p>\n\n        </div>\n\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "overview",
       "hash": {},
       "data": data,
@@ -2412,59 +2410,51 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var localStorageApi = {
+const localStorageApi = {
   //Проверяет хранилище по ключу. Возвращает: Пустой массив - если не находит, и Данные - если находит
-  getMovies: function getMovies(key) {
-    var keyStorage = this.load(key);
+  getMovies(key) {
+    const keyStorage = this.load(key);
     if (Array.isArray(keyStorage)) return keyStorage;
     this.save(key, []);
     return [];
   },
+
   //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
-  addMovie: function addMovie(key, value) {
-    var dataFromLocalStorage = this.load(key);
-    this.save(key, [value].concat(_toConsumableArray(dataFromLocalStorage)));
+  addMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    this.save(key, [value, ...dataFromLocalStorage]);
   },
-  removeMovie: function removeMovie(key, value) {
-    var dataFromLocalStorage = this.load(key);
-    var valueIndex = dataFromLocalStorage.indexOf(value);
+
+  removeMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    const valueIndex = dataFromLocalStorage.indexOf(value);
 
     if (0 <= valueIndex) {
       dataFromLocalStorage.splice(valueIndex, 1);
       this.save(key, dataFromLocalStorage);
     }
   },
+
   // Принимает ключ `key` по которому будет произведена выборка.
-  load: function load(key) {
+  load(key) {
     try {
-      var serializedState = localStorage.getItem(key);
+      const serializedState = localStorage.getItem(key);
       return serializedState === null ? undefined : JSON.parse(serializedState);
     } catch (err) {
       console.error('Get state error: ', err);
     }
   },
+
   // Принимает ключ `key` и значение `value`.
-  save: function save(key, value) {
+  save(key, value) {
     try {
-      var serializedState = JSON.stringify(value);
+      const serializedState = JSON.stringify(value);
       localStorage.setItem(key, serializedState);
     } catch (err) {
       console.error('Set state error: ', err);
     }
   }
+
 };
 var _default = localStorageApi;
 exports.default = _default;
@@ -2480,31 +2470,31 @@ var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var initStorageBtns = function initStorageBtns() {
-  var storageEl = document.querySelector('.modal-card .storage');
-  var movieId = document.querySelector('.modal-card').dataset.action;
+const initStorageBtns = () => {
+  const storageEl = document.querySelector('.modal-card .storage');
+  const movieId = document.querySelector('.modal-card').dataset.action;
   checkStorage(storageEl);
   storageEl.addEventListener('change', onStorageBtnClick);
 
   function onStorageBtnClick(e) {
-    var storageKey = e.target.value;
-    var action = e.target.checked ? 'add' : 'remove';
+    const storageKey = e.target.value;
+    const action = e.target.checked ? 'add' : 'remove';
 
     _localStorageApi.default.getMovies(storageKey);
 
     makeActionInStorage({
-      storageKey: storageKey,
-      movieId: movieId,
-      action: action
+      storageKey,
+      movieId,
+      action
     });
   }
 
   function checkStorage(storageEl) {
-    var btnsEl = storageEl.querySelectorAll('[type=checkbox]');
-    btnsEl.forEach(function (element) {
-      var storageKey = element.value;
+    const btnsEl = storageEl.querySelectorAll('[type=checkbox]');
+    btnsEl.forEach(element => {
+      const storageKey = element.value;
 
-      var arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
+      const arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
       // console.log(arr.indexOf(movieId));
 
 
@@ -2515,10 +2505,11 @@ var initStorageBtns = function initStorageBtns() {
 
 exports.initStorageBtns = initStorageBtns;
 
-function makeActionInStorage(_ref) {
-  var storageKey = _ref.storageKey,
-      movieId = _ref.movieId,
-      action = _ref.action;
+function makeActionInStorage({
+  storageKey,
+  movieId,
+  action
+}) {
   if (action === 'add') _localStorageApi.default.addMovie(storageKey, movieId);
   if (action === 'remove') _localStorageApi.default.removeMovie(storageKey, movieId);
 }
@@ -2541,22 +2532,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //local Storage
 // let page = 1;
-var apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
-var cardFilm = document.querySelector('.card__colection'); // cardFilm.addEventListener('click', openModal);
+const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+const cardFilm = document.querySelector('.card__colection');
+cardFilm.addEventListener('click', openModal);
 
 function fetchOneMovieInfo(movie_id) {
-  var url = "https://api.themoviedb.org/3/movie/".concat(movie_id, "?api_key=").concat(apiKey);
-  return fetch(url).then(function (response) {
-    return response.json();
-  });
+  const url = "https://api.themoviedb.org/3/movie/".concat(movie_id, "?api_key=").concat(apiKey);
+  return fetch(url).then(response => response.json()).then(data => ({ ...data,
+    popularity: data.popularity.toFixed(1)
+  }));
 }
 
 function openModal(e) {
   e.preventDefault();
-  fetchOneMovieInfo(e.target.dataset.id).then(function (data) {
+  fetchOneMovieInfo(e.target.dataset.id).then(data => {
     if (e.target.nodeName !== 'IMG') return;
-    var markup = (0, _modalFilmCard.default)(data);
-    var modal = basicLightbox.create(markup);
+    const markup = (0, _modalFilmCard.default)(data);
+    const modal = basicLightbox.create(markup);
     modal.show();
     window.addEventListener('keydown', closeModalHandler);
 
@@ -2569,174 +2561,11 @@ function openModal(e) {
 
 
     (0, _initStorageInModal.initStorageBtns)();
-  }).then(function (data) {})["catch"](function (error) {
+  }).then(data => {}).catch(error => {
     console.log('oops!');
   });
 }
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"js/cardFetc.js":[function(require,module,exports) {
-// import filmsCardTpl from '../templates/card-films.hbs';
-// import NewApiService from './apiServis';
-// import { renderPagination } from './pagination';
-// import createTrailerLink from './trailers.js';
-// import errorUrl from '../images/catch-error-pagination.jpg';
-// const listElement = document.querySelector('.js-card');
-// const logoEl = document.querySelector('.js-main-logo');
-// const warningField = document.querySelector('.header-warning');
-// const newApiService = new NewApiService();
-// render();
-// fetchDataOfPopularFilms();
-// logoEl.addEventListener('click', onLogoClick);
-// // page set to default with click on logotype without page refresh
-// function onLogoClick(e) {
-//   e.preventDefault();
-//   render();
-//   fetchDataOfPopularFilms();
-// }
-// // renders main (first) page
-// export function render() {
-//   warningField.textContent = ``;
-//   newApiService.page = 1;
-//   newApiService
-//     .insertGenresToMovieObj()
-//     .then(renderFilmsCard)
-//     .catch(err => {
-//       console.log('error in function render');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // renders main (first) page
-// export function renderOnSearchMistake() {
-//   newApiService.page = 1;
-//   newApiService
-//     .insertGenresToMovieObj()
-//     .then(renderFilmsCard)
-//     .catch(err => {
-//       console.log('error in function render');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // function for insertion of markup
-// function renderFilmsCard(articles) {
-//   listElement.innerHTML = filmsCardTpl(articles);
-//   createTrailerLink();
-// }
-// // renders movies by appropriate page
-// function displayList(wrapper, page) {
-//   wrapper.innerHTML = '';
-//   fetchPopularFilmsByPage(page)
-//     .then(renderFilmsCard)
-//     .catch(err => {
-//       console.log('error in function displayList');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // renders pagination for main (first) fetch
-// export function fetchDataOfPopularFilms() {
-//   newApiService
-//     .fetchPopularArticlesPages()
-//     .then(results => {
-//       renderPagination(results.total_pages, results.results, displayList);
-//     })
-//     .catch(err => {
-//       console.log('error in function fetchDataOfPopularFilms');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // fetches popular movies by appropriate page
-// function fetchPopularFilmsByPage(page) {
-//   newApiService.pageNum = page;
-//   return newApiService.insertGenresToMovieObj();
-// }
-},{}],"js/teamLightbox.js":[function(require,module,exports) {
-// import * as basicLightbox from 'basiclightbox';
-// import ruslanaUrl from '../images/team-ruslana.jpeg';
-// import olgaUrl from '../images/team-olga.jpeg';
-// import dariaUrl from '../images/team-daria.jpeg';
-// import denisUrl from '../images/team-denis.jpeg';
-// import ihorUrl from '../images/team-ihor.jpeg';
-// import katyaUrl from '../images/team-katya.jpeg';
-// import vladymyrUrl from '../images/team-vladymyr.jpeg';
-// import aleksandrUrl from '../images/team-aleksandr.jpg';
-// import spriteUrl from '../images/sprite.svg';
-// const markup = `<div class="team-wrapper"><div class="team-card">
-//     <img src="${ruslanaUrl}" alt="Ruslana" class="team-image">
-//     <p class="team-name">Ruslana</p>
-//     <p class="team-role">Team Lead</p>
-//     <a href="https://github.com/RuslanaLogosha" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${olgaUrl}" alt="Olga" class="team-image">
-//     <p class="team-name">Olga</p>
-//     <p class="team-role">Scrum Master</p>
-//     <a href="https://github.com/levshukova" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${dariaUrl}" alt="Daria" class="team-image">
-//     <p class="team-name">Daria</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/Daria-Churkina" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${denisUrl}" alt="Denis" class="team-image">
-//     <p class="team-name">Denis</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/vbd4eva" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${ihorUrl}" alt="Ihor" class="team-image">
-//     <p class="team-name">Ihor</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/taraiihor" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${katyaUrl}" alt="Katya" class="team-image">
-//     <p class="team-name">Katya</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/Kateryna-Urbanovych" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${vladymyrUrl}" alt="Vladymyr" class="team-image">
-//     <p class="team-name">Vladymyr</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/created-with-love" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div>
-// <div class="team-card">
-//     <img src="${aleksandrUrl}" alt="Aleksandr" class="team-image">
-//     <p class="team-name">Aleksandr</p>
-//     <p class="team-role">Developer</p>
-//     <a href="https://github.com/AleksMkm" target="_blank" class="team-git"><svg class="logo__icon" width="24" height="24">
-//       <use href="${spriteUrl}#github"></use>
-//     </svg></a>
-// </div></div>`;
-// const container = document.querySelector('.js-team-modal');
-// const markup2 = `<img src="${katyaUrl}"/>`;
-// container.addEventListener('click', openModal);
-// const modal = basicLightbox.create(markup);
-// function openModal(e) {
-//   modal.show();
-//   window.addEventListener('keydown', closeModalHandler);
-//   function closeModalHandler(e) {
-//     if (e.code === 'Escape') {
-//       modal.close();
-//       window.removeEventListener('keydown', closeModalHandler);
-//     }
-//   }
-// }
-},{}],"templates/card-films.hbs":[function(require,module,exports) {
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2748,10 +2577,8 @@ var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.run
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-var templateFunction = _handlebars.default.template({
-  "1": function _(container, depth0, helpers, partials, data) {
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
     var stack1,
         helper,
         alias1 = depth0 != null ? depth0 : container.nullContext || {},
@@ -2766,7 +2593,7 @@ var templateFunction = _handlebars.default.template({
       return undefined;
     };
 
-    return "<li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    return "<li class=\"card__film\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2780,7 +2607,7 @@ var templateFunction = _handlebars.default.template({
           "column": 42
         }
       }
-    }) : helper)) + "'>\n   <div class=\"btn-id\">\n      <button data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>\n   <div class=\"btn-id\">\n      <button data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2794,7 +2621,7 @@ var templateFunction = _handlebars.default.template({
           "column": 29
         }
       }
-    }) : helper)) + "' class=\"btn-youtube\">\n         <div class=\"overlay-btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "' class=\"btn-youtube\">\n         <div class=\"overlay-btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2808,7 +2635,7 @@ var templateFunction = _handlebars.default.template({
           "column": 62
         }
       }
-    }) : helper)) + "'>\n            <h2 class=\"btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>\n            <h2 class=\"btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
@@ -2822,7 +2649,7 @@ var templateFunction = _handlebars.default.template({
           "column": 56
         }
       }
-    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <div class=\"thumb\">\n      <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "'>Movie Trailer</h2>\n         </div>\n      </button>\n\n   </div>\n   <div class=\"thumb\">\n      <img src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "poster_path",
       "hash": {},
       "data": data,
@@ -2836,7 +2663,7 @@ var templateFunction = _handlebars.default.template({
           "column": 62
         }
       }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
@@ -2850,7 +2677,7 @@ var templateFunction = _handlebars.default.template({
           "column": 78
         }
       }
-    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
@@ -2864,63 +2691,63 @@ var templateFunction = _handlebars.default.template({
           "column": 87
         }
       }
-    }) : helper)) + "\" width=\"100%\"\n         data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 13,
-          "column": 18
+          "line": 12,
+          "column": 111
         },
         "end": {
-          "line": 13,
-          "column": 24
+          "line": 12,
+          "column": 117
         }
       }
-    }) : helper)) + "\"onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n />\n      <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\"\n         onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\" />\n      <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 39
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 55
         }
       }
-    }) : helper)) + "</span>\n   </div>\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + "</span>\n   </div>\n   <h2 class=\"card__title\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "title",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 27
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 36
         }
       }
-    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "name",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 37
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 45
         }
       }
-    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+    }) : helper)) + "</h2>\n   <p class=\"card__text\">\n      <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -2928,31 +2755,31 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 15
+          "line": 18,
+          "column": 12
         },
         "end": {
-          "line": 19,
-          "column": 50
+          "line": 18,
+          "column": 47
         }
       }
-    })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, _typeof(helper) === alias3 ? helper.call(alias1, {
+    })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "release_date",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 66
+          "line": 18,
+          "column": 63
         },
         "end": {
-          "line": 19,
-          "column": 82
+          "line": 18,
+          "column": 79
         }
       }
-    }) : helper)) + "</span>\n      </p>\n</li>\n";
+    }) : helper)) + "</span>\n   </p>\n</li>\n";
   },
-  "2": function _(container, depth0, helpers, partials, data) {
+  "2": function (container, depth0, helpers, partials, data) {
     var helper,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -2968,18 +2795,18 @@ var templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 32
+          "line": 18,
+          "column": 29
         },
         "end": {
-          "line": 19,
-          "column": 40
+          "line": 18,
+          "column": 37
         }
       }
     }) : helper)) + " ";
   },
   "compiler": [8, ">= 4.3.0"],
-  "main": function main(container, depth0, helpers, partials, data) {
+  "main": function (container, depth0, helpers, partials, data) {
     var stack1,
         lookupProperty = container.lookupProperty || function (parent, propertyName) {
       if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -3001,7 +2828,7 @@ var templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 9
         }
       }
@@ -3012,7 +2839,99 @@ var templateFunction = _handlebars.default.template({
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/spinner.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/apiServis.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const BASE_URL = "https://api.themoviedb.org/3";
+const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
+
+class NewApiService {
+  constructor() {
+    this.searchQuery = '';
+    this.page = 1;
+  }
+
+  fetchPopularArticles() {
+    const url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      return results;
+    });
+  }
+
+  fetchSearchArticles() {
+    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page, "&query=").concat(this.searchQuery);
+    return fetch(url).then(response => response.json()).then(({
+      results
+    }) => {
+      return results;
+    });
+  }
+
+  fetchPopularArticlesPages() {
+    const url = "".concat(BASE_URL, "/movie/popular?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page);
+    return fetch(url).then(response => response.json());
+  }
+
+  fetchSearchArticlesPages() {
+    const url = "".concat(BASE_URL, "/search/movie?api_key=").concat(KEY, "&language=en-US&page=").concat(this.page, "&query=").concat(this.searchQuery);
+    return fetch(url).then(response => response.json());
+  }
+
+  fetchGenres() {
+    const url = "".concat(BASE_URL, "/genre/movie/list?api_key=").concat(KEY);
+    return fetch(url).then(response => response.json()).then(data => {
+      return data.genres;
+    });
+  }
+
+  insertGenresToMovieObj() {
+    return this.fetchPopularArticles().then(data => {
+      return this.fetchGenres().then(genresList => {
+        return data.map(movie => ({ ...movie,
+          release_date: movie.release_date.split('-')[0],
+          genres: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+        }));
+      });
+    });
+  }
+
+  insertGenresToSearchObj() {
+    return this.fetchSearchArticles().then(data => {
+      return this.fetchGenres().then(genresList => {
+        return data.map(movie => ({ ...movie,
+          release_date: movie.release_date.split('-')[0],
+          genres: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+        }));
+      });
+    });
+  }
+
+  get query() {
+    return this.searchQuery;
+  }
+
+  set query(newQuery) {
+    this.searchQuery = newQuery;
+  }
+
+  get pageNum() {
+    return this.page;
+  }
+
+  set pageNum(newPage) {
+    this.page = newPage;
+  }
+
+}
+
+exports.default = NewApiService;
+},{}],"js/spinner.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3026,10 +2945,10 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
-var spinner = basicLightbox.create(markup);
+const markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
+const spinner = basicLightbox.create(markup);
 var _default = {
-  spinner: spinner
+  spinner
 }; // ПОКАЗАТЬ спиннер - spinner.show();
 // ЗАКРЫТЬ  спиннер - spinner.close();
 // // Как пример - спиннер пока срабатывает при клике на копирайт
@@ -3055,37 +2974,31 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function createTrailerLink() {
-  var trailerBtn = document.querySelectorAll('.btn-youtube');
-  trailerBtn.forEach(function (el) {
-    return el.addEventListener('click', function (e) {
-      drawModalForTrailler(e.target.dataset.id);
-    });
-  });
+  const trailerBtn = document.querySelectorAll('.btn-youtube');
+  trailerBtn.forEach(el => el.addEventListener('click', e => {
+    drawModalForTrailler(e.target.dataset.id);
+  }));
 
   function drawModalForTrailler(id) {
-    var ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
-    var url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
-    fetch(url).then(function (response) {
-      return response.json();
-    }).then(function (data) {
-      var id = data.results[0].key;
-      var instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
+    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
+    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
+    fetch(url).then(response => response.json()).then(data => {
+      const id = data.results[0].key;
+      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
       instance.show();
       modalClBtTrailer(instance);
-    })["catch"](function () {
-      var instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
+    }).catch(() => {
+      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
       instance.show();
       modalClBtTrailer(instance);
     });
   }
 
   function modalClBtTrailer(instance) {
-    var modalBox = document.querySelector('.basicLightbox--iframe');
+    const modalBox = document.querySelector('.basicLightbox--iframe');
     modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
-    var modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
-    modalCloseBtn.addEventListener('click', function () {
-      return instance.close();
-    });
+    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
+    modalCloseBtn.addEventListener('click', () => instance.close());
   }
 }
 },{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/pagination.js":[function(require,module,exports) {
@@ -3104,16 +3017,16 @@ var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var listElement = document.querySelector('.js-card');
-var paginationElement = document.getElementById('pagination');
-var arrowLeft = document.querySelector('.arrow_left');
-var arrowRight = document.querySelector('.arrow_right');
-var warningField = document.querySelector('.header-warning');
-var currentPage = 1;
-var pagesOnWindow = 5;
-var rows = 20;
-var BASE_URL = "https://api.themoviedb.org/3";
-var KEY = "d91911ebb88751cf9e5c4b8fdf4412c9"; // Вова, комменты не снимай, рендер выведен в отдельные модули
+const listElement = document.querySelector('.js-card');
+const paginationElement = document.getElementById('pagination');
+const arrowLeft = document.querySelector('.arrow_left');
+const arrowRight = document.querySelector('.arrow_right');
+const warningField = document.querySelector('.header-warning');
+let currentPage = 1;
+const pagesOnWindow = 5;
+let rows = 20;
+const BASE_URL = "https://api.themoviedb.org/3";
+const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9"; // Вова, комменты не снимай, рендер выведен в отдельные модули
 // fetchDataOfPopularFilms();
 // function fetchDataOfPopularFilms() {
 //   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
@@ -3172,9 +3085,9 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
   function setupPagination(items, wrapper, rowsPerPage) {
     wrapper.innerHTML = '';
-    var pageCount = totalPages;
-    var maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
-    var maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
+    let pageCount = totalPages;
+    let maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
+    let maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
 
     if (maxLeftPage < 1) {
       maxLeftPage = 1;
@@ -3191,33 +3104,30 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       maxRightPage = totalPages;
     }
 
-    for (var i = 1; i <= totalPages; i++) {
+    for (let i = 1; i <= totalPages; i++) {
       if (maxLeftPage !== 1 && i == 1) {
-        var btn = paginationButton(i, items);
+        let btn = paginationButton(i, items);
         wrapper.appendChild(btn);
       }
 
       if (maxRightPage !== totalPages && i == totalPages) {
-        var _btn = paginationButton(i, items);
-
-        wrapper.appendChild(_btn);
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
       }
 
       if (i >= maxLeftPage && i <= maxRightPage) {
-        var _btn2 = paginationButton(i, items);
-
-        wrapper.appendChild(_btn2);
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
       }
 
       if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
-        var threeDotsEl = addThreeDotsBlock();
+        const threeDotsEl = addThreeDotsBlock();
         wrapper.insertBefore(threeDotsEl, wrapper[wrapper.length - 2]);
       }
 
       if (pageCount >= 7 && i == pageCount - 1 && currentPage !== pageCount && currentPage !== pageCount - 2 && currentPage !== pageCount - 1) {
-        var _threeDotsEl = addThreeDotsBlock();
-
-        wrapper.insertBefore(_threeDotsEl, wrapper[1]);
+        const threeDotsEl = addThreeDotsBlock();
+        wrapper.insertBefore(threeDotsEl, wrapper[1]);
       }
     }
 
@@ -3225,14 +3135,14 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
   }
 
   function addThreeDotsBlock() {
-    var threeDots = document.createElement('div');
+    const threeDots = document.createElement('div');
     threeDots.classList.add('threeDots');
     threeDots.innerText = '...';
     return threeDots;
   }
 
   function paginationButton(page, items) {
-    var button = document.createElement('button');
+    let button = document.createElement('button');
     button.innerText = page;
     if (currentPage == page) button.classList.add('active');
     button.addEventListener('click', function () {
@@ -3242,7 +3152,7 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
-      var current_btn = document.querySelector('.pagenumbers button.active');
+      let current_btn = document.querySelector('.pagenumbers button.active');
       current_btn.classList.remove('active');
       button.classList.add('active');
       setupPagination(listItems, paginationElement, rows);
@@ -3284,7 +3194,7 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 function hideExtremeButtons(totalPages) {
   if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // код для мобильных устройств
-    var allPaginationBtns = document.querySelectorAll('#pagination button');
+    const allPaginationBtns = document.querySelectorAll('#pagination button');
 
     if (currentPage > 3) {
       allPaginationBtns[0].classList.add('hide');
@@ -3299,95 +3209,267 @@ function hideExtremeButtons(totalPages) {
     }
   }
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"js/keyWordSearch.js":[function(require,module,exports) {
-// import filmsCardTpl from '../templates/card-films.hbs';
-// import { renderPagination } from './pagination';
-// import ApiService from './apiServis';
-// import placeholder from './spinner';
-// import createTrailerLink from './trailers.js';
-// import errorUrl from '../images/catch-error-pagination.jpg';
-// import * as cardFetch from './cardFetc';
-// const refs = {
-//   searchForm: document.querySelector('#search-form'),
-//   cardContainer: document.querySelector('.js-card'),
-//   warningField: document.querySelector('.header-warning'),
-// };
-// const filmApiService = new ApiService();
-// const listElement = document.querySelector('.js-card');
-// refs.searchForm.addEventListener('submit', onKeyWordSearch);
-// function onKeyWordSearch(e) {
-//   filmApiService.pageNum = 1;
-//   placeholder.spinner.show();
-//   e.preventDefault();
-//   filmApiService.query = e.currentTarget.elements.query.value;
-//   if (filmApiService.query === '') {
-//     placeholder.spinner.close();
-//     refs.warningField.textContent = `Please write something in the box :)`;
-//     return;
-//   }
-//   render(filmApiService.query);
-//   fetchDataOfSearchFilms(filmApiService.query);
-//   e.currentTarget.elements.query.value = '';
-//   refs.warningField.textContent = '';
-// }
-// // renders main (first) page after search *on submit*
-// function render(searchQuery) {
-//   filmApiService.query = searchQuery;
-//   filmApiService
-//     .insertGenresToSearchObj()
-//     .then(renderFilmsCard)
-//     .catch(err => {
-//       console.log('error in function render');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // function for insertion of markup
-// function renderFilmsCard(articles) {
-//   listElement.innerHTML = filmsCardTpl(articles);
-//   createTrailerLink();
-// }
-// // renders movies by appropriate page & search query
-// function displaySearchListByPage(wrapper, page, searchQuery) {
-//   wrapper.innerHTML = '';
-//   fetchSearchFilmsByPage(page, searchQuery)
-//     .then(renderFilmsCard)
-//     .catch(err => {
-//       console.log('error in function displaySearchListByPage');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // renders pagination for main (first) fetch
-// function fetchDataOfSearchFilms(searchQuery) {
-//   filmApiService.query = searchQuery;
-//   filmApiService
-//     .fetchSearchArticlesPages()
-//     .then(results => {
-//       renderPagination(
-//         results.total_pages,
-//         results.results,
-//         displaySearchListByPage,
-//         searchQuery,
-//       );
-//       if (results.total_pages === 0) {
-//         placeholder.spinner.close();
-//         refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
-//         cardFetch.renderOnSearchMistake();
-//         cardFetch.fetchDataOfPopularFilms();
-//         return;
-//       }
-//     })
-//     .catch(err => {
-//       console.log('error in function fetchDataOfSearchFilms');
-//       listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
-//     });
-// }
-// // fetches search queries by appropriate page & search query
-// function fetchSearchFilmsByPage(page, searchQuery) {
-//   filmApiService.pageNum = page;
-//   filmApiService.query = searchQuery;
-//   return filmApiService.insertGenresToSearchObj();
-// }
-},{}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"images/catch-error-pagination.jpg":[function(require,module,exports) {
+module.exports = "/catch-error-pagination.b8d8ff00.jpg";
+},{}],"js/cardFetc.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.render = render;
+exports.renderOnSearchMistake = renderOnSearchMistake;
+exports.fetchDataOfPopularFilms = fetchDataOfPopularFilms;
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+var _apiServis = _interopRequireDefault(require("./apiServis"));
+
+var _pagination = require("./pagination");
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
+
+var _catchErrorPagination = _interopRequireDefault(require("../images/catch-error-pagination.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const listElement = document.querySelector('.js-card');
+const logoEl = document.querySelector('.js-main-logo');
+const warningField = document.querySelector('.js-warning');
+const searchResField = document.querySelector('.js-search-results');
+const newApiService = new _apiServis.default();
+render();
+fetchDataOfPopularFilms();
+logoEl.addEventListener('click', onLogoClick); // page set to default with click on logotype without page refresh
+
+function onLogoClick(e) {
+  e.preventDefault();
+  render();
+  fetchDataOfPopularFilms();
+} // renders main (first) page
+
+
+function render() {
+  warningField.textContent = "";
+  searchResField.textContent = "";
+  newApiService.page = 1;
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard).catch(err => {
+    console.log('error in function render');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // renders main (first) page
+
+
+function renderOnSearchMistake() {
+  newApiService.page = 1;
+  newApiService.insertGenresToMovieObj().then(renderFilmsCard).catch(err => {
+    console.log('error in function render');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // function for insertion of markup
+
+
+function renderFilmsCard(articles) {
+  listElement.innerHTML = (0, _cardFilms.default)(articles);
+  (0, _trailers.default)();
+} // renders movies by appropriate page
+
+
+function displayList(wrapper, page) {
+  wrapper.innerHTML = '';
+  fetchPopularFilmsByPage(page).then(renderFilmsCard).catch(err => {
+    console.log('error in function displayList');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // renders pagination for main (first) fetch
+
+
+function fetchDataOfPopularFilms() {
+  newApiService.fetchPopularArticlesPages().then(results => {
+    (0, _pagination.renderPagination)(results.total_pages, results.results, displayList);
+  }).catch(err => {
+    console.log('error in function fetchDataOfPopularFilms');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // fetches popular movies by appropriate page
+
+
+function fetchPopularFilmsByPage(page) {
+  newApiService.pageNum = page;
+  return newApiService.insertGenresToMovieObj();
+}
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./apiServis":"js/apiServis.js","./pagination":"js/pagination.js","./trailers.js":"js/trailers.js","../images/catch-error-pagination.jpg":"images/catch-error-pagination.jpg"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
+module.exports = "/team-ruslana.5ee08793.jpeg";
+},{}],"images/team-olga.jpeg":[function(require,module,exports) {
+module.exports = "/team-olga.c40113fb.jpeg";
+},{}],"images/team-daria.jpeg":[function(require,module,exports) {
+module.exports = "/team-daria.ee65a5d2.jpeg";
+},{}],"images/team-denis.jpeg":[function(require,module,exports) {
+module.exports = "/team-denis.0a5b0591.jpeg";
+},{}],"images/team-ihor.jpeg":[function(require,module,exports) {
+module.exports = "/team-ihor.677fa90f.jpeg";
+},{}],"images/team-katya.jpeg":[function(require,module,exports) {
+module.exports = "/team-katya.dcfa35e7.jpeg";
+},{}],"images/team-vladymyr.jpeg":[function(require,module,exports) {
+module.exports = "/team-vladymyr.bc76483f.jpeg";
+},{}],"images/team-aleksandr.jpg":[function(require,module,exports) {
+module.exports = "/team-aleksandr.cfd8cc78.jpg";
+},{}],"images/sprite.svg":[function(require,module,exports) {
+module.exports = "/sprite.5ec50489.svg";
+},{}],"js/teamLightbox.js":[function(require,module,exports) {
+"use strict";
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+var _teamRuslana = _interopRequireDefault(require("../images/team-ruslana.jpeg"));
+
+var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpeg"));
+
+var _teamDaria = _interopRequireDefault(require("../images/team-daria.jpeg"));
+
+var _teamDenis = _interopRequireDefault(require("../images/team-denis.jpeg"));
+
+var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpeg"));
+
+var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpeg"));
+
+var _teamVladymyr = _interopRequireDefault(require("../images/team-vladymyr.jpeg"));
+
+var _teamAleksandr = _interopRequireDefault(require("../images/team-aleksandr.jpg"));
+
+var _sprite = _interopRequireDefault(require("../images/sprite.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/vbd4eva\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+const container = document.querySelector('.js-team-modal');
+const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
+container.addEventListener('click', openModal);
+const modal = basicLightbox.create(markup);
+
+function openModal(e) {
+  modal.show();
+  window.addEventListener('keydown', closeModalHandler);
+
+  function closeModalHandler(e) {
+    if (e.code === 'Escape') {
+      modal.close();
+      window.removeEventListener('keydown', closeModalHandler);
+    }
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"js/keyWordSearch.js":[function(require,module,exports) {
+"use strict";
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+var _pagination = require("./pagination");
+
+var _apiServis = _interopRequireDefault(require("./apiServis"));
+
+var _spinner = _interopRequireDefault(require("./spinner"));
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
+
+var _catchErrorPagination = _interopRequireDefault(require("../images/catch-error-pagination.jpg"));
+
+var cardFetch = _interopRequireWildcard(require("./cardFetc"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const refs = {
+  searchForm: document.querySelector('#search-form'),
+  cardContainer: document.querySelector('.js-card'),
+  warningField: document.querySelector('.js-warning'),
+  searchResField: document.querySelector('.js-search-results')
+};
+const filmApiService = new _apiServis.default();
+const listElement = document.querySelector('.js-card');
+refs.searchForm.addEventListener('submit', onKeyWordSearch);
+
+function onKeyWordSearch(e) {
+  filmApiService.pageNum = 1;
+
+  _spinner.default.spinner.show();
+
+  e.preventDefault();
+  filmApiService.query = e.currentTarget.elements.query.value;
+
+  if (filmApiService.query === '') {
+    _spinner.default.spinner.close();
+
+    refs.warningField.textContent = "Please write something in the box :)";
+    return;
+  }
+
+  render(filmApiService.query);
+  fetchDataOfSearchFilms(filmApiService.query);
+  e.currentTarget.elements.query.value = '';
+  refs.warningField.textContent = '';
+} // renders main (first) page after search *on submit*
+
+
+function render(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.insertGenresToSearchObj().then(renderFilmsCard).catch(err => {
+    console.log('error in function render');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // function for insertion of markup
+
+
+function renderFilmsCard(articles) {
+  listElement.innerHTML = (0, _cardFilms.default)(articles);
+  (0, _trailers.default)();
+} // renders movies by appropriate page & search query
+
+
+function displaySearchListByPage(wrapper, page, searchQuery) {
+  wrapper.innerHTML = '';
+  fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard).catch(err => {
+    console.log('error in function displaySearchListByPage');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // renders pagination for main (first) fetch
+
+
+function fetchDataOfSearchFilms(searchQuery) {
+  filmApiService.query = searchQuery;
+  filmApiService.fetchSearchArticlesPages().then(results => {
+    (0, _pagination.renderPagination)(results.total_pages, results.results, displaySearchListByPage, searchQuery);
+
+    if (results.total_pages === 0) {
+      _spinner.default.spinner.close();
+
+      refs.warningField.textContent = "Sorry, there no results found. Try searching for something else!";
+      cardFetch.renderOnSearchMistake();
+      cardFetch.fetchDataOfPopularFilms();
+      return;
+    }
+
+    refs.searchResField.textContent = "Yay! We have ".concat(results.total_results, " results on request \"").concat(searchQuery, "\"!");
+    refs.searchResField.style.color = '#f54275';
+  }).catch(err => {
+    console.log('error in function fetchDataOfSearchFilms');
+    listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
+  });
+} // fetches search queries by appropriate page & search query
+
+
+function fetchSearchFilmsByPage(page, searchQuery) {
+  filmApiService.pageNum = page;
+  filmApiService.query = searchQuery;
+  return filmApiService.insertGenresToSearchObj();
+}
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js","./apiServis":"js/apiServis.js","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js","../images/catch-error-pagination.jpg":"images/catch-error-pagination.jpg","./cardFetc":"js/cardFetc.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
 var define;
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -4138,24 +4220,4184 @@ try {
   Function("r", "regeneratorRuntime = r")(runtime);
 }
 
+},{}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
+var global = arguments[3];
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/** Used as references for various `Number` constants. */
+var NAN = 0 / 0;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/** Used to match leading and trailing whitespace. */
+var reTrim = /^\s+|\s+$/g;
+
+/** Used to detect bad signed hexadecimal string values. */
+var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+
+/** Used to detect binary string values. */
+var reIsBinary = /^0b[01]+$/i;
+
+/** Used to detect octal string values. */
+var reIsOctal = /^0o[0-7]+$/i;
+
+/** Built-in method references without a dependency on `root`. */
+var freeParseInt = parseInt;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max,
+    nativeMin = Math.min;
+
+/**
+ * Gets the timestamp of the number of milliseconds that have elapsed since
+ * the Unix epoch (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Date
+ * @returns {number} Returns the timestamp.
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => Logs the number of milliseconds it took for the deferred invocation.
+ */
+var now = function() {
+  return root.Date.now();
+};
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed `func` invocations and a `flush` method to immediately invoke them.
+ * Provide `options` to indicate whether `func` should be invoked on the
+ * leading and/or trailing edge of the `wait` timeout. The `func` is invoked
+ * with the last arguments provided to the debounced function. Subsequent
+ * calls to the debounced function return the result of the last `func`
+ * invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the debounced function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=false]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {number} [options.maxWait]
+ *  The maximum time `func` is allowed to be delayed before it's invoked.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // Avoid costly calculations while the window size is in flux.
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // Invoke `sendMail` when clicked, debouncing subsequent calls.
+ * jQuery(element).on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // Ensure `batchLog` is invoked once after 1 second of debounced calls.
+ * var debounced = _.debounce(batchLog, 250, { 'maxWait': 1000 });
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', debounced);
+ *
+ * // Cancel the trailing debounced invocation.
+ * jQuery(window).on('popstate', debounced.cancel);
+ */
+function debounce(func, wait, options) {
+  var lastArgs,
+      lastThis,
+      maxWait,
+      result,
+      timerId,
+      lastCallTime,
+      lastInvokeTime = 0,
+      leading = false,
+      maxing = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = toNumber(wait) || 0;
+  if (isObject(options)) {
+    leading = !!options.leading;
+    maxing = 'maxWait' in options;
+    maxWait = maxing ? nativeMax(toNumber(options.maxWait) || 0, wait) : maxWait;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function invokeFunc(time) {
+    var args = lastArgs,
+        thisArg = lastThis;
+
+    lastArgs = lastThis = undefined;
+    lastInvokeTime = time;
+    result = func.apply(thisArg, args);
+    return result;
+  }
+
+  function leadingEdge(time) {
+    // Reset any `maxWait` timer.
+    lastInvokeTime = time;
+    // Start the timer for the trailing edge.
+    timerId = setTimeout(timerExpired, wait);
+    // Invoke the leading edge.
+    return leading ? invokeFunc(time) : result;
+  }
+
+  function remainingWait(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime,
+        result = wait - timeSinceLastCall;
+
+    return maxing ? nativeMin(result, maxWait - timeSinceLastInvoke) : result;
+  }
+
+  function shouldInvoke(time) {
+    var timeSinceLastCall = time - lastCallTime,
+        timeSinceLastInvoke = time - lastInvokeTime;
+
+    // Either this is the first call, activity has stopped and we're at the
+    // trailing edge, the system time has gone backwards and we're treating
+    // it as the trailing edge, or we've hit the `maxWait` limit.
+    return (lastCallTime === undefined || (timeSinceLastCall >= wait) ||
+      (timeSinceLastCall < 0) || (maxing && timeSinceLastInvoke >= maxWait));
+  }
+
+  function timerExpired() {
+    var time = now();
+    if (shouldInvoke(time)) {
+      return trailingEdge(time);
+    }
+    // Restart the timer.
+    timerId = setTimeout(timerExpired, remainingWait(time));
+  }
+
+  function trailingEdge(time) {
+    timerId = undefined;
+
+    // Only invoke if we have `lastArgs` which means `func` has been
+    // debounced at least once.
+    if (trailing && lastArgs) {
+      return invokeFunc(time);
+    }
+    lastArgs = lastThis = undefined;
+    return result;
+  }
+
+  function cancel() {
+    if (timerId !== undefined) {
+      clearTimeout(timerId);
+    }
+    lastInvokeTime = 0;
+    lastArgs = lastCallTime = lastThis = timerId = undefined;
+  }
+
+  function flush() {
+    return timerId === undefined ? result : trailingEdge(now());
+  }
+
+  function debounced() {
+    var time = now(),
+        isInvoking = shouldInvoke(time);
+
+    lastArgs = arguments;
+    lastThis = this;
+    lastCallTime = time;
+
+    if (isInvoking) {
+      if (timerId === undefined) {
+        return leadingEdge(lastCallTime);
+      }
+      if (maxing) {
+        // Handle invocations in a tight loop.
+        timerId = setTimeout(timerExpired, wait);
+        return invokeFunc(lastCallTime);
+      }
+    }
+    if (timerId === undefined) {
+      timerId = setTimeout(timerExpired, wait);
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  debounced.flush = flush;
+  return debounced;
+}
+
+/**
+ * Creates a throttled function that only invokes `func` at most once per
+ * every `wait` milliseconds. The throttled function comes with a `cancel`
+ * method to cancel delayed `func` invocations and a `flush` method to
+ * immediately invoke them. Provide `options` to indicate whether `func`
+ * should be invoked on the leading and/or trailing edge of the `wait`
+ * timeout. The `func` is invoked with the last arguments provided to the
+ * throttled function. Subsequent calls to the throttled function return the
+ * result of the last `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is
+ * invoked on the trailing edge of the timeout only if the throttled function
+ * is invoked more than once during the `wait` timeout.
+ *
+ * If `wait` is `0` and `leading` is `false`, `func` invocation is deferred
+ * until to the next tick, similar to `setTimeout` with a timeout of `0`.
+ *
+ * See [David Corbacho's article](https://css-tricks.com/debouncing-throttling-explained-examples/)
+ * for details over the differences between `_.throttle` and `_.debounce`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to throttle.
+ * @param {number} [wait=0] The number of milliseconds to throttle invocations to.
+ * @param {Object} [options={}] The options object.
+ * @param {boolean} [options.leading=true]
+ *  Specify invoking on the leading edge of the timeout.
+ * @param {boolean} [options.trailing=true]
+ *  Specify invoking on the trailing edge of the timeout.
+ * @returns {Function} Returns the new throttled function.
+ * @example
+ *
+ * // Avoid excessively updating the position while scrolling.
+ * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
+ *
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
+ * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
+ * jQuery(element).on('click', throttled);
+ *
+ * // Cancel the trailing throttled invocation.
+ * jQuery(window).on('popstate', throttled.cancel);
+ */
+function throttle(func, wait, options) {
+  var leading = true,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  if (isObject(options)) {
+    leading = 'leading' in options ? !!options.leading : leading;
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike(value) && objectToString.call(value) == symbolTag);
+}
+
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */
+function toNumber(value) {
+  if (typeof value == 'number') {
+    return value;
+  }
+  if (isSymbol(value)) {
+    return NAN;
+  }
+  if (isObject(value)) {
+    var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+    value = isObject(other) ? (other + '') : other;
+  }
+  if (typeof value != 'string') {
+    return value === 0 ? value : +value;
+  }
+  value = value.replace(reTrim, '');
+  var isBinary = reIsBinary.test(value);
+  return (isBinary || reIsOctal.test(value))
+    ? freeParseInt(value.slice(2), isBinary ? 2 : 8)
+    : (reIsBadHex.test(value) ? NAN : +value);
+}
+
+module.exports = throttle;
+
 },{}],"js/btn-upp.js":[function(require,module,exports) {
-// import throttle from 'lodash.throttle';
-// const upBtn = document.querySelector('[data-up-btn]');
-// window.addEventListener('scroll', throttle(hideElOnScroll(upBtn), 250));
-// upBtn.addEventListener('click', toPageTopOnClick);
-// function hideElOnScroll(el) {
-//   return function hideOnScroll(e) {
-//     if (pageYOffset < document.documentElement.clientHeight) {
-//       el.classList.add('visuallyhidden');
-//     } else {
-//       el.classList.remove('visuallyhidden');
-//     }
-//   };
-// }
-// function toPageTopOnClick(e) {
-//   window.scrollTo({ top: 0, behavior: 'smooth' });
-// }
-},{}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _lodash = _interopRequireDefault(require("lodash.throttle"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const upBtn = document.querySelector('[data-up-btn]');
+window.addEventListener('scroll', (0, _lodash.default)(hideElOnScroll(upBtn), 250));
+upBtn.addEventListener('click', toPageTopOnClick);
+
+function hideElOnScroll(el) {
+  return function hideOnScroll(e) {
+    if (pageYOffset < document.documentElement.clientHeight) {
+      el.classList.add('visuallyhidden');
+    } else {
+      el.classList.remove('visuallyhidden');
+    }
+  };
+}
+
+function toPageTopOnClick(e) {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+},{"lodash.throttle":"../node_modules/lodash.throttle/index.js"}],"../node_modules/@glidejs/glide/dist/glide.esm.js":[function(require,module,exports) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+/*!
+ * Glide.js v3.4.1
+ * (c) 2013-2019 Jędrzej Chałubek <jedrzej.chalubek@gmail.com> (http://jedrzejchalubek.com/)
+ * Released under the MIT License.
+ */
+var defaults = {
+  /**
+   * Type of the movement.
+   *
+   * Available types:
+   * `slider` - Rewinds slider to the start/end when it reaches the first or last slide.
+   * `carousel` - Changes slides without starting over when it reaches the first or last slide.
+   *
+   * @type {String}
+   */
+  type: 'slider',
+
+  /**
+   * Start at specific slide number defined with zero-based index.
+   *
+   * @type {Number}
+   */
+  startAt: 0,
+
+  /**
+   * A number of slides visible on the single viewport.
+   *
+   * @type {Number}
+   */
+  perView: 1,
+
+  /**
+   * Focus currently active slide at a specified position in the track.
+   *
+   * Available inputs:
+   * `center` - Current slide will be always focused at the center of a track.
+   * `0,1,2,3...` - Current slide will be focused on the specified zero-based index.
+   *
+   * @type {String|Number}
+   */
+  focusAt: 0,
+
+  /**
+   * A size of the gap added between slides.
+   *
+   * @type {Number}
+   */
+  gap: 10,
+
+  /**
+   * Change slides after a specified interval. Use `false` for turning off autoplay.
+   *
+   * @type {Number|Boolean}
+   */
+  autoplay: false,
+
+  /**
+   * Stop autoplay on mouseover event.
+   *
+   * @type {Boolean}
+   */
+  hoverpause: true,
+
+  /**
+   * Allow for changing slides with left and right keyboard arrows.
+   *
+   * @type {Boolean}
+   */
+  keyboard: true,
+
+  /**
+   * Stop running `perView` number of slides from the end. Use this
+   * option if you don't want to have an empty space after
+   * a slider. Works only with `slider` type and a
+   * non-centered `focusAt` setting.
+   *
+   * @type {Boolean}
+   */
+  bound: false,
+
+  /**
+   * Minimal swipe distance needed to change the slide. Use `false` for turning off a swiping.
+   *
+   * @type {Number|Boolean}
+   */
+  swipeThreshold: 80,
+
+  /**
+   * Minimal mouse drag distance needed to change the slide. Use `false` for turning off a dragging.
+   *
+   * @type {Number|Boolean}
+   */
+  dragThreshold: 120,
+
+  /**
+   * A maximum number of slides to which movement will be made on swiping or dragging. Use `false` for unlimited.
+   *
+   * @type {Number|Boolean}
+   */
+  perTouch: false,
+
+  /**
+   * Moving distance ratio of the slides on a swiping and dragging.
+   *
+   * @type {Number}
+   */
+  touchRatio: 0.5,
+
+  /**
+   * Angle required to activate slides moving on swiping or dragging.
+   *
+   * @type {Number}
+   */
+  touchAngle: 45,
+
+  /**
+   * Duration of the animation in milliseconds.
+   *
+   * @type {Number}
+   */
+  animationDuration: 400,
+
+  /**
+   * Allows looping the `slider` type. Slider will rewind to the first/last slide when it's at the start/end.
+   *
+   * @type {Boolean}
+   */
+  rewind: true,
+
+  /**
+   * Duration of the rewinding animation of the `slider` type in milliseconds.
+   *
+   * @type {Number}
+   */
+  rewindDuration: 800,
+
+  /**
+   * Easing function for the animation.
+   *
+   * @type {String}
+   */
+  animationTimingFunc: 'cubic-bezier(.165, .840, .440, 1)',
+
+  /**
+   * Throttle costly events at most once per every wait milliseconds.
+   *
+   * @type {Number}
+   */
+  throttle: 10,
+
+  /**
+   * Moving direction mode.
+   *
+   * Available inputs:
+   * - 'ltr' - left to right movement,
+   * - 'rtl' - right to left movement.
+   *
+   * @type {String}
+   */
+  direction: 'ltr',
+
+  /**
+   * The distance value of the next and previous viewports which
+   * have to peek in the current view. Accepts number and
+   * pixels as a string. Left and right peeking can be
+   * set up separately with a directions object.
+   *
+   * For example:
+   * `100` - Peek 100px on the both sides.
+   * { before: 100, after: 50 }` - Peek 100px on the left side and 50px on the right side.
+   *
+   * @type {Number|String|Object}
+   */
+  peek: 0,
+
+  /**
+   * Collection of options applied at specified media breakpoints.
+   * For example: display two slides per view under 800px.
+   * `{
+   *   '800px': {
+   *     perView: 2
+   *   }
+   * }`
+   */
+  breakpoints: {},
+
+  /**
+   * Collection of internally used HTML classes.
+   *
+   * @todo Refactor `slider` and `carousel` properties to single `type: { slider: '', carousel: '' }` object
+   * @type {Object}
+   */
+  classes: {
+    direction: {
+      ltr: 'glide--ltr',
+      rtl: 'glide--rtl'
+    },
+    slider: 'glide--slider',
+    carousel: 'glide--carousel',
+    swipeable: 'glide--swipeable',
+    dragging: 'glide--dragging',
+    cloneSlide: 'glide__slide--clone',
+    activeNav: 'glide__bullet--active',
+    activeSlide: 'glide__slide--active',
+    disabledArrow: 'glide__arrow--disabled'
+  }
+};
+/**
+ * Outputs warning message to the bowser console.
+ *
+ * @param  {String} msg
+ * @return {Void}
+ */
+
+function warn(msg) {
+  console.error("[Glide warn]: " + msg);
+}
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
+  return typeof obj;
+} : function (obj) {
+  return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+};
+
+var classCallCheck = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+var createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+var get = function get(object, property, receiver) {
+  if (object === null) object = Function.prototype;
+  var desc = Object.getOwnPropertyDescriptor(object, property);
+
+  if (desc === undefined) {
+    var parent = Object.getPrototypeOf(object);
+
+    if (parent === null) {
+      return undefined;
+    } else {
+      return get(parent, property, receiver);
+    }
+  } else if ("value" in desc) {
+    return desc.value;
+  } else {
+    var getter = desc.get;
+
+    if (getter === undefined) {
+      return undefined;
+    }
+
+    return getter.call(receiver);
+  }
+};
+
+var inherits = function (subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+};
+
+var possibleConstructorReturn = function (self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return call && (typeof call === "object" || typeof call === "function") ? call : self;
+};
+/**
+ * Converts value entered as number
+ * or string to integer value.
+ *
+ * @param {String} value
+ * @returns {Number}
+ */
+
+
+function toInt(value) {
+  return parseInt(value);
+}
+/**
+ * Converts value entered as number
+ * or string to flat value.
+ *
+ * @param {String} value
+ * @returns {Number}
+ */
+
+
+function toFloat(value) {
+  return parseFloat(value);
+}
+/**
+ * Indicates whether the specified value is a string.
+ *
+ * @param  {*}   value
+ * @return {Boolean}
+ */
+
+
+function isString(value) {
+  return typeof value === 'string';
+}
+/**
+ * Indicates whether the specified value is an object.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ *
+ * @see https://github.com/jashkenas/underscore
+ */
+
+
+function isObject(value) {
+  var type = typeof value === 'undefined' ? 'undefined' : _typeof(value);
+  return type === 'function' || type === 'object' && !!value; // eslint-disable-line no-mixed-operators
+}
+/**
+ * Indicates whether the specified value is a number.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */
+
+
+function isNumber(value) {
+  return typeof value === 'number';
+}
+/**
+ * Indicates whether the specified value is a function.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */
+
+
+function isFunction(value) {
+  return typeof value === 'function';
+}
+/**
+ * Indicates whether the specified value is undefined.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */
+
+
+function isUndefined(value) {
+  return typeof value === 'undefined';
+}
+/**
+ * Indicates whether the specified value is an array.
+ *
+ * @param  {*} value
+ * @return {Boolean}
+ */
+
+
+function isArray(value) {
+  return value.constructor === Array;
+}
+/**
+ * Creates and initializes specified collection of extensions.
+ * Each extension receives access to instance of glide and rest of components.
+ *
+ * @param {Object} glide
+ * @param {Object} extensions
+ *
+ * @returns {Object}
+ */
+
+
+function mount(glide, extensions, events) {
+  var components = {};
+
+  for (var name in extensions) {
+    if (isFunction(extensions[name])) {
+      components[name] = extensions[name](glide, components, events);
+    } else {
+      warn('Extension must be a function');
+    }
+  }
+
+  for (var _name in components) {
+    if (isFunction(components[_name].mount)) {
+      components[_name].mount();
+    }
+  }
+
+  return components;
+}
+/**
+ * Defines getter and setter property on the specified object.
+ *
+ * @param  {Object} obj         Object where property has to be defined.
+ * @param  {String} prop        Name of the defined property.
+ * @param  {Object} definition  Get and set definitions for the property.
+ * @return {Void}
+ */
+
+
+function define(obj, prop, definition) {
+  Object.defineProperty(obj, prop, definition);
+}
+/**
+ * Sorts aphabetically object keys.
+ *
+ * @param  {Object} obj
+ * @return {Object}
+ */
+
+
+function sortKeys(obj) {
+  return Object.keys(obj).sort().reduce(function (r, k) {
+    r[k] = obj[k];
+    return r[k], r;
+  }, {});
+}
+/**
+ * Merges passed settings object with default options.
+ *
+ * @param  {Object} defaults
+ * @param  {Object} settings
+ * @return {Object}
+ */
+
+
+function mergeOptions(defaults, settings) {
+  var options = _extends({}, defaults, settings); // `Object.assign` do not deeply merge objects, so we
+  // have to do it manually for every nested object
+  // in options. Although it does not look smart,
+  // it's smaller and faster than some fancy
+  // merging deep-merge algorithm script.
+
+
+  if (settings.hasOwnProperty('classes')) {
+    options.classes = _extends({}, defaults.classes, settings.classes);
+
+    if (settings.classes.hasOwnProperty('direction')) {
+      options.classes.direction = _extends({}, defaults.classes.direction, settings.classes.direction);
+    }
+  }
+
+  if (settings.hasOwnProperty('breakpoints')) {
+    options.breakpoints = _extends({}, defaults.breakpoints, settings.breakpoints);
+  }
+
+  return options;
+}
+
+var EventsBus = function () {
+  /**
+   * Construct a EventBus instance.
+   *
+   * @param {Object} events
+   */
+  function EventsBus() {
+    var events = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    classCallCheck(this, EventsBus);
+    this.events = events;
+    this.hop = events.hasOwnProperty;
+  }
+  /**
+   * Adds listener to the specifed event.
+   *
+   * @param {String|Array} event
+   * @param {Function} handler
+   */
+
+
+  createClass(EventsBus, [{
+    key: 'on',
+    value: function on(event, handler) {
+      if (isArray(event)) {
+        for (var i = 0; i < event.length; i++) {
+          this.on(event[i], handler);
+        }
+      } // Create the event's object if not yet created
+
+
+      if (!this.hop.call(this.events, event)) {
+        this.events[event] = [];
+      } // Add the handler to queue
+
+
+      var index = this.events[event].push(handler) - 1; // Provide handle back for removal of event
+
+      return {
+        remove: function remove() {
+          delete this.events[event][index];
+        }
+      };
+    }
+    /**
+     * Runs registered handlers for specified event.
+     *
+     * @param {String|Array} event
+     * @param {Object=} context
+     */
+
+  }, {
+    key: 'emit',
+    value: function emit(event, context) {
+      if (isArray(event)) {
+        for (var i = 0; i < event.length; i++) {
+          this.emit(event[i], context);
+        }
+      } // If the event doesn't exist, or there's no handlers in queue, just leave
+
+
+      if (!this.hop.call(this.events, event)) {
+        return;
+      } // Cycle through events queue, fire!
+
+
+      this.events[event].forEach(function (item) {
+        item(context || {});
+      });
+    }
+  }]);
+  return EventsBus;
+}();
+
+var Glide = function () {
+  /**
+   * Construct glide.
+   *
+   * @param  {String} selector
+   * @param  {Object} options
+   */
+  function Glide(selector) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    classCallCheck(this, Glide);
+    this._c = {};
+    this._t = [];
+    this._e = new EventsBus();
+    this.disabled = false;
+    this.selector = selector;
+    this.settings = mergeOptions(defaults, options);
+    this.index = this.settings.startAt;
+  }
+  /**
+   * Initializes glide.
+   *
+   * @param {Object} extensions Collection of extensions to initialize.
+   * @return {Glide}
+   */
+
+
+  createClass(Glide, [{
+    key: 'mount',
+    value: function mount$$1() {
+      var extensions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      this._e.emit('mount.before');
+
+      if (isObject(extensions)) {
+        this._c = mount(this, extensions, this._e);
+      } else {
+        warn('You need to provide a object on `mount()`');
+      }
+
+      this._e.emit('mount.after');
+
+      return this;
+    }
+    /**
+     * Collects an instance `translate` transformers.
+     *
+     * @param  {Array} transformers Collection of transformers.
+     * @return {Void}
+     */
+
+  }, {
+    key: 'mutate',
+    value: function mutate() {
+      var transformers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+      if (isArray(transformers)) {
+        this._t = transformers;
+      } else {
+        warn('You need to provide a array on `mutate()`');
+      }
+
+      return this;
+    }
+    /**
+     * Updates glide with specified settings.
+     *
+     * @param {Object} settings
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'update',
+    value: function update() {
+      var settings = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      this.settings = mergeOptions(this.settings, settings);
+
+      if (settings.hasOwnProperty('startAt')) {
+        this.index = settings.startAt;
+      }
+
+      this._e.emit('update');
+
+      return this;
+    }
+    /**
+     * Change slide with specified pattern. A pattern must be in the special format:
+     * `>` - Move one forward
+     * `<` - Move one backward
+     * `={i}` - Go to {i} zero-based slide (eq. '=1', will go to second slide)
+     * `>>` - Rewinds to end (last slide)
+     * `<<` - Rewinds to start (first slide)
+     *
+     * @param {String} pattern
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'go',
+    value: function go(pattern) {
+      this._c.Run.make(pattern);
+
+      return this;
+    }
+    /**
+     * Move track by specified distance.
+     *
+     * @param {String} distance
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'move',
+    value: function move(distance) {
+      this._c.Transition.disable();
+
+      this._c.Move.make(distance);
+
+      return this;
+    }
+    /**
+     * Destroy instance and revert all changes done by this._c.
+     *
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      this._e.emit('destroy');
+
+      return this;
+    }
+    /**
+     * Start instance autoplaying.
+     *
+     * @param {Boolean|Number} interval Run autoplaying with passed interval regardless of `autoplay` settings
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'play',
+    value: function play() {
+      var interval = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+      if (interval) {
+        this.settings.autoplay = interval;
+      }
+
+      this._e.emit('play');
+
+      return this;
+    }
+    /**
+     * Stop instance autoplaying.
+     *
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'pause',
+    value: function pause() {
+      this._e.emit('pause');
+
+      return this;
+    }
+    /**
+     * Sets glide into a idle status.
+     *
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'disable',
+    value: function disable() {
+      this.disabled = true;
+      return this;
+    }
+    /**
+     * Sets glide into a active status.
+     *
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'enable',
+    value: function enable() {
+      this.disabled = false;
+      return this;
+    }
+    /**
+     * Adds cuutom event listener with handler.
+     *
+     * @param  {String|Array} event
+     * @param  {Function} handler
+     * @return {Glide}
+     */
+
+  }, {
+    key: 'on',
+    value: function on(event, handler) {
+      this._e.on(event, handler);
+
+      return this;
+    }
+    /**
+     * Checks if glide is a precised type.
+     *
+     * @param  {String} name
+     * @return {Boolean}
+     */
+
+  }, {
+    key: 'isType',
+    value: function isType(name) {
+      return this.settings.type === name;
+    }
+    /**
+     * Gets value of the core options.
+     *
+     * @return {Object}
+     */
+
+  }, {
+    key: 'settings',
+    get: function get$$1() {
+      return this._o;
+    }
+    /**
+     * Sets value of the core options.
+     *
+     * @param  {Object} o
+     * @return {Void}
+     */
+    ,
+    set: function set$$1(o) {
+      if (isObject(o)) {
+        this._o = o;
+      } else {
+        warn('Options must be an `object` instance.');
+      }
+    }
+    /**
+     * Gets current index of the slider.
+     *
+     * @return {Object}
+     */
+
+  }, {
+    key: 'index',
+    get: function get$$1() {
+      return this._i;
+    }
+    /**
+     * Sets current index a slider.
+     *
+     * @return {Object}
+     */
+    ,
+    set: function set$$1(i) {
+      this._i = toInt(i);
+    }
+    /**
+     * Gets type name of the slider.
+     *
+     * @return {String}
+     */
+
+  }, {
+    key: 'type',
+    get: function get$$1() {
+      return this.settings.type;
+    }
+    /**
+     * Gets value of the idle status.
+     *
+     * @return {Boolean}
+     */
+
+  }, {
+    key: 'disabled',
+    get: function get$$1() {
+      return this._d;
+    }
+    /**
+     * Sets value of the idle status.
+     *
+     * @return {Boolean}
+     */
+    ,
+    set: function set$$1(status) {
+      this._d = !!status;
+    }
+  }]);
+  return Glide;
+}();
+
+function Run(Glide, Components, Events) {
+  var Run = {
+    /**
+     * Initializes autorunning of the glide.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this._o = false;
+    },
+
+    /**
+     * Makes glides running based on the passed moving schema.
+     *
+     * @param {String} move
+     */
+    make: function make(move) {
+      var _this = this;
+
+      if (!Glide.disabled) {
+        Glide.disable();
+        this.move = move;
+        Events.emit('run.before', this.move);
+        this.calculate();
+        Events.emit('run', this.move);
+        Components.Transition.after(function () {
+          if (_this.isStart()) {
+            Events.emit('run.start', _this.move);
+          }
+
+          if (_this.isEnd()) {
+            Events.emit('run.end', _this.move);
+          }
+
+          if (_this.isOffset('<') || _this.isOffset('>')) {
+            _this._o = false;
+            Events.emit('run.offset', _this.move);
+          }
+
+          Events.emit('run.after', _this.move);
+          Glide.enable();
+        });
+      }
+    },
+
+    /**
+     * Calculates current index based on defined move.
+     *
+     * @return {Void}
+     */
+    calculate: function calculate() {
+      var move = this.move,
+          length = this.length;
+      var steps = move.steps,
+          direction = move.direction;
+      var countableSteps = isNumber(toInt(steps)) && toInt(steps) !== 0;
+
+      switch (direction) {
+        case '>':
+          if (steps === '>') {
+            Glide.index = length;
+          } else if (this.isEnd()) {
+            if (!(Glide.isType('slider') && !Glide.settings.rewind)) {
+              this._o = true;
+              Glide.index = 0;
+            }
+          } else if (countableSteps) {
+            Glide.index += Math.min(length - Glide.index, -toInt(steps));
+          } else {
+            Glide.index++;
+          }
+
+          break;
+
+        case '<':
+          if (steps === '<') {
+            Glide.index = 0;
+          } else if (this.isStart()) {
+            if (!(Glide.isType('slider') && !Glide.settings.rewind)) {
+              this._o = true;
+              Glide.index = length;
+            }
+          } else if (countableSteps) {
+            Glide.index -= Math.min(Glide.index, toInt(steps));
+          } else {
+            Glide.index--;
+          }
+
+          break;
+
+        case '=':
+          Glide.index = steps;
+          break;
+
+        default:
+          warn('Invalid direction pattern [' + direction + steps + '] has been used');
+          break;
+      }
+    },
+
+    /**
+     * Checks if we are on the first slide.
+     *
+     * @return {Boolean}
+     */
+    isStart: function isStart() {
+      return Glide.index === 0;
+    },
+
+    /**
+     * Checks if we are on the last slide.
+     *
+     * @return {Boolean}
+     */
+    isEnd: function isEnd() {
+      return Glide.index === this.length;
+    },
+
+    /**
+     * Checks if we are making a offset run.
+     *
+     * @param {String} direction
+     * @return {Boolean}
+     */
+    isOffset: function isOffset(direction) {
+      return this._o && this.move.direction === direction;
+    }
+  };
+  define(Run, 'move', {
+    /**
+     * Gets value of the move schema.
+     *
+     * @returns {Object}
+     */
+    get: function get() {
+      return this._m;
+    },
+
+    /**
+     * Sets value of the move schema.
+     *
+     * @returns {Object}
+     */
+    set: function set(value) {
+      var step = value.substr(1);
+      this._m = {
+        direction: value.substr(0, 1),
+        steps: step ? toInt(step) ? toInt(step) : step : 0
+      };
+    }
+  });
+  define(Run, 'length', {
+    /**
+     * Gets value of the running distance based
+     * on zero-indexing number of slides.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      var settings = Glide.settings;
+      var length = Components.Html.slides.length; // If the `bound` option is acitve, a maximum running distance should be
+      // reduced by `perView` and `focusAt` settings. Running distance
+      // should end before creating an empty space after instance.
+
+      if (Glide.isType('slider') && settings.focusAt !== 'center' && settings.bound) {
+        return length - 1 - (toInt(settings.perView) - 1) + toInt(settings.focusAt);
+      }
+
+      return length - 1;
+    }
+  });
+  define(Run, 'offset', {
+    /**
+     * Gets status of the offsetting flag.
+     *
+     * @return {Boolean}
+     */
+    get: function get() {
+      return this._o;
+    }
+  });
+  return Run;
+}
+/**
+ * Returns a current time.
+ *
+ * @return {Number}
+ */
+
+
+function now() {
+  return new Date().getTime();
+}
+/**
+ * Returns a function, that, when invoked, will only be triggered
+ * at most once during a given window of time.
+ *
+ * @param {Function} func
+ * @param {Number} wait
+ * @param {Object=} options
+ * @return {Function}
+ *
+ * @see https://github.com/jashkenas/underscore
+ */
+
+
+function throttle(func, wait, options) {
+  var timeout = void 0,
+      context = void 0,
+      args = void 0,
+      result = void 0;
+  var previous = 0;
+  if (!options) options = {};
+
+  var later = function later() {
+    previous = options.leading === false ? 0 : now();
+    timeout = null;
+    result = func.apply(context, args);
+    if (!timeout) context = args = null;
+  };
+
+  var throttled = function throttled() {
+    var at = now();
+    if (!previous && options.leading === false) previous = at;
+    var remaining = wait - (at - previous);
+    context = this;
+    args = arguments;
+
+    if (remaining <= 0 || remaining > wait) {
+      if (timeout) {
+        clearTimeout(timeout);
+        timeout = null;
+      }
+
+      previous = at;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    } else if (!timeout && options.trailing !== false) {
+      timeout = setTimeout(later, remaining);
+    }
+
+    return result;
+  };
+
+  throttled.cancel = function () {
+    clearTimeout(timeout);
+    previous = 0;
+    timeout = context = args = null;
+  };
+
+  return throttled;
+}
+
+var MARGIN_TYPE = {
+  ltr: ['marginLeft', 'marginRight'],
+  rtl: ['marginRight', 'marginLeft']
+};
+
+function Gaps(Glide, Components, Events) {
+  var Gaps = {
+    /**
+     * Applies gaps between slides. First and last
+     * slides do not receive it's edge margins.
+     *
+     * @param {HTMLCollection} slides
+     * @return {Void}
+     */
+    apply: function apply(slides) {
+      for (var i = 0, len = slides.length; i < len; i++) {
+        var style = slides[i].style;
+        var direction = Components.Direction.value;
+
+        if (i !== 0) {
+          style[MARGIN_TYPE[direction][0]] = this.value / 2 + 'px';
+        } else {
+          style[MARGIN_TYPE[direction][0]] = '';
+        }
+
+        if (i !== slides.length - 1) {
+          style[MARGIN_TYPE[direction][1]] = this.value / 2 + 'px';
+        } else {
+          style[MARGIN_TYPE[direction][1]] = '';
+        }
+      }
+    },
+
+    /**
+     * Removes gaps from the slides.
+     *
+     * @param {HTMLCollection} slides
+     * @returns {Void}
+    */
+    remove: function remove(slides) {
+      for (var i = 0, len = slides.length; i < len; i++) {
+        var style = slides[i].style;
+        style.marginLeft = '';
+        style.marginRight = '';
+      }
+    }
+  };
+  define(Gaps, 'value', {
+    /**
+     * Gets value of the gap.
+     *
+     * @returns {Number}
+     */
+    get: function get() {
+      return toInt(Glide.settings.gap);
+    }
+  });
+  define(Gaps, 'grow', {
+    /**
+     * Gets additional dimentions value caused by gaps.
+     * Used to increase width of the slides wrapper.
+     *
+     * @returns {Number}
+     */
+    get: function get() {
+      return Gaps.value * (Components.Sizes.length - 1);
+    }
+  });
+  define(Gaps, 'reductor', {
+    /**
+     * Gets reduction value caused by gaps.
+     * Used to subtract width of the slides.
+     *
+     * @returns {Number}
+     */
+    get: function get() {
+      var perView = Glide.settings.perView;
+      return Gaps.value * (perView - 1) / perView;
+    }
+  });
+  /**
+   * Apply calculated gaps:
+   * - after building, so slides (including clones) will receive proper margins
+   * - on updating via API, to recalculate gaps with new options
+   */
+
+  Events.on(['build.after', 'update'], throttle(function () {
+    Gaps.apply(Components.Html.wrapper.children);
+  }, 30));
+  /**
+   * Remove gaps:
+   * - on destroying to bring markup to its inital state
+   */
+
+  Events.on('destroy', function () {
+    Gaps.remove(Components.Html.wrapper.children);
+  });
+  return Gaps;
+}
+/**
+ * Finds siblings nodes of the passed node.
+ *
+ * @param  {Element} node
+ * @return {Array}
+ */
+
+
+function siblings(node) {
+  if (node && node.parentNode) {
+    var n = node.parentNode.firstChild;
+    var matched = [];
+
+    for (; n; n = n.nextSibling) {
+      if (n.nodeType === 1 && n !== node) {
+        matched.push(n);
+      }
+    }
+
+    return matched;
+  }
+
+  return [];
+}
+/**
+ * Checks if passed node exist and is a valid element.
+ *
+ * @param  {Element} node
+ * @return {Boolean}
+ */
+
+
+function exist(node) {
+  if (node && node instanceof window.HTMLElement) {
+    return true;
+  }
+
+  return false;
+}
+
+var TRACK_SELECTOR = '[data-glide-el="track"]';
+
+function Html(Glide, Components) {
+  var Html = {
+    /**
+     * Setup slider HTML nodes.
+     *
+     * @param {Glide} glide
+     */
+    mount: function mount() {
+      this.root = Glide.selector;
+      this.track = this.root.querySelector(TRACK_SELECTOR);
+      this.slides = Array.prototype.slice.call(this.wrapper.children).filter(function (slide) {
+        return !slide.classList.contains(Glide.settings.classes.cloneSlide);
+      });
+    }
+  };
+  define(Html, 'root', {
+    /**
+     * Gets node of the glide main element.
+     *
+     * @return {Object}
+     */
+    get: function get() {
+      return Html._r;
+    },
+
+    /**
+     * Sets node of the glide main element.
+     *
+     * @return {Object}
+     */
+    set: function set(r) {
+      if (isString(r)) {
+        r = document.querySelector(r);
+      }
+
+      if (exist(r)) {
+        Html._r = r;
+      } else {
+        warn('Root element must be a existing Html node');
+      }
+    }
+  });
+  define(Html, 'track', {
+    /**
+     * Gets node of the glide track with slides.
+     *
+     * @return {Object}
+     */
+    get: function get() {
+      return Html._t;
+    },
+
+    /**
+     * Sets node of the glide track with slides.
+     *
+     * @return {Object}
+     */
+    set: function set(t) {
+      if (exist(t)) {
+        Html._t = t;
+      } else {
+        warn('Could not find track element. Please use ' + TRACK_SELECTOR + ' attribute.');
+      }
+    }
+  });
+  define(Html, 'wrapper', {
+    /**
+     * Gets node of the slides wrapper.
+     *
+     * @return {Object}
+     */
+    get: function get() {
+      return Html.track.children[0];
+    }
+  });
+  return Html;
+}
+
+function Peek(Glide, Components, Events) {
+  var Peek = {
+    /**
+     * Setups how much to peek based on settings.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this.value = Glide.settings.peek;
+    }
+  };
+  define(Peek, 'value', {
+    /**
+     * Gets value of the peek.
+     *
+     * @returns {Number|Object}
+     */
+    get: function get() {
+      return Peek._v;
+    },
+
+    /**
+     * Sets value of the peek.
+     *
+     * @param {Number|Object} value
+     * @return {Void}
+     */
+    set: function set(value) {
+      if (isObject(value)) {
+        value.before = toInt(value.before);
+        value.after = toInt(value.after);
+      } else {
+        value = toInt(value);
+      }
+
+      Peek._v = value;
+    }
+  });
+  define(Peek, 'reductor', {
+    /**
+     * Gets reduction value caused by peek.
+     *
+     * @returns {Number}
+     */
+    get: function get() {
+      var value = Peek.value;
+      var perView = Glide.settings.perView;
+
+      if (isObject(value)) {
+        return value.before / perView + value.after / perView;
+      }
+
+      return value * 2 / perView;
+    }
+  });
+  /**
+   * Recalculate peeking sizes on:
+   * - when resizing window to update to proper percents
+   */
+
+  Events.on(['resize', 'update'], function () {
+    Peek.mount();
+  });
+  return Peek;
+}
+
+function Move(Glide, Components, Events) {
+  var Move = {
+    /**
+     * Constructs move component.
+     *
+     * @returns {Void}
+     */
+    mount: function mount() {
+      this._o = 0;
+    },
+
+    /**
+     * Calculates a movement value based on passed offset and currently active index.
+     *
+     * @param  {Number} offset
+     * @return {Void}
+     */
+    make: function make() {
+      var _this = this;
+
+      var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      this.offset = offset;
+      Events.emit('move', {
+        movement: this.value
+      });
+      Components.Transition.after(function () {
+        Events.emit('move.after', {
+          movement: _this.value
+        });
+      });
+    }
+  };
+  define(Move, 'offset', {
+    /**
+     * Gets an offset value used to modify current translate.
+     *
+     * @return {Object}
+     */
+    get: function get() {
+      return Move._o;
+    },
+
+    /**
+     * Sets an offset value used to modify current translate.
+     *
+     * @return {Object}
+     */
+    set: function set(value) {
+      Move._o = !isUndefined(value) ? toInt(value) : 0;
+    }
+  });
+  define(Move, 'translate', {
+    /**
+     * Gets a raw movement value.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return Components.Sizes.slideWidth * Glide.index;
+    }
+  });
+  define(Move, 'value', {
+    /**
+     * Gets an actual movement value corrected by offset.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      var offset = this.offset;
+      var translate = this.translate;
+
+      if (Components.Direction.is('rtl')) {
+        return translate + offset;
+      }
+
+      return translate - offset;
+    }
+  });
+  /**
+   * Make movement to proper slide on:
+   * - before build, so glide will start at `startAt` index
+   * - on each standard run to move to newly calculated index
+   */
+
+  Events.on(['build.before', 'run'], function () {
+    Move.make();
+  });
+  return Move;
+}
+
+function Sizes(Glide, Components, Events) {
+  var Sizes = {
+    /**
+     * Setups dimentions of slides.
+     *
+     * @return {Void}
+     */
+    setupSlides: function setupSlides() {
+      var width = this.slideWidth + 'px';
+      var slides = Components.Html.slides;
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = width;
+      }
+    },
+
+    /**
+     * Setups dimentions of slides wrapper.
+     *
+     * @return {Void}
+     */
+    setupWrapper: function setupWrapper(dimention) {
+      Components.Html.wrapper.style.width = this.wrapperSize + 'px';
+    },
+
+    /**
+     * Removes applied styles from HTML elements.
+     *
+     * @returns {Void}
+     */
+    remove: function remove() {
+      var slides = Components.Html.slides;
+
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.width = '';
+      }
+
+      Components.Html.wrapper.style.width = '';
+    }
+  };
+  define(Sizes, 'length', {
+    /**
+     * Gets count number of the slides.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return Components.Html.slides.length;
+    }
+  });
+  define(Sizes, 'width', {
+    /**
+     * Gets width value of the glide.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return Components.Html.root.offsetWidth;
+    }
+  });
+  define(Sizes, 'wrapperSize', {
+    /**
+     * Gets size of the slides wrapper.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return Sizes.slideWidth * Sizes.length + Components.Gaps.grow + Components.Clones.grow;
+    }
+  });
+  define(Sizes, 'slideWidth', {
+    /**
+     * Gets width value of the single slide.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return Sizes.width / Glide.settings.perView - Components.Peek.reductor - Components.Gaps.reductor;
+    }
+  });
+  /**
+   * Apply calculated glide's dimensions:
+   * - before building, so other dimentions (e.g. translate) will be calculated propertly
+   * - when resizing window to recalculate sildes dimensions
+   * - on updating via API, to calculate dimensions based on new options
+   */
+
+  Events.on(['build.before', 'resize', 'update'], function () {
+    Sizes.setupSlides();
+    Sizes.setupWrapper();
+  });
+  /**
+   * Remove calculated glide's dimensions:
+   * - on destoting to bring markup to its inital state
+   */
+
+  Events.on('destroy', function () {
+    Sizes.remove();
+  });
+  return Sizes;
+}
+
+function Build(Glide, Components, Events) {
+  var Build = {
+    /**
+     * Init glide building. Adds classes, sets
+     * dimensions and setups initial state.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      Events.emit('build.before');
+      this.typeClass();
+      this.activeClass();
+      Events.emit('build.after');
+    },
+
+    /**
+     * Adds `type` class to the glide element.
+     *
+     * @return {Void}
+     */
+    typeClass: function typeClass() {
+      Components.Html.root.classList.add(Glide.settings.classes[Glide.settings.type]);
+    },
+
+    /**
+     * Sets active class to current slide.
+     *
+     * @return {Void}
+     */
+    activeClass: function activeClass() {
+      var classes = Glide.settings.classes;
+      var slide = Components.Html.slides[Glide.index];
+
+      if (slide) {
+        slide.classList.add(classes.activeSlide);
+        siblings(slide).forEach(function (sibling) {
+          sibling.classList.remove(classes.activeSlide);
+        });
+      }
+    },
+
+    /**
+     * Removes HTML classes applied at building.
+     *
+     * @return {Void}
+     */
+    removeClasses: function removeClasses() {
+      var classes = Glide.settings.classes;
+      Components.Html.root.classList.remove(classes[Glide.settings.type]);
+      Components.Html.slides.forEach(function (sibling) {
+        sibling.classList.remove(classes.activeSlide);
+      });
+    }
+  };
+  /**
+   * Clear building classes:
+   * - on destroying to bring HTML to its initial state
+   * - on updating to remove classes before remounting component
+   */
+
+  Events.on(['destroy', 'update'], function () {
+    Build.removeClasses();
+  });
+  /**
+   * Remount component:
+   * - on resizing of the window to calculate new dimentions
+   * - on updating settings via API
+   */
+
+  Events.on(['resize', 'update'], function () {
+    Build.mount();
+  });
+  /**
+   * Swap active class of current slide:
+   * - after each move to the new index
+   */
+
+  Events.on('move.after', function () {
+    Build.activeClass();
+  });
+  return Build;
+}
+
+function Clones(Glide, Components, Events) {
+  var Clones = {
+    /**
+     * Create pattern map and collect slides to be cloned.
+     */
+    mount: function mount() {
+      this.items = [];
+
+      if (Glide.isType('carousel')) {
+        this.items = this.collect();
+      }
+    },
+
+    /**
+     * Collect clones with pattern.
+     *
+     * @return {Void}
+     */
+    collect: function collect() {
+      var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var slides = Components.Html.slides;
+      var _Glide$settings = Glide.settings,
+          perView = _Glide$settings.perView,
+          classes = _Glide$settings.classes;
+      var peekIncrementer = +!!Glide.settings.peek;
+      var part = perView + peekIncrementer;
+      var start = slides.slice(0, part);
+      var end = slides.slice(-part);
+
+      for (var r = 0; r < Math.max(1, Math.floor(perView / slides.length)); r++) {
+        for (var i = 0; i < start.length; i++) {
+          var clone = start[i].cloneNode(true);
+          clone.classList.add(classes.cloneSlide);
+          items.push(clone);
+        }
+
+        for (var _i = 0; _i < end.length; _i++) {
+          var _clone = end[_i].cloneNode(true);
+
+          _clone.classList.add(classes.cloneSlide);
+
+          items.unshift(_clone);
+        }
+      }
+
+      return items;
+    },
+
+    /**
+     * Append cloned slides with generated pattern.
+     *
+     * @return {Void}
+     */
+    append: function append() {
+      var items = this.items;
+      var _Components$Html = Components.Html,
+          wrapper = _Components$Html.wrapper,
+          slides = _Components$Html.slides;
+      var half = Math.floor(items.length / 2);
+      var prepend = items.slice(0, half).reverse();
+      var append = items.slice(half, items.length);
+      var width = Components.Sizes.slideWidth + 'px';
+
+      for (var i = 0; i < append.length; i++) {
+        wrapper.appendChild(append[i]);
+      }
+
+      for (var _i2 = 0; _i2 < prepend.length; _i2++) {
+        wrapper.insertBefore(prepend[_i2], slides[0]);
+      }
+
+      for (var _i3 = 0; _i3 < items.length; _i3++) {
+        items[_i3].style.width = width;
+      }
+    },
+
+    /**
+     * Remove all cloned slides.
+     *
+     * @return {Void}
+     */
+    remove: function remove() {
+      var items = this.items;
+
+      for (var i = 0; i < items.length; i++) {
+        Components.Html.wrapper.removeChild(items[i]);
+      }
+    }
+  };
+  define(Clones, 'grow', {
+    /**
+     * Gets additional dimentions value caused by clones.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      return (Components.Sizes.slideWidth + Components.Gaps.value) * Clones.items.length;
+    }
+  });
+  /**
+   * Append additional slide's clones:
+   * - while glide's type is `carousel`
+   */
+
+  Events.on('update', function () {
+    Clones.remove();
+    Clones.mount();
+    Clones.append();
+  });
+  /**
+   * Append additional slide's clones:
+   * - while glide's type is `carousel`
+   */
+
+  Events.on('build.before', function () {
+    if (Glide.isType('carousel')) {
+      Clones.append();
+    }
+  });
+  /**
+   * Remove clones HTMLElements:
+   * - on destroying, to bring HTML to its initial state
+   */
+
+  Events.on('destroy', function () {
+    Clones.remove();
+  });
+  return Clones;
+}
+
+var EventsBinder = function () {
+  /**
+   * Construct a EventsBinder instance.
+   */
+  function EventsBinder() {
+    var listeners = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    classCallCheck(this, EventsBinder);
+    this.listeners = listeners;
+  }
+  /**
+   * Adds events listeners to arrows HTML elements.
+   *
+   * @param  {String|Array} events
+   * @param  {Element|Window|Document} el
+   * @param  {Function} closure
+   * @param  {Boolean|Object} capture
+   * @return {Void}
+   */
+
+
+  createClass(EventsBinder, [{
+    key: 'on',
+    value: function on(events, el, closure) {
+      var capture = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+      if (isString(events)) {
+        events = [events];
+      }
+
+      for (var i = 0; i < events.length; i++) {
+        this.listeners[events[i]] = closure;
+        el.addEventListener(events[i], this.listeners[events[i]], capture);
+      }
+    }
+    /**
+     * Removes event listeners from arrows HTML elements.
+     *
+     * @param  {String|Array} events
+     * @param  {Element|Window|Document} el
+     * @param  {Boolean|Object} capture
+     * @return {Void}
+     */
+
+  }, {
+    key: 'off',
+    value: function off(events, el) {
+      var capture = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+      if (isString(events)) {
+        events = [events];
+      }
+
+      for (var i = 0; i < events.length; i++) {
+        el.removeEventListener(events[i], this.listeners[events[i]], capture);
+      }
+    }
+    /**
+     * Destroy collected listeners.
+     *
+     * @returns {Void}
+     */
+
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      delete this.listeners;
+    }
+  }]);
+  return EventsBinder;
+}();
+
+function Resize(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var Resize = {
+    /**
+     * Initializes window bindings.
+     */
+    mount: function mount() {
+      this.bind();
+    },
+
+    /**
+     * Binds `rezsize` listener to the window.
+     * It's a costly event, so we are debouncing it.
+     *
+     * @return {Void}
+     */
+    bind: function bind() {
+      Binder.on('resize', window, throttle(function () {
+        Events.emit('resize');
+      }, Glide.settings.throttle));
+    },
+
+    /**
+     * Unbinds listeners from the window.
+     *
+     * @return {Void}
+     */
+    unbind: function unbind() {
+      Binder.off('resize', window);
+    }
+  };
+  /**
+   * Remove bindings from window:
+   * - on destroying, to remove added EventListener
+   */
+
+  Events.on('destroy', function () {
+    Resize.unbind();
+    Binder.destroy();
+  });
+  return Resize;
+}
+
+var VALID_DIRECTIONS = ['ltr', 'rtl'];
+var FLIPED_MOVEMENTS = {
+  '>': '<',
+  '<': '>',
+  '=': '='
+};
+
+function Direction(Glide, Components, Events) {
+  var Direction = {
+    /**
+     * Setups gap value based on settings.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this.value = Glide.settings.direction;
+    },
+
+    /**
+     * Resolves pattern based on direction value
+     *
+     * @param {String} pattern
+     * @returns {String}
+     */
+    resolve: function resolve(pattern) {
+      var token = pattern.slice(0, 1);
+
+      if (this.is('rtl')) {
+        return pattern.split(token).join(FLIPED_MOVEMENTS[token]);
+      }
+
+      return pattern;
+    },
+
+    /**
+     * Checks value of direction mode.
+     *
+     * @param {String} direction
+     * @returns {Boolean}
+     */
+    is: function is(direction) {
+      return this.value === direction;
+    },
+
+    /**
+     * Applies direction class to the root HTML element.
+     *
+     * @return {Void}
+     */
+    addClass: function addClass() {
+      Components.Html.root.classList.add(Glide.settings.classes.direction[this.value]);
+    },
+
+    /**
+     * Removes direction class from the root HTML element.
+     *
+     * @return {Void}
+     */
+    removeClass: function removeClass() {
+      Components.Html.root.classList.remove(Glide.settings.classes.direction[this.value]);
+    }
+  };
+  define(Direction, 'value', {
+    /**
+     * Gets value of the direction.
+     *
+     * @returns {Number}
+     */
+    get: function get() {
+      return Direction._v;
+    },
+
+    /**
+     * Sets value of the direction.
+     *
+     * @param {String} value
+     * @return {Void}
+     */
+    set: function set(value) {
+      if (VALID_DIRECTIONS.indexOf(value) > -1) {
+        Direction._v = value;
+      } else {
+        warn('Direction value must be `ltr` or `rtl`');
+      }
+    }
+  });
+  /**
+   * Clear direction class:
+   * - on destroy to bring HTML to its initial state
+   * - on update to remove class before reappling bellow
+   */
+
+  Events.on(['destroy', 'update'], function () {
+    Direction.removeClass();
+  });
+  /**
+   * Remount component:
+   * - on update to reflect changes in direction value
+   */
+
+  Events.on('update', function () {
+    Direction.mount();
+  });
+  /**
+   * Apply direction class:
+   * - before building to apply class for the first time
+   * - on updating to reapply direction class that may changed
+   */
+
+  Events.on(['build.before', 'update'], function () {
+    Direction.addClass();
+  });
+  return Direction;
+}
+/**
+ * Reflects value of glide movement.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function Rtl(Glide, Components) {
+  return {
+    /**
+     * Negates the passed translate if glide is in RTL option.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    modify: function modify(translate) {
+      if (Components.Direction.is('rtl')) {
+        return -translate;
+      }
+
+      return translate;
+    }
+  };
+}
+/**
+ * Updates glide movement with a `gap` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function Gap(Glide, Components) {
+  return {
+    /**
+     * Modifies passed translate value with number in the `gap` settings.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    modify: function modify(translate) {
+      return translate + Components.Gaps.value * Glide.index;
+    }
+  };
+}
+/**
+ * Updates glide movement with width of additional clones width.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function Grow(Glide, Components) {
+  return {
+    /**
+     * Adds to the passed translate width of the half of clones.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    modify: function modify(translate) {
+      return translate + Components.Clones.grow / 2;
+    }
+  };
+}
+/**
+ * Updates glide movement with a `peek` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function Peeking(Glide, Components) {
+  return {
+    /**
+     * Modifies passed translate value with a `peek` setting.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    modify: function modify(translate) {
+      if (Glide.settings.focusAt >= 0) {
+        var peek = Components.Peek.value;
+
+        if (isObject(peek)) {
+          return translate - peek.before;
+        }
+
+        return translate - peek;
+      }
+
+      return translate;
+    }
+  };
+}
+/**
+ * Updates glide movement with a `focusAt` settings.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function Focusing(Glide, Components) {
+  return {
+    /**
+     * Modifies passed translate value with index in the `focusAt` setting.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    modify: function modify(translate) {
+      var gap = Components.Gaps.value;
+      var width = Components.Sizes.width;
+      var focusAt = Glide.settings.focusAt;
+      var slideWidth = Components.Sizes.slideWidth;
+
+      if (focusAt === 'center') {
+        return translate - (width / 2 - slideWidth / 2);
+      }
+
+      return translate - slideWidth * focusAt - gap * focusAt;
+    }
+  };
+}
+/**
+ * Applies diffrent transformers on translate value.
+ *
+ * @param  {Object} Glide
+ * @param  {Object} Components
+ * @return {Object}
+ */
+
+
+function mutator(Glide, Components, Events) {
+  /**
+   * Merge instance transformers with collection of default transformers.
+   * It's important that the Rtl component be last on the list,
+   * so it reflects all previous transformations.
+   *
+   * @type {Array}
+   */
+  var TRANSFORMERS = [Gap, Grow, Peeking, Focusing].concat(Glide._t, [Rtl]);
+  return {
+    /**
+     * Piplines translate value with registered transformers.
+     *
+     * @param  {Number} translate
+     * @return {Number}
+     */
+    mutate: function mutate(translate) {
+      for (var i = 0; i < TRANSFORMERS.length; i++) {
+        var transformer = TRANSFORMERS[i];
+
+        if (isFunction(transformer) && isFunction(transformer().modify)) {
+          translate = transformer(Glide, Components, Events).modify(translate);
+        } else {
+          warn('Transformer should be a function that returns an object with `modify()` method');
+        }
+      }
+
+      return translate;
+    }
+  };
+}
+
+function Translate(Glide, Components, Events) {
+  var Translate = {
+    /**
+     * Sets value of translate on HTML element.
+     *
+     * @param {Number} value
+     * @return {Void}
+     */
+    set: function set(value) {
+      var transform = mutator(Glide, Components).mutate(value);
+      Components.Html.wrapper.style.transform = 'translate3d(' + -1 * transform + 'px, 0px, 0px)';
+    },
+
+    /**
+     * Removes value of translate from HTML element.
+     *
+     * @return {Void}
+     */
+    remove: function remove() {
+      Components.Html.wrapper.style.transform = '';
+    }
+  };
+  /**
+   * Set new translate value:
+   * - on move to reflect index change
+   * - on updating via API to reflect possible changes in options
+   */
+
+  Events.on('move', function (context) {
+    var gap = Components.Gaps.value;
+    var length = Components.Sizes.length;
+    var width = Components.Sizes.slideWidth;
+
+    if (Glide.isType('carousel') && Components.Run.isOffset('<')) {
+      Components.Transition.after(function () {
+        Events.emit('translate.jump');
+        Translate.set(width * (length - 1));
+      });
+      return Translate.set(-width - gap * length);
+    }
+
+    if (Glide.isType('carousel') && Components.Run.isOffset('>')) {
+      Components.Transition.after(function () {
+        Events.emit('translate.jump');
+        Translate.set(0);
+      });
+      return Translate.set(width * length + gap * length);
+    }
+
+    return Translate.set(context.movement);
+  });
+  /**
+   * Remove translate:
+   * - on destroying to bring markup to its inital state
+   */
+
+  Events.on('destroy', function () {
+    Translate.remove();
+  });
+  return Translate;
+}
+
+function Transition(Glide, Components, Events) {
+  /**
+   * Holds inactivity status of transition.
+   * When true transition is not applied.
+   *
+   * @type {Boolean}
+   */
+  var disabled = false;
+  var Transition = {
+    /**
+     * Composes string of the CSS transition.
+     *
+     * @param {String} property
+     * @return {String}
+     */
+    compose: function compose(property) {
+      var settings = Glide.settings;
+
+      if (!disabled) {
+        return property + ' ' + this.duration + 'ms ' + settings.animationTimingFunc;
+      }
+
+      return property + ' 0ms ' + settings.animationTimingFunc;
+    },
+
+    /**
+     * Sets value of transition on HTML element.
+     *
+     * @param {String=} property
+     * @return {Void}
+     */
+    set: function set() {
+      var property = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'transform';
+      Components.Html.wrapper.style.transition = this.compose(property);
+    },
+
+    /**
+     * Removes value of transition from HTML element.
+     *
+     * @return {Void}
+     */
+    remove: function remove() {
+      Components.Html.wrapper.style.transition = '';
+    },
+
+    /**
+     * Runs callback after animation.
+     *
+     * @param  {Function} callback
+     * @return {Void}
+     */
+    after: function after(callback) {
+      setTimeout(function () {
+        callback();
+      }, this.duration);
+    },
+
+    /**
+     * Enable transition.
+     *
+     * @return {Void}
+     */
+    enable: function enable() {
+      disabled = false;
+      this.set();
+    },
+
+    /**
+     * Disable transition.
+     *
+     * @return {Void}
+     */
+    disable: function disable() {
+      disabled = true;
+      this.set();
+    }
+  };
+  define(Transition, 'duration', {
+    /**
+     * Gets duration of the transition based
+     * on currently running animation type.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      var settings = Glide.settings;
+
+      if (Glide.isType('slider') && Components.Run.offset) {
+        return settings.rewindDuration;
+      }
+
+      return settings.animationDuration;
+    }
+  });
+  /**
+   * Set transition `style` value:
+   * - on each moving, because it may be cleared by offset move
+   */
+
+  Events.on('move', function () {
+    Transition.set();
+  });
+  /**
+   * Disable transition:
+   * - before initial build to avoid transitioning from `0` to `startAt` index
+   * - while resizing window and recalculating dimentions
+   * - on jumping from offset transition at start and end edges in `carousel` type
+   */
+
+  Events.on(['build.before', 'resize', 'translate.jump'], function () {
+    Transition.disable();
+  });
+  /**
+   * Enable transition:
+   * - on each running, because it may be disabled by offset move
+   */
+
+  Events.on('run', function () {
+    Transition.enable();
+  });
+  /**
+   * Remove transition:
+   * - on destroying to bring markup to its inital state
+   */
+
+  Events.on('destroy', function () {
+    Transition.remove();
+  });
+  return Transition;
+}
+/**
+ * Test via a getter in the options object to see
+ * if the passive property is accessed.
+ *
+ * @see https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
+ */
+
+
+var supportsPassive = false;
+
+try {
+  var opts = Object.defineProperty({}, 'passive', {
+    get: function get() {
+      supportsPassive = true;
+    }
+  });
+  window.addEventListener('testPassive', null, opts);
+  window.removeEventListener('testPassive', null, opts);
+} catch (e) {}
+
+var supportsPassive$1 = supportsPassive;
+var START_EVENTS = ['touchstart', 'mousedown'];
+var MOVE_EVENTS = ['touchmove', 'mousemove'];
+var END_EVENTS = ['touchend', 'touchcancel', 'mouseup', 'mouseleave'];
+var MOUSE_EVENTS = ['mousedown', 'mousemove', 'mouseup', 'mouseleave'];
+
+function Swipe(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var swipeSin = 0;
+  var swipeStartX = 0;
+  var swipeStartY = 0;
+  var disabled = false;
+  var capture = supportsPassive$1 ? {
+    passive: true
+  } : false;
+  var Swipe = {
+    /**
+     * Initializes swipe bindings.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this.bindSwipeStart();
+    },
+
+    /**
+     * Handler for `swipestart` event. Calculates entry points of the user's tap.
+     *
+     * @param {Object} event
+     * @return {Void}
+     */
+    start: function start(event) {
+      if (!disabled && !Glide.disabled) {
+        this.disable();
+        var swipe = this.touches(event);
+        swipeSin = null;
+        swipeStartX = toInt(swipe.pageX);
+        swipeStartY = toInt(swipe.pageY);
+        this.bindSwipeMove();
+        this.bindSwipeEnd();
+        Events.emit('swipe.start');
+      }
+    },
+
+    /**
+     * Handler for `swipemove` event. Calculates user's tap angle and distance.
+     *
+     * @param {Object} event
+     */
+    move: function move(event) {
+      if (!Glide.disabled) {
+        var _Glide$settings = Glide.settings,
+            touchAngle = _Glide$settings.touchAngle,
+            touchRatio = _Glide$settings.touchRatio,
+            classes = _Glide$settings.classes;
+        var swipe = this.touches(event);
+        var subExSx = toInt(swipe.pageX) - swipeStartX;
+        var subEySy = toInt(swipe.pageY) - swipeStartY;
+        var powEX = Math.abs(subExSx << 2);
+        var powEY = Math.abs(subEySy << 2);
+        var swipeHypotenuse = Math.sqrt(powEX + powEY);
+        var swipeCathetus = Math.sqrt(powEY);
+        swipeSin = Math.asin(swipeCathetus / swipeHypotenuse);
+
+        if (swipeSin * 180 / Math.PI < touchAngle) {
+          event.stopPropagation();
+          Components.Move.make(subExSx * toFloat(touchRatio));
+          Components.Html.root.classList.add(classes.dragging);
+          Events.emit('swipe.move');
+        } else {
+          return false;
+        }
+      }
+    },
+
+    /**
+     * Handler for `swipeend` event. Finitializes user's tap and decides about glide move.
+     *
+     * @param {Object} event
+     * @return {Void}
+     */
+    end: function end(event) {
+      if (!Glide.disabled) {
+        var settings = Glide.settings;
+        var swipe = this.touches(event);
+        var threshold = this.threshold(event);
+        var swipeDistance = swipe.pageX - swipeStartX;
+        var swipeDeg = swipeSin * 180 / Math.PI;
+        var steps = Math.round(swipeDistance / Components.Sizes.slideWidth);
+        this.enable();
+
+        if (swipeDistance > threshold && swipeDeg < settings.touchAngle) {
+          // While swipe is positive and greater than threshold move backward.
+          if (settings.perTouch) {
+            steps = Math.min(steps, toInt(settings.perTouch));
+          }
+
+          if (Components.Direction.is('rtl')) {
+            steps = -steps;
+          }
+
+          Components.Run.make(Components.Direction.resolve('<' + steps));
+        } else if (swipeDistance < -threshold && swipeDeg < settings.touchAngle) {
+          // While swipe is negative and lower than negative threshold move forward.
+          if (settings.perTouch) {
+            steps = Math.max(steps, -toInt(settings.perTouch));
+          }
+
+          if (Components.Direction.is('rtl')) {
+            steps = -steps;
+          }
+
+          Components.Run.make(Components.Direction.resolve('>' + steps));
+        } else {
+          // While swipe don't reach distance apply previous transform.
+          Components.Move.make();
+        }
+
+        Components.Html.root.classList.remove(settings.classes.dragging);
+        this.unbindSwipeMove();
+        this.unbindSwipeEnd();
+        Events.emit('swipe.end');
+      }
+    },
+
+    /**
+     * Binds swipe's starting event.
+     *
+     * @return {Void}
+     */
+    bindSwipeStart: function bindSwipeStart() {
+      var _this = this;
+
+      var settings = Glide.settings;
+
+      if (settings.swipeThreshold) {
+        Binder.on(START_EVENTS[0], Components.Html.wrapper, function (event) {
+          _this.start(event);
+        }, capture);
+      }
+
+      if (settings.dragThreshold) {
+        Binder.on(START_EVENTS[1], Components.Html.wrapper, function (event) {
+          _this.start(event);
+        }, capture);
+      }
+    },
+
+    /**
+     * Unbinds swipe's starting event.
+     *
+     * @return {Void}
+     */
+    unbindSwipeStart: function unbindSwipeStart() {
+      Binder.off(START_EVENTS[0], Components.Html.wrapper, capture);
+      Binder.off(START_EVENTS[1], Components.Html.wrapper, capture);
+    },
+
+    /**
+     * Binds swipe's moving event.
+     *
+     * @return {Void}
+     */
+    bindSwipeMove: function bindSwipeMove() {
+      var _this2 = this;
+
+      Binder.on(MOVE_EVENTS, Components.Html.wrapper, throttle(function (event) {
+        _this2.move(event);
+      }, Glide.settings.throttle), capture);
+    },
+
+    /**
+     * Unbinds swipe's moving event.
+     *
+     * @return {Void}
+     */
+    unbindSwipeMove: function unbindSwipeMove() {
+      Binder.off(MOVE_EVENTS, Components.Html.wrapper, capture);
+    },
+
+    /**
+     * Binds swipe's ending event.
+     *
+     * @return {Void}
+     */
+    bindSwipeEnd: function bindSwipeEnd() {
+      var _this3 = this;
+
+      Binder.on(END_EVENTS, Components.Html.wrapper, function (event) {
+        _this3.end(event);
+      });
+    },
+
+    /**
+     * Unbinds swipe's ending event.
+     *
+     * @return {Void}
+     */
+    unbindSwipeEnd: function unbindSwipeEnd() {
+      Binder.off(END_EVENTS, Components.Html.wrapper);
+    },
+
+    /**
+     * Normalizes event touches points accorting to different types.
+     *
+     * @param {Object} event
+     */
+    touches: function touches(event) {
+      if (MOUSE_EVENTS.indexOf(event.type) > -1) {
+        return event;
+      }
+
+      return event.touches[0] || event.changedTouches[0];
+    },
+
+    /**
+     * Gets value of minimum swipe distance settings based on event type.
+     *
+     * @return {Number}
+     */
+    threshold: function threshold(event) {
+      var settings = Glide.settings;
+
+      if (MOUSE_EVENTS.indexOf(event.type) > -1) {
+        return settings.dragThreshold;
+      }
+
+      return settings.swipeThreshold;
+    },
+
+    /**
+     * Enables swipe event.
+     *
+     * @return {self}
+     */
+    enable: function enable() {
+      disabled = false;
+      Components.Transition.enable();
+      return this;
+    },
+
+    /**
+     * Disables swipe event.
+     *
+     * @return {self}
+     */
+    disable: function disable() {
+      disabled = true;
+      Components.Transition.disable();
+      return this;
+    }
+  };
+  /**
+   * Add component class:
+   * - after initial building
+   */
+
+  Events.on('build.after', function () {
+    Components.Html.root.classList.add(Glide.settings.classes.swipeable);
+  });
+  /**
+   * Remove swiping bindings:
+   * - on destroying, to remove added EventListeners
+   */
+
+  Events.on('destroy', function () {
+    Swipe.unbindSwipeStart();
+    Swipe.unbindSwipeMove();
+    Swipe.unbindSwipeEnd();
+    Binder.destroy();
+  });
+  return Swipe;
+}
+
+function Images(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var Images = {
+    /**
+     * Binds listener to glide wrapper.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this.bind();
+    },
+
+    /**
+     * Binds `dragstart` event on wrapper to prevent dragging images.
+     *
+     * @return {Void}
+     */
+    bind: function bind() {
+      Binder.on('dragstart', Components.Html.wrapper, this.dragstart);
+    },
+
+    /**
+     * Unbinds `dragstart` event on wrapper.
+     *
+     * @return {Void}
+     */
+    unbind: function unbind() {
+      Binder.off('dragstart', Components.Html.wrapper);
+    },
+
+    /**
+     * Event handler. Prevents dragging.
+     *
+     * @return {Void}
+     */
+    dragstart: function dragstart(event) {
+      event.preventDefault();
+    }
+  };
+  /**
+   * Remove bindings from images:
+   * - on destroying, to remove added EventListeners
+   */
+
+  Events.on('destroy', function () {
+    Images.unbind();
+    Binder.destroy();
+  });
+  return Images;
+}
+
+function Anchors(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  /**
+   * Holds detaching status of anchors.
+   * Prevents detaching of already detached anchors.
+   *
+   * @private
+   * @type {Boolean}
+   */
+
+  var detached = false;
+  /**
+   * Holds preventing status of anchors.
+   * If `true` redirection after click will be disabled.
+   *
+   * @private
+   * @type {Boolean}
+   */
+
+  var prevented = false;
+  var Anchors = {
+    /**
+     * Setups a initial state of anchors component.
+     *
+     * @returns {Void}
+     */
+    mount: function mount() {
+      /**
+       * Holds collection of anchors elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */
+      this._a = Components.Html.wrapper.querySelectorAll('a');
+      this.bind();
+    },
+
+    /**
+     * Binds events to anchors inside a track.
+     *
+     * @return {Void}
+     */
+    bind: function bind() {
+      Binder.on('click', Components.Html.wrapper, this.click);
+    },
+
+    /**
+     * Unbinds events attached to anchors inside a track.
+     *
+     * @return {Void}
+     */
+    unbind: function unbind() {
+      Binder.off('click', Components.Html.wrapper);
+    },
+
+    /**
+     * Handler for click event. Prevents clicks when glide is in `prevent` status.
+     *
+     * @param  {Object} event
+     * @return {Void}
+     */
+    click: function click(event) {
+      if (prevented) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+    },
+
+    /**
+     * Detaches anchors click event inside glide.
+     *
+     * @return {self}
+     */
+    detach: function detach() {
+      prevented = true;
+
+      if (!detached) {
+        for (var i = 0; i < this.items.length; i++) {
+          this.items[i].draggable = false;
+          this.items[i].setAttribute('data-href', this.items[i].getAttribute('href'));
+          this.items[i].removeAttribute('href');
+        }
+
+        detached = true;
+      }
+
+      return this;
+    },
+
+    /**
+     * Attaches anchors click events inside glide.
+     *
+     * @return {self}
+     */
+    attach: function attach() {
+      prevented = false;
+
+      if (detached) {
+        for (var i = 0; i < this.items.length; i++) {
+          this.items[i].draggable = true;
+          this.items[i].setAttribute('href', this.items[i].getAttribute('data-href'));
+        }
+
+        detached = false;
+      }
+
+      return this;
+    }
+  };
+  define(Anchors, 'items', {
+    /**
+     * Gets collection of the arrows HTML elements.
+     *
+     * @return {HTMLElement[]}
+     */
+    get: function get() {
+      return Anchors._a;
+    }
+  });
+  /**
+   * Detach anchors inside slides:
+   * - on swiping, so they won't redirect to its `href` attributes
+   */
+
+  Events.on('swipe.move', function () {
+    Anchors.detach();
+  });
+  /**
+   * Attach anchors inside slides:
+   * - after swiping and transitions ends, so they can redirect after click again
+   */
+
+  Events.on('swipe.end', function () {
+    Components.Transition.after(function () {
+      Anchors.attach();
+    });
+  });
+  /**
+   * Unbind anchors inside slides:
+   * - on destroying, to bring anchors to its initial state
+   */
+
+  Events.on('destroy', function () {
+    Anchors.attach();
+    Anchors.unbind();
+    Binder.destroy();
+  });
+  return Anchors;
+}
+
+var NAV_SELECTOR = '[data-glide-el="controls[nav]"]';
+var CONTROLS_SELECTOR = '[data-glide-el^="controls"]';
+
+function Controls(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var capture = supportsPassive$1 ? {
+    passive: true
+  } : false;
+  var Controls = {
+    /**
+     * Inits arrows. Binds events listeners
+     * to the arrows HTML elements.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      /**
+       * Collection of navigation HTML elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */
+      this._n = Components.Html.root.querySelectorAll(NAV_SELECTOR);
+      /**
+       * Collection of controls HTML elements.
+       *
+       * @private
+       * @type {HTMLCollection}
+       */
+
+      this._c = Components.Html.root.querySelectorAll(CONTROLS_SELECTOR);
+      this.addBindings();
+    },
+
+    /**
+     * Sets active class to current slide.
+     *
+     * @return {Void}
+     */
+    setActive: function setActive() {
+      for (var i = 0; i < this._n.length; i++) {
+        this.addClass(this._n[i].children);
+      }
+    },
+
+    /**
+     * Removes active class to current slide.
+     *
+     * @return {Void}
+     */
+    removeActive: function removeActive() {
+      for (var i = 0; i < this._n.length; i++) {
+        this.removeClass(this._n[i].children);
+      }
+    },
+
+    /**
+     * Toggles active class on items inside navigation.
+     *
+     * @param  {HTMLElement} controls
+     * @return {Void}
+     */
+    addClass: function addClass(controls) {
+      var settings = Glide.settings;
+      var item = controls[Glide.index];
+
+      if (item) {
+        item.classList.add(settings.classes.activeNav);
+        siblings(item).forEach(function (sibling) {
+          sibling.classList.remove(settings.classes.activeNav);
+        });
+      }
+    },
+
+    /**
+     * Removes active class from active control.
+     *
+     * @param  {HTMLElement} controls
+     * @return {Void}
+     */
+    removeClass: function removeClass(controls) {
+      var item = controls[Glide.index];
+
+      if (item) {
+        item.classList.remove(Glide.settings.classes.activeNav);
+      }
+    },
+
+    /**
+     * Adds handles to the each group of controls.
+     *
+     * @return {Void}
+     */
+    addBindings: function addBindings() {
+      for (var i = 0; i < this._c.length; i++) {
+        this.bind(this._c[i].children);
+      }
+    },
+
+    /**
+     * Removes handles from the each group of controls.
+     *
+     * @return {Void}
+     */
+    removeBindings: function removeBindings() {
+      for (var i = 0; i < this._c.length; i++) {
+        this.unbind(this._c[i].children);
+      }
+    },
+
+    /**
+     * Binds events to arrows HTML elements.
+     *
+     * @param {HTMLCollection} elements
+     * @return {Void}
+     */
+    bind: function bind(elements) {
+      for (var i = 0; i < elements.length; i++) {
+        Binder.on('click', elements[i], this.click);
+        Binder.on('touchstart', elements[i], this.click, capture);
+      }
+    },
+
+    /**
+     * Unbinds events binded to the arrows HTML elements.
+     *
+     * @param {HTMLCollection} elements
+     * @return {Void}
+     */
+    unbind: function unbind(elements) {
+      for (var i = 0; i < elements.length; i++) {
+        Binder.off(['click', 'touchstart'], elements[i]);
+      }
+    },
+
+    /**
+     * Handles `click` event on the arrows HTML elements.
+     * Moves slider in driection precised in
+     * `data-glide-dir` attribute.
+     *
+     * @param {Object} event
+     * @return {Void}
+     */
+    click: function click(event) {
+      event.preventDefault();
+      Components.Run.make(Components.Direction.resolve(event.currentTarget.getAttribute('data-glide-dir')));
+    }
+  };
+  define(Controls, 'items', {
+    /**
+     * Gets collection of the controls HTML elements.
+     *
+     * @return {HTMLElement[]}
+     */
+    get: function get() {
+      return Controls._c;
+    }
+  });
+  /**
+   * Swap active class of current navigation item:
+   * - after mounting to set it to initial index
+   * - after each move to the new index
+   */
+
+  Events.on(['mount.after', 'move.after'], function () {
+    Controls.setActive();
+  });
+  /**
+   * Remove bindings and HTML Classes:
+   * - on destroying, to bring markup to its initial state
+   */
+
+  Events.on('destroy', function () {
+    Controls.removeBindings();
+    Controls.removeActive();
+    Binder.destroy();
+  });
+  return Controls;
+}
+
+function Keyboard(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var Keyboard = {
+    /**
+     * Binds keyboard events on component mount.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      if (Glide.settings.keyboard) {
+        this.bind();
+      }
+    },
+
+    /**
+     * Adds keyboard press events.
+     *
+     * @return {Void}
+     */
+    bind: function bind() {
+      Binder.on('keyup', document, this.press);
+    },
+
+    /**
+     * Removes keyboard press events.
+     *
+     * @return {Void}
+     */
+    unbind: function unbind() {
+      Binder.off('keyup', document);
+    },
+
+    /**
+     * Handles keyboard's arrows press and moving glide foward and backward.
+     *
+     * @param  {Object} event
+     * @return {Void}
+     */
+    press: function press(event) {
+      if (event.keyCode === 39) {
+        Components.Run.make(Components.Direction.resolve('>'));
+      }
+
+      if (event.keyCode === 37) {
+        Components.Run.make(Components.Direction.resolve('<'));
+      }
+    }
+  };
+  /**
+   * Remove bindings from keyboard:
+   * - on destroying to remove added events
+   * - on updating to remove events before remounting
+   */
+
+  Events.on(['destroy', 'update'], function () {
+    Keyboard.unbind();
+  });
+  /**
+   * Remount component
+   * - on updating to reflect potential changes in settings
+   */
+
+  Events.on('update', function () {
+    Keyboard.mount();
+  });
+  /**
+   * Destroy binder:
+   * - on destroying to remove listeners
+   */
+
+  Events.on('destroy', function () {
+    Binder.destroy();
+  });
+  return Keyboard;
+}
+
+function Autoplay(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  var Autoplay = {
+    /**
+     * Initializes autoplaying and events.
+     *
+     * @return {Void}
+     */
+    mount: function mount() {
+      this.start();
+
+      if (Glide.settings.hoverpause) {
+        this.bind();
+      }
+    },
+
+    /**
+     * Starts autoplaying in configured interval.
+     *
+     * @param {Boolean|Number} force Run autoplaying with passed interval regardless of `autoplay` settings
+     * @return {Void}
+     */
+    start: function start() {
+      var _this = this;
+
+      if (Glide.settings.autoplay) {
+        if (isUndefined(this._i)) {
+          this._i = setInterval(function () {
+            _this.stop();
+
+            Components.Run.make('>');
+
+            _this.start();
+          }, this.time);
+        }
+      }
+    },
+
+    /**
+     * Stops autorunning of the glide.
+     *
+     * @return {Void}
+     */
+    stop: function stop() {
+      this._i = clearInterval(this._i);
+    },
+
+    /**
+     * Stops autoplaying while mouse is over glide's area.
+     *
+     * @return {Void}
+     */
+    bind: function bind() {
+      var _this2 = this;
+
+      Binder.on('mouseover', Components.Html.root, function () {
+        _this2.stop();
+      });
+      Binder.on('mouseout', Components.Html.root, function () {
+        _this2.start();
+      });
+    },
+
+    /**
+     * Unbind mouseover events.
+     *
+     * @returns {Void}
+     */
+    unbind: function unbind() {
+      Binder.off(['mouseover', 'mouseout'], Components.Html.root);
+    }
+  };
+  define(Autoplay, 'time', {
+    /**
+     * Gets time period value for the autoplay interval. Prioritizes
+     * times in `data-glide-autoplay` attrubutes over options.
+     *
+     * @return {Number}
+     */
+    get: function get() {
+      var autoplay = Components.Html.slides[Glide.index].getAttribute('data-glide-autoplay');
+
+      if (autoplay) {
+        return toInt(autoplay);
+      }
+
+      return toInt(Glide.settings.autoplay);
+    }
+  });
+  /**
+   * Stop autoplaying and unbind events:
+   * - on destroying, to clear defined interval
+   * - on updating via API to reset interval that may changed
+   */
+
+  Events.on(['destroy', 'update'], function () {
+    Autoplay.unbind();
+  });
+  /**
+   * Stop autoplaying:
+   * - before each run, to restart autoplaying
+   * - on pausing via API
+   * - on destroying, to clear defined interval
+   * - while starting a swipe
+   * - on updating via API to reset interval that may changed
+   */
+
+  Events.on(['run.before', 'pause', 'destroy', 'swipe.start', 'update'], function () {
+    Autoplay.stop();
+  });
+  /**
+   * Start autoplaying:
+   * - after each run, to restart autoplaying
+   * - on playing via API
+   * - while ending a swipe
+   */
+
+  Events.on(['run.after', 'play', 'swipe.end'], function () {
+    Autoplay.start();
+  });
+  /**
+   * Remount autoplaying:
+   * - on updating via API to reset interval that may changed
+   */
+
+  Events.on('update', function () {
+    Autoplay.mount();
+  });
+  /**
+   * Destroy a binder:
+   * - on destroying glide instance to clearup listeners
+   */
+
+  Events.on('destroy', function () {
+    Binder.destroy();
+  });
+  return Autoplay;
+}
+/**
+ * Sorts keys of breakpoint object so they will be ordered from lower to bigger.
+ *
+ * @param {Object} points
+ * @returns {Object}
+ */
+
+
+function sortBreakpoints(points) {
+  if (isObject(points)) {
+    return sortKeys(points);
+  } else {
+    warn('Breakpoints option must be an object');
+  }
+
+  return {};
+}
+
+function Breakpoints(Glide, Components, Events) {
+  /**
+   * Instance of the binder for DOM Events.
+   *
+   * @type {EventsBinder}
+   */
+  var Binder = new EventsBinder();
+  /**
+   * Holds reference to settings.
+   *
+   * @type {Object}
+   */
+
+  var settings = Glide.settings;
+  /**
+   * Holds reference to breakpoints object in settings. Sorts breakpoints
+   * from smaller to larger. It is required in order to proper
+   * matching currently active breakpoint settings.
+   *
+   * @type {Object}
+   */
+
+  var points = sortBreakpoints(settings.breakpoints);
+  /**
+   * Cache initial settings before overwritting.
+   *
+   * @type {Object}
+   */
+
+  var defaults = _extends({}, settings);
+
+  var Breakpoints = {
+    /**
+     * Matches settings for currectly matching media breakpoint.
+     *
+     * @param {Object} points
+     * @returns {Object}
+     */
+    match: function match(points) {
+      if (typeof window.matchMedia !== 'undefined') {
+        for (var point in points) {
+          if (points.hasOwnProperty(point)) {
+            if (window.matchMedia('(max-width: ' + point + 'px)').matches) {
+              return points[point];
+            }
+          }
+        }
+      }
+
+      return defaults;
+    }
+  };
+  /**
+   * Overwrite instance settings with currently matching breakpoint settings.
+   * This happens right after component initialization.
+   */
+
+  _extends(settings, Breakpoints.match(points));
+  /**
+   * Update glide with settings of matched brekpoint:
+   * - window resize to update slider
+   */
+
+
+  Binder.on('resize', window, throttle(function () {
+    Glide.settings = mergeOptions(settings, Breakpoints.match(points));
+  }, Glide.settings.throttle));
+  /**
+   * Resort and update default settings:
+   * - on reinit via API, so breakpoint matching will be performed with options
+   */
+
+  Events.on('update', function () {
+    points = sortBreakpoints(points);
+    defaults = _extends({}, settings);
+  });
+  /**
+   * Unbind resize listener:
+   * - on destroying, to bring markup to its initial state
+   */
+
+  Events.on('destroy', function () {
+    Binder.off('resize', window);
+  });
+  return Breakpoints;
+}
+
+var COMPONENTS = {
+  // Required
+  Html: Html,
+  Translate: Translate,
+  Transition: Transition,
+  Direction: Direction,
+  Peek: Peek,
+  Sizes: Sizes,
+  Gaps: Gaps,
+  Move: Move,
+  Clones: Clones,
+  Resize: Resize,
+  Build: Build,
+  Run: Run,
+  // Optional
+  Swipe: Swipe,
+  Images: Images,
+  Anchors: Anchors,
+  Controls: Controls,
+  Keyboard: Keyboard,
+  Autoplay: Autoplay,
+  Breakpoints: Breakpoints
+};
+
+var Glide$1 = function (_Core) {
+  inherits(Glide$$1, _Core);
+
+  function Glide$$1() {
+    classCallCheck(this, Glide$$1);
+    return possibleConstructorReturn(this, (Glide$$1.__proto__ || Object.getPrototypeOf(Glide$$1)).apply(this, arguments));
+  }
+
+  createClass(Glide$$1, [{
+    key: 'mount',
+    value: function mount() {
+      var extensions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      return get(Glide$$1.prototype.__proto__ || Object.getPrototypeOf(Glide$$1.prototype), 'mount', this).call(this, _extends({}, COMPONENTS, extensions));
+    }
+  }]);
+  return Glide$$1;
+}(Glide);
+
+var _default = Glide$1;
+exports.default = _default;
+},{}],"templates/card-films-slider.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
+    var helper,
+        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+        alias2 = container.hooks.helperMissing,
+        alias3 = "function",
+        alias4 = container.escapeExpression,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return "<li class=\"slider-card\" data-action='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 37
+        },
+        "end": {
+          "line": 2,
+          "column": 43
+        }
+      }
+    }) : helper)) + "'>\n    <div class=\"btn-id\">\n        <button data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 25
+        },
+        "end": {
+          "line": 4,
+          "column": 31
+        }
+      }
+    }) : helper)) + "' class=\"btn-youtube\">\n            <div class=\"overlay-btn-youtube-text\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 59
+        },
+        "end": {
+          "line": 5,
+          "column": 65
+        }
+      }
+    }) : helper)) + "'>\n                <h2 class=\"btn-youtube-text-slider\" data-id='" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 61
+        },
+        "end": {
+          "line": 6,
+          "column": 67
+        }
+      }
+    }) : helper)) + "'>Trailer</h2>\n            </div>\n        </button>\n\n    </div>\n    <div class=\"thumb\">\n        <img class=\"slider-image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "poster_path",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 70
+        },
+        "end": {
+          "line": 12,
+          "column": 85
+        }
+      }
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 92
+        },
+        "end": {
+          "line": 12,
+          "column": 101
+        }
+      }
+    }) : helper)) + " " + alias4((helper = (helper = lookupProperty(helpers, "name") || (depth0 != null ? lookupProperty(depth0, "name") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "name",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 102
+        },
+        "end": {
+          "line": 12,
+          "column": 110
+        }
+      }
+    }) : helper)) + "\"\n            data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 21
+        },
+        "end": {
+          "line": 13,
+          "column": 27
+        }
+      }
+    }) : helper)) + "\"\n            onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\" />\n        <span class=\"rating-slider\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "vote_average",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 36
+        },
+        "end": {
+          "line": 15,
+          "column": 52
+        }
+      }
+    }) : helper)) + "</span>\n    </div>\n</li>\n";
+  },
+  "compiler": [8, ">= 4.3.0"],
+  "main": function (container, depth0, helpers, partials, data) {
+    var stack1,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return (stack1 = lookupProperty(helpers, "each").call(depth0 != null ? depth0 : container.nullContext || {}, depth0, {
+      "name": "each",
+      "hash": {},
+      "fn": container.program(1, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 18,
+          "column": 9
+        }
+      }
+    })) != null ? stack1 : "";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/slider.js":[function(require,module,exports) {
+"use strict";
+
+var _glide = _interopRequireDefault(require("@glidejs/glide"));
+
+var _cardFilmsSlider = _interopRequireDefault(require("../templates/card-films-slider.hbs"));
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const sliderContainer = document.querySelector('.js-slider-container');
+renderTrendy();
+const glide = new _glide.default('.glide', {
+  type: 'carousel',
+  startAt: 0,
+  focusAt: 'center',
+  perView: 8,
+  autoplay: 2000,
+  hoverpause: true,
+  bound: true,
+  peek: '200px'
+});
+glide.mount();
+
+function renderTrendy() {
+  const url = "https://api.themoviedb.org/3/trending/all/day?api_key=d91911ebb88751cf9e5c4b8fdf4412c9";
+  return fetch(url).then(response => response.json()).then(({
+    results
+  }) => {
+    return results;
+  }).then(renderSliderFilms).catch(err => {
+    sliderContainer.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(errorUrl, "\" />");
+  });
+}
+
+function renderSliderFilms(articles) {
+  sliderContainer.innerHTML = (0, _cardFilmsSlider.default)(articles);
+}
+},{"@glidejs/glide":"../node_modules/@glidejs/glide/dist/glide.esm.js","../templates/card-films-slider.hbs":"templates/card-films-slider.hbs","./trailers.js":"js/trailers.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 require("./sass/main.scss");
@@ -4179,7 +8421,9 @@ require("./js/spinner");
 require("./js/trailers");
 
 require("./js/btn-upp");
-},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js","regenerator-runtime/runtime.js":"../node_modules/regenerator-runtime/runtime.js","./js/spinner":"js/spinner.js","./js/trailers":"js/trailers.js","./js/btn-upp":"js/btn-upp.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+require("./js/slider");
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard.js":"js/modalFilmCard.js","./js/cardFetc.js":"js/cardFetc.js","./js/teamLightbox":"js/teamLightbox.js","./js/pagination.js":"js/pagination.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/keyWordSearch":"js/keyWordSearch.js","regenerator-runtime/runtime.js":"../node_modules/regenerator-runtime/runtime.js","./js/spinner":"js/spinner.js","./js/trailers":"js/trailers.js","./js/btn-upp":"js/btn-upp.js","./js/slider":"js/slider.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4207,7 +8451,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58306" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49525" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
