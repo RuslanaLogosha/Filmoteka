@@ -1,5 +1,7 @@
 import localStorageApi from './localStorageApi';
 
+
+
 export const initStorageBtns = () => {
   const storageEl = document.querySelector('.modal-card .storage');
   const movieId = document.querySelector('.modal-card').dataset.action;
@@ -35,11 +37,20 @@ export const initStorageBtns = () => {
   } 
 
 }
- 
-
 
 function makeActionInStorage({storageKey, movieId, action}) { 
-  if (action === 'add') localStorageApi.addMovie(storageKey, movieId);
-  if(action === 'remove') localStorageApi.removeMovie(storageKey, movieId);
+  if (action === 'add') {
+    localStorageApi.addMovie(storageKey, movieId);
+    changeLibraryCardDisplay('initial');
+  }
+  if (action === 'remove') {
+    localStorageApi.removeMovie(storageKey, movieId);
+    changeLibraryCardDisplay('none');
+  }
+
+  function changeLibraryCardDisplay(value) { 
+    const LibraryCard = document.querySelector(`[data-library="${storageKey}"] [data-action="${movieId}"]`);
+    if (LibraryCard) LibraryCard.style.display = value;
+  }
 }
 

@@ -22,18 +22,25 @@ const getMovies = async idList => {
 };
 
 const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
+const USER_POINT_STORAGE_NAME = 'user';
+
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card-library'),
 };
 
+getCurrentLibrary();
 renderMovies();
 
 refs.storageList.addEventListener('change', renderMovies);
 
 function renderMovies() {
-  const key = getCheckedLiblary(CHOICE_STORAGE_BTN_NAME);
+    
+  const key = getCheckedLiblary();
   const queueIds = localStorageApi.getMovies(key);
+
+  refs.cardLibrary.dataset.library = key;
+  saveCurrentLibrary(key);
 
   if (queueIds.length) {
     getMovies(queueIds).then(renderMarkup);
@@ -41,10 +48,20 @@ function renderMovies() {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
   }
 }
-function getCheckedLiblary(name) {
-  return document.querySelector(`[name=${name}]:checked`).value;
+function getCheckedLiblary() {
+  return document.querySelector(`[name=${CHOICE_STORAGE_BTN_NAME}]:checked`).value;
 }
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
   createTrailerLink();
+}
+
+function getCurrentLibrary() { 
+  const userPoint = localStorageApi.load(USER_POINT_STORAGE_NAME);
+  if (userPoint) {
+    document.querySelector(`[value="${userPoint.currentLibrary}"]`).checked = true;
+   }
+}
+function saveCurrentLibrary(currentLibrary) { 
+  localStorageApi.save(USER_POINT_STORAGE_NAME, { currentLibrary });
 }
