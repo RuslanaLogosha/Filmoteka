@@ -582,6 +582,7 @@ html {
   line-height: 1.33;
   text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
   border: 1px solid #ffffff;
   border-radius: 5px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -590,10 +591,6 @@ html {
   .storage__btn {
     min-width: 136px;
   }
-}
-.storage__btn:hover, .storage__btn:focus {
-  background-color: #ff6b08;
-  border: 1px solid #ff6b08;
 }
 
 .storage__input:checked ~ .storage__btn {
@@ -605,11 +602,6 @@ html {
   background-color: #ffffff;
   border: 1px solid #000000;
   color: #000000;
-}
-
-.storage__input ~ .storage__btn:hover, .storage__input ~ .storage__btn:focus {
-  background-color: #ff6b08;
-  border: 1px solid #ff6b08;
 }
 
 .side-nav--lib {
@@ -909,7 +901,6 @@ footer {
   .modal-card {
     background-color: #ffffff;
     width: 300px;
-    cursor: pointer;
     margin-top: 450px;
   }
 }
@@ -945,6 +936,7 @@ footer {
 .cardItem__wrapper p {
   display: flex;
   font-size: 12px;
+  font-weight: 500;
   font-family: "Roboto";
   line-height: 1.333;
   margin-bottom: 18px;
@@ -958,35 +950,46 @@ footer {
 
 .cardItem_text {
   color: #8d8d8d;
+  display: flex;
+  align-items: center;
 }
 
 .cardItem__vote_average {
   display: inline-block;
   margin-left: 50px;
-  margin-right: 7px;
+  margin-right: 3px;
   background-color: #ff6b08;
-  width: 38px;
-  height: 18px;
   border-radius: 5px;
   color: white;
+  font-weight: 500;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.5;
+  padding: 1px 9px 1px 10px;
 }
 
 .cardItem__vote_count {
-  margin-left: 16px;
+  display: inline-block;
+  margin-left: 3px;
   color: black;
+  font-weight: 500;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 1px 4px 1px 4px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .cardItem___data {
   margin-left: 63px;
   color: black;
+  font-weight: 500;
 }
 
 .cardItem__title_data {
-  margin-left: 50px;
+  margin-left: 45px;
   text-transform: uppercase;
   color: black;
+  font-weight: 500;
 }
 
 .cardItem__genre {
@@ -997,6 +1000,7 @@ footer {
 .cardItem__genreList {
   display: inline-block;
   width: 135px;
+  font-weight: 500;
 }
 
 .cardItem__genre_data {
@@ -1035,12 +1039,6 @@ footer {
   width: 134px;
 }
 
-.cardItem__button:hover {
-  background-color: #ff6b08;
-  color: white;
-  border: 0;
-}
-
 .cardItem__list {
   list-style: none;
 }
@@ -1050,7 +1048,6 @@ footer {
     background-color: #ffffff;
     width: 720px;
     margin-top: 0px;
-    cursor: pointer;
     display: flex;
   }
 
@@ -1575,6 +1572,7 @@ footer {
 .slider-wrapper {
   background-color: #f7f7f7;
   padding-bottom: 20px;
+  font-size: 13px;
 }
 
 .glide__arrow {

@@ -2510,8 +2510,22 @@ function makeActionInStorage({
   movieId,
   action
 }) {
-  if (action === 'add') _localStorageApi.default.addMovie(storageKey, movieId);
-  if (action === 'remove') _localStorageApi.default.removeMovie(storageKey, movieId);
+  if (action === 'add') {
+    _localStorageApi.default.addMovie(storageKey, movieId);
+
+    changeLibraryCardDisplay('initial');
+  }
+
+  if (action === 'remove') {
+    _localStorageApi.default.removeMovie(storageKey, movieId);
+
+    changeLibraryCardDisplay('none');
+  }
+
+  function changeLibraryCardDisplay(value) {
+    const LibraryCard = document.querySelector("[data-library=\"".concat(storageKey, "\"] [data-action=\"").concat(movieId, "\"]"));
+    if (LibraryCard) LibraryCard.style.display = value;
+  }
 }
 },{"./localStorageApi":"js/localStorageApi.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
 "use strict";
@@ -3406,6 +3420,7 @@ function onKeyWordSearch(e) {
   if (filmApiService.query === '') {
     _spinner.default.spinner.close();
 
+    refs.searchResField.textContent = '';
     refs.warningField.textContent = "Please write something in the box :)";
     return;
   }
@@ -3450,13 +3465,14 @@ function fetchDataOfSearchFilms(searchQuery) {
       _spinner.default.spinner.close();
 
       refs.warningField.textContent = "Sorry, there no results found. Try searching for something else!";
+      refs.searchResField.textContent = '';
       cardFetch.renderOnSearchMistake();
       cardFetch.fetchDataOfPopularFilms();
       return;
     }
 
-    refs.searchResField.textContent = "Yay! We have ".concat(results.total_results, " results on request \"").concat(searchQuery, "\"!");
-    refs.searchResField.style.color = '#f54275';
+    refs.searchResField.textContent = "Yay! We found ".concat(results.total_results, " results on request \"").concat(searchQuery, "\"!");
+    refs.searchResField.style.color = '#818181';
   }).catch(err => {
     console.log('error in function fetchDataOfSearchFilms');
     listElement.innerHTML = "<img class=\"catch-error-pagination\" src=\"".concat(_catchErrorPagination.default, "\" />");
@@ -8451,7 +8467,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49525" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51160" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

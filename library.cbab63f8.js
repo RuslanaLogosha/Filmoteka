@@ -189,931 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"./../images/icons8-play-button-2.svg":[["icons8-play-button-2.f5ce0859.svg","images/icons8-play-button-2.svg"],"images/icons8-play-button-2.svg"],"./../images/icon-close.svg":[["icon-close.1add023a.svg","images/icon-close.svg"],"images/icon-close.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/basiclightbox/dist/basicLightbox.min.js":[function(require,module,exports) {
-var define;
-var global = arguments[3];
-!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).basicLightbox=e()}}((function(){return function e(n,t,o){function r(c,u){if(!t[c]){if(!n[c]){var s="function"==typeof require&&require;if(!u&&s)return s(c,!0);if(i)return i(c,!0);var a=new Error("Cannot find module '"+c+"'");throw a.code="MODULE_NOT_FOUND",a}var l=t[c]={exports:{}};n[c][0].call(l.exports,(function(e){return r(n[c][1][e]||e)}),l,l.exports,e,n,t,o)}return t[c].exports}for(var i="function"==typeof require&&require,c=0;c<o.length;c++)r(o[c]);return r}({1:[function(e,n,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.create=t.visible=void 0;var o=function(e){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=document.createElement("div");return t.innerHTML=e.trim(),!0===n?t.children:t.firstChild},r=function(e,n){var t=e.children;return 1===t.length&&t[0].tagName===n},i=function(e){return null!=(e=e||document.querySelector(".basicLightbox"))&&!0===e.ownerDocument.body.contains(e)};t.visible=i;t.create=function(e,n){var t=function(e,n){var t=o('\n\t\t<div class="basicLightbox '.concat(n.className,'">\n\t\t\t<div class="basicLightbox__placeholder" role="dialog"></div>\n\t\t</div>\n\t')),i=t.querySelector(".basicLightbox__placeholder");e.forEach((function(e){return i.appendChild(e)}));var c=r(i,"IMG"),u=r(i,"VIDEO"),s=r(i,"IFRAME");return!0===c&&t.classList.add("basicLightbox--img"),!0===u&&t.classList.add("basicLightbox--video"),!0===s&&t.classList.add("basicLightbox--iframe"),t}(e=function(e){var n="string"==typeof e,t=e instanceof HTMLElement==!0;if(!1===n&&!1===t)throw new Error("Content must be a DOM element/node or string");return!0===n?Array.from(o(e,!0)):"TEMPLATE"===e.tagName?[e.content.cloneNode(!0)]:Array.from(e.children)}(e),n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(null==(e=Object.assign({},e)).closable&&(e.closable=!0),null==e.className&&(e.className=""),null==e.onShow&&(e.onShow=function(){}),null==e.onClose&&(e.onClose=function(){}),"boolean"!=typeof e.closable)throw new Error("Property `closable` must be a boolean");if("string"!=typeof e.className)throw new Error("Property `className` must be a string");if("function"!=typeof e.onShow)throw new Error("Property `onShow` must be a function");if("function"!=typeof e.onClose)throw new Error("Property `onClose` must be a function");return e}(n)),c=function(e){return!1!==n.onClose(u)&&function(e,n){return e.classList.remove("basicLightbox--visible"),setTimeout((function(){return!1===i(e)||e.parentElement.removeChild(e),n()}),410),!0}(t,(function(){if("function"==typeof e)return e(u)}))};!0===n.closable&&t.addEventListener("click",(function(e){e.target===t&&c()}));var u={element:function(){return t},visible:function(){return i(t)},show:function(e){return!1!==n.onShow(u)&&function(e,n){return document.body.appendChild(e),setTimeout((function(){requestAnimationFrame((function(){return e.classList.add("basicLightbox--visible"),n()}))}),10),!0}(t,(function(){if("function"==typeof e)return e(u)}))},close:c};return u}},{}]},{},[1])(1)}));
-},{}],"images/team-ruslana.jpeg":[function(require,module,exports) {
-module.exports = "/team-ruslana.5ee08793.jpeg";
-},{}],"images/team-olga.jpeg":[function(require,module,exports) {
-module.exports = "/team-olga.c40113fb.jpeg";
-},{}],"images/team-daria.jpeg":[function(require,module,exports) {
-module.exports = "/team-daria.ee65a5d2.jpeg";
-},{}],"images/team-denis.jpeg":[function(require,module,exports) {
-module.exports = "/team-denis.0a5b0591.jpeg";
-},{}],"images/team-ihor.jpeg":[function(require,module,exports) {
-module.exports = "/team-ihor.677fa90f.jpeg";
-},{}],"images/team-katya.jpeg":[function(require,module,exports) {
-module.exports = "/team-katya.dcfa35e7.jpeg";
-},{}],"images/team-vladymyr.jpeg":[function(require,module,exports) {
-module.exports = "/team-vladymyr.bc76483f.jpeg";
-},{}],"images/team-aleksandr.jpg":[function(require,module,exports) {
-module.exports = "/team-aleksandr.cfd8cc78.jpg";
-},{}],"images/sprite.svg":[function(require,module,exports) {
-module.exports = "/sprite.5ec50489.svg";
-},{}],"js/teamLightbox.js":[function(require,module,exports) {
-"use strict";
-
-var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
-
-var _teamRuslana = _interopRequireDefault(require("../images/team-ruslana.jpeg"));
-
-var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpeg"));
-
-var _teamDaria = _interopRequireDefault(require("../images/team-daria.jpeg"));
-
-var _teamDenis = _interopRequireDefault(require("../images/team-denis.jpeg"));
-
-var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpeg"));
-
-var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpeg"));
-
-var _teamVladymyr = _interopRequireDefault(require("../images/team-vladymyr.jpeg"));
-
-var _teamAleksandr = _interopRequireDefault(require("../images/team-aleksandr.jpg"));
-
-var _sprite = _interopRequireDefault(require("../images/sprite.svg"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/vbd4eva\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
-const container = document.querySelector('.js-team-modal');
-const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
-container.addEventListener('click', openModal);
-const modal = basicLightbox.create(markup);
-
-function openModal(e) {
-  modal.show();
-  window.addEventListener('keydown', closeModalHandler);
-
-  function closeModalHandler(e) {
-    if (e.code === 'Escape') {
-      modal.close();
-      window.removeEventListener('keydown', closeModalHandler);
-    }
-  }
-}
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"../node_modules/basiclightbox/dist/basicLightbox.min.css":[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
-var define;
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var runtime = (function (exports) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function define(obj, key, value) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-    return obj[key];
-  }
-  try {
-    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
-    define({}, "");
-  } catch (err) {
-    define = function(obj, key, value) {
-      return obj[key] = value;
-    };
-  }
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  exports.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunction.displayName = define(
-    GeneratorFunctionPrototype,
-    toStringTagSymbol,
-    "GeneratorFunction"
-  );
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      define(prototype, method, function(arg) {
-        return this._invoke(method, arg);
-      });
-    });
-  }
-
-  exports.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  exports.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      define(genFun, toStringTagSymbol, "GeneratorFunction");
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  exports.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator, PromiseImpl) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return PromiseImpl.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return PromiseImpl.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new PromiseImpl(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  exports.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
-    if (PromiseImpl === void 0) PromiseImpl = Promise;
-
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList),
-      PromiseImpl
-    );
-
-    return exports.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        // Note: ["return"] must be used for ES3 parsing compatibility.
-        if (delegate.iterator["return"]) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  define(Gp, toStringTagSymbol, "Generator");
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  exports.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  exports.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-
-  // Regardless of whether this script is executing as a CommonJS module
-  // or not, return the runtime object so that we can declare the variable
-  // regeneratorRuntime in the outer scope, which allows this module to be
-  // injected easily by `bin/regenerator --include-runtime script.js`.
-  return exports;
-
-}(
-  // If this script is executing as a CommonJS module, use module.exports
-  // as the regeneratorRuntime namespace. Otherwise create a new empty
-  // object. Either way, the resulting object will be used to initialize
-  // the regeneratorRuntime variable at the top of this file.
-  typeof module === "object" ? module.exports : {}
-));
-
-try {
-  regeneratorRuntime = runtime;
-} catch (accidentalStrictMode) {
-  // This module should not be running in strict mode, so the above
-  // assignment should always work unless something is misconfigured. Just
-  // in case runtime.js accidentally runs in strict mode, we can escape
-  // strict mode using a global Function call. This could conceivably fail
-  // if a Content Security Policy forbids using Function, but in that case
-  // the proper solution is to fix the accidental strict mode problem. If
-  // you've misconfigured your bundler to force strict mode and applied a
-  // CSP to forbid Function, and you're not willing to fix either of those
-  // problems, please detail your unique predicament in a GitHub issue.
-  Function("r", "regeneratorRuntime = r")(runtime);
-}
-
-},{}],"js/trailers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createTrailerLink;
-
-var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createTrailerLink() {
-  const trailerBtn = document.querySelectorAll('.btn-youtube');
-  trailerBtn.forEach(el => el.addEventListener('click', e => {
-    drawModalForTrailler(e.target.dataset.id);
-  }));
-
-  function drawModalForTrailler(id) {
-    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
-    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
-    fetch(url).then(response => response.json()).then(data => {
-      const id = data.results[0].key;
-      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
-      instance.show();
-      modalClBtTrailer(instance);
-    }).catch(() => {
-      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
-      instance.show();
-      modalClBtTrailer(instance);
-    });
-  }
-
-  function modalClBtTrailer(instance) {
-    const modalBox = document.querySelector('.basicLightbox--iframe');
-    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
-    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
-    modalCloseBtn.addEventListener('click', () => instance.close());
-  }
-}
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"images/nothingHere.jpg":[function(require,module,exports) {
-module.exports = "/nothingHere.316956b7.jpg";
-},{}],"js/localStorageApi.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-const localStorageApi = {
-  //Проверяет хранилище по ключу. Возвращает: Пустой массив - если не находит, и Данные - если находит
-  getMovies(key) {
-    const keyStorage = this.load(key);
-    if (Array.isArray(keyStorage)) return keyStorage;
-    this.save(key, []);
-    return [];
-  },
-
-  //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
-  addMovie(key, value) {
-    const dataFromLocalStorage = this.load(key);
-    this.save(key, [value, ...dataFromLocalStorage]);
-  },
-
-  removeMovie(key, value) {
-    const dataFromLocalStorage = this.load(key);
-    const valueIndex = dataFromLocalStorage.indexOf(value);
-
-    if (0 <= valueIndex) {
-      dataFromLocalStorage.splice(valueIndex, 1);
-      this.save(key, dataFromLocalStorage);
-    }
-  },
-
-  // Принимает ключ `key` по которому будет произведена выборка.
-  load(key) {
-    try {
-      const serializedState = localStorage.getItem(key);
-      return serializedState === null ? undefined : JSON.parse(serializedState);
-    } catch (err) {
-      console.error('Get state error: ', err);
-    }
-  },
-
-  // Принимает ключ `key` и значение `value`.
-  save(key, value) {
-    try {
-      const serializedState = JSON.stringify(value);
-      localStorage.setItem(key, serializedState);
-    } catch (err) {
-      console.error('Set state error: ', err);
-    }
-  }
-
-};
-var _default = localStorageApi;
-exports.default = _default;
-},{}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
+},{"./../images/header-bg-main-mobile.jpg":[["header-bg-main-mobile.71b6a31c.jpg","images/header-bg-main-mobile.jpg"],"images/header-bg-main-mobile.jpg"],"./../images/header-bg-main-mobile@2x.jpg":[["header-bg-main-mobile@2x.afb557df.jpg","images/header-bg-main-mobile@2x.jpg"],"images/header-bg-main-mobile@2x.jpg"],"./../images/header-bg-main-tablet.jpg":[["header-bg-main-tablet.310b555c.jpg","images/header-bg-main-tablet.jpg"],"images/header-bg-main-tablet.jpg"],"./../images/header-bg-main-desktop.jpg":[["header-bg-main-desktop.0c233672.jpg","images/header-bg-main-desktop.jpg"],"images/header-bg-main-desktop.jpg"],"./../images/header-bg-lib-mobile.jpg":[["header-bg-lib-mobile.5145fa34.jpg","images/header-bg-lib-mobile.jpg"],"images/header-bg-lib-mobile.jpg"],"./../images/header-bg-lib-mobile@2x.jpg":[["header-bg-lib-mobile@2x.0d738ecb.jpg","images/header-bg-lib-mobile@2x.jpg"],"images/header-bg-lib-mobile@2x.jpg"],"./../images/header-bg-lib-tablet.jpg":[["header-bg-lib-tablet.03f0847c.jpg","images/header-bg-lib-tablet.jpg"],"images/header-bg-lib-tablet.jpg"],"./../images/header-bg-lib-desktop.jpg":[["header-bg-lib-desktop.ecf5eb53.jpg","images/header-bg-lib-desktop.jpg"],"images/header-bg-lib-desktop.jpg"],"./../images/pagination/arrow-left.svg":[["arrow-left.62ff9ef7.svg","images/pagination/arrow-left.svg"],"images/pagination/arrow-left.svg"],"./../images/pagination/arrow-right.svg":[["arrow-right.f04d22a6.svg","images/pagination/arrow-right.svg"],"images/pagination/arrow-right.svg"],"./../images/icons8-play-button-2.svg":[["icons8-play-button-2.f5ce0859.svg","images/icons8-play-button-2.svg"],"images/icons8-play-button-2.svg"],"./../images/icon-close.svg":[["icon-close.1add023a.svg","images/icon-close.svg"],"images/icon-close.svg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/handlebars/dist/handlebars.runtime.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**!
@@ -3128,7 +2204,1269 @@ THE SOFTWARE.
 });
 
 ;
-},{}],"templates/card-films.hbs":[function(require,module,exports) {
+},{}],"templates/modalFilmCard.hbs":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const templateFunction = _handlebars.default.template({
+  "1": function (container, depth0, helpers, partials, data) {
+    var lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return "\n                <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n                ";
+  },
+  "compiler": [8, ">= 4.3.0"],
+  "main": function (container, depth0, helpers, partials, data) {
+    var stack1,
+        helper,
+        alias1 = depth0 != null ? depth0 : container.nullContext || {},
+        alias2 = container.hooks.helperMissing,
+        alias3 = "function",
+        alias4 = container.escapeExpression,
+        lookupProperty = container.lookupProperty || function (parent, propertyName) {
+      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
+        return parent[propertyName];
+      }
+
+      return undefined;
+    };
+
+    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "id",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 37
+        },
+        "end": {
+          "line": 1,
+          "column": 43
+        }
+      }
+    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "poster_path",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 63
+        },
+        "end": {
+          "line": 3,
+          "column": 78
+        }
+      }
+    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 85
+        },
+        "end": {
+          "line": 3,
+          "column": 94
+        }
+      }
+    }) : helper)) + "\" onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n/>\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 35
+        },
+        "end": {
+          "line": 8,
+          "column": 44
+        }
+      }
+    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "vote_average",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 61
+        },
+        "end": {
+          "line": 10,
+          "column": 77
+        }
+      }
+    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "vote_count",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 45
+        },
+        "end": {
+          "line": 11,
+          "column": 59
+        }
+      }
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "popularity",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 52
+        },
+        "end": {
+          "line": 14,
+          "column": 66
+        }
+      }
+    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "original_title",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 61
+        },
+        "end": {
+          "line": 17,
+          "column": 79
+        }
+      }
+    }) : helper)) + "</span>\n        </p>\n        <div class=\"genres\">\n            <p class=\"cardItem__genre cardItem_text\">\n                Genre\n            </p>\n            <p class=\"cardItem__genreList\">" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+      "name": "each",
+      "hash": {},
+      "fn": container.program(1, data, 0),
+      "inverse": container.noop,
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 43
+        },
+        "end": {
+          "line": 25,
+          "column": 25
+        }
+      }
+    })) != null ? stack1 : "") + "</p>\n\n        </div>\n\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+      "name": "overview",
+      "hash": {},
+      "data": data,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 12
+        },
+        "end": {
+          "line": 33,
+          "column": 24
+        }
+      }
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+  },
+  "useData": true
+});
+
+var _default = templateFunction;
+exports.default = _default;
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"../node_modules/basiclightbox/dist/basicLightbox.min.js":[function(require,module,exports) {
+var define;
+var global = arguments[3];
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{("undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this).basicLightbox=e()}}((function(){return function e(n,t,o){function r(c,u){if(!t[c]){if(!n[c]){var s="function"==typeof require&&require;if(!u&&s)return s(c,!0);if(i)return i(c,!0);var a=new Error("Cannot find module '"+c+"'");throw a.code="MODULE_NOT_FOUND",a}var l=t[c]={exports:{}};n[c][0].call(l.exports,(function(e){return r(n[c][1][e]||e)}),l,l.exports,e,n,t,o)}return t[c].exports}for(var i="function"==typeof require&&require,c=0;c<o.length;c++)r(o[c]);return r}({1:[function(e,n,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.create=t.visible=void 0;var o=function(e){var n=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=document.createElement("div");return t.innerHTML=e.trim(),!0===n?t.children:t.firstChild},r=function(e,n){var t=e.children;return 1===t.length&&t[0].tagName===n},i=function(e){return null!=(e=e||document.querySelector(".basicLightbox"))&&!0===e.ownerDocument.body.contains(e)};t.visible=i;t.create=function(e,n){var t=function(e,n){var t=o('\n\t\t<div class="basicLightbox '.concat(n.className,'">\n\t\t\t<div class="basicLightbox__placeholder" role="dialog"></div>\n\t\t</div>\n\t')),i=t.querySelector(".basicLightbox__placeholder");e.forEach((function(e){return i.appendChild(e)}));var c=r(i,"IMG"),u=r(i,"VIDEO"),s=r(i,"IFRAME");return!0===c&&t.classList.add("basicLightbox--img"),!0===u&&t.classList.add("basicLightbox--video"),!0===s&&t.classList.add("basicLightbox--iframe"),t}(e=function(e){var n="string"==typeof e,t=e instanceof HTMLElement==!0;if(!1===n&&!1===t)throw new Error("Content must be a DOM element/node or string");return!0===n?Array.from(o(e,!0)):"TEMPLATE"===e.tagName?[e.content.cloneNode(!0)]:Array.from(e.children)}(e),n=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(null==(e=Object.assign({},e)).closable&&(e.closable=!0),null==e.className&&(e.className=""),null==e.onShow&&(e.onShow=function(){}),null==e.onClose&&(e.onClose=function(){}),"boolean"!=typeof e.closable)throw new Error("Property `closable` must be a boolean");if("string"!=typeof e.className)throw new Error("Property `className` must be a string");if("function"!=typeof e.onShow)throw new Error("Property `onShow` must be a function");if("function"!=typeof e.onClose)throw new Error("Property `onClose` must be a function");return e}(n)),c=function(e){return!1!==n.onClose(u)&&function(e,n){return e.classList.remove("basicLightbox--visible"),setTimeout((function(){return!1===i(e)||e.parentElement.removeChild(e),n()}),410),!0}(t,(function(){if("function"==typeof e)return e(u)}))};!0===n.closable&&t.addEventListener("click",(function(e){e.target===t&&c()}));var u={element:function(){return t},visible:function(){return i(t)},show:function(e){return!1!==n.onShow(u)&&function(e,n){return document.body.appendChild(e),setTimeout((function(){requestAnimationFrame((function(){return e.classList.add("basicLightbox--visible"),n()}))}),10),!0}(t,(function(){if("function"==typeof e)return e(u)}))},close:c};return u}},{}]},{},[1])(1)}));
+},{}],"../node_modules/basiclightbox/dist/basicLightbox.min.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/localStorageApi.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+const localStorageApi = {
+  //Проверяет хранилище по ключу. Возвращает: Пустой массив - если не находит, и Данные - если находит
+  getMovies(key) {
+    const keyStorage = this.load(key);
+    if (Array.isArray(keyStorage)) return keyStorage;
+    this.save(key, []);
+    return [];
+  },
+
+  //Добавляет фильм : Пушит переданный 'value' в LocalStorage с ключем 'key'
+  addMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    this.save(key, [value, ...dataFromLocalStorage]);
+  },
+
+  removeMovie(key, value) {
+    const dataFromLocalStorage = this.load(key);
+    const valueIndex = dataFromLocalStorage.indexOf(value);
+
+    if (0 <= valueIndex) {
+      dataFromLocalStorage.splice(valueIndex, 1);
+      this.save(key, dataFromLocalStorage);
+    }
+  },
+
+  // Принимает ключ `key` по которому будет произведена выборка.
+  load(key) {
+    try {
+      const serializedState = localStorage.getItem(key);
+      return serializedState === null ? undefined : JSON.parse(serializedState);
+    } catch (err) {
+      console.error('Get state error: ', err);
+    }
+  },
+
+  // Принимает ключ `key` и значение `value`.
+  save(key, value) {
+    try {
+      const serializedState = JSON.stringify(value);
+      localStorage.setItem(key, serializedState);
+    } catch (err) {
+      console.error('Set state error: ', err);
+    }
+  }
+
+};
+var _default = localStorageApi;
+exports.default = _default;
+},{}],"js/initStorageInModal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initStorageBtns = void 0;
+
+var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const initStorageBtns = () => {
+  const storageEl = document.querySelector('.modal-card .storage');
+  const movieId = document.querySelector('.modal-card').dataset.action;
+  checkStorage(storageEl);
+  storageEl.addEventListener('change', onStorageBtnClick);
+
+  function onStorageBtnClick(e) {
+    const storageKey = e.target.value;
+    const action = e.target.checked ? 'add' : 'remove';
+
+    _localStorageApi.default.getMovies(storageKey);
+
+    makeActionInStorage({
+      storageKey,
+      movieId,
+      action
+    });
+  }
+
+  function checkStorage(storageEl) {
+    const btnsEl = storageEl.querySelectorAll('[type=checkbox]');
+    btnsEl.forEach(element => {
+      const storageKey = element.value;
+
+      const arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
+      // console.log(arr.indexOf(movieId));
+
+
+      if (0 <= arr.indexOf(movieId)) element.checked = "true";
+    });
+  }
+};
+
+exports.initStorageBtns = initStorageBtns;
+
+function makeActionInStorage({
+  storageKey,
+  movieId,
+  action
+}) {
+  if (action === 'add') {
+    _localStorageApi.default.addMovie(storageKey, movieId);
+
+    changeLibraryCardDisplay('initial');
+  }
+
+  if (action === 'remove') {
+    _localStorageApi.default.removeMovie(storageKey, movieId);
+
+    changeLibraryCardDisplay('none');
+  }
+
+  function changeLibraryCardDisplay(value) {
+    const LibraryCard = document.querySelector("[data-library=\"".concat(storageKey, "\"] [data-action=\"").concat(movieId, "\"]"));
+    if (LibraryCard) LibraryCard.style.display = value;
+  }
+}
+},{"./localStorageApi":"js/localStorageApi.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
+"use strict";
+
+var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+require("basiclightbox/dist/basicLightbox.min.css");
+
+var _initStorageInModal = require("./initStorageInModal");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//local Storage
+// let page = 1;
+const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+const cardFilm = document.querySelector('.card__colection');
+cardFilm.addEventListener('click', openModal);
+
+function fetchOneMovieInfo(movie_id) {
+  const url = "https://api.themoviedb.org/3/movie/".concat(movie_id, "?api_key=").concat(apiKey);
+  return fetch(url).then(response => response.json()).then(data => ({ ...data,
+    popularity: data.popularity.toFixed(1)
+  }));
+}
+
+function openModal(e) {
+  e.preventDefault();
+  fetchOneMovieInfo(e.target.dataset.id).then(data => {
+    if (e.target.nodeName !== 'IMG') return;
+    const markup = (0, _modalFilmCard.default)(data);
+    const modal = basicLightbox.create(markup);
+    modal.show();
+    window.addEventListener('keydown', closeModalHandler);
+
+    function closeModalHandler(e) {
+      if (e.code === 'Escape') {
+        modal.close();
+        window.removeEventListener('keydown', closeModalHandler);
+      }
+    } //new Function
+
+
+    (0, _initStorageInModal.initStorageBtns)();
+  }).then(data => {}).catch(error => {
+    console.log('oops!');
+  });
+}
+},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"images/team-ruslana.jpeg":[function(require,module,exports) {
+module.exports = "/team-ruslana.5ee08793.jpeg";
+},{}],"images/team-olga.jpeg":[function(require,module,exports) {
+module.exports = "/team-olga.c40113fb.jpeg";
+},{}],"images/team-daria.jpeg":[function(require,module,exports) {
+module.exports = "/team-daria.ee65a5d2.jpeg";
+},{}],"images/team-denis.jpeg":[function(require,module,exports) {
+module.exports = "/team-denis.0a5b0591.jpeg";
+},{}],"images/team-ihor.jpeg":[function(require,module,exports) {
+module.exports = "/team-ihor.677fa90f.jpeg";
+},{}],"images/team-katya.jpeg":[function(require,module,exports) {
+module.exports = "/team-katya.dcfa35e7.jpeg";
+},{}],"images/team-vladymyr.jpeg":[function(require,module,exports) {
+module.exports = "/team-vladymyr.bc76483f.jpeg";
+},{}],"images/team-aleksandr.jpg":[function(require,module,exports) {
+module.exports = "/team-aleksandr.cfd8cc78.jpg";
+},{}],"images/sprite.svg":[function(require,module,exports) {
+module.exports = "/sprite.5ec50489.svg";
+},{}],"js/teamLightbox.js":[function(require,module,exports) {
+"use strict";
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+var _teamRuslana = _interopRequireDefault(require("../images/team-ruslana.jpeg"));
+
+var _teamOlga = _interopRequireDefault(require("../images/team-olga.jpeg"));
+
+var _teamDaria = _interopRequireDefault(require("../images/team-daria.jpeg"));
+
+var _teamDenis = _interopRequireDefault(require("../images/team-denis.jpeg"));
+
+var _teamIhor = _interopRequireDefault(require("../images/team-ihor.jpeg"));
+
+var _teamKatya = _interopRequireDefault(require("../images/team-katya.jpeg"));
+
+var _teamVladymyr = _interopRequireDefault(require("../images/team-vladymyr.jpeg"));
+
+var _teamAleksandr = _interopRequireDefault(require("../images/team-aleksandr.jpg"));
+
+var _sprite = _interopRequireDefault(require("../images/sprite.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const markup = "<div class=\"team-wrapper\"><div class=\"team-card\">\n    <img src=\"".concat(_teamRuslana.default, "\" alt=\"Ruslana\" class=\"team-image\">\n    <p class=\"team-name\">Ruslana</p>\n    <p class=\"team-role\">Team Lead</p>\n    <a href=\"https://github.com/RuslanaLogosha\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamOlga.default, "\" alt=\"Olga\" class=\"team-image\">\n    <p class=\"team-name\">Olga</p>\n    <p class=\"team-role\">Scrum Master</p>\n    <a href=\"https://github.com/levshukova\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDaria.default, "\" alt=\"Daria\" class=\"team-image\">\n    <p class=\"team-name\">Daria</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Daria-Churkina\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamDenis.default, "\" alt=\"Denis\" class=\"team-image\">\n    <p class=\"team-name\">Denis</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/vbd4eva\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamIhor.default, "\" alt=\"Ihor\" class=\"team-image\">\n    <p class=\"team-name\">Ihor</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/taraiihor\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamKatya.default, "\" alt=\"Katya\" class=\"team-image\">\n    <p class=\"team-name\">Katya</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/Kateryna-Urbanovych\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamVladymyr.default, "\" alt=\"Vladymyr\" class=\"team-image\">\n    <p class=\"team-name\">Vladymyr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/created-with-love\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div>\n<div class=\"team-card\">\n    <img src=\"").concat(_teamAleksandr.default, "\" alt=\"Aleksandr\" class=\"team-image\">\n    <p class=\"team-name\">Aleksandr</p>\n    <p class=\"team-role\">Developer</p>\n    <a href=\"https://github.com/AleksMkm\" target=\"_blank\" class=\"team-git\"><svg class=\"logo__icon\" width=\"24\" height=\"24\">\n      <use href=\"").concat(_sprite.default, "#github\"></use>\n    </svg></a>\n</div></div>");
+const container = document.querySelector('.js-team-modal');
+const markup2 = "<img src=\"".concat(_teamKatya.default, "\"/>");
+container.addEventListener('click', openModal);
+const modal = basicLightbox.create(markup);
+
+function openModal(e) {
+  modal.show();
+  window.addEventListener('keydown', closeModalHandler);
+
+  function closeModalHandler(e) {
+    if (e.code === 'Escape') {
+      modal.close();
+      window.removeEventListener('keydown', closeModalHandler);
+    }
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","../images/team-ruslana.jpeg":"images/team-ruslana.jpeg","../images/team-olga.jpeg":"images/team-olga.jpeg","../images/team-daria.jpeg":"images/team-daria.jpeg","../images/team-denis.jpeg":"images/team-denis.jpeg","../images/team-ihor.jpeg":"images/team-ihor.jpeg","../images/team-katya.jpeg":"images/team-katya.jpeg","../images/team-vladymyr.jpeg":"images/team-vladymyr.jpeg","../images/team-aleksandr.jpg":"images/team-aleksandr.jpg","../images/sprite.svg":"images/sprite.svg"}],"../node_modules/regenerator-runtime/runtime.js":[function(require,module,exports) {
+var define;
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+  typeof module === "object" ? module.exports : {}
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+},{}],"js/trailers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createTrailerLink;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function createTrailerLink() {
+  const trailerBtn = document.querySelectorAll('.btn-youtube');
+  trailerBtn.forEach(el => el.addEventListener('click', e => {
+    drawModalForTrailler(e.target.dataset.id);
+  }));
+
+  function drawModalForTrailler(id) {
+    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
+    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
+    fetch(url).then(response => response.json()).then(data => {
+      const id = data.results[0].key;
+      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
+      instance.show();
+      modalClBtTrailer(instance);
+    }).catch(() => {
+      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
+      instance.show();
+      modalClBtTrailer(instance);
+    });
+  }
+
+  function modalClBtTrailer(instance) {
+    const modalBox = document.querySelector('.basicLightbox--iframe');
+    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
+    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
+    modalCloseBtn.addEventListener('click', () => instance.close());
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"images/nothingHere.jpg":[function(require,module,exports) {
+module.exports = "/nothingHere.316956b7.jpg";
+},{}],"js/spinner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const markup = "<div class=\"sk-chase\">\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n    <div class=\"sk-chase-dot\"></div>\n  </div>";
+const spinner = basicLightbox.create(markup);
+var _default = {
+  spinner
+}; // ПОКАЗАТЬ спиннер - spinner.show();
+// ЗАКРЫТЬ  спиннер - spinner.close();
+// // Как пример - спиннер пока срабатывает при клике на копирайт
+// const copyrightContainer = document.querySelector('.copyright');
+// copyrightContainer.addEventListener('click', onLoadingSpinner);
+// function onLoadingSpinner() {
+//   spinner.show();
+// }
+
+exports.default = _default;
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"templates/card-films.hbs":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3411,6 +3749,8 @@ var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 var _nothingHere = _interopRequireDefault(require("../images/nothingHere.jpg"));
 
+var _spinner = _interopRequireDefault(require("./spinner"));
+
 var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
@@ -3429,330 +3769,59 @@ const getMovies = async idList => {
 };
 
 const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
+const USER_POINT_STORAGE_NAME = 'user';
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card-library')
 };
+getCurrentLibrary();
 renderMovies();
 refs.storageList.addEventListener('change', renderMovies);
 
 function renderMovies() {
-  const key = getCheckedLiblary(CHOICE_STORAGE_BTN_NAME);
+  const key = getCheckedLiblary();
 
-  const queueIds = _localStorageApi.default.getMovies(key);
+  const idList = _localStorageApi.default.getMovies(key);
 
-  if (queueIds.length) {
-    getMovies(queueIds).then(renderMarkup);
+  refs.cardLibrary.dataset.library = key;
+  saveCurrentLibrary(key);
+
+  if (idList.length) {
+    _spinner.default.spinner.show();
+
+    getMovies(idList).then(moviesArray => {
+      renderMarkup(moviesArray);
+
+      _spinner.default.spinner.close();
+    });
   } else {
     refs.cardLibrary.innerHTML = "<img src=\"".concat(_nothingHere.default, "\" alt=\"There is nothing\" />");
   }
 }
 
-function getCheckedLiblary(name) {
-  return document.querySelector("[name=".concat(name, "]:checked")).value;
+function getCheckedLiblary() {
+  return document.querySelector("[name=".concat(CHOICE_STORAGE_BTN_NAME, "]:checked")).value;
 }
 
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = (0, _cardFilms.default)(moviesArray);
   (0, _trailers.default)();
 }
-},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./trailers.js":"js/trailers.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs"}],"templates/modalFilmCard.hbs":[function(require,module,exports) {
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
+function getCurrentLibrary() {
+  const userPoint = _localStorageApi.default.load(USER_POINT_STORAGE_NAME);
 
-var _handlebars = _interopRequireDefault(require("handlebars/dist/handlebars.runtime"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const templateFunction = _handlebars.default.template({
-  "1": function (container, depth0, helpers, partials, data) {
-    var lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return "\n                <span class=\"cardItem__genre_data\">" + container.escapeExpression(container.lambda(depth0 != null ? lookupProperty(depth0, "name") : depth0, depth0)) + "</span>\n                ";
-  },
-  "compiler": [8, ">= 4.3.0"],
-  "main": function (container, depth0, helpers, partials, data) {
-    var stack1,
-        helper,
-        alias1 = depth0 != null ? depth0 : container.nullContext || {},
-        alias2 = container.hooks.helperMissing,
-        alias3 = "function",
-        alias4 = container.escapeExpression,
-        lookupProperty = container.lookupProperty || function (parent, propertyName) {
-      if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
-        return parent[propertyName];
-      }
-
-      return undefined;
-    };
-
-    return "<div class=\"modal-card\" data-action=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "id",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 37
-        },
-        "end": {
-          "line": 1,
-          "column": 43
-        }
-      }
-    }) : helper)) + "\">\n    <div class=\"cardItem__image\">\n        <img class=\"image\" src=\"https://image.tmdb.org/t/p/w500" + alias4((helper = (helper = lookupProperty(helpers, "poster_path") || (depth0 != null ? lookupProperty(depth0, "poster_path") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "poster_path",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 63
-        },
-        "end": {
-          "line": 3,
-          "column": 78
-        }
-      }
-    }) : helper)) + "\" alt=\"" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 85
-        },
-        "end": {
-          "line": 3,
-          "column": 94
-        }
-      }
-    }) : helper)) + "\" onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n/>\n    </div>\n\n    <div class=\" cardItem__wrapper\">\n        <h2 class=\"cardItem__name\">" + alias4((helper = (helper = lookupProperty(helpers, "title") || (depth0 != null ? lookupProperty(depth0, "title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 35
-        },
-        "end": {
-          "line": 8,
-          "column": 44
-        }
-      }
-    }) : helper)) + "</h2>\n        <p class=\"cadrItem__vote cardItem_text\">\n            Vote / Votes<span class=\"cardItem__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "vote_average",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 61
-        },
-        "end": {
-          "line": 10,
-          "column": 77
-        }
-      }
-    }) : helper)) + "</span>/<span\n                class=\"cardItem__vote_count\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_count") || (depth0 != null ? lookupProperty(depth0, "vote_count") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "vote_count",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 11,
-          "column": 45
-        },
-        "end": {
-          "line": 11,
-          "column": 59
-        }
-      }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem__popularity cardItem_text\">\n            Popularity<span class=\"cardItem___data\">" + alias4((helper = (helper = lookupProperty(helpers, "popularity") || (depth0 != null ? lookupProperty(depth0, "popularity") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "popularity",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 52
-        },
-        "end": {
-          "line": 14,
-          "column": 66
-        }
-      }
-    }) : helper)) + "</span>\n        </p>\n        <p class=\"cardItem-Title cardItem_text\">\n            Original Title<span class=\"cardItem__title_data\">" + alias4((helper = (helper = lookupProperty(helpers, "original_title") || (depth0 != null ? lookupProperty(depth0, "original_title") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "original_title",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 61
-        },
-        "end": {
-          "line": 17,
-          "column": 79
-        }
-      }
-    }) : helper)) + "</span>\n        </p>\n        <div class=\"genres\">\n            <p class=\"cardItem__genre cardItem_text\">\n                Genre\n            </p>\n            <p class=\"cardItem__genreList\">" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
-      "name": "each",
-      "hash": {},
-      "fn": container.program(1, data, 0),
-      "inverse": container.noop,
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 23,
-          "column": 43
-        },
-        "end": {
-          "line": 25,
-          "column": 25
-        }
-      }
-    })) != null ? stack1 : "") + "</p>\n\n        </div>\n\n\n\n        <p class=\"cardItem__about\">About</p>\n        <p class=\"cardItem__description\">\n            " + alias4((helper = (helper = lookupProperty(helpers, "overview") || (depth0 != null ? lookupProperty(depth0, "overview") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
-      "name": "overview",
-      "hash": {},
-      "data": data,
-      "loc": {
-        "start": {
-          "line": 33,
-          "column": 12
-        },
-        "end": {
-          "line": 33,
-          "column": 24
-        }
-      }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
-  },
-  "useData": true
-});
-
-var _default = templateFunction;
-exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/initStorageInModal.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.initStorageBtns = void 0;
-
-var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const initStorageBtns = () => {
-  const storageEl = document.querySelector('.modal-card .storage');
-  const movieId = document.querySelector('.modal-card').dataset.action;
-  checkStorage(storageEl);
-  storageEl.addEventListener('change', onStorageBtnClick);
-
-  function onStorageBtnClick(e) {
-    const storageKey = e.target.value;
-    const action = e.target.checked ? 'add' : 'remove';
-
-    _localStorageApi.default.getMovies(storageKey);
-
-    makeActionInStorage({
-      storageKey,
-      movieId,
-      action
-    });
+  if (userPoint) {
+    document.querySelector("[value=\"".concat(userPoint.currentLibrary, "\"]")).checked = true;
   }
-
-  function checkStorage(storageEl) {
-    const btnsEl = storageEl.querySelectorAll('[type=checkbox]');
-    btnsEl.forEach(element => {
-      const storageKey = element.value;
-
-      const arr = _localStorageApi.default.load(storageKey); // console.log(movieId);
-      // console.log(arr.indexOf(movieId));
-
-
-      if (0 <= arr.indexOf(movieId)) element.checked = "true";
-    });
-  }
-};
-
-exports.initStorageBtns = initStorageBtns;
-
-function makeActionInStorage({
-  storageKey,
-  movieId,
-  action
-}) {
-  if (action === 'add') _localStorageApi.default.addMovie(storageKey, movieId);
-  if (action === 'remove') _localStorageApi.default.removeMovie(storageKey, movieId);
-}
-},{"./localStorageApi":"js/localStorageApi.js"}],"js/modalFilmCard.js":[function(require,module,exports) {
-"use strict";
-
-var _modalFilmCard = _interopRequireDefault(require("../templates/modalFilmCard.hbs"));
-
-var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
-
-require("basiclightbox/dist/basicLightbox.min.css");
-
-var _initStorageInModal = require("./initStorageInModal");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//local Storage
-// let page = 1;
-const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
-const cardFilm = document.querySelector('.card__colection');
-cardFilm.addEventListener('click', openModal);
-
-function fetchOneMovieInfo(movie_id) {
-  const url = "https://api.themoviedb.org/3/movie/".concat(movie_id, "?api_key=").concat(apiKey);
-  return fetch(url).then(response => response.json()).then(data => ({ ...data,
-    popularity: data.popularity.toFixed(1)
-  }));
 }
 
-function openModal(e) {
-  e.preventDefault();
-  fetchOneMovieInfo(e.target.dataset.id).then(data => {
-    if (e.target.nodeName !== 'IMG') return;
-    const markup = (0, _modalFilmCard.default)(data);
-    const modal = basicLightbox.create(markup);
-    modal.show();
-    window.addEventListener('keydown', closeModalHandler);
-
-    function closeModalHandler(e) {
-      if (e.code === 'Escape') {
-        modal.close();
-        window.removeEventListener('keydown', closeModalHandler);
-      }
-    } //new Function
-
-
-    (0, _initStorageInModal.initStorageBtns)();
-  }).then(data => {}).catch(error => {
-    console.log('oops!');
+function saveCurrentLibrary(currentLibrary) {
+  _localStorageApi.default.save(USER_POINT_STORAGE_NAME, {
+    currentLibrary
   });
 }
-},{"../templates/modalFilmCard.hbs":"templates/modalFilmCard.hbs","basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js","basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./initStorageInModal":"js/initStorageInModal.js"}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
+},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./trailers.js":"js/trailers.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./spinner":"js/spinner.js","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs"}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
 var global = arguments[3];
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -4226,18 +4295,18 @@ function toPageTopOnClick(e) {
 
 require("./sass/main.scss");
 
+require("./js/modalFilmCard");
+
 require("./js/teamLightbox");
 
 require("../node_modules/basiclightbox/dist/basicLightbox.min.css");
 
 require("./js/myLibrary");
 
-require("./js/modalFilmCard");
-
 require("./js/btn-upp");
 
 require("./js/trailers");
-},{"./sass/main.scss":"sass/main.scss","./js/teamLightbox":"js/teamLightbox.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/myLibrary":"js/myLibrary.js","./js/modalFilmCard":"js/modalFilmCard.js","./js/btn-upp":"js/btn-upp.js","./js/trailers":"js/trailers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./sass/main.scss":"sass/main.scss","./js/modalFilmCard":"js/modalFilmCard.js","./js/teamLightbox":"js/teamLightbox.js","../node_modules/basiclightbox/dist/basicLightbox.min.css":"../node_modules/basiclightbox/dist/basicLightbox.min.css","./js/myLibrary":"js/myLibrary.js","./js/btn-upp":"js/btn-upp.js","./js/trailers":"js/trailers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4265,7 +4334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49525" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51160" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
