@@ -5,6 +5,10 @@
   background-color: rgb(247, 247, 247);
   padding-bottom: 20px;
   font-size: 13px;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
 }
 
 .glide__arrow {
