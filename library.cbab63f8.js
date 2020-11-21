@@ -3254,31 +3254,31 @@ const templateFunction = _handlebars.default.template({
           "column": 87
         }
       }
-    }) : helper)) + "\" width=\"100%\"\n         data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\" width=\"100%\" data-id=\"" + alias4((helper = (helper = lookupProperty(helpers, "id") || (depth0 != null ? lookupProperty(depth0, "id") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "id",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 13,
-          "column": 18
+          "line": 12,
+          "column": 111
         },
         "end": {
-          "line": 13,
-          "column": 24
+          "line": 12,
+          "column": 117
         }
       }
-    }) : helper)) + "\"onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\"\n />\n      <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
+    }) : helper)) + "\"\n         onerror=\"this.onerror=null;this.src='https://ik.imagekit.io/tc8jxffbcvf/default-movie-portrait_EmJUj9Tda5wa.jpg?tr=fo-auto,di-';\" />\n      <span class=\"card__vote_average\">" + alias4((helper = (helper = lookupProperty(helpers, "vote_average") || (depth0 != null ? lookupProperty(depth0, "vote_average") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
       "name": "vote_average",
       "hash": {},
       "data": data,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 39
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 55
         }
       }
@@ -3288,11 +3288,11 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 27
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 36
         }
       }
@@ -3302,15 +3302,15 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 37
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 45
         }
       }
-    }) : helper)) + "</h4>\n      <p class=\"card__text\">\n         <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
+    }) : helper)) + "</h2>\n   <p class=\"card__text\">\n      <span>" + ((stack1 = lookupProperty(helpers, "each").call(alias1, depth0 != null ? lookupProperty(depth0, "genres") : depth0, {
       "name": "each",
       "hash": {},
       "fn": container.program(2, data, 0),
@@ -3318,12 +3318,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 15
+          "line": 18,
+          "column": 12
         },
         "end": {
-          "line": 19,
-          "column": 50
+          "line": 18,
+          "column": 47
         }
       }
     })) != null ? stack1 : "") + "</span> | <span>" + alias4((helper = (helper = lookupProperty(helpers, "release_date") || (depth0 != null ? lookupProperty(depth0, "release_date") : depth0)) != null ? helper : alias2, typeof helper === alias3 ? helper.call(alias1, {
@@ -3332,15 +3332,15 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 66
+          "line": 18,
+          "column": 63
         },
         "end": {
-          "line": 19,
-          "column": 82
+          "line": 18,
+          "column": 79
         }
       }
-    }) : helper)) + "</span>\n      </p>\n</li>\n";
+    }) : helper)) + "</span>\n   </p>\n</li>\n";
   },
   "2": function (container, depth0, helpers, partials, data) {
     var helper,
@@ -3358,12 +3358,12 @@ const templateFunction = _handlebars.default.template({
       "data": data,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 32
+          "line": 18,
+          "column": 29
         },
         "end": {
-          "line": 19,
-          "column": 40
+          "line": 18,
+          "column": 37
         }
       }
     }) : helper)) + " ";
@@ -3391,7 +3391,7 @@ const templateFunction = _handlebars.default.template({
           "column": 0
         },
         "end": {
-          "line": 22,
+          "line": 21,
           "column": 9
         }
       }
@@ -4263,7 +4263,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59548" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60976" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
