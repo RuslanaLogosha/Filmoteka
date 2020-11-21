@@ -72,6 +72,7 @@ function fetchDataOfSearchFilms(searchQuery) {
       renderPagination(
         results.total_pages,
         results.results,
+        results.total_results,
         displaySearchListByPage,
         searchQuery,
       );
@@ -82,6 +83,8 @@ function fetchDataOfSearchFilms(searchQuery) {
         cardFetch.fetchDataOfPopularFilms();
         return;
       }
+      refs.warningField.textContent = `Yay! We have ${results.total_results} results on request "${searchQuery}"!`;
+      refs.warningField.style.color = '#f54275';
     })
     .catch(err => {
       console.log('error in function fetchDataOfSearchFilms');
