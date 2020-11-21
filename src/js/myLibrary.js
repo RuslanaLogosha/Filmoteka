@@ -1,7 +1,7 @@
 import regeneratorRuntime from 'regenerator-runtime';
 import createTrailerLink from './trailers.js';
 import nothingHereUrl from '../images/nothingHere.jpg';
-
+import placeholder from './spinner';
 import localStorageApi from './localStorageApi';
 import cardFilmsTpl from '../templates/card-films.hbs';
 
@@ -37,13 +37,17 @@ refs.storageList.addEventListener('change', renderMovies);
 function renderMovies() {
     
   const key = getCheckedLiblary();
-  const queueIds = localStorageApi.getMovies(key);
+  const idList = localStorageApi.getMovies(key);
 
   refs.cardLibrary.dataset.library = key;
   saveCurrentLibrary(key);
 
-  if (queueIds.length) {
-    getMovies(queueIds).then(renderMarkup);
+  if (idList.length) {
+    placeholder.spinner.show();
+    getMovies(idList).then(moviesArray => {
+      renderMarkup(moviesArray);
+      placeholder.spinner.close();
+    });
   } else {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
   }
