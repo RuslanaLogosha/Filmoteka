@@ -101,16 +101,18 @@
 
   color: $white;
 
+  cursor: pointer;
+
   border: 1px solid $white;
   border-radius: 5px;
 
   @include twoTransitions(background-color, border);
 
-  &:hover,
-  &:focus {
-    background-color: $accentColor;
-    border: 1px solid $accentColor;
-  }
+  // &:hover,
+  // &:focus {
+  //   background-color: $accentColor;
+  //   border: 1px solid $accentColor;
+  // }
 }
 
 .storage__input:checked ~ .storage__btn {
@@ -125,13 +127,13 @@
   color: $dark;
 }
 
-.storage__input ~ .storage__btn {
-  &:hover,
-  &:focus {
-    background-color: $accentColor;
-    border: 1px solid $accentColor;
-  }
-}
+// .storage__input ~ .storage__btn {
+//   &:hover,
+//   &:focus {
+//     background-color: $accentColor;
+//     border: 1px solid $accentColor;
+//   }
+// }
 
 // nav
 
