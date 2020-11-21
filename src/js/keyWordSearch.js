@@ -24,6 +24,7 @@ function onKeyWordSearch(e) {
   filmApiService.query = e.currentTarget.elements.query.value;
   if (filmApiService.query === '') {
     placeholder.spinner.close();
+    refs.searchResField.textContent = '';
     refs.warningField.textContent = `Please write something in the box :)`;
     return;
   }
@@ -32,7 +33,6 @@ function onKeyWordSearch(e) {
   fetchDataOfSearchFilms(filmApiService.query);
   e.currentTarget.elements.query.value = '';
   refs.warningField.textContent = '';
-  refs.searchResField.textContent = '';
 }
 
 // renders main (first) page after search *on submit*
@@ -79,14 +79,14 @@ function fetchDataOfSearchFilms(searchQuery) {
       );
       if (results.total_pages === 0) {
         placeholder.spinner.close();
-        refs.searchResField.textContent = '';
         refs.warningField.textContent = `Sorry, there no results found. Try searching for something else!`;
+        refs.searchResField.textContent = '';
         cardFetch.renderOnSearchMistake();
         cardFetch.fetchDataOfPopularFilms();
         return;
       }
-      refs.searchResField.textContent = `Yay! We have ${results.total_results} results on request "${searchQuery}"!`;
-      refs.searchResField.style.color = '#52bf92';
+      refs.searchResField.textContent = `Yay! We found ${results.total_results} results on request "${searchQuery}"!`;
+      refs.searchResField.style.color = '#818181';
     })
     .catch(err => {
       console.log('error in function fetchDataOfSearchFilms');
