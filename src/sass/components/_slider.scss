@@ -1,9 +1,10 @@
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.theme';
 
 .slider-wrapper {
   background-color: rgb(247, 247, 247);
   padding-bottom: 20px;
+  font-size: 13px;
 }
 
 .glide__arrow {
@@ -52,8 +53,7 @@
 // from trailler
 
 .slider-card .btn-youtube {
-    width: 100px;
-
+  width: 100px;
 }
 
 .slider-card .overlay-btn-youtube-text {
