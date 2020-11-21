@@ -9,7 +9,8 @@ import * as cardFetch from './cardFetc';
 const refs = {
   searchForm: document.querySelector('#search-form'),
   cardContainer: document.querySelector('.js-card'),
-  warningField: document.querySelector('.header-warning'),
+  warningField: document.querySelector('.js-warning'),
+  searchResField: document.querySelector('.js-search-results'),
 };
 const filmApiService = new ApiService();
 const listElement = document.querySelector('.js-card');
@@ -72,7 +73,6 @@ function fetchDataOfSearchFilms(searchQuery) {
       renderPagination(
         results.total_pages,
         results.results,
-        results.total_results,
         displaySearchListByPage,
         searchQuery,
       );
@@ -83,8 +83,8 @@ function fetchDataOfSearchFilms(searchQuery) {
         cardFetch.fetchDataOfPopularFilms();
         return;
       }
-      refs.warningField.textContent = `Yay! We have ${results.total_results} results on request "${searchQuery}"!`;
-      refs.warningField.style.color = '#f54275';
+      refs.searchResField.textContent = `Yay! We have ${results.total_results} results on request "${searchQuery}"!`;
+      refs.searchResField.style.color = '#f54275';
     })
     .catch(err => {
       console.log('error in function fetchDataOfSearchFilms');

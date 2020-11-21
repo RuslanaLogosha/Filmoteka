@@ -6,7 +6,8 @@ import errorUrl from '../images/catch-error-pagination.jpg';
 
 const listElement = document.querySelector('.js-card');
 const logoEl = document.querySelector('.js-main-logo');
-const warningField = document.querySelector('.header-warning');
+const warningField = document.querySelector('.js-warning');
+const searchResField = document.querySelector('.js-search-results');
 const newApiService = new NewApiService();
 
 render();
@@ -24,6 +25,7 @@ function onLogoClick(e) {
 // renders main (first) page
 export function render() {
   warningField.textContent = ``;
+  searchResField.textContent = ``;
   newApiService.page = 1;
   newApiService
     .insertGenresToMovieObj()
