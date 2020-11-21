@@ -8,71 +8,11 @@ const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
 const warningField = document.querySelector('.header-warning');
 let currentPage = 1;
+let pageCount;
 const pagesOnWindow = 5;
 let rows = 20;
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
-
-// Вова, комменты не снимай, рендер выведен в отдельные модули
-
-// fetchDataOfPopularFilms();
-
-// function fetchDataOfPopularFilms() {
-//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US`;
-//   return fetch(url)
-//     .then((response) => {
-//       return response.json();
-//     })
-//     .then((results) => {
-//       renderPagination(results.total_pages, results.results, displayList);
-//     });
-// }
-
-// function fetchPopularFilmsByPage(page) {
-//   const url = `${BASE_URL}/movie/popular?api_key=${KEY}&language=en-US&page=${page}`;
-//   return fetch(url)
-//     .then((response) => response.json())
-//     .then(({ results }) => {
-//       return results;
-//     });
-// }
-
-// function fetchSearchFilmsByPage(page, searchQuery) {
-//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&language=en-US&page=${page}&include_adult=false&query=${searchQuery}`;
-//   return fetch(url)
-//     .then(response => response.json())
-//     .then(({ results }) => {
-//       return results;
-//     });
-// }
-
-// function fetchFilmsSearch(searchQuery) {
-//   const url = `${BASE_URL}/search/movie?api_key=${KEY}&query=${searchQuery}`;
-//   return fetch(url)
-//     .then(response => response.json())
-//     .then(results => {
-//       renderPagination(
-//         results.total_pages,
-//         results.results,
-//         displaySearchListByPage,
-//         searchQuery,
-//       );
-//     });
-// }
-
-// function renderFilmsCard(articles) {
-//   listElement.innerHTML = filmsCardTpl(articles);
-// }
-
-// function displayList(wrapper, page) {
-//   wrapper.innerHTML = '';
-//   fetchPopularFilmsByPage(page).then(renderFilmsCard);
-// }
-
-// function displaySearchListByPage(wrapper, page, searchQuery) {
-//   wrapper.innerHTML = '';
-//   fetchSearchFilmsByPage(page, searchQuery).then(renderFilmsCard);
-// }
 
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
@@ -81,7 +21,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   function setupPagination(items, wrapper, rowsPerPage) {
     wrapper.innerHTML = '';
 
-    let pageCount = totalPages;
+    pageCount = totalPages;
     let maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
     let maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
 
@@ -137,6 +77,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
         wrapper.insertBefore(threeDotsEl, wrapper[1]);
       }
     }
+
     placeholder.spinner.close();
   }
 
@@ -177,6 +118,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+    disableArrowBtn(totalPages);
     hideExtremeButtons(totalPages);
   }
 
@@ -187,19 +129,22 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+    disableArrowBtn(totalPages);
     hideExtremeButtons(totalPages);
   }
 
   setupPagination(listItems, paginationElement, rows);
   arrowLeft.addEventListener('click', onArrowLeftClick);
   arrowRight.addEventListener('click', onArrowRightClick);
+
   hideExtremeButtons(totalPages);
+  disableArrowBtn(totalPages);
 }
 
 function hideExtremeButtons(totalPages) {
   if (
     /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent,
+      navigator.userAgent
     )
   ) {
     // код для мобильных устройств
@@ -215,5 +160,29 @@ function hideExtremeButtons(totalPages) {
     } else {
       allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
     }
+  }
+}
+
+paginationElement.addEventListener('click', disableArrowBtnAfterPageClick);
+
+function disableArrowBtnAfterPageClick(e) {
+  if (e.target.tagName != 'BUTTON') {
+    return;
+  } else {
+    disableArrowBtn(pageCount);
+  }
+}
+
+function disableArrowBtn(totalPages) {
+  if (currentPage === 1) {
+    arrowLeft.classList.add('disabled-arrow');
+  } else {
+    arrowLeft.classList.remove('disabled-arrow');
+  }
+
+  if (currentPage === totalPages) {
+    arrowRight.classList.add('disabled-arrow');
+  } else {
+    arrowRight.classList.remove('disabled-arrow');
   }
 }

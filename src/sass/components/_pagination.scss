@@ -45,6 +45,7 @@
         line-height: 1.33;
         font-style: normal;
         background-color: #FFF;
+
     }
 
     button:hover {
@@ -59,6 +60,24 @@
         border-radius: 5px;
     }
 }
+
+
+@media screen and (max-width: 400px) {
+    .pagenumbers button {
+        width: 38px;
+        height: 38px;
+        margin: 3px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .pagenumbers button {
+        width: 35px;
+        height: 35px;
+        margin: 1px;
+    }
+}
+
 
 .arrow_left {
     background-image: url('../../src/images/pagination/arrow-left.svg');
@@ -125,4 +144,9 @@
 
 .hide {
     display: none;
+}
+
+.disabled-arrow {
+    pointer-events: none;
+    background-color: #c4c0c0;
 }
