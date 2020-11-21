@@ -50,6 +50,12 @@
 }
 
 // from trailler
+
+.slider-card .btn-youtube {
+    width: 100px;
+
+}
+
 .slider-card .overlay-btn-youtube-text {
   position: absolute;
   display: flex;
@@ -57,7 +63,7 @@
   justify-content: center;
   flex-direction: column;
   height: 19px;
-  width: 110px;
+  width: 70px;
 
   pointer-events: none;
   font-family: 'Roboto', sans-serif;
@@ -66,7 +72,7 @@
 
   border-radius: 5px;
   top: 5px;
-  left: 100px;
+  left: 75px;
   z-index: 2;
   opacity: 0;
   transform: translateX(-63%);

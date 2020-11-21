@@ -9,7 +9,7 @@ const glide = new Glide('.glide', {
   startAt: 0,
   focusAt: 'center',
   perView: 8,
-  autoplay: 1500,
+  autoplay: 2000,
   hoverpause: true,
   bound: true,
   peek: '200px',
