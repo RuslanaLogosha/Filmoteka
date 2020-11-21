@@ -14,9 +14,15 @@ let rows = 20;
 const BASE_URL = `https://api.themoviedb.org/3`;
 const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 
+function resetCurrentPage() {
+  currentPage = 1;
+}
+
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
-  currentPage = 1;
+  resetCurrentPage();
+  arrowLeft.removeEventListener('click', onArrowLeftClick);
+  arrowRight.removeEventListener('click', onArrowRightClick);
 
   function setupPagination(items, wrapper, rowsPerPage) {
     wrapper.innerHTML = '';
@@ -118,6 +124,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
     }
+
     disableArrowBtn(totalPages);
     hideExtremeButtons(totalPages);
   }
@@ -134,8 +141,8 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   }
 
   setupPagination(listItems, paginationElement, rows);
-  arrowLeft.addEventListener('click', onArrowLeftClick);
-  arrowRight.addEventListener('click', onArrowRightClick);
+  arrowLeft.onclick = onArrowLeftClick;
+  arrowRight.onclick = onArrowRightClick;
 
   hideExtremeButtons(totalPages);
   disableArrowBtn(totalPages);
