@@ -15,7 +15,7 @@ JavaScript (%)....
 - [Daria Churkina](https://www.linkedin.com/in/daria-churkina-823a4b108/)
 - [Aleksandr Mukomelov](https://www.linkedin.com/in/aleksandr-mukomelov-b9799155/)
 - [Vladimir Ivanchenko](https://www.linkedin.com/in/vladimir-ivanchenko/)
-- [Kateryna Urbanovych] (https://github.com/Kateryna-Urbanovych)
+- [Kateryna Urbanovych](https://github.com/Kateryna-Urbanovych)
 
 ### Prerequisites
 
