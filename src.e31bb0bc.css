@@ -596,6 +596,7 @@ html {
 .storage__input:checked ~ .storage__btn {
   background-color: #ff6b08;
   border: 1px solid #ff6b08;
+  color: #ffffff;
 }
 
 .storage__input ~ .storage__btn {
@@ -916,10 +917,10 @@ footer {
   background-color: #c4c0c0;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .modal-card {
     background-color: #ffffff;
-    width: 300px;
+    width: 320px;
     margin-top: 450px;
   }
 }
@@ -935,6 +936,12 @@ footer {
   width: 260px;
   height: 404px;
   border-radius: 5px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .image {
+    width: 280px;
+    height: 416px;
+  }
 }
 
 .cardItem__wrapper {
@@ -953,18 +960,12 @@ footer {
 }
 
 .cardItem__wrapper p {
-  display: flex;
   font-size: 12px;
   font-weight: 500;
   font-family: "Roboto";
   line-height: 1.333;
   margin-bottom: 18px;
   letter-spacing: 1px;
-}
-
-.cardItem__genreList {
-  list-style: disc;
-  display: block;
 }
 
 .cardItem_text {
@@ -1005,7 +1006,7 @@ footer {
 }
 
 .cardItem__title_data {
-  margin-left: 45px;
+  margin-left: 46px;
   text-transform: uppercase;
   color: black;
   font-weight: 500;
@@ -1015,16 +1016,22 @@ footer {
   display: inline-block;
   margin-right: 90px;
 }
-
-.cardItem__genreList {
-  display: inline-block;
-  width: 135px;
-  font-weight: 500;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .cardItem__genre {
+    margin-right: 90px;
+  }
 }
 
 .cardItem__genre_data {
   color: black;
   margin-right: 5px;
+}
+
+.cardItem__genreList {
+  list-style: disc;
+  display: block;
+  flex-wrap: wrap;
+  list-style: disc;
 }
 
 .cardItem__about {
@@ -1036,11 +1043,6 @@ footer {
 .cardItem__description {
   font-size: 11px;
   color: black;
-}
-
-.cardItem__listButton {
-  display: flex;
-  text-align: center;
 }
 
 .cardItem__button {
@@ -1104,10 +1106,6 @@ footer {
     font-size: 25px;
     line-height: 35px;
   }
-
-  .cardItem__button:not(:last-child) {
-    margin-right: 16px;
-  }
 }
 @media (min-width: 1024px) {
   .modal-card {
@@ -1131,10 +1129,6 @@ footer {
 
   .cardItem__genreList {
     width: 290px;
-  }
-
-  .cardItem__button {
-    width: 170px;
   }
 }
 .basicLightbox {
@@ -1592,6 +1586,11 @@ footer {
   background-color: #f7f7f7;
   padding-bottom: 20px;
   font-size: 13px;
+}
+@media screen and (max-width: 1023px) {
+  .slider-wrapper {
+    display: none;
+  }
 }
 
 .glide__arrow {

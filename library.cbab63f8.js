@@ -2386,7 +2386,7 @@ const templateFunction = _handlebars.default.template({
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">add to watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">add to queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
   },
   "useData": true
 });
@@ -4334,7 +4334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51165" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51593" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
