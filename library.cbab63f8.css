@@ -835,6 +835,20 @@ footer {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 400px) {
+  .pagenumbers button {
+    width: 38px;
+    height: 38px;
+    margin: 3px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .pagenumbers button {
+    width: 35px;
+    height: 35px;
+    margin: 1px;
+  }
+}
 .arrow_left {
   background-image: url("/arrow-left.62ff9ef7.svg");
   background-repeat: no-repeat;
@@ -895,6 +909,11 @@ footer {
 }
 .hide {
   display: none;
+}
+
+.disabled-arrow {
+  pointer-events: none;
+  background-color: #c4c0c0;
 }
 
 @media screen and (min-width: 320px) {
