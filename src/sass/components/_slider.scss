@@ -1,5 +1,10 @@
-@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
-@import 'node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.slider-wrapper {
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 20px;
+}
 
 .glide__arrow {
   background-color: $accentColor;
@@ -10,9 +15,14 @@
 }
 
 .slider-title {
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
-  color: $textColor;
+  color: $dark;
+
+  font-family: $mainFont;
+  font-size: 14px;
+  line-height: 1.12;
 }
 
 .slider-image {

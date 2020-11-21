@@ -7,9 +7,11 @@ renderTrendy();
 const glide = new Glide('.glide', {
   type: 'carousel',
   startAt: 0,
-  perView: 5,
-  autoplay: 2000,
+  focusAt: 'center',
+  perView: 8,
+  autoplay: 1500,
   hoverpause: true,
+  bound: true,
   peek: '200px',
 });
 
