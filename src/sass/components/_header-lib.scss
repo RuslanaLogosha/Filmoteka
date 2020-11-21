@@ -118,6 +118,7 @@
 .storage__input:checked ~ .storage__btn {
   background-color: $accentColor;
   border: 1px solid $accentColor;
+  color: $white;
 }
 
 //добавила для кнопок в модальном окне
