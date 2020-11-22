@@ -2386,7 +2386,7 @@ const templateFunction = _handlebars.default.template({
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"modal-close-btn\">Close</div>\n</div>";
   },
   "useData": true
 });
@@ -2564,6 +2564,8 @@ function openModal(e) {
     const markup = (0, _modalFilmCard.default)(data);
     const modal = basicLightbox.create(markup);
     modal.show();
+    const closeBtn = document.querySelector('.modal-close-btn');
+    closeBtn.addEventListener('click', closeModal);
     window.addEventListener('keydown', closeModalHandler);
 
     function closeModalHandler(e) {
@@ -2571,6 +2573,11 @@ function openModal(e) {
         modal.close();
         window.removeEventListener('keydown', closeModalHandler);
       }
+    }
+
+    function closeModal(e) {
+      modal.close();
+      window.removeEventListener('keydown', closeModalHandler);
     } //new Function
 
 
@@ -3075,6 +3082,10 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
       _spinner.default.spinner.show();
 
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
       let current_btn = document.querySelector('.pagenumbers button.active');
@@ -8451,7 +8462,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61730" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65192" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
