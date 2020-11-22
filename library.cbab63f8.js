@@ -3971,7 +3971,8 @@ const getMovies = async idList => {
 
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
-  cardLibrary: document.querySelector('.js-card-library')
+  cardLibrary: document.querySelector('.js-card-library'),
+  paginationContainer: document.querySelector('.pagination__container')
 };
 getCurrentLibrary();
 renderMovies();
@@ -3990,12 +3991,14 @@ function renderMovies() {
 
     getMovies(idList.slice(0, 20)).then(moviesArray => {
       renderMarkup(moviesArray);
+      refs.paginationContainer.style.display = 'block';
       fetchDataOfLibFilms();
 
       _spinner.default.spinner.close();
     });
   } else {
     refs.cardLibrary.innerHTML = "<img src=\"".concat(_nothingHere.default, "\" alt=\"There is nothing\" />");
+    refs.paginationContainer.style.display = 'none';
   }
 }
 
@@ -4568,7 +4571,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56155" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56517" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

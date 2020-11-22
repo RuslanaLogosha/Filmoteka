@@ -6439,7 +6439,7 @@ function Clones(Glide, Components, Events) {
       }
 
       for (var _i2 = 0; _i2 < prepend.length; _i2++) {
-        wrapper.insertBefore(prepend[_i2], slides[0]);
+        wrapper.appendChild(prepend[_i2], slides[0]);
       }
 
       for (var _i3 = 0; _i3 < items.length; _i3++) {
@@ -8450,7 +8450,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56155" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56517" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -788,6 +788,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 }
 .pagination__container .list {
   width: 100%;
@@ -1374,8 +1375,8 @@ footer {
 
 .lightbox__button {
   position: absolute;
-  top: 60px;
-  right: 20px;
+  top: 200px;
+  right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1402,6 +1403,26 @@ footer {
   background-color: #FF6B08;
 }
 
+@media screen and (min-width: 768px) {
+  .lightbox__button {
+    right: 90px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lightbox__button {
+    right: 215px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .lightbox__button {
+    right: 350px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .lightbox__button {
+    right: 500px;
+  }
+}
 .up-btn-wrapper {
   position: fixed;
   bottom: 39px;
