@@ -9,12 +9,6 @@ import { renderPagination } from './pagination';
 const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
 const USER_POINT_STORAGE_NAME = 'user';
 
-const idArray = localStorageApi.getMovies(getCheckedLiblary());
-const totalLibPages = Math.ceil(
-  localStorageApi.getMovies(getCheckedLiblary()).length / 20,
-);
-const libPages = [];
-
 const getMovies = async idList => {
   const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 
@@ -38,7 +32,6 @@ const refs = {
 
 getCurrentLibrary();
 renderMovies();
-fetchDataOfLibFilms();
 
 refs.storageList.addEventListener('change', renderMovies);
 
@@ -51,8 +44,9 @@ function renderMovies() {
 
   if (idList.length) {
     placeholder.spinner.show();
-    getMovies(idList).then(moviesArray => {
+    getMovies(idList.slice(0, 20)).then(moviesArray => {
       renderMarkup(moviesArray);
+      fetchDataOfLibFilms();
       placeholder.spinner.close();
     });
   } else {
@@ -82,10 +76,6 @@ function saveCurrentLibrary(currentLibrary) {
 
 // pagination
 
-for (let i = 0; i <= totalLibPages; i += 20) {
-  libPages.push(i / 20);
-}
-
 // renders main (first) page = renderMovies
 
 // function for insertion of markup = renderMarkup(moviesArray)
@@ -95,7 +85,6 @@ function displayLibList(wrapper, page) {
   wrapper.innerHTML = '';
   fetchLibFilmsByPage(page).catch(err => {
     console.log('error in function displayList');
-    listElement.innerHTML = `<img class="catch-error-pagination" src="${errorUrl}" />`;
   });
 }
 
@@ -104,16 +93,10 @@ function fetchLibFilmsByPage(page) {
   const key = getCheckedLiblary();
   const idList = localStorageApi.getMovies(key);
 
-  console.log(idList);
-  console.log(page);
-  console.log(idList.slice(20, 40));
-
   const requiredPageIdList = idList.slice(
     (page - 1) * 20,
     (page - 1) * 20 + 20,
   );
-
-  console.log(requiredPageIdList);
 
   placeholder.spinner.show();
   return getMovies(requiredPageIdList).then(moviesArray => {
@@ -124,5 +107,9 @@ function fetchLibFilmsByPage(page) {
 
 // renders pagination for main (first) fetch // оставить рендер пагинации
 export function fetchDataOfLibFilms() {
+  const totalLibPages = Math.ceil(
+    localStorageApi.getMovies(getCheckedLiblary()).length / 20,
+  );
+
   renderPagination(totalLibPages, null, displayLibList);
 }
