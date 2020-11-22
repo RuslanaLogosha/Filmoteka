@@ -1,7 +1,7 @@
 import filmsCardTpl from '../templates/card-films.hbs';
 import NewApiService from './apiServis';
 import { renderPagination } from './pagination';
-import createTrailerLink from './trailers.js';
+import trailer from './trailers.js';
 import errorUrl from '../images/catch-error-pagination.jpg';
 
 const listElement = document.querySelector('.js-card');
@@ -51,7 +51,7 @@ export function renderOnSearchMistake() {
 // function for insertion of markup
 function renderFilmsCard(articles) {
   listElement.innerHTML = filmsCardTpl(articles);
-  createTrailerLink();
+  trailer.createTrailerLink(document.querySelectorAll('.btn-youtube'));
 }
 
 // renders movies by appropriate page

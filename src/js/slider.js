@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide';
 import filmsCardSliderTpl from '../templates/card-films-slider.hbs';
-import createTrailerLink from './trailers.js';
+import trailer from './trailers.js';
 const sliderContainer = document.querySelector('.js-slider-container');
 renderTrendy();
 
@@ -30,4 +30,5 @@ function renderTrendy() {
 
 function renderSliderFilms(articles) {
   sliderContainer.innerHTML = filmsCardSliderTpl(articles);
+  trailer.createTrailerLink(document.querySelectorAll('.btn-youtube-slider'));
 }
