@@ -121,6 +121,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   function onArrowLeftClick() {
     if (currentPage > 1) {
       placeholder.spinner.show();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       currentPage--;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
@@ -134,6 +135,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   function onArrowRightClick() {
     if (currentPage < totalPages) {
       placeholder.spinner.show();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       currentPage++;
       setupPagination(listItems, paginationElement, rows);
       callback(listElement, currentPage, searchQuery);
