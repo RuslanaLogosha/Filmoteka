@@ -47,12 +47,13 @@ function renderMovies() {
     placeholder.spinner.show();
     getMovies(idList.slice(0, 20)).then(moviesArray => {
       renderMarkup(moviesArray);
+      refs.paginationContainer.style.display = 'block';
       fetchDataOfLibFilms();
       placeholder.spinner.close();
     });
   } else {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
-    refs.paginationContainer.innerHTML = '';
+    refs.paginationContainer.style.display = 'none';
   }
 }
 function getCheckedLiblary() {
