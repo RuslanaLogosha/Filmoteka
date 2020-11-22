@@ -28,6 +28,7 @@ const getMovies = async idList => {
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card-library'),
+  paginationContainer: document.querySelector('.pagination__container'),
 };
 
 getCurrentLibrary();
@@ -51,6 +52,7 @@ function renderMovies() {
     });
   } else {
     refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
+    refs.paginationContainer.innerHTML = '';
   }
 }
 function getCheckedLiblary() {
