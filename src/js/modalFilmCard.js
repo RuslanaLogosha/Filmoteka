@@ -10,6 +10,7 @@ import { initStorageBtns } from './initStorageInModal';
 const apiKey = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 
 const cardFilm = document.querySelector('.card__colection');
+
 cardFilm.addEventListener('click', openModal);
 
 function fetchOneMovieInfo(movie_id) {
@@ -34,6 +35,9 @@ function openModal(e) {
 
       modal.show();
 
+      const closeBtn = document.querySelector('.modal-close-btn');
+      closeBtn.addEventListener('click', closeModal);
+
       window.addEventListener('keydown', closeModalHandler);
 
       function closeModalHandler(e) {
@@ -41,6 +45,11 @@ function openModal(e) {
           modal.close();
           window.removeEventListener('keydown', closeModalHandler);
         }
+      }
+
+      function closeModal(e) {
+        modal.close();
+        window.removeEventListener('keydown', closeModalHandler);
       }
 
       //new Function

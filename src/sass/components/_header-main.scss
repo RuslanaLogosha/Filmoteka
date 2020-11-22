@@ -88,8 +88,21 @@
 
   color: $white;
 
+  @include transition(border-bottom);
+
   &::placeholder {
     color: $white;
+
+    @include transition(color);
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $accentColor;
+
+    &::placeholder {
+      color: $accentColor;
+    }
   }
 }
 
@@ -112,6 +125,12 @@
   border: transparent;
 
   color: $white;
+
+  @include transition(color);
+
+  .search-field:focus ~ & {
+    color: $accentColor;
+  }
 }
 
 // warning
