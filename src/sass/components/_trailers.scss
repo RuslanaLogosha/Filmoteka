@@ -1,109 +1,109 @@
 .btn-youtube {
-    position: absolute;
-    z-index: 1;
-    
-    width: 275px;
-    height: 40px;
-    margin-left: 2px;
-    background-repeat: no-repeat;
-    cursor: pointer;
+  position: absolute;
+  z-index: 1;
 
-    border: 0;
-    outline: none;
-    background-image: url("../images/icons8-play-button-2.svg");
-    background-color: transparent;
+  width: 275px;
+  height: 40px;
+  margin-left: 2px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  border: 0;
+  outline: none;
+  background-image: url('../images/icons8-play-button-2.svg');
+  background-color: transparent;
 }
 
 .btn-youtube-text {
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    color: #c4302b;
-    cursor: pointer;
-    margin: 0;
-    z-index: 5;
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #c4302b;
+  cursor: pointer;
+  margin: 0;
+  z-index: 5;
 }
 
 .card__film .overlay-btn-youtube-text {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 25px;
-    width: 230px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25px;
+  width: 230px;
 
-    pointer-events: none;
-    font-family: 'Roboto', sans-serif;
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
 
-    background-color: rgba(255, 255, 255, 0.8);
-    
-    border-radius: 5px;
-    top: 3px;
-    left: 180px;
-    z-index: 2;
-    opacity: 0;
-    transform: translateX(-63%);
-    transition: all 400ms ease-in;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  border-radius: 5px;
+  top: 3px;
+  left: 180px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-63%);
+  transition: all 400ms ease-in;
 }
 
 .card__film:hover .overlay-btn-youtube-text {
-    display: flex;
-    opacity: 1;
-    transform: translateX(-63%);
+  display: flex;
+  opacity: 1;
+  transform: translateX(-63%);
 }
 
 .lightbox__button {
-    position: absolute;
-    top: 200px;
-    right: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    border-radius: 50%;
-    background-color: transparent;
-    color: #FFF;
-    cursor: pointer;
-    transition: background-color 200ms ease-in-out;
-    outline: none;
-    background-image: url("../images/icon-close.svg");
-    background-position: center;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    transition: all 300ms ease-in;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  outline: none;
+  background-image: url('../images/icon-close.svg');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  //   transition: all 300ms ease-in;
 }
 
 .lightbox__button:hover,
 .lightbox__button:focus {
-    background-color: #FF6B08;
+  background-color: #ff6b08;
 }
 
-
 @media screen and (min-width: 768px) {
-    .lightbox__button {
-        right: 90px;
-    }
+  .lightbox__button {
+    top: 100px;
+    right: calc(((100vw - 668px) / 2));
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .lightbox__button {
-        right: 215px;
-    }
+  .lightbox__button {
+    top: 100px;
+    right: calc(((100vw - 824px) / 2));
+  }
 }
 
-@media screen and (min-width: 1280px) {
-    .lightbox__button {
-        right: 350px;
-    }
-}
+// @media screen and (min-width: 1280px) {
+//   .lightbox__button {
+//     right: 350px;
+//   }
+// }
 
-@media screen and (min-width: 1600px) {
-    .lightbox__button {
-        right: 500px;
-    }
-}
+// @media screen and (min-width: 1600px) {
+//   .lightbox__button {
+//     right: 500px;
+//   }
+// }
