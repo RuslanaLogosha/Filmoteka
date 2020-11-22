@@ -3134,22 +3134,24 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
 
 function hideExtremeButtons(totalPages) {
-  if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // код для мобильных устройств
-    const allPaginationBtns = document.querySelectorAll('#pagination button');
+  try {
+    if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      // код для мобильных устройств
+      const allPaginationBtns = document.querySelectorAll('#pagination button');
 
-    if (currentPage > 3) {
-      allPaginationBtns[0].classList.add('hide');
-    } else {
-      allPaginationBtns[0].classList.remove('hide');
-    }
+      if (currentPage > 3) {
+        allPaginationBtns[0].classList.add('hide');
+      } else {
+        allPaginationBtns[0].classList.remove('hide');
+      }
 
-    if (currentPage < totalPages - 3) {
-      allPaginationBtns[allPaginationBtns.length - 1].classList.add('hide');
-    } else {
-      allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
+      if (currentPage < totalPages - 3) {
+        allPaginationBtns[allPaginationBtns.length - 1].classList.add('hide');
+      } else {
+        allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
+      }
     }
-  }
+  } catch (error) {}
 }
 
 paginationElement.addEventListener('click', disableArrowBtnAfterPageClick);
@@ -8383,14 +8385,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const sliderContainer = document.querySelector('.js-slider-container');
 renderTrendy();
 const glide = new _glide.default('.glide', {
-  type: 'carousel',
+  type: 'slider',
   startAt: 0,
-  focusAt: 'center',
   perView: 8,
   autoplay: 2000,
   hoverpause: true,
-  bound: true,
-  peek: '200px'
+  bound: true
 });
 glide.mount();
 
@@ -8462,7 +8462,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65192" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59575" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
