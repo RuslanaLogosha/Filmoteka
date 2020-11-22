@@ -1,6 +1,4 @@
-import filmsCardTpl from '../templates/card-films.hbs';
 import placeholder from './spinner';
-import createTrailerLink from './trailers.js';
 
 const listElement = document.querySelector('.js-card');
 const paginationElement = document.getElementById('pagination');
@@ -11,13 +9,12 @@ let currentPage = 1;
 let pageCount;
 const pagesOnWindow = 5;
 let rows = 20;
-const BASE_URL = `https://api.themoviedb.org/3`;
-const KEY = `d91911ebb88751cf9e5c4b8fdf4412c9`;
 
 function resetCurrentPage() {
   currentPage = 1;
 }
 
+// главная функция для рендера pagination. Callback - функция для работы с fetch (зависит от раздела, где рисуем pagination)
 export function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
   resetCurrentPage();
@@ -61,6 +58,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
         wrapper.appendChild(btn);
       }
 
+      // добавляет троеточие в pagination в зависимости от текущей страницы и общего к-ва страниц
       if (
         totalPages >= 6 &&
         i == 1 &&
@@ -87,6 +85,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     placeholder.spinner.close();
   }
 
+  // создает троеточия для pagination
   function addThreeDotsBlock() {
     const threeDots = document.createElement('div');
     threeDots.classList.add('threeDots');
@@ -117,6 +116,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     return button;
   }
 
+  // ф-кция для отслеживания кликов по стрелке влево
   function onArrowLeftClick() {
     if (currentPage > 1) {
       placeholder.spinner.show();
@@ -129,6 +129,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     hideExtremeButtons(totalPages);
   }
 
+  // ф-кция для отслеживания кликов по стрелке вправо
   function onArrowRightClick() {
     if (currentPage < totalPages) {
       placeholder.spinner.show();
@@ -148,10 +149,11 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
   disableArrowBtn(totalPages);
 }
 
+// прячет первую и последнюю страницу по бокам для мобильных гаджетов с маленьким экраном
 function hideExtremeButtons(totalPages) {
   if (
     /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent,
+      navigator.userAgent
     )
   ) {
     // код для мобильных устройств
@@ -180,6 +182,7 @@ function disableArrowBtnAfterPageClick(e) {
   }
 }
 
+// делает неактивными кнопки-стрелки на первой и последней  странице
 function disableArrowBtn(totalPages) {
   if (currentPage === 1) {
     arrowLeft.classList.add('disabled-arrow');
