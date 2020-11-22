@@ -5,14 +5,12 @@ const sliderContainer = document.querySelector('.js-slider-container');
 renderTrendy();
 
 const glide = new Glide('.glide', {
-  type: 'carousel',
+  type: 'slider',
   startAt: 0,
-  focusAt: 'center',
   perView: 8,
   autoplay: 2000,
   hoverpause: true,
   bound: true,
-  peek: '200px',
 });
 
 glide.mount();
