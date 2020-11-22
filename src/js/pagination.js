@@ -102,6 +102,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
     button.addEventListener('click', function () {
       warningField.textContent = ``;
       placeholder.spinner.show();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       currentPage = page;
       callback(listElement, currentPage, searchQuery);
 
@@ -153,7 +154,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 function hideExtremeButtons(totalPages) {
   if (
     /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
+      navigator.userAgent,
     )
   ) {
     // код для мобильных устройств

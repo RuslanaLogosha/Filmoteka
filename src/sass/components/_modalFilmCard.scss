@@ -1,5 +1,7 @@
-@media screen and (max-width: 767px) {
-  .modal-close-btn {
+.modal-close-btn {
+  display: none;
+
+  @media screen and (max-width: 767px) {
     position: absolute;
     top: -30px;
     left: 0;
