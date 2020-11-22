@@ -1,5 +1,5 @@
 import regeneratorRuntime from 'regenerator-runtime';
-import createTrailerLink from './trailers.js';
+import trailer from './trailers.js';
 import nothingHereUrl from '../images/nothingHere.jpg';
 import placeholder from './spinner';
 import localStorageApi from './localStorageApi';
@@ -62,7 +62,7 @@ function getCheckedLiblary() {
 }
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
-  createTrailerLink();
+  trailer.createTrailerLink(document.querySelectorAll('.btn-youtube'));
 }
 
 function getCurrentLibrary() {
