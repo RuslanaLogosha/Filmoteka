@@ -2386,7 +2386,7 @@ const templateFunction = _handlebars.default.template({
           "column": 24
         }
       }
-    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">add to watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">add to queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
+    }) : helper)) + "\n        </p>\n        <div class=\"cardItem__listButton\">\n            <ul class=\"storage\">\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Watched\" class=\"storage__input visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-WatchedButton\">Watched</span>\n                    </label>\n                </li>\n                <li class=\"storage__item\">\n                    <label class=\"storage__label \">\n                        <input type=\"checkbox\" value=\"Queue\" class=\"storage__input  visuallyhidden\" />\n                        <span class=\"storage__btn\" id=\"js-QueueButton\">Queue</span>\n                    </label>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>";
   },
   "useData": true
 });
@@ -3740,8 +3740,204 @@ const templateFunction = _handlebars.default.template({
 
 var _default = templateFunction;
 exports.default = _default;
-},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/myLibrary.js":[function(require,module,exports) {
+},{"handlebars/dist/handlebars.runtime":"../node_modules/handlebars/dist/handlebars.runtime.js"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.renderPagination = renderPagination;
+
+var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
+
+var _spinner = _interopRequireDefault(require("./spinner"));
+
+var _trailers = _interopRequireDefault(require("./trailers.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const listElement = document.querySelector('.js-card');
+const paginationElement = document.getElementById('pagination');
+const arrowLeft = document.querySelector('.arrow_left');
+const arrowRight = document.querySelector('.arrow_right');
+const warningField = document.querySelector('.header-warning');
+let currentPage = 1;
+let pageCount;
+const pagesOnWindow = 5;
+let rows = 20;
+const BASE_URL = "https://api.themoviedb.org/3";
+const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
+
+function resetCurrentPage() {
+  currentPage = 1;
+}
+
+function renderPagination(totalPages, listItems, callback, searchQuery) {
+  paginationElement.innerHTML = '';
+  resetCurrentPage();
+  arrowLeft.removeEventListener('click', onArrowLeftClick);
+  arrowRight.removeEventListener('click', onArrowRightClick);
+
+  function setupPagination(items, wrapper, rowsPerPage) {
+    wrapper.innerHTML = '';
+    pageCount = totalPages;
+    let maxLeftPage = currentPage - Math.floor(pagesOnWindow / 2);
+    let maxRightPage = currentPage + Math.floor(pagesOnWindow / 2);
+
+    if (maxLeftPage < 1) {
+      maxLeftPage = 1;
+      maxRightPage = pagesOnWindow;
+    }
+
+    if (maxRightPage > totalPages) {
+      maxLeftPage = totalPages - (pagesOnWindow - 1);
+
+      if (maxLeftPage < 1) {
+        maxLeftPage = 1;
+      }
+
+      maxRightPage = totalPages;
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (maxLeftPage !== 1 && i == 1) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (maxRightPage !== totalPages && i == totalPages) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (i >= maxLeftPage && i <= maxRightPage) {
+        let btn = paginationButton(i, items);
+        wrapper.appendChild(btn);
+      }
+
+      if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
+        const threeDotsEl = addThreeDotsBlock();
+        wrapper.insertBefore(threeDotsEl, wrapper[wrapper.length - 2]);
+      }
+
+      if (pageCount >= 7 && i == pageCount - 1 && currentPage !== pageCount && currentPage !== pageCount - 2 && currentPage !== pageCount - 1) {
+        const threeDotsEl = addThreeDotsBlock();
+        wrapper.insertBefore(threeDotsEl, wrapper[1]);
+      }
+    }
+
+    _spinner.default.spinner.close();
+  }
+
+  function addThreeDotsBlock() {
+    const threeDots = document.createElement('div');
+    threeDots.classList.add('threeDots');
+    threeDots.innerText = '...';
+    return threeDots;
+  }
+
+  function paginationButton(page, items) {
+    let button = document.createElement('button');
+    button.innerText = page;
+    if (currentPage == page) button.classList.add('active');
+    button.addEventListener('click', function () {
+      warningField.textContent = "";
+
+      _spinner.default.spinner.show();
+
+      currentPage = page;
+      callback(listElement, currentPage, searchQuery);
+      let current_btn = document.querySelector('.pagenumbers button.active');
+      current_btn.classList.remove('active');
+      button.classList.add('active');
+      setupPagination(listItems, paginationElement, rows);
+      hideExtremeButtons(totalPages);
+    });
+    return button;
+  }
+
+  function onArrowLeftClick() {
+    if (currentPage > 1) {
+      _spinner.default.spinner.show();
+
+      currentPage--;
+      setupPagination(listItems, paginationElement, rows);
+      callback(listElement, currentPage, searchQuery);
+    }
+
+    disableArrowBtn(totalPages);
+    hideExtremeButtons(totalPages);
+  }
+
+  function onArrowRightClick() {
+    if (currentPage < totalPages) {
+      _spinner.default.spinner.show();
+
+      currentPage++;
+      setupPagination(listItems, paginationElement, rows);
+      callback(listElement, currentPage, searchQuery);
+    }
+
+    disableArrowBtn(totalPages);
+    hideExtremeButtons(totalPages);
+  }
+
+  setupPagination(listItems, paginationElement, rows);
+  arrowLeft.onclick = onArrowLeftClick;
+  arrowRight.onclick = onArrowRightClick;
+  hideExtremeButtons(totalPages);
+  disableArrowBtn(totalPages);
+}
+
+function hideExtremeButtons(totalPages) {
+  if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // код для мобильных устройств
+    const allPaginationBtns = document.querySelectorAll('#pagination button');
+
+    if (currentPage > 3) {
+      allPaginationBtns[0].classList.add('hide');
+    } else {
+      allPaginationBtns[0].classList.remove('hide');
+    }
+
+    if (currentPage < totalPages - 3) {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.add('hide');
+    } else {
+      allPaginationBtns[allPaginationBtns.length - 1].classList.remove('hide');
+    }
+  }
+}
+
+paginationElement.addEventListener('click', disableArrowBtnAfterPageClick);
+
+function disableArrowBtnAfterPageClick(e) {
+  if (e.target.tagName != 'BUTTON') {
+    return;
+  } else {
+    disableArrowBtn(pageCount);
+  }
+}
+
+function disableArrowBtn(totalPages) {
+  if (currentPage === 1) {
+    arrowLeft.classList.add('disabled-arrow');
+  } else {
+    arrowLeft.classList.remove('disabled-arrow');
+  }
+
+  if (currentPage === totalPages) {
+    arrowRight.classList.add('disabled-arrow');
+  } else {
+    arrowRight.classList.remove('disabled-arrow');
+  }
+}
+},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"js/myLibrary.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchDataOfLibFilms = fetchDataOfLibFilms;
 
 var _regeneratorRuntime = _interopRequireDefault(require("regenerator-runtime"));
 
@@ -3755,7 +3951,12 @@ var _localStorageApi = _interopRequireDefault(require("./localStorageApi"));
 
 var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
 
+var _pagination = require("./pagination");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
+const USER_POINT_STORAGE_NAME = 'user';
 
 const getMovies = async idList => {
   const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
@@ -3768,8 +3969,6 @@ const getMovies = async idList => {
   return await Promise.all(promises);
 };
 
-const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
-const USER_POINT_STORAGE_NAME = 'user';
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card-library')
@@ -3789,8 +3988,9 @@ function renderMovies() {
   if (idList.length) {
     _spinner.default.spinner.show();
 
-    getMovies(idList).then(moviesArray => {
+    getMovies(idList.slice(0, 20)).then(moviesArray => {
       renderMarkup(moviesArray);
+      fetchDataOfLibFilms();
 
       _spinner.default.spinner.close();
     });
@@ -3820,8 +4020,42 @@ function saveCurrentLibrary(currentLibrary) {
   _localStorageApi.default.save(USER_POINT_STORAGE_NAME, {
     currentLibrary
   });
+} // pagination
+// renders main (first) page = renderMovies
+// function for insertion of markup = renderMarkup(moviesArray)
+// renders movies by appropriate page
+
+
+function displayLibList(wrapper, page) {
+  wrapper.innerHTML = '';
+  fetchLibFilmsByPage(page).catch(err => {
+    console.log('error in function displayList');
+  });
+} // fetches movies by appropriate page
+
+
+function fetchLibFilmsByPage(page) {
+  const key = getCheckedLiblary();
+
+  const idList = _localStorageApi.default.getMovies(key);
+
+  const requiredPageIdList = idList.slice((page - 1) * 20, (page - 1) * 20 + 20);
+
+  _spinner.default.spinner.show();
+
+  return getMovies(requiredPageIdList).then(moviesArray => {
+    renderMarkup(moviesArray);
+
+    _spinner.default.spinner.close();
+  });
+} // renders pagination for main (first) fetch // оставить рендер пагинации
+
+
+function fetchDataOfLibFilms() {
+  const totalLibPages = Math.ceil(_localStorageApi.default.getMovies(getCheckedLiblary()).length / 20);
+  (0, _pagination.renderPagination)(totalLibPages, null, displayLibList);
 }
-},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./trailers.js":"js/trailers.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./spinner":"js/spinner.js","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs"}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
+},{"regenerator-runtime":"../node_modules/regenerator-runtime/runtime.js","./trailers.js":"js/trailers.js","../images/nothingHere.jpg":"images/nothingHere.jpg","./spinner":"js/spinner.js","./localStorageApi":"js/localStorageApi.js","../templates/card-films.hbs":"templates/card-films.hbs","./pagination":"js/pagination.js"}],"../node_modules/lodash.throttle/index.js":[function(require,module,exports) {
 var global = arguments[3];
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -4334,7 +4568,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51620" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56155" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
