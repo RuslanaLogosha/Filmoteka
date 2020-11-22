@@ -53,12 +53,17 @@ export default class NewApiService {
   insertGenresToSearchObj() {
     return this.fetchSearchArticles().then(data => {
       return this.fetchGenres().then(genresList => {
+        let release_date;
         return data.map(movie => ({
           ...movie,
-          release_date: movie.release_date.split('-')[0],
+          release_date: movie.release_date
+            ? movie.release_date.split('-')[0]
+            : 'n/a',
           genres: movie.genre_ids
-            .map(id => genresList.filter(el => el.id === id))
-            .flat(),
+            ? movie.genre_ids
+                .map(id => genresList.filter(el => el.id === id))
+                .flat()
+            : 'n/a',
         }));
       });
     });
