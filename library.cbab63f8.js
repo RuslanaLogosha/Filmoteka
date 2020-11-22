@@ -3748,11 +3748,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.renderPagination = renderPagination;
 
-var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
-
 var _spinner = _interopRequireDefault(require("./spinner"));
-
-var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3765,12 +3761,11 @@ let currentPage = 1;
 let pageCount;
 const pagesOnWindow = 5;
 let rows = 20;
-const BASE_URL = "https://api.themoviedb.org/3";
-const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
 
 function resetCurrentPage() {
   currentPage = 1;
-}
+} // главная функция для рендера pagination. Callback - функция для работы с fetch (зависит от раздела, где рисуем pagination)
+
 
 function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
@@ -3813,7 +3808,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       if (i >= maxLeftPage && i <= maxRightPage) {
         let btn = paginationButton(i, items);
         wrapper.appendChild(btn);
-      }
+      } // добавляет троеточие в pagination в зависимости от текущей страницы и общего к-ва страниц
+
 
       if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
         const threeDotsEl = addThreeDotsBlock();
@@ -3827,7 +3823,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
     }
 
     _spinner.default.spinner.close();
-  }
+  } // создает троеточия для pagination
+
 
   function addThreeDotsBlock() {
     const threeDots = document.createElement('div');
@@ -3854,7 +3851,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       hideExtremeButtons(totalPages);
     });
     return button;
-  }
+  } // ф-кция для отслеживания кликов по стрелке влево
+
 
   function onArrowLeftClick() {
     if (currentPage > 1) {
@@ -3867,7 +3865,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
     disableArrowBtn(totalPages);
     hideExtremeButtons(totalPages);
-  }
+  } // ф-кция для отслеживания кликов по стрелке вправо
+
 
   function onArrowRightClick() {
     if (currentPage < totalPages) {
@@ -3887,7 +3886,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
   arrowRight.onclick = onArrowRightClick;
   hideExtremeButtons(totalPages);
   disableArrowBtn(totalPages);
-}
+} // прячет первую и последнюю страницу по бокам для мобильных гаджетов с маленьким экраном
+
 
 function hideExtremeButtons(totalPages) {
   if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -3916,7 +3916,8 @@ function disableArrowBtnAfterPageClick(e) {
   } else {
     disableArrowBtn(pageCount);
   }
-}
+} // делает неактивными кнопки-стрелки на первой и последней  странице
+
 
 function disableArrowBtn(totalPages) {
   if (currentPage === 1) {
@@ -3931,7 +3932,7 @@ function disableArrowBtn(totalPages) {
     arrowRight.classList.remove('disabled-arrow');
   }
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"js/myLibrary.js":[function(require,module,exports) {
+},{"./spinner":"js/spinner.js"}],"js/myLibrary.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4571,7 +4572,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61730" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

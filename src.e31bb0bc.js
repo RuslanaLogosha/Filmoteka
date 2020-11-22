@@ -2973,48 +2973,6 @@ var _default = {
 // }
 
 exports.default = _default;
-},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/trailers.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = createTrailerLink;
-
-var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function createTrailerLink() {
-  const trailerBtn = document.querySelectorAll('.btn-youtube');
-  trailerBtn.forEach(el => el.addEventListener('click', e => {
-    drawModalForTrailler(e.target.dataset.id);
-  }));
-
-  function drawModalForTrailler(id) {
-    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
-    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
-    fetch(url).then(response => response.json()).then(data => {
-      const id = data.results[0].key;
-      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
-      instance.show();
-      modalClBtTrailer(instance);
-    }).catch(() => {
-      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
-      instance.show();
-      modalClBtTrailer(instance);
-    });
-  }
-
-  function modalClBtTrailer(instance) {
-    const modalBox = document.querySelector('.basicLightbox--iframe');
-    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
-    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
-    modalCloseBtn.addEventListener('click', () => instance.close());
-  }
-}
 },{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"js/pagination.js":[function(require,module,exports) {
 "use strict";
 
@@ -3023,11 +2981,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.renderPagination = renderPagination;
 
-var _cardFilms = _interopRequireDefault(require("../templates/card-films.hbs"));
-
 var _spinner = _interopRequireDefault(require("./spinner"));
-
-var _trailers = _interopRequireDefault(require("./trailers.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3040,12 +2994,11 @@ let currentPage = 1;
 let pageCount;
 const pagesOnWindow = 5;
 let rows = 20;
-const BASE_URL = "https://api.themoviedb.org/3";
-const KEY = "d91911ebb88751cf9e5c4b8fdf4412c9";
 
 function resetCurrentPage() {
   currentPage = 1;
-}
+} // главная функция для рендера pagination. Callback - функция для работы с fetch (зависит от раздела, где рисуем pagination)
+
 
 function renderPagination(totalPages, listItems, callback, searchQuery) {
   paginationElement.innerHTML = '';
@@ -3088,7 +3041,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       if (i >= maxLeftPage && i <= maxRightPage) {
         let btn = paginationButton(i, items);
         wrapper.appendChild(btn);
-      }
+      } // добавляет троеточие в pagination в зависимости от текущей страницы и общего к-ва страниц
+
 
       if (totalPages >= 6 && i == 1 && currentPage !== 1 && currentPage !== 2 && currentPage !== 3) {
         const threeDotsEl = addThreeDotsBlock();
@@ -3102,7 +3056,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
     }
 
     _spinner.default.spinner.close();
-  }
+  } // создает троеточия для pagination
+
 
   function addThreeDotsBlock() {
     const threeDots = document.createElement('div');
@@ -3129,7 +3084,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
       hideExtremeButtons(totalPages);
     });
     return button;
-  }
+  } // ф-кция для отслеживания кликов по стрелке влево
+
 
   function onArrowLeftClick() {
     if (currentPage > 1) {
@@ -3142,7 +3098,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
 
     disableArrowBtn(totalPages);
     hideExtremeButtons(totalPages);
-  }
+  } // ф-кция для отслеживания кликов по стрелке вправо
+
 
   function onArrowRightClick() {
     if (currentPage < totalPages) {
@@ -3162,7 +3119,8 @@ function renderPagination(totalPages, listItems, callback, searchQuery) {
   arrowRight.onclick = onArrowRightClick;
   hideExtremeButtons(totalPages);
   disableArrowBtn(totalPages);
-}
+} // прячет первую и последнюю страницу по бокам для мобильных гаджетов с маленьким экраном
+
 
 function hideExtremeButtons(totalPages) {
   if (/Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -3191,7 +3149,8 @@ function disableArrowBtnAfterPageClick(e) {
   } else {
     disableArrowBtn(pageCount);
   }
-}
+} // делает неактивными кнопки-стрелки на первой и последней  странице
+
 
 function disableArrowBtn(totalPages) {
   if (currentPage === 1) {
@@ -3206,7 +3165,49 @@ function disableArrowBtn(totalPages) {
     arrowRight.classList.remove('disabled-arrow');
   }
 }
-},{"../templates/card-films.hbs":"templates/card-films.hbs","./spinner":"js/spinner.js","./trailers.js":"js/trailers.js"}],"images/catch-error-pagination.jpg":[function(require,module,exports) {
+},{"./spinner":"js/spinner.js"}],"js/trailers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createTrailerLink;
+
+var basicLightbox = _interopRequireWildcard(require("basiclightbox"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function createTrailerLink() {
+  const trailerBtn = document.querySelectorAll('.btn-youtube');
+  trailerBtn.forEach(el => el.addEventListener('click', e => {
+    drawModalForTrailler(e.target.dataset.id);
+  }));
+
+  function drawModalForTrailler(id) {
+    const ApiKey = '7f0b5ab01080cb0bb4b9db0d9bc41efa';
+    const url = "https://api.themoviedb.org/3/movie/".concat(id, "/videos?api_key=").concat(ApiKey, "&language=en-US");
+    fetch(url).then(response => response.json()).then(data => {
+      const id = data.results[0].key;
+      const instance = basicLightbox.create("\n  <iframe width=\"560\" height=\"315\" src='https://www.youtube.com/embed/".concat(id, "'frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n"));
+      instance.show();
+      modalClBtTrailer(instance);
+    }).catch(() => {
+      const instance = basicLightbox.create("\n    <iframe width=\"560\" height=\"315\" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n      ");
+      instance.show();
+      modalClBtTrailer(instance);
+    });
+  }
+
+  function modalClBtTrailer(instance) {
+    const modalBox = document.querySelector('.basicLightbox--iframe');
+    modalBox.insertAdjacentHTML('afterbegin', "<button\n        type=\"button\"\n        class=\"lightbox__button\"\n        data-action=\"close-lightbox\"\n        ></button>\n    ");
+    const modalCloseBtn = document.querySelector('[data-action="close-lightbox"]');
+    modalCloseBtn.addEventListener('click', () => instance.close());
+  }
+}
+},{"basiclightbox":"../node_modules/basiclightbox/dist/basicLightbox.min.js"}],"images/catch-error-pagination.jpg":[function(require,module,exports) {
 module.exports = "/catch-error-pagination.b8d8ff00.jpg";
 },{}],"js/cardFetc.js":[function(require,module,exports) {
 "use strict";
@@ -8450,7 +8451,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61730" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
