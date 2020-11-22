@@ -151,7 +151,7 @@ export function renderPagination(totalPages, listItems, callback, searchQuery) {
 function hideExtremeButtons(totalPages) {
   if (
     /Android|webOS|iPhone|iPad|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
+      navigator.userAgent,
     )
   ) {
     // код для мобильных устройств
