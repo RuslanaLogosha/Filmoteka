@@ -20,14 +20,17 @@
 }
 
 .slider-title {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: center;
-  color: $dark;
 
+  color: $svgColor;
   font-family: $mainFont;
   font-size: 14px;
-  line-height: 1.12;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: uppercase;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 }
 
 .slider-image {
