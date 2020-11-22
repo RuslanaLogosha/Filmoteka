@@ -2925,9 +2925,10 @@ class NewApiService {
   insertGenresToSearchObj() {
     return this.fetchSearchArticles().then(data => {
       return this.fetchGenres().then(genresList => {
+        let release_date;
         return data.map(movie => ({ ...movie,
-          release_date: movie.release_date.split('-')[0],
-          genres: movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat()
+          release_date: movie.release_date ? movie.release_date.split('-')[0] : 'n/a',
+          genres: movie.genre_ids ? movie.genre_ids.map(id => genresList.filter(el => el.id === id)).flat() : 'n/a'
         }));
       });
     });
@@ -8462,7 +8463,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59575" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63724" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
