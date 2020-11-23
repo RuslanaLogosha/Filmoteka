@@ -3,14 +3,18 @@ import createTrailerLink from './trailers.js';
 import nothingHereUrl from '../images/nothingHere.jpg';
 import placeholder from './spinner';
 import localStorageApi from './localStorageApi';
+import userPoint from './userPoint';
 import cardFilmsTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 
-const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
-const USER_POINT_STORAGE_NAME = 'user';
 
-const getMovies = async idList => {
-  const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+
+const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
+
+
+//возвращает промис с массивом объектов фильмов <-- принимает массив Айдишников
+async function getMovies(idList) { 
+    const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
 
   const promises = idList.map(id => {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`;
@@ -23,7 +27,7 @@ const getMovies = async idList => {
   });
 
   return await Promise.all(promises);
-};
+}
 
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
@@ -31,7 +35,12 @@ const refs = {
   paginationContainer: document.querySelector('.pagination__container'),
 };
 
-getCurrentLibrary();
+
+
+
+const currentLibrary = userPoint.getCurrentLibrary();
+if(currentLibrary) document.querySelector(`[value="${currentLibrary}"]`).checked = true;
+
 renderMovies();
 
 refs.storageList.addEventListener('change', renderMovies);
@@ -41,7 +50,7 @@ function renderMovies() {
   const idList = localStorageApi.getMovies(key);
 
   refs.cardLibrary.dataset.library = key;
-  saveCurrentLibrary(key);
+  userPoint.saveCurrentLibrary(key);
 
   if (idList.length) {
     placeholder.spinner.show();
@@ -56,6 +65,7 @@ function renderMovies() {
     refs.paginationContainer.style.display = 'none';
   }
 }
+
 function getCheckedLiblary() {
   return document.querySelector(`[name=${CHOICE_STORAGE_BTN_NAME}]:checked`)
     .value;
@@ -65,17 +75,6 @@ function renderMarkup(moviesArray) {
   createTrailerLink();
 }
 
-function getCurrentLibrary() {
-  const userPoint = localStorageApi.load(USER_POINT_STORAGE_NAME);
-  if (userPoint) {
-    document.querySelector(
-      `[value="${userPoint.currentLibrary}"]`,
-    ).checked = true;
-  }
-}
-function saveCurrentLibrary(currentLibrary) {
-  localStorageApi.save(USER_POINT_STORAGE_NAME, { currentLibrary });
-}
 
 // pagination
 
@@ -109,7 +108,7 @@ function fetchLibFilmsByPage(page) {
 }
 
 // renders pagination for main (first) fetch // оставить рендер пагинации
-export function fetchDataOfLibFilms() {
+function fetchDataOfLibFilms() {
   const totalLibPages = Math.ceil(
     localStorageApi.getMovies(getCheckedLiblary()).length / 20,
   );
