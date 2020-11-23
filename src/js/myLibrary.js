@@ -31,11 +31,9 @@ async function getMovies(idList) {
 
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
-  cardLibrary: document.querySelector('.js-card-library'),
+  cardLibrary: document.querySelector('.js-card'),
   paginationContainer: document.querySelector('.pagination__container'),
 };
-
-
 
 
 const currentLibrary = userPoint.getCurrentLibrary();
