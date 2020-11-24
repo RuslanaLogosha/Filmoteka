@@ -2,14 +2,17 @@ import regeneratorRuntime from 'regenerator-runtime';
 import createTrailerLink from './trailers.js';
 import nothingHereUrl from '../images/nothingHere.jpg';
 import placeholder from './spinner';
+
 import localStorageApi from './localStorageApi';
 import userPoint from './userPoint';
+import getCheckedLiblary from './getCheckedLiblary'
+
 import cardFilmsTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 
 
 
-const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
+
 
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
@@ -47,10 +50,6 @@ function renderMovies() {
   }
 }
 
-function getCheckedLiblary() {
-  return document.querySelector(`[name=${CHOICE_STORAGE_BTN_NAME}]:checked`)
-    .value;
-}
 function renderMarkup(moviesArray) {
   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
   createTrailerLink();
