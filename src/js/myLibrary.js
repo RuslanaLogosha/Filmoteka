@@ -11,37 +11,20 @@ import { renderPagination } from './pagination';
 
 const CHOICE_STORAGE_BTN_NAME = 'storage-btn';
 
-
-//возвращает промис с массивом объектов фильмов <-- принимает массив Айдишников
-async function getMovies(idList) { 
-    const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
-
-  const promises = idList.map(id => {
-    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`;
-    return fetch(url)
-      .then(r => r.json())
-      .then(data => ({
-        ...data,
-        release_date: data.release_date.split('-')[0],
-      }));
-  });
-
-  return await Promise.all(promises);
-}
-
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
   cardLibrary: document.querySelector('.js-card'),
   paginationContainer: document.querySelector('.pagination__container'),
 };
 
-
+//
 const currentLibrary = userPoint.getCurrentLibrary();
 if(currentLibrary) document.querySelector(`[value="${currentLibrary}"]`).checked = true;
 
 renderMovies();
 
 refs.storageList.addEventListener('change', renderMovies);
+//
 
 function renderMovies() {
   const key = getCheckedLiblary();
@@ -52,7 +35,7 @@ function renderMovies() {
 
   if (idList.length) {
     placeholder.spinner.show();
-    getMovies(idList.slice(0, 20)).then(moviesArray => {
+    fetchMoviesById(idList.slice(0, 20)).then(moviesArray => {
       renderMarkup(moviesArray);
       refs.paginationContainer.style.display = 'block';
       fetchDataOfLibFilms();
@@ -73,6 +56,23 @@ function renderMarkup(moviesArray) {
   createTrailerLink();
 }
 
+
+//возвращает промис с массивом объектов фильмов <-- принимает массив Айдишников
+async function fetchMoviesById(idList) { 
+    const key = 'd91911ebb88751cf9e5c4b8fdf4412c9';
+
+  const promises = idList.map(id => {
+    const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${key}`;
+    return fetch(url)
+      .then(r => r.json())
+      .then(data => ({
+        ...data,
+        release_date: data.release_date.split('-')[0],
+      }));
+  });
+
+  return await Promise.all(promises);
+}
 
 // pagination
 
@@ -99,7 +99,7 @@ function fetchLibFilmsByPage(page) {
   );
 
   placeholder.spinner.show();
-  return getMovies(requiredPageIdList).then(moviesArray => {
+  return fetchMoviesById(requiredPageIdList).then(moviesArray => {
     renderMarkup(moviesArray);
     placeholder.spinner.close();
   });
