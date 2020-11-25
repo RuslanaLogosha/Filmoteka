@@ -56,7 +56,7 @@ function renderMovies() {
     placeholder.spinner.show();
     fetchMoviesById(idList.slice(0, 20)).then(moviesArray => {
       myLibraryMarkup.renderCardList(moviesArray);
-      myLibraryMarkup.paginationContainer.style.display = 'block';
+      myLibraryMarkup.showPagination();
       fetchDataOfLibFilms();
       placeholder.spinner.close();
     });

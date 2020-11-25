@@ -15,7 +15,12 @@ const myLibraryMarkup = {
   renderEmtyCardList() { 
     this.cardsContainer.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
     this.paginationContainer.style.display = 'none';
-  }
+    },
+
+    showPagination() {
+        this.paginationContainer.style.display = 'block';
+ }
+
 } 
 
 export default myLibraryMarkup;
