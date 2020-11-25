@@ -1,23 +1,37 @@
 import regeneratorRuntime from 'regenerator-runtime';
-import createTrailerLink from './trailers.js';
-import nothingHereUrl from '../images/nothingHere.jpg';
+// import createTrailerLink from './trailers.js';
+// import nothingHereUrl from '../images/nothingHere.jpg';
 import placeholder from './spinner';
 
 import localStorageApi from './localStorageApi';
+import myLibraryMarkup from './myLibraryMarkup';
 import userPoint from './userPoint';
-import getCheckedLiblary from './getCheckedLiblary'
+import getCheckedLiblary from './getCheckedLiblary';
 
-import cardFilmsTpl from '../templates/card-films.hbs';
 import { renderPagination } from './pagination';
 
 
+// const myLibraryMarkup = {
 
+//   cardsContainer : document.querySelector('.js-card'),
+//   paginationContainer: document.querySelector('.pagination__container'),
+  
+//   renderCardList(moviesArray) {
+//     this.cardsContainer.innerHTML = cardFilmsTpl(moviesArray);
+//     createTrailerLink();
+//   },
+
+//   renderEmtyCardList() { 
+//     this.cardsContainer.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
+//     this.paginationContainer.style.display = 'none';
+//   }
+// } 
 
 
 const refs = {
   storageList: document.querySelector('.js-choice-storage'),
-  cardLibrary: document.querySelector('.js-card'),
-  paginationContainer: document.querySelector('.pagination__container'),
+  // cardLibrary: document.querySelector('.js-card'),
+  // paginationContainer: document.querySelector('.pagination__container'),
 };
 
 //
@@ -29,31 +43,34 @@ renderMovies();
 refs.storageList.addEventListener('change', renderMovies);
 //
 
+
+
 function renderMovies() {
   const key = getCheckedLiblary();
   const idList = localStorageApi.getMovies(key);
 
-  refs.cardLibrary.dataset.library = key;
+  myLibraryMarkup.cardsContainer.dataset.library = key;
   userPoint.saveCurrentLibrary(key);
 
   if (idList.length) {
     placeholder.spinner.show();
     fetchMoviesById(idList.slice(0, 20)).then(moviesArray => {
-      renderMarkup(moviesArray);
-      refs.paginationContainer.style.display = 'block';
+      myLibraryMarkup.renderCardList(moviesArray);
+      myLibraryMarkup.paginationContainer.style.display = 'block';
       fetchDataOfLibFilms();
       placeholder.spinner.close();
     });
   } else {
-    refs.cardLibrary.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
-    refs.paginationContainer.style.display = 'none';
+    // myLibraryMarkup.cardsContainer.innerHTML = `<img src="${nothingHereUrl}" alt="There is nothing" />`;
+    // myLibraryMarkup.paginationContainer.style.display = 'none';
+    myLibraryMarkup.renderEmtyCardList();
   }
 }
 
-function renderMarkup(moviesArray) {
-  refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
-  createTrailerLink();
-}
+// function myLibraryMarkup.renderCardList(moviesArray) {
+//   refs.cardLibrary.innerHTML = cardFilmsTpl(moviesArray);
+//   createTrailerLink();
+// }
 
 
 //возвращает промис с массивом объектов фильмов <-- принимает массив Айдишников
@@ -77,7 +94,7 @@ async function fetchMoviesById(idList) {
 
 // renders main (first) page = renderMovies
 
-// function for insertion of markup = renderMarkup(moviesArray)
+// function for insertion of markup = myLibraryMarkup.renderCardList(moviesArray)
 
 // renders movies by appropriate page
 function displayLibList(wrapper, page) {
@@ -99,7 +116,7 @@ function fetchLibFilmsByPage(page) {
 
   placeholder.spinner.show();
   return fetchMoviesById(requiredPageIdList).then(moviesArray => {
-    renderMarkup(moviesArray);
+    myLibraryMarkup.renderCardList(moviesArray);
     placeholder.spinner.close();
   });
 }
