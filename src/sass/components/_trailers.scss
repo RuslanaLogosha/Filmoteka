@@ -83,6 +83,13 @@
   background-color: #ff6b08;
 }
 
+@media screen and (min-width: 300px) and (max-width: 692px) {
+  .lightbox__button {
+    top: 90px;
+    right: calc(((100vw - 324px) / 2));
+  }
+}
+
 @media screen and (min-width: 768px) {
   .lightbox__button {
     top: 100px;
@@ -97,14 +104,3 @@
   }
 }
 
-// @media screen and (min-width: 1280px) {
-//   .lightbox__button {
-//     right: 350px;
-//   }
-// }
-
-// @media screen and (min-width: 1600px) {
-//   .lightbox__button {
-//     right: 500px;
-//   }
-// }
